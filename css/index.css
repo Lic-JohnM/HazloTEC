@@ -1,0 +1,755 @@
+
+@font-face {
+  font-family: 'Comfortaa-VariableFont_wght';
+  src: url('fuente/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+    body { background-color: white;
+           font-family: 'Comfortaa-VariableFont_wght';
+            margin:0;
+           padding: 0; }
+   #menu { background-color: white;
+                    color: rgb(0,0,55); 
+                    border-bottom: 1px solid rgb(0,0,55);
+                    width: 100vw;
+                    height: 10vh;
+                    display:grid;
+                    position: fixed; 
+                     /* grid-template-columns: 20% 30% 10% 30% 10%;*/ 
+                    grid-template-columns:50% 50%; 
+                    align-items: center;
+                    justify-items: center;                
+                }
+
+                #menu>a{
+                        color: rgb(0,0,55);
+                        text-decoration: none;
+                        background-image: linear-gradient(rgb(0, 0, 55), rgb(0, 0, 55)),
+                        linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255)),
+                        linear-gradient(rgb(255,255,255), rgb(255,255,255));
+                        background-size: 20px 2px, 100% 2px, 0 2px;
+                        background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+                        background-repeat: no-repeat;
+                        transition: background-size 2s linear, background-position 2s linear;
+                }
+            
+                #menu>a:hover{
+                        background-size: 20px 2px, 0 2px, 100% 2px;
+                        background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;;
+             }
+
+    
+
+    header{
+        width: 100vw;
+        height: 40vh;
+        background-image: url(/Imagenes/header.png);
+        background-size: 100% 100%;
+        background-position: 0%;
+
+    }
+
+
+ 
+    #LC{
+      width: 100vw;
+      height: 5vh;
+      background-color: #0c3141ff;
+      padding-bottom:2%;
+      font-size: large;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      color:white;
+    }
+
+
+
+    #SLC{
+      width: 100vw;
+      height: 180vh;
+      background-image: url(/Imagenes/slc.png);
+      background-size: 100% 100%;
+      display: grid;
+      grid-template-columns: 5% 30% 30% 30% 5%;
+      grid-template-rows: 2% 24.5% 24.5% 24.5% 24.5% 2%;
+
+    }
+
+    #SLC>#A1{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 2;
+     grid-column: 2; 
+    }
+
+    #SLC>#a1>#a11{
+
+     text-decoration: none;
+      text-align: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+    }
+
+    #SLC>#a1>#a12{
+          background-image: url(/Imagenes/programacion/programacion.png);
+        background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a1>#a13{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+
+    }
+
+    #SLC>#a1:hover{
+      color: rgba(47,65,89,0.9) ;
+      background-color:#f6dfca;
+      border-style: solid;
+      border-color:#f6dfca;
+    }
+
+    #SLC>#a2{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 2;
+     grid-column: 3; 
+   
+    }
+    #SLC>#a2>#a21{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+
+    }
+
+    #SLC>#a2>#a22{
+      background-image: url(/Imagenes/Energia/energia1.png);
+      background-color:white;
+      background-size: 90% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    
+    }
+    #SLC>#a2>#a23{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+
+    }
+
+    #SLC>#a2:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+    
+
+
+    #SLC>#a3{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 2;
+     grid-column: 4; 
+      text-decoration: none;
+    }
+    #SLC>#a3>#a31{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a3>#a32{
+       background-image: url(/Imagenes/electronica/electronica1.png);
+        background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a3>#a33{
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a3:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+    
+       
+    #SLC>#a4{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 3;
+     grid-column: 2; 
+   
+    }
+    #SLC>#a4>#a41{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a4>#a42{
+        background-image: url(/Imagenes/Domotica/domotica1.png);
+      background-color:white;
+      background-size: 70% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a4>#a43{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a4:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+    
+        #SLC>#a4>#a42:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+
+    #SLC>#a5{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 3;
+     grid-column: 3;
+     text-decoration:none;
+    color:white;
+    }
+    #SLC>#a5>#a51{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a5>#a52{
+     background-image: url(/Imagenes/mecanica/mecanica1.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a5>#a53{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+ 
+    
+    #SLC>#a6{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 3;
+     grid-column: 4; 
+   
+    }
+    #SLC>#a6>#a61{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a6>#a62{
+     background-image: url(/Imagenes/ofimatica/ofimatica1.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a6>#a63{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a6:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+    
+        #SLC>#a6>#a62:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+
+    #SLC>#a7{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 4;
+     grid-column: 2; 
+         text-decoration: none;
+      color:white;
+    }
+    #SLC>#a7>#a71{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a7>#a72{
+     background-image: url(/Imagenes/manipulacionimagenes/manipulacion1.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a7>#a73{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+
+    #SLC>#a8{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 4;
+     grid-column: 3; 
+   
+    }
+    #SLC>#a8>#a81{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a8>#a82{
+      background-image: url(/Imagenes/animaciondigital/ANIMACIONDIGITAL.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a8>#a83{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a8:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+
+    #SLC>#a8>#a82:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a9{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row: 4;
+     grid-column: 4; 
+   
+    }
+    #SLC>#a9>#a91{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a9>#a92{
+      background-image: url(/Imagenes/creaciondevideojuegos/creaciondevideojuegos.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a9>#a93{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a9:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+    #SLC>#a9>#a92:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+ #SLC>#a10{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 2;
+     grid-column-end:3;
+
+    }
+    #SLC>#a10>#a101{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a10>#a102{
+      background-image: url(/Imagenes/Materialesyestructura/materialesyestructuras.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a10>#a103{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a10>#a102:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a10:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+ #SLC>#a11{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 3;
+     grid-column-end:4;
+
+    }
+    #SLC>#a11>#a111{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a11>#a112{
+      background-image: url(/Imagenes/diseñoweb/diseñoweb1.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a11>#a113{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a11:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+    
+        #SLC>#a11>#a112:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+
+ #SLC>#a12{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 4;
+     grid-column-end:5;
+
+    }
+    #SLC>#a12>#a121{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a12>#a122{
+         background-image: url(/Imagenes/Hidraulicaneumatica/NH1.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a12>#a123{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a12:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+    #SLC>#a12>#a122:hover{
+      background-image: url(/Imagenes/proximamente.png);
+      background-color:white;
+      background-size: 60% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    
+    
+           #LC>H1{
+            font-size:35px;
+        }
+    
+    footer{
+      width: 100vw;
+      height: 10vh;
+      background-color: rgba(47,65,89,0.9);
+      display:grid;
+      grid-template-columns: 1fr;
+      align-items:center;
+      justify-items:center;
+ 
+    }
+    
+    footer>a{
+             color:white;
+             text-decoration:none;
+             background-color:rgba(47,65,89,0.9);
+             padding-top:1%;
+             padding-bottom:1%;
+             padding-left:2%;
+             padding-right:2%;
+      
+    }
