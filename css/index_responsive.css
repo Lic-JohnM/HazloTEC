@@ -1,0 +1,266 @@
+   @media only screen and (max-width: 1500px) {
+          #menu {
+            font-size:20px;
+          }
+      
+        header{
+            height: 35vh;
+            font-size:12px;
+        }
+  
+  
+        #LC{
+          width: 100vw;
+          height: 5vh;
+          font-size:12px;
+ 
+        }
+    
+   #SLC{
+          width: 100vw;
+          height: 320vh;
+          font-size:20px;
+          display:grid;
+          background-image:none;
+          grid-template-columns:5% 43% 4% 43% 5%;
+          grid-template-rows: 1% 16% 16% 18% 16% 17% 16% 2%;
+        }
+ 
+        
+        #SLC>#A1{
+            
+            grid-column:2;
+            grid-row:2;
+            grid-template-rows:25% 60% 15%;  
+          
+          
+        }
+        #SLC>#A2{
+            
+            grid-column:4;
+            grid-row:2;
+            grid-template-rows:25% 60% 15%;            
+        }
+        #SLC>#A3{
+            
+            grid-column:2;
+            grid-row:3;
+             grid-template-rows:25% 60% 15%;           
+        }
+        
+        #SLC>#A4{
+            
+            grid-column:4;
+            grid-row:3;
+            grid-template-rows:25% 60% 15%;            
+        }
+        
+        #SLC>#A5{
+            
+            grid-column:2;
+            grid-row:4;
+            grid-template-rows:25% 60% 15%;            
+        }
+        
+        #SLC>#A6{
+            
+            grid-column:4;
+            grid-row:4;
+            grid-template-rows:25% 60% 15%;        
+        }
+        
+        #SLC>#A7{
+            
+            grid-column:2;
+            grid-row:5;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A8{
+            
+            grid-column:4;
+            grid-row:5;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A9{
+            
+            grid-column:2;
+            grid-row:6;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A10{
+            
+            grid-column:4;
+            grid-row:6;
+            grid-template-rows:25% 60% 15%;
+        }
+        #SLC>#A11{
+            
+            grid-column:2;
+            grid-row:7;
+            grid-template-rows:25% 60% 15%;
+        }
+        #SLC>#A12{
+            
+            grid-column:4;
+            grid-row:7;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        
+        
+        
+    
+    }
+
+     
+     
+        @media only screen and (max-width: 1000px) {
+        #menu{
+           grid-template-columns:40% 60%;
+           font-size:35px;
+           position:relative;
+           height:8vh;
+        
+          }
+          #menu>#r5{
+           display: none;
+          }
+          #menu>#r4{
+           display: none;
+          }
+          #menu>#r3{
+           display: none;
+          }
+          
+      
+      header{
+            height: 15vh;
+            background-image:url(/Imagenes/header_xs.png);
+        }
+        header>#SH1{
+            grid-template-columns: auto;
+            grid-template-rows:10% 80%;
+        }
+        header>#SH1>#Bht>h3{
+            display:none;
+        }
+        header>#SH1>#Bht{
+            grid-template-rows:auto;
+            grid-template-columns:30% 70%;
+            font-size:25px;
+        }
+        header>#SH1>#Bht2{
+            margin-top:4%;
+            margin-left:4%;
+            margin-right:4%;
+            font-size:19px;
+        }
+     
+        #LC{
+          width: 100vw;
+          height: 2vh;
+          font-size:15px;
+ 
+        }
+ 
+        #LC>H1{
+            font-size:35px;
+        }
+        #SLC{
+          width: 100vw;
+          height: 420vh;
+          font-size:40px;
+          display:grid;
+          background-image:none;
+          grid-template-columns:5% 90% 5%;
+          grid-template-rows:repeat(12,1fr)
+        }
+ 
+        
+        #SLC>#A1{
+            
+            grid-column:2;
+            grid-row:1;
+            grid-template-rows:25% 60% 15%;
+        }
+        #SLC>#A2{
+            
+            grid-column:2;
+            grid-row:2;
+            grid-template-rows:25% 60% 15%;            
+        }
+        #SLC>#A3{
+            
+            grid-column:2;
+            grid-row:3;
+             grid-template-rows:25% 60% 15%;           
+        }
+        
+        #SLC>#A4{
+            
+            grid-column:2;
+            grid-row:4;
+            grid-template-rows:25% 60% 15%;            
+        }
+        
+        #SLC>#A5{
+            
+            grid-column:2;
+            grid-row:5;
+            grid-template-rows:25% 60% 15%;            
+        }
+        
+        #SLC>#A6{
+            
+            grid-column:2;
+            grid-row:6;
+            grid-template-rows:25% 60% 15%;        
+        }
+        
+        #SLC>#A7{
+            
+            grid-column:2;
+            grid-row:7;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A8{
+            
+            grid-column:2;
+            grid-row:8;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A9{
+            
+            grid-column:2;
+            grid-row:9;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        #SLC>#A10{
+            
+            grid-column:2;
+            grid-row:10;
+            grid-template-rows:25% 60% 15%;
+        }
+        #SLC>#A11{
+            
+            grid-column:2;
+            grid-row:11;
+            grid-template-rows:25% 60% 15%;
+        }
+        #SLC>#A12{
+            
+            grid-column:2;
+            grid-row:12;
+            grid-template-rows:25% 60% 15%;
+        }
+        
+        footer{
+            font-size:35px;
+        }
+     }
