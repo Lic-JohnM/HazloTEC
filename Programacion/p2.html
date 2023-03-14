@@ -17,9 +17,14 @@
 		<script>
 	$(document).ready(function(){
 	  $("#info").css("height","150vh");
+	
 	//Controlar división de la página menu anterior y siguiente
 	var divs = document.getElementsByClassName("n1").length;
-	console.log("Hay " + divs + " elementos");
+	if (divs > 1) {
+	    $("#info>#con>#ctrl").css("grid-template-columns","1fr 1fr");
+	} else {
+	    $("#info>#con>#ctrl").css("grid-template-columns","1fr");
+	}
 	});
 	</script>
 		
@@ -109,8 +114,8 @@
                         <br>
 
                          <div id="ctrl">
-				
-				
+					
+				 <a class="n1" href="p1.html"> anterior </a>
 				<a class="n1" href="p2.html"> siguiente </a>
                              
 
