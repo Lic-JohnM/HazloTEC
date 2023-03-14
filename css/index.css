@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'Comfortaa-VariableFont_wght';
-  src: url('https://lic-johnm.github.io/JEMA/fuente/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+  src: url('https://lic-johnm.github.io/HazloTEC/fuente/Comfortaa/Comfortaa-VariableFont_wght.ttf');
   font-style: normal;
   font-weight: normal;
 }
@@ -44,7 +44,7 @@
     header{
         width: 100vw;
         height: 40vh;
-        background-image: url(https://lic-johnm.github.io/JEMA/Imagenes/Principal/header.png);
+        background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/header.png);
         background-size: 100% 100%;
         background-position: 0%;
 
@@ -103,7 +103,7 @@
     }
 
     #SLC>#a1>#a12{
-          background-image: url(https://lic-johnm.github.io/JEMA/Programacion/Ilustracion_programacion.png);
+          background-image: url(https://lic-johnm.github.io/HazloTEC/Programacion/Ilustracion_programacion.png);
         background-color:white;
       background-size: 70% 80%;
       background-position: center center;
