@@ -18,6 +18,8 @@
 	$(document).ready(function(){
 	  $("#info").css("height","150vh");
 	  console.log($("#info>#con>#ctrl").length);
+	var divs = document.getElementsByClassName("n1").length;
+	console.log("Hay " + divs + " elementos");
 	});
 	</script>
 		
@@ -108,7 +110,8 @@
 
                          <div id="ctrl">
 				
-				<a href="p1.html"> anterior </a>
+				<a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p2.html"> siguiente </a>
                              
 
                         </div>
