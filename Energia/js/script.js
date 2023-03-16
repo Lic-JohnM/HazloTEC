@@ -38,10 +38,7 @@ $(document).ready(function(){
                   $("#info>#con>#ej3>p").append("<h5> Ep = 1,008 J </h5><br>");
                                                          
                                 		});
-  	});
-	
-	
-	
+ 
 	
 	});
 
