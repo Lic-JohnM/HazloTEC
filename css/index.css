@@ -371,21 +371,6 @@
     color:white;
     }
 
-    #SLC>#a6:hover{
-    color: rgba(47,65,89,0.9) ;
-    background-color:#f6dfca;
-    border-style: solid;
-    border-color:#f6dfca;
-    }
-    
-        #SLC>#a6>#a62:hover{
-            background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
 
     #SLC>#a7{
      border-color: rgba(47,65,89,0.9) ;
