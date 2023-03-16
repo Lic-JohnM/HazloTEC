@@ -355,7 +355,7 @@
     }
 
     #SLC>#a6>#a62{
-     background-image: url(/Imagenes/ofimatica/ofimatica1.png);
+     background-image: url(https://lic-johnm.github.io/HazloTEC/Ofimatica/Ilustracion_ofimatica.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -379,8 +379,7 @@
     }
     
         #SLC>#a6>#a62:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
+            background-color:white;
       background-size: 60% 80%;
       background-position: center center;
       background-repeat:no-repeat;
