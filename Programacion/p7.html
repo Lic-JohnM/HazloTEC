@@ -6,8 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -36,69 +35,100 @@
 
                 <div id="con">
 
-					<h2> Condicionales </h2>
+			<h2> Ciclos</h2>
 
 				<br>
 
-			<p> En la programación las condicionales dividen el flujo de un programa dependiendo de algún valor o una decisión, como puede ser por ejemplo una variable llamada clima y si toma el valor de lluvia puede hacer que cambiemos el atuendo o el accesorio para salir a la calle a que si fuese de valor sol. En un diagrama de flujo se ve de la siguiente manera.</p>
-
-			<br>
-					<div style="text-align:center;">
-        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249535" height="715" width="600" frameborder="0" scrolling="no" ></iframe>
-                  </div>  
+			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
 
 			<br>
 
-			<h3> Condicionales en Python </h3>
+			<div id="img"></div>
 
 			<br>
-
-			<p> Las condicionales en Python manejan unos espacios y puntuaciones que se deben seguir para que funcione el programa, así también tenemos que saber que si queremos comparar con un valor puntual debemos emplear ==(doble igual) como se muestra en el siguiente programa que es el programa anterior escrito en Python:
-
+			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
 			<br>
-
 <pre>
     <code>
-print("ingrese el clima ¿sol o lluvia?");
-clima=input();
-if clima=="lluvia":
-    print("lleva sombrilla");
-else:
-    print("lleva gafas de sol");
 
+print("ingrese el dinero");
+dinero=float(input());
+i = 1
+while dinero < 2500:
+  print("le falta dinero")
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
     </code>
-</pre>
+</pre>			
 
-            
-			<br>
+<br>
+			   
+			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
 
-	
-
-			<h3> Operadores de relación </h3>
-
-			<br>
-
-			<p> Dependiendo la condición que necesitemos comparar se emplean después del if, distintos tipos de operadores de relación por ejemplo si necesitamos comparar una condición donde un número X sea mayor a 5, se escribiría de la siguiente manera <b>X>5</b>, si es un intervalo donde sean números mayores a 5 y menores a 10, se escribiría de la siguiente manera <b>X>5 AND X<10 </b>. </p>
-
-	        <br>
-	        
-	        	<p> Para finalizar si se requiere comparar con un valor puntual, como es por ejemplo si el número X debe ser igual a 8 para que se cumpla la condición se escribiria de la siguiente manera <b>X==8</b> </p>
-	        	
-	        	
-            <br>
-            <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
-			<br>
-
-		
-
-                        
+			<h3> Contadores </h3>
 
 			<br>
 
-           		 <a id="dcr" href="https://es.scribd.com/document/631280276/P4" target="_blank"> Descarga ejercicios de condicionales </a>
+
+ <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
+			<div id="img2"></div>
+			<br>
+		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
+<pre>
+    <code>
+
+print("ingrese el dinero");
+dinero=int(input());
+i = 1
+while dinero < 2500:
+  a=2500-dinero;
+  print("le falta")
+  print(a);
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+   print("puede seguir");   
+    </code>
+</pre>	    
+
+			
+			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
+<br>
+<pre>
+    <code>
+print("ingrese el dinero");
+dinero=float(input());
+contador=0
+while dinero < 2500:
+  a=2500-dinero;
+  contador=contador+1;
+  print("le falta")
+  print(a);
+  print("intento:");
+  print(contador);
+  print("ingrese el dinero");
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
+    </code>
+</pre>	 
+
+                        <br>
+
+                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+
+
+
+			<a id="dcr" href="https://es.scribd.com/document/631668204/P7-1"  target="_blank"> Descarga ejercicio ciclos </a>
+
 
 
                         <br>
+
 
                          <div id="ctrl">
 					
