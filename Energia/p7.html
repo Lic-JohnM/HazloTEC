@@ -35,97 +35,51 @@
 
                 <div id="con">
 
-			<h2> Ciclos</h2>
-
+			<h2> Transición energética</h2>
 				<br>
-
-			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
-
+			<p> Actualmente los tipos de energía se clasifican de dos maneras, las <b>energías renovales</b> y las las <b>energías no renovables</b>, donde gran parte de nuestros artefactos funcionan aun con energias no renovables y llamamos transición energética al proceso para que funcionen con energías renovables y en lo posible energías limpias (baja o nula contaminación).  </p>
 			<br>
-
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-
+			<h3> Tipos de energía no renovables </h3>
 			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
-
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
-
-			<h3> Contadores </h3>
-
-			<br>
-
-
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
-
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
-
+			<p> La humanidad para realizar sus acciones cotidianas en la historia se a valido de diferentes fuentes de energía tanto en la forma de adquirirla, transportarla y consumirla, no hace más de alrededor de 500 años que no teniamos electricidad, ni petroleo y sin el gasolina haciendo así un estilo de vida muy diferente al que conocemos. En los últimos siglos el desarrollo tecnologíco a sido enorme y de donde obtener recursos inicialmente no parecia tener ningún problema es hoy en día un gran inconveniente, observemos la siguiente imagen:</p>
                         <br>
+                        	<div style="text-align:center;">
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1134555331100367232" height="349" width="345" frameborder="0" scrolling="no" ></iframe>			</div>     
 
+        		    <br>
+			<br>
+						<p> Es un tren a carbon, donde podemos observar la cantidad de humo que deposita al medio ambiente y aunque inicialmente la necesidad era que llevara las cargas o pasajeros en unos tiempos y con alguna facilidad que no se conseguia con otros medios de transportes hoy en día por la cantidad de personas que somos y el estilo de vida resulta perjudicial por dos grandes factores que vamos a ver a continuación <b> el calentamiento global </b> y la <b>limitación de los recursos.</b>  </p>
+			<br>
+			<h3> Calentamiento global </h3>
+			<br>
+			<p> El cambio de la temperatura del planeta tierra es un fenomeno natural y normal, sin embargo el avance tecnologíco producido en los últimos siglos ha producido un aumento en los grados centigrados del planeta de forma extremadamente rápida.</p>
+			<br>
+                     	<div style="text-align:center;">
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=6403624462241539" height="942" width="450" frameborder="0" scrolling="no" ></iframe>
+			</div>     
+
+        		    <br>
+			<br>
+			
+			<p> Podemos observar en la imagen como el agua de los lagos se ha secado y reducido en tamaño por el aumento del calor del planteta, asi como los glaciares descongelados, etapas de sequias extremadamente largas, entre otras muchas consecuencias. Esto se debe a que todos los planetas cuentan con una atmosfera que es una capa gaseosa que cubre el planeta de los rayos solares y regula la temperatura del planeta, la puedes ver en la siguiente imagen como la linea blanca curva que acompaña el planeta tierra:</p>
+			<br>
+                     	<div style="text-align:center;">
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249255" height="847" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>     
+
+        		    
+			<br>
+			<p> A la función de controlar el clima se llama <b>efecto invernadero</b>, sin embargo debido a la producción de algunos gases producidos por los tipos de energía empleados en gran porcentaje por la humanidad no ha podido realizar su finalidad y la temperatura se queda "atrapada" en el planeta. 
+			</p>
+            <br>
+			<h3> Limitación de recursos</h3>
+						<br>
+			<p> Un segundo motivo por el que debemos hacer la transición energética se encuentra en que estos tipos de recursos que estamos empleando son limitados y en algún momento dejaran de existir. Siendo así tenemos que habitar nuestros artefactos y habitos a esta nueva realidad que se avecina. Ahora en este curso vamos a estudiar inicialmente los tipos de energía no renovables posteriormente las renovables encontrando sus respectivas ventajas y desventajas.
+			</p>
+                        <br>
                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
 
