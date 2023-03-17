@@ -5,7 +5,7 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
+	<title>Energía</title>
 	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
@@ -37,97 +37,103 @@
                 <div id="con">
 
 		
-		<h2> LISTAS</h2>
-
+	<div id="info">
+                <div id="con">
+			   <br>
+			<h2> ENERGIA EN FORMA DE ONDAS</h2>
+			<br>
+            <p>La energía se puede transferir de diversas maneras y una es la radiación que consiste en <b>la transmisión de energía por ondas.</b> Una onda consiste en la transferencia de energía por un medio, el cuál puede ser materia y estar en cualquiera de sus estados (solido, liquido o gaseoso) o en el vacio. Así existen elementos generadores de energía como es el sol que genera la energía en forma de ondas que recibimos todos los días, pero así también lo son el sonido en lo que se denomina <b>energía sonora </b> o cuando lanzamos una piedra al agua.  </p> 
 				<br>
-
-			<p> Las listas en Python son una forma de almacenar diferentes datos en una misma variable,a continuación tenemos varios ejemplos: </p>
-			<br>
-			<p>Numeros_pares=[0,2,4,6,8,10]</p>
-			<br>
-			<p>Numeros_primos=[1,2,3,5,7,11]</p>
-			<br>
-			<p>Colores=["rojo","azul","gris","blanco","negro",gris]</p>
-			<br>
-			<p>Ingredientes_ensalada=["lechuga","tomate","pepino","aceite","zanahoria"]</p>
-			<br>
-		
-			<p>Para la explicación de lo que podemos hacer con las listas vamos  guardar el nombre de 6 estudiantes de un curso, lo cuál se haria de la siguiente manera:</p>
-
-			<br>
+						<div style="text-align:center;">
 			
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-            <p>el codigo que vamos a emplear para explicar las listas es el siguiente:</p>
-            <br>
-<pre>
-    <code>
-estudiantes=["Juan","Andrea","Luis","Laura","Oscar"];
-print(estudiantes[2]);
-print(len(estudiantes));
-estudiantes.pop(1);
-print(estudiantes);
-estudiantes.insert(4,"Luna");
-print(estudiantes);
-    </code>
-</pre>
-            <br>
-	        <p>Todos los elementos tienen una posición que inicia desde 0, así Juan ocupa la posición 0, Andres ocupa la posición 1, Luis ocupa  la posición 2, Laura la posición 3 y Oscar la posición 4. Para acceder a un elemento solamente basta escribir su posición de la siguiente manera <b>estudiantes[2]</b> que en esta ocasión daria como resultado Luis.</p>
-
-			<br>
-
-			<p> Si queremos saber la longitud solo basta con escribir el siguiente codigo: <b>len(estudiantes)</b> que en este caso daria como resultado 4.</p>
-
-			<br>
-
-			<p>Para añadir o eliminar basta con conocer la posición donde se encuentra el elemento que vamos a quitar o a la posición del elemento que vamos a añadir, por ejemplo de la lista vamos a eliminar a la estudiante Andrea que estaria en la posición 1 y empleamos el comando pop : <b>estudiantes.pop(1)</b> así la lista nos quedaria:</p>
-
-            <br>
-
-			<p>estudiantes=["Juan","Luis","Fabian","Elkin"]</p>
-
-			<br>
-
-			<p> Para añadir a un estudiante en la mitad de los estudiantes Laura y Oscar debemos inicialmente tener en cuenta la posición que seria la número 4 y empleamos el comando insert : <b>estudiantes.insert(4,"Luna")</b> </p>
-
-			<br>
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=925208317174765853" height="400" width="450" frameborder="0" scrolling="no" ></iframe>
+			</div>
+							
+        		    <br>
+				<br>
+				<h2> Propiedades de las ondas y ondas electromagnéticas </h2>
 			
+				<br>
+			<p>Una de las principales caracteristicas de las ondas es que la energía se manifiesta de <b>forma periodica</b>, lo que quiere decir que tiene un patron que se repite cada cierto tiempo como podemos ver en la imagén de arriba donde la onda de agua se repite, el valor que determina que tan seguido se repite se denomina <b>frecuencia</b>, su unidad es el <b>Hertz</b> y su simbolo es <b>Hz</b> . Un tipo de ondas son las ondas electromagneticas y la energía que se produce se llama <b>energía radiante</b> , en la siguiente tabla podemos ver como  según su frecuencia cambia el funcionamiento de algunas aplicaciones que tenemos diariamente.</p>
 			<br>
-
-			<h3> Ciclos </h3>
-
+              <table>
+                  <tr>
+                      <th style="background-color:rgb(16,6,90);color:white;padding-top:1%;padding-bottom:1%"> Frecuencia</th>
+                      <th style="background-color:rgb(16,6,90);color:white;padding-top:1%;padding-bottom:1%">Aplicación</th>
+ 
+                  </tr>
+                  <tr>
+                      <th><p>0hz a 10<sup>4</sup></p></th>
+                      <th><p>Corriente electríca alterna</p>
+                      </th>
+               
+                  </tr>
+                  <tr>
+                      <th><p>10<sup>4</sup> a 10<sup>8</sup></p></th>
+                      <th><p>Radio AM y FM</p>
+                      </th>
+                     
+                  </tr>
+                  
+                 <tr>
+                      <th><p>10<sup>8</sup> a 10<sup>12</sup></p></th>
+                      <th><p> Radar - Celular - Microondas </p>
+                      </th>
+                     
+                  </tr>
+                  
+                  
+                 <tr>
+                      <th><p>10<sup>12</sup> a 10<sup>15</sup></p></th>
+                      <th><p> Radiografia </p>
+                      </th>
+                   
+                  </tr>
+              </table>       
+  	
+  	    <br>
+  	    <br>
+				<h2> Período </h2>
+			
+				<br>
+			<p>La frecuencia hace referencias a que tantas repeticiones tiene en 1 segundo, recordemos que por ejemplo 10<sup>8</sup> equivale a 100000000, así que siguiendo la tabla un horno microondas tiene una frecuencia en sus ondas de cien millones de repeticiones en 1 segundo. Para determinar cuanto tiempo demora en hacerse cada repetición calculamos el <b>período</b> con la siguiente formula:</p>
 			<br>
+                         <h5> Periodo= 1/frecuencia  </h5>
+			<br>
+	
+		<h4> Ejercicios de práctica </h4>
 
-			<p> Los ciclos en programación se emplean para repetir lineas de codigos hasta que se cumpla cierta condición, por ejemplo si para acceder a cada uno de los elementos de la lista estudiantes del ejemplo anterior podriamos hacerlo estudiantes[0], estudiantes[1]...etc. Sin embargo si la lista tuviese 40 estudiantes implicaria repetir 40 veces las linea de codigo. </p>
-		
-			  <br>
-			  
-			  <p>Existen varias estructuras de programación para hacer ciclos pero inicialmente emplearemos la estructura <b>for</b>, en donde para recorrer todo el vector y mostrar los elementos solamente basta con el siguiente codigo:</p>
-
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-  print(x)
-     
-    </code>
-</pre>
-
-			  <p>Una utilidad de recorrer una lista es encontrar la posición de un elemento usando el comando <b>index</b>, a continuación se presenta el ejemplo empleando para encontrar la posición del estudiante fabian</p>	        	
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-    posicion = estudiantes.index("Fabian");
-print(posicion);
-     
-    </code>
-</pre>
+                        <div id="ej1">
+                                <p> <b>1.</b>La nota musical LA tiene una frecuencia de 440 Hz.¿Cuál es su periodo?. </p>
+                                <br>
+                                <h5>Solución</h5>
+                                <br>
+                                <p> Inicialmente obtenemos las variables que tenemos del ejercicio: </p>
+                                <br>
+                                <p> frecuencia = 440 Hz </p>
+                                <br>
+                                <p> Haciendo uso de las formula anteriormente vista la solución es la siguiente: </p>
+                                <br>
+                                <h5> Periodo = 1/440 Hz </h5>
+                                <h5> Periodo = 0.0022 s </h5>
+                                <br>
+                                <p> Así sabemos que cada repetición de la nota LA se repite cada 0.0022 segundos.  </p>
+                 
+                                
+                        </div>
+                        <br>
+                        <p>A continuación se proponen unos ejercicios, intenta hacerlos primero y despues revisa si te da el mismo resultado.</p>
+                        <br>
+                        <div id="ej2">
+                                <p> <b>2.</b> La frecuencia WIFI es de 2.4 Ghz, lo que quiere decir que en 1 segundo se repite 2400000000 veces y en ella llega la información a nuestros dispositivos moviles¿Que periodo de tiempo tiene cada repeticion de una onda de WIFI? </p>
+                                <a> Mostrar Solución </a>
+                        </div>
+                        <br>
+                        <div id="ej3">
+                                <p> <b>3.</b> La radio nacional de colombia tiene una frecuencia de 570Khz, cuál es el periodo de cada onda de radio de esta emisora.  </p>
+                                <a> Mostrar Solución </a>
+                        </div>			
+                        <br>
 
                <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
