@@ -5,7 +5,7 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
+	<title>Electrónica</title>
 	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
@@ -36,76 +36,66 @@
 
                 <div id="con">
 
-					<h2> Condicionales anidadas </h2>
-
+						<h2> Fuentes de energía electríca </h2>
 				<br>
-
-			<p> En algunas ocasiones un programa puede tener varios flujos según las decisiones o situaciones que pasen. Así por ejemplo al momento de saber cuál es el desempeño según la nota definitiva de una materia de un colegio, el diagrama podría ser el siguiente: </p>
-
+			<p> Una vez es claro que existe la energía electríca alterna y que tiene un proceso para volverse en continua, la aplicación que vamos a ver a continuación es para poder adaptar el voltaje o la corriente continua según se requiera. El voltaje continuo podemos obtenerlo de un proceso de rectificación y regulación desde la toma como un adaptador de celular o desde las baterias donde especifica cuanto voltaje genera así como la corriente.</p>
 			<br>
-						<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
+				<div style="text-align:center;">
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1035265033068513325" height="295" width="345" frameborder="0" scrolling="no" ></iframe>
+					
+			</div>
 			<br>
-
-			<h3> Condicionales anidadas en Python </h3>
-
-			<br>
-
-			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-else:
-    if definitiva>=4.0 and definitiva<4.5:
-          print("tu desempeño es alto");
-    else:
-        if definitiva>=3.0 and definitiva<4.0:
-              print("tu desempeño es basico");
-        else:
-            if definitiva>=0.0 and definitiva<3.0:
-                print("tu desempeño es bajo");
-            else:
-                print("Esta nota no existe");
-
-    </code>
-</pre>
-
-	<br>
-
-			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-elif definitiva>=4.0 and definitiva<4.5:
-    print("tu desempeño es alto");
-elif definitiva>=3.0 and definitiva<4.0:
-    print("tu desempeño es basico");
-elif definitiva>=0.0 and definitiva<3.0:
-     print("tu desempeño es bajo");
-else:
-     print("Esta nota no existe");
-     
-    </code>
-</pre>
-
+			<p>En el caso de las baterias la cantidad de electrones se pierden cada vez que se emplea y cada vez se desgastan más a excepción que sean recargables las cuales tienen más tiempo de utilidad, por este motivo se especifica el voltaje inicial en la mayoria de las baterias pero es una cantidad que varia y la corriente se mide por Amperios-Hora.
+       </p>
             <br>
+            <h5>Suma de fuentes para obtener voltaje</h5>
+       			<br>
+                        <div id="img2"></div>
+                      
+			<br>
+			<p> En ocasiones el voltaje a emplear no es suficiente y necesitamos añadir más fuentes de voltaje, una forma de solucionarlo es sumar las fuentes siempre y cuando <b>se comparta la misma corriente en las fuentes de voltaje</b>. Este sistema lo podemos observar en las pilas de los controles remotos que empleamos diariamente donde las conectamos en serie para obtener más voltaje.
+             </p>
+			<br>
+			<h5>Divisor de voltaje</h5>
+			<br>
+			<p> Este circuito que se presenta funciona para dividir el voltaje según las necesidades y la corriente es la misma en todo el circuito. Así por ejemplo si tenemos un sensor que funciona unicamente con 5V, y tenemos un cargador de celular de 12V podemos ajustar las resistencias para obtener el voltaje necesario.</p>
+                    <div id="img3">
+                    </div>
+                        
+			<br>
+            
+			<h5> Suma de fuentes para obtener corriente </h5>
 
-	        	
-            <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+			<br>
+
+			<p> Para sumar fuentes de corriente se deben configurar en paralelo siempre y cuando se compartan los mismos voltajes en las diversas fuentes.</p>
+
+
+			<br>
+
+			<div id="img4"></div>
+
+			<br>
+
+			<h5> Divisor de corriente </h5>
+
+			<br>
+
+			<p> Los divisores de corriente permiten dividir la corriente según las necesidades que tengamos en el circuito, así por ejemplo si tenemos una fuente de 5v pero con más corriente de la necesaria con esta configuración podemos dividir la corriente por las resistencias para tener la corriente y el voltaje adecuados.</p>
+
+
+			<br>
+
+			<div id="img5"></div>
+
+			<br>      
+				
+
+                        <br>
+                        
+                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+           
 
 			<br>
 
