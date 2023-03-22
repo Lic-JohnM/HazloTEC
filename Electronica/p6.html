@@ -37,97 +37,59 @@
                 <div id="con">
 
 		
-		<h2> LISTAS</h2>
-
+		<h2> Semiconductores </h2>
 				<br>
-
-			<p> Las listas en Python son una forma de almacenar diferentes datos en una misma variable,a continuación tenemos varios ejemplos: </p>
+			<p>Los electrones fluyen con más facilidad en ciertos materiales que en otros, por ejemplo en materiales como la madera el flujo es nulo por la composición física y química de esta. Sin embargo en otros materiales se presta más el flujo como lo son los metales y el agua. El <b>silicio</b> es el segundo más material abundante en el planeta tierra y es la base de los materiales semiconductores, de este material estan hechas las resistencias electronicas permitiendo según las franjas el respectivo paso de electrones. A continuación podemos observar algunos elementos semiconductores empleados en la electrónica.</p>
 			<br>
-			<p>Numeros_pares=[0,2,4,6,8,10]</p>
+			<h3>Diodos</h3>
 			<br>
-			<p>Numeros_primos=[1,2,3,5,7,11]</p>
+			<div id="img">
+			    <a>Imagen de</a> <a href="https://pixabay.com/es/users/halejandropmartz-4267922/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2713093">Alejandro</a> <a>en</a> <a href="https://pixabay.com/es//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2713093">Pixabay</a>
+			</div>
 			<br>
-			<p>Colores=["rojo","azul","gris","blanco","negro",gris]</p>
+			<p>Los diodos son elementos que permiten el paso de corriente solamente cuando esta conectado de una manera, en el proceso de transformación de energía alterna pudimos observar la aplicación como elemento de rectificación. En la imágen anterior podemos observar un LED(Diodo Emisor de Luz), el cuál es empleado en la transformación de la iluminación actual.
+       </p>
+       <br>
+		    <h5>Circuito de iluminación</h5>
 			<br>
-			<p>Ingredientes_ensalada=["lechuga","tomate","pepino","aceite","zanahoria"]</p>
+			<p>A continuación se presentan dos circuitos de iluminación básica, en donde se tiene el control de todos los LED por aparte o independientes. Según la cantidad de LED se debe tener en cuenta que consumen 30mA y no pueden exceder los 200mA para que se quemen. El primer circuito empleando la configuración en serie es el siguiente:</p>
+                        <div id="img2"></div>
+                      
 			<br>
-		
-			<p>Para la explicación de lo que podemos hacer con las listas vamos  guardar el nombre de 6 estudiantes de un curso, lo cuál se haria de la siguiente manera:</p>
-
+			<p> El segundo circuito empleando la configuración en paralelo es el siguiente en donde podemos tener un control claro de cada LED que queremos encender.
+             </p>
 			<br>
-			
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
+                    <div id="img3">
+                     
+                    </div>
+                        
 			<br>
-            <p>el codigo que vamos a emplear para explicar las listas es el siguiente:</p>
+	         <p>Donde debemos tener en cuenta que si no se emplean algunos LEDS, la corriente se divide en los que estan encendidos, por eso es importante hacer el calculo correctamente y no dañas los componentes.
+            </p>
+             <br>
+          
+            <br>  
+            
+            
+			<h3> Transistores </h3>
+            
             <br>
-<pre>
-    <code>
-estudiantes=["Juan","Andrea","Luis","Laura","Oscar"];
-print(estudiantes[2]);
-print(len(estudiantes));
-estudiantes.pop(1);
-print(estudiantes);
-estudiantes.insert(4,"Luna");
-print(estudiantes);
-    </code>
-</pre>
-            <br>
-	        <p>Todos los elementos tienen una posición que inicia desde 0, así Juan ocupa la posición 0, Andres ocupa la posición 1, Luis ocupa  la posición 2, Laura la posición 3 y Oscar la posición 4. Para acceder a un elemento solamente basta escribir su posición de la siguiente manera <b>estudiantes[2]</b> que en esta ocasión daria como resultado Luis.</p>
+            <div id="img4"></div>
+			<br>
+
+			<p> En la imagen anterior podemos observar un transistor el cuál es un elemento con 3 pines a conector(emisor,base,colector). Este componente con voltaje directo tiene un funcionamiento como interruptor a continuación se presenta el circuito con su respectiva formula:</p>
+
 
 			<br>
 
-			<p> Si queremos saber la longitud solo basta con escribir el siguiente codigo: <b>len(estudiantes)</b> que en este caso daria como resultado 4.</p>
+			<div id="img5"></div>
 
 			<br>
 
-			<p>Para añadir o eliminar basta con conocer la posición donde se encuentra el elemento que vamos a quitar o a la posición del elemento que vamos a añadir, por ejemplo de la lista vamos a eliminar a la estudiante Andrea que estaria en la posición 1 y empleamos el comando pop : <b>estudiantes.pop(1)</b> así la lista nos quedaria:</p>
+			<p> Así con esta configuración escogiendo correctamente las resistencias y si llega la corriente adecuada a la base, podemos adaptar múltiples sensores.</p>        
+				
 
-            <br>
-
-			<p>estudiantes=["Juan","Luis","Fabian","Elkin"]</p>
-
-			<br>
-
-			<p> Para añadir a un estudiante en la mitad de los estudiantes Laura y Oscar debemos inicialmente tener en cuenta la posición que seria la número 4 y empleamos el comando insert : <b>estudiantes.insert(4,"Luna")</b> </p>
-
-			<br>
-			
-			<br>
-
-			<h3> Ciclos </h3>
-
-			<br>
-
-			<p> Los ciclos en programación se emplean para repetir lineas de codigos hasta que se cumpla cierta condición, por ejemplo si para acceder a cada uno de los elementos de la lista estudiantes del ejemplo anterior podriamos hacerlo estudiantes[0], estudiantes[1]...etc. Sin embargo si la lista tuviese 40 estudiantes implicaria repetir 40 veces las linea de codigo. </p>
-		
-			  <br>
-			  
-			  <p>Existen varias estructuras de programación para hacer ciclos pero inicialmente emplearemos la estructura <b>for</b>, en donde para recorrer todo el vector y mostrar los elementos solamente basta con el siguiente codigo:</p>
-
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-  print(x)
-     
-    </code>
-</pre>
-
-			  <p>Una utilidad de recorrer una lista es encontrar la posición de un elemento usando el comando <b>index</b>, a continuación se presenta el ejemplo empleando para encontrar la posición del estudiante fabian</p>	        	
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-    posicion = estudiantes.index("Fabian");
-print(posicion);
-     
-    </code>
-</pre>
+                        <br>
 
                <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
