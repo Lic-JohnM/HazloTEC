@@ -15,7 +15,7 @@
                     width: 100vw;
                     height: 10vh;
                     display:grid;
-                    position: fixed; 
+                    /*position: fixed;*/ 
                      /* grid-template-columns: 20% 30% 10% 30% 10%;*/ 
                     grid-template-columns:50% 50%; 
                     align-items: center;
