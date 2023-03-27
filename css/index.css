@@ -563,7 +563,7 @@
     }
 
     #SLC>#a10>#a102{
-      background-image: url(/Imagenes/Materialesyestructura/materialesyestructuras.png);
+ background-image: url(https://lic-johnm.github.io/HazloTEC/MYE/MYE.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -579,15 +579,7 @@
     color:white;
     }
 
-    #SLC>#a10>#a102:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
+
     #SLC>#a10:hover{
     color: rgba(47,65,89,0.9) ;
     background-color:#f6dfca;
