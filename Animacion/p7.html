@@ -35,98 +35,18 @@
 
                 <div id="con">
 
-			<h2> Ciclos</h2>
+			<h2> Eventos en Scratch</h2>
 
 				<br>
+			<h3>Mensajes en Scratch</h3>
+			<p>Inicialmente debemos comprender como funciona un evento y es que se envia una accion y otro objeto lo recibe</p>
+			<h3>Sensores en Scratch</h3>
+			<p>Lo que se puede enviar es un mensaje de objeto, puntero, borde o color</p>		
 
-			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
-
-			<br>
-
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
+						<h3>Dialogos en Scratch</h3>
+			<p>Debe existir un emispor y receptor parea que funcine</p>
 			
-			</div>  
-
-			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
-
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
-
-			<h3> Contadores </h3>
-
-			<br>
-
-
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
-
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
-
-                        <br>
-
-                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+                       <p>Las actividades propuestas para reforzar el tema, son las siguientes(hacer el cuento de la liebre ylos conejos con eventos.):</p>
 
 
 
