@@ -446,7 +446,7 @@
     }
 
     #SLC>#a8>#a82{
-      background-image: url(/Imagenes/animaciondigital/ANIMACIONDIGITAL.png);
+      background-image: url(https://lic-johnm.github.io/HazloTEC/mecanica/Ilustracion_animacion.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -469,16 +469,6 @@
     border-color:#f6dfca;
     }
 
-
-    #SLC>#a8>#a82:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
     #SLC>#a9{
      border-color: rgba(47,65,89,0.9) ;
      background-color: rgba(47,65,89,0.9) ;
@@ -504,7 +494,7 @@
     }
 
     #SLC>#a9>#a92{
-      background-image: url(/Imagenes/creaciondevideojuegos/creaciondevideojuegos.png);
+      background-image: url(https://lic-johnm.github.io/HazloTEC/mecanica/Ilustracion_video_juegos.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -527,15 +517,7 @@
     border-color:#f6dfca;
     }
 
-    #SLC>#a9>#a92:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
+
  #SLC>#a10{
      border-color: rgba(47,65,89,0.9) ;
      background-color: rgba(47,65,89,0.9) ;
@@ -614,7 +596,7 @@
     }
 
     #SLC>#a11>#a112{
-      background-image: url(/Imagenes/diseñoweb/diseñoweb1.png);
+      background-image: url(https://lic-johnm.github.io/HazloTEC/mecanica/Ilustracion_WEB.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -636,16 +618,7 @@
     border-style: solid;
     border-color:#f6dfca;
     }
-    
-        #SLC>#a11>#a112:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
+
 
  #SLC>#a12{
      border-color: rgba(47,65,89,0.9) ;
@@ -674,7 +647,7 @@
     }
 
     #SLC>#a12>#a122{
-         background-image: url(/Imagenes/Hidraulicaneumatica/NH1.png);
+      background-image: url(https://lic-johnm.github.io/HazloTEC/mecanica/Ilustracion_HYM.png);
       background-color:white;
       background-size: 80% 90%;
       background-position: center center;
@@ -697,15 +670,7 @@
     border-color:#f6dfca;
     }
 
-    #SLC>#a12>#a122:hover{
-      background-image: url(/Imagenes/proximamente.png);
-      background-color:white;
-      background-size: 60% 80%;
-      background-position: center center;
-      background-repeat:no-repeat;
-      text-decoration: none;
-      color:white;
-    }
+
     
     
            #LC>H1{
