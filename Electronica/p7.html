@@ -6,7 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,112 +36,78 @@
 
                 <div id="con">
 
-			<h2> Ciclos</h2>
-
+		
+		<h2> Semiconductores </h2>
 				<br>
+			<p>Los electrones fluyen con más facilidad en ciertos materiales que en otros, por ejemplo en materiales como la madera el flujo es nulo por la composición física y química de esta. Sin embargo en otros materiales se presta más el flujo como lo son los metales y el agua. El <b>silicio</b> es el segundo más material abundante en el planeta tierra y es la base de los materiales semiconductores, de este material estan hechas las resistencias electronicas permitiendo según las franjas el respectivo paso de electrones. A continuación podemos observar algunos elementos semiconductores empleados en la electrónica.</p>
+			<br>
+			<h3>Diodos</h3>
+			<br>
+			<div id="img">
+			    <a>Imagen de</a> <a href="https://pixabay.com/es/users/halejandropmartz-4267922/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2713093">Alejandro</a> <a>en</a> <a href="https://pixabay.com/es//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2713093">Pixabay</a>
+			</div>
+			<br>
+			<p>Los diodos son elementos que permiten el paso de corriente solamente cuando esta conectado de una manera, en el proceso de transformación de energía alterna pudimos observar la aplicación como elemento de rectificación. En la imágen anterior podemos observar un LED(Diodo Emisor de Luz), el cuál es empleado en la transformación de la iluminación actual.
+       </p>
+       <br>
+		    <h5>Circuito de iluminación</h5>
+			<br>
+			<p>A continuación se presentan dos circuitos de iluminación básica, en donde se tiene el control de todos los LED por aparte o independientes. Según la cantidad de LED se debe tener en cuenta que consumen 30mA y no pueden exceder los 200mA para que se quemen. El primer circuito empleando la configuración en serie es el siguiente:</p>
+                        <div id="img2"></div>
+                      
+			<br>
+			<p> El segundo circuito empleando la configuración en paralelo es el siguiente en donde podemos tener un control claro de cada LED que queremos encender.
+             </p>
+			<br>
+                    <div id="img3">
+                     
+                    </div>
+                        
+			<br>
+	         <p>Donde debemos tener en cuenta que si no se emplean algunos LEDS, la corriente se divide en los que estan encendidos, por eso es importante hacer el calculo correctamente y no dañas los componentes.
+            </p>
+             <br>
+          
+            <br>  
+            
+            
+			<h3> Transistores </h3>
+            
+            <br>
+            <div id="img4"></div>
+			<br>
 
-			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
+			<p> En la imagen anterior podemos observar un transistor el cuál es un elemento con 3 pines a conector(emisor,base,colector). Este componente con voltaje directo tiene un funcionamiento como interruptor a continuación se presenta el circuito con su respectiva formula:</p>
+
 
 			<br>
 
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-
-			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
-
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
-
-			<h3> Contadores </h3>
+			<div id="img5"></div>
 
 			<br>
 
-
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
-
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
+			<p> Así con esta configuración escogiendo correctamente las resistencias y si llega la corriente adecuada a la base, podemos adaptar múltiples sensores.</p>        
+				
 
                         <br>
 
-                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+               <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
+			<br>
 
+                        
 
-			<a id="dcr" href="https://es.scribd.com/document/631668204/P7-1"  target="_blank"> Descarga ejercicio ciclos </a>
+			<br>
 
+           		 <a id="dcr" href="https://es.scribd.com/document/631658395/P6" target="_blank"> Descarga ejercicios de listas </a>
 
 
                         <br>
-
 
                          <div id="ctrl">
 					
-				 <a class="n1" href="p6.html"> anterior </a>
-				<a class="n1" href="p8.html"> siguiente </a>
+				 <a class="n1" href="p5.html"> anterior </a>
+				<a class="n1" href="p7.html"> siguiente </a>
                              
 
                         </div>
