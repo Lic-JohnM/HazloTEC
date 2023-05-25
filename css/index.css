@@ -43,7 +43,7 @@
 
     header{
         width: 100vw;
-        height: 70vh;
+        height: 68vh;
         background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/Header.png);
         background-size: 100% 100%;
         background-position: 0%;
@@ -54,9 +54,9 @@
  
     #LC{
       width: 100vw;
-      height: 5vh;
+      height: 4vh;
       background-color: #0c3141ff;
-      padding-bottom:2%;
+      padding-bottom:1%;
       font-size: large;
       display: flex;
       align-content: center;
