@@ -54,10 +54,10 @@
  
     #LC{
       width: 100vw;
-      height: 4vh;
+      height: 5vh;
       background-color: #0c3141ff;
       padding-bottom:1%;
-      font-size: large;
+      font-size: medium;
       display: flex;
       align-content: center;
       justify-content: center;
