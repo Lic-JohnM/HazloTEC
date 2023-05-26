@@ -69,11 +69,21 @@ header>#crea>div{
       justify-content:center;
      text-decoration: none;
            color:white;
-   
+        font-size: medium;
+  
 }
 
 
- 
+header>#crea>div>#img{
+   background-image: url(https://lic-johnm.github.io/HazloTEC/AYP/Ilustracion_ayp.png);
+      background-color:white;
+      background-size: 70% 80%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+}
+
     #LC{
       width: 100vw;
       height: 5vh;
