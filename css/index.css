@@ -57,8 +57,21 @@ header>#crea{
      margin-top:10%;
      margin-bottom:10%;
      margin-right:22%;
-     
+     display:grid;
+      grid-template-rows: 30% 50% 20%;   
 }
+
+
+header>#crea>div{
+     text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+   
+}
+
 
  
     #LC{
