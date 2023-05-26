@@ -69,12 +69,12 @@ header>#crea>div{
       justify-content:center;
      text-decoration: none;
            color:white;
-        font-size: medium;
+        font-size: large;
   
 }
 
 
-header>#crea>div>#img{
+header>#crea>#img{
    background-image: url(https://lic-johnm.github.io/HazloTEC/AYP/Ilustracion_ayp.png);
       background-color:white;
       background-size: 70% 80%;
