@@ -43,7 +43,7 @@
 
     header{
         width: 100vw;
-        height: 68vh;
+        height: 80vh;
         background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/Header.png);
         background-size: 100% 100%;
         background-position: 0%;
@@ -56,8 +56,7 @@ header>#crea{
      background-color:#0c3141ff;
      margin-top:10%;
      margin-bottom:10%;
-     margin-left:5%;
-     margin-right:5%;
+     margin-right:15%;
      
 }
 
