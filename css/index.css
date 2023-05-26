@@ -48,7 +48,7 @@
         background-size: 100% 100%;
         background-position: 0%;
         display:grid;
-        grid-template-columns: 40% 60%;
+        grid-template-columns: 45% 55%;
 
     }
 
@@ -56,7 +56,7 @@ header>#crea{
      background-color:#0c3141ff;
      margin-top:10%;
      margin-bottom:10%;
-     margin-right:15%;
+     margin-right:18%;
      
 }
 
