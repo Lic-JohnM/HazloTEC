@@ -58,7 +58,8 @@ header>#crea{
      margin-bottom:10%;
      margin-right:22%;
      display:grid;
-      grid-template-rows: 30% 50% 20%;   
+      grid-template-rows: 30% 50% 20%;  
+      transition:all 300ms;
 }
 
     header>#crea:hover{
@@ -66,6 +67,7 @@ header>#crea{
     background-color:#f6dfca;
     border-style: solid;
     border-color:#f6dfca;
+    transform:scale(1.2);
     }
 
 header>#crea>a{
@@ -112,7 +114,13 @@ header>#crea>#img{
       grid-template-rows: 2% 24.5% 24.5% 24.5% 24.5% 2%;
 
     }
-
+    .info{
+      transition: all 400ms;
+      }
+    .info:hover{
+      box-shadow:10px 10px 0px 0px #0c3141ff, 20px 20px rgb(33, 94, 121), 30px 30px 14px rgb(55, 156, 199);
+    transform: translate(-5px ,-5px);
+    }
     #SLC>#A1{
      border-color: rgba(47,65,89,0.9) ;
      background-color: rgba(47,65,89,0.9) ;
