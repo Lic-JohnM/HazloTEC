@@ -10,7 +10,7 @@ HazloTEC es una página WEB educativa personal dedicada a la asignatura de ense�
 
 **Estudiantes**: 👨‍🎓 👩‍🎓 : Si quiere aprender de forma autonoma muchos ejercicios traen una base para trabajar en ellos y son ejercicios comprobados con diferentes estudiantes en apoyar el proceso educativo.
 
-A continuación se dividira la explicación de la página en 3 partes: 
+A continuación se dividira la explicación de la página en 2 partes: 
 
 1️⃣ Sobre el uso de la plantilla para generar una página con diversos elementos (titulos, tablas, imagenes..., etc). 
 
