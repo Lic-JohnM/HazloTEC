@@ -1,19 +1,12 @@
 ![Membrete](https://github.com/Lic-JohnM/HazloTEC/assets/58535936/c54f3336-540a-4ee7-9f46-2fd66f49af80)
 
-Página WEB educativa de tecnología e informática
+# Acerca de HazloTEC
 
-## :hammer:Funcionalidades del proyecto
+HazloTEC es una página WEB educativa personal dedicada a la asignatura de enseñanza y aprendizaje de tecnología e informática. Surge de la necesidad de registrar experiencias pedagógicas de clase tanto en su explicación, actividad y evaluación. Es una proyecto diseñado para:
 
-- `Funcionalidad 1`: descripción de la funcionalidad 1- `Funcionalidad 2`: descripción de la funcionalidad 2- `Funcionalidad 2a`: descripción de la funcionalidade 2a relacionada con la funcionalidad 2- `Funcionalidad 3`: descripción de la funcionalidad 3
+-Docentes:
 
 
-\## 📁 Acceso al proyecto
-
-**Indica cómo se puede descargar o acceder al código fuente del proyecto, ya sea proyecto inicial o final**
-
-\## 🛠️ Abre y ejecuta el proyecto
-
-**Muestra las instrucciones necesarias para abrir y ejecutar el proyecto**
 
 
 
