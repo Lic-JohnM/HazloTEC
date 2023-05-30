@@ -10,17 +10,6 @@ HazloTEC es una página WEB educativa dedicada a la enseñanza y aprendizaje de 
 
 **Estudiantes**: 👨‍🎓 👩‍🎓 : Si quiere aprender de forma autonoma muchos ejercicios traen una base para trabajar en ellos y son ejercicios comprobados con diferentes estudiantes que aprendieron con ellos.
 
-A continuación se dividira la explicación de la página en 2 partes: 
-
-1️⃣ Sobre el uso de la plantilla para generar una página con diversos elementos (titulos, tablas, imagenes..., etc). 
-
-2️⃣ La base pedagógica y didactica de todo el proyecto tanto para docentes como estudiantes.
-
-## Plantilla HazloTEC
-
-La plantilla esta diseñada para trabajar 12 diferentes temas de manera modular, donde debemos conocer lo básico de HTML. Una vez descargue la plantilla a su computador o copie el repositorio en su GitHub va a tener los siguientes archivos con la respectiva disposición del mapa el sitio:
-
-## Nuestra base pedagógica
 
 
 
