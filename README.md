@@ -2,7 +2,7 @@
 
 # Acerca de HazloTEC
 
-HazloTEC es una página WEB educativa dedicada a la asignatura de enseñanza y aprendizaje de tecnología e informática. Surge de la necesidad de registrar experiencias pedagógicas de clase tanto en su explicación, actividad y evaluación. Es una proyecto diseñado para:
+HazloTEC es una página WEB educativa dedicada a la enseñanza y aprendizaje de la asignatura de tecnología e informática. Surge de la necesidad de registrar experiencias pedagógicas de clase tanto en su explicación, actividad y evaluación en un entorno virtual fácil de acceder y comprender para los estudiantes así como para registrar información por parte de los docentes. Es una proyecto diseñado para:
 
 **Docentes - programadores** :teacher: 🖱️ : Si tiene múltiples experiencias tanto de temas como proyectos y quieres subirlos a linea con total control de diseño WEB de una forma fácil y prediseñada es una excelente plantilla.
 
