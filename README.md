@@ -8,7 +8,7 @@ HazloTEC es una página WEB educativa dedicada a la enseñanza y aprendizaje de 
 
 **Docentes tecnología e informática** 👨‍🏫✍️🦾:Si los contenidos le llaman la atención y cree poder trabajar con ellos se puede emplear de forma libre incluso es 100% editable para adaptarlo a las necesidades educativas, ahora si quiere contribuir a este proyecto puede generar cambios usando este controlador de versiones lo cuál permite un dialogo pedagógico para mejorar los contenidos expuestos al publico. 
 
-**Estudiantes**: 👨‍🎓 👩‍🎓 : Si quiere aprender de forma autonoma muchos ejercicios traen una base para trabajar en ellos y son ejercicios comprobados con diferentes estudiantes en apoyar el proceso educativo.
+**Estudiantes**: 👨‍🎓 👩‍🎓 : Si quiere aprender de forma autonoma muchos ejercicios traen una base para trabajar en ellos y son ejercicios comprobados con diferentes estudiantes que aprendieron con ellos.
 
 A continuación se dividira la explicación de la página en 2 partes: 
 
