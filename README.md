@@ -18,6 +18,8 @@ A continuación se dividira la explicación de la página en 2 partes:
 
 ## Plantilla HazloTEC
 
+La plantilla esta diseñada para trabajar 12 diferentes temas de manera modular, donde debemos conocer lo básico de HTML. Una vez descargue la plantilla a su computador o copie el repositorio en su GitHub va a tener los siguientes archivos con la respectiva disposición del mapa el sitio:
+
 ## Nuestra base pedagógica
 
 
