@@ -137,7 +137,7 @@
           
       
       header{
-            height: 15vh;
+            height: 50vh;
              background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/Header_XS.png);
               grid-template-rows: 50% 50%;
         }
