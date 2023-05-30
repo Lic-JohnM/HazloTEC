@@ -16,6 +16,10 @@ A continuación se dividira la explicación de la página en 2 partes:
 
 2️⃣ La base pedagógica y didactica de todo el proyecto tanto para docentes como estudiantes.
 
+## Plantilla HazloTEC
+
+## Nuestra base pedagógica
+
 
 
 
