@@ -140,7 +140,7 @@
             height: 45vh;
              background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/Header.png);
               grid-template-rows: 50% 50%;
-            
+            font-size:25px;
         }
            header>#bg{
             display:none;
@@ -148,11 +148,11 @@
            
              header>#crea{
            
-                height: 40vh;
+                height: 35vh;
               width: 80vw;
                 margin-top:20%;
                 margin-left:20%;
-                font-size:19px;
+                
            }
            
            
