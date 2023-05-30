@@ -138,7 +138,7 @@
       
       header{
             height: 45vh;
-             background-image: url(https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/Header.png);
+             background-color:rgb(65,152,171);
               grid-template-rows: 50% 50%;
             font-size:25px;
         }
