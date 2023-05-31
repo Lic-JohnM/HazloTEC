@@ -140,7 +140,7 @@
             height: 45vh;
              background-color:rgb(65,152,171);
               grid-template-rows: 50% 50%;
-            font-size:25px;
+           
         }
            header>#bg{
             display:none;
@@ -152,7 +152,7 @@
               width: 80vw;
                 margin-top:20%;
                 margin-left:20%;
-                
+                 font-size:35px;
            }
            
              header>#crea:hover{
@@ -160,7 +160,7 @@
     background-color:#f6dfca;
     border-style: solid;
     border-color:#f6dfca;
-    transform:scale(0.8);
+    transform:scale(1.1);
     }
            
            
