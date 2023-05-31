@@ -139,7 +139,9 @@
       header{
             height: 45vh;
              background-color:rgb(65,152,171);
+             background-image:none;
               grid-template-rows: 50% 50%;
+             font-size:35px;
            
         }
            header>#bg{
