@@ -1,0 +1,120 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<title>JEMA</title>
+	
+<meta name="description" content="JEMA-Página con contenido libre, sobre educación en tecnología, con cursos de programación, electrónica, energías, video juegos, diseño WEB, mecánica, materiales, estructuras, mecánica e hidraulica.">
+<link rel="icon" type="image/x-icon" href="/Imagenes/FAVICON.ico">
+<style>
+
+@font-face {
+  font-family: 'Comfortaa-VariableFont_wght';
+  src: url('fuente/Comfortaa/Comfortaa-VariableFont_wght.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+    body { background-color: white;
+           font-family: 'Comfortaa-VariableFont_wght';
+            margin:0;
+           padding: 0; }
+
+    header{
+        width: 100vw;
+        height: 100vh;
+        display:grid;
+        grid-template-columns:20% 80%;
+       
+    }
+    
+    header>#In{
+        grid-column:1;
+         background-color:rgb(247,183,164);
+         color:rgb(12,49,65);
+         display:grid;
+	justify-content:center;
+	align-items:center;
+	grid-template-rows: 13% 20% 13% 12% 12% 12% 18%;
+       
+
+    }
+
+    
+
+
+  
+    
+    @media only screen and (max-width: 1500px) {
+          #menu {
+            font-size:20px;
+          }
+      
+        header{
+            height: 100vh;
+            font-size:12px;
+        }
+  
+  
+     
+        
+        
+    
+    }
+
+     
+     
+        @media only screen and (max-width: 1000px) {
+       
+          
+      
+      header{
+            height: 15vh;
+            background-image:url(/Imagenes/header_xs.png);
+        }
+        header>#SH1{
+            grid-template-columns: auto;
+            grid-template-rows:10% 80%;
+        }
+        header>#SH1>#Bht>h3{
+            display:none;
+        }
+        header>#SH1>#Bht{
+            grid-template-rows:auto;
+            grid-template-columns:30% 70%;
+            font-size:25px;
+        }
+        header>#SH1>#Bht2{
+            margin-top:4%;
+            margin-left:4%;
+            margin-right:4%;
+            font-size:19px;
+        }
+     
+     }
+</style>
+</head>
+
+<body>
+
+	
+
+<header>
+
+    <div id="In">
+          
+        <h3>Estudiantes inscritos</h3>
+        <h1 style="font-size:50px;">118</h1>
+        <h2>Filtrar por:</h2>
+        <div>Colegio</div>
+        <div>Curso</div>
+	<div>Tematica</div>
+	<div><a style="background-color:rgb(12,49,65);color:white; padding:15px;">Administrar evaluaciones</a></div>
+    </div>
+
+</header>
+
+</body>
+
+</html>
