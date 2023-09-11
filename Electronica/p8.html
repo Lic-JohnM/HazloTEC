@@ -34,80 +34,86 @@
         <div id="info">
 
                 <div id="con">
-	  
+
+			<br>
+			
 			<br>
             
 			<h2>Fotoresistencia LDR</h2>
 
 			<br>
-			<p>La fotoresistencia es un sensor que funciona con la cantidad de luz que recibe, en este sentido entre más luz menos resistencia electrónica tiene el sensor, lo podemos ver en la siguiente imagen:</p>
+			<p>La fotoresistencia es un sensor que funciona con la cantidad de luz que recibe(la cual se mide en Luxes),lo podemos ver en la siguiente imagen:</p>
 			<br>
 			<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=46584177389547263" height="775" width="450" frameborder="0" scrolling="no" ></iframe>			</div>
 			<br>
-			<p>A continuación podemos observar un circuito, donde podemos observar la variación de la fotoresistencia, empleando una fuente de voltaje y una multimetro.</p>
-			<br>
-			<iframe width="725" height="453" src="https://www.tinkercad.com/embed/jtAoQBWTqgD?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-			<br>
-				<h2>Sensor de distancia de ultrasonido</h2>
-
-			<br>
-			<p>El sensor de ultrasonido envia una onda a la distancia retornando la distancia precisa a la que se encuentra el objetivo, lo podemos ver en la siguiente imagen: </p>
-
-			<br>
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1123085225805226703" height="400" width="450" frameborder="0" scrolling="no" ></iframe>	
-			</div>
+			<p>En donde según la variación de luz genera un cambio en la resistencia, donde empleando un circuito <b>divisor de voltaje</b> puede generar una variación de voltaje para un circuito electríco.</p>
 			
 			<br>
 			<h3> Potenciometro </h3>
 
 			<br>
-			<p>El potenciometro es un sensor donde según el giro de una perilla se determina un voltaje según el angulo y la cantidad de vueltas. Podemos observalos a continuación</p>
-
-
-            <br>
-            
-				<div style="text-align:center;">
+			<p>El potenciometro se puede emplear como un sensor donde según el giro de una perilla se requiera tomar una señal como un joystick de un control o un equipo de sonido en sus perillas de sonida. Funciona desde el principio de la variación de la resistencia electríca según el giro como la fotocelda generando un circuito <b>divisor de voltaje</b>entre sus terminales si así se desea. Existen diferentes tipos donde varian su resistencia de forma lineal o logaritmica así como por la cantidad de vueltas que se le de al potenciometro, a continuación podemos observar uno:</p>
+                        <br>
+            				<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=692639617695812420" height="441" width="345" frameborder="0" scrolling="no" ></iframe>
 			</div>
 					<br>
          
-
 			<h3> Sensor infrarrojo </h3>
 
 			<br>
 
-			<p> El sensor infrarrojo consta de un LED emisor de un rayo infrarojo y otro LED receptor así cuando el LED receptor no recibe alguna señal por algún motivo se activa un circuito de sensor como el que se puede apreciar a continuación:</p>
+			<p> El sensor infrarrojo consta de dos partes un LED emisor  que genera una señal del espectro electromagnetico en la frecuencia infrarroja y un fototransistor o foto diodo el cual recibe esta radiación transformandola en una mayor corriente que la que circula por el así como un mayor voltaje si el circuito esta conectado a una resistencia, a continuación podemos observar el sensor:</p>
 			<br>
 					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=627759635573531649" height="737" width="450" frameborder="0" scrolling="no" ></iframe>	
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1145532855363671120" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
 					</div>
 
 			<br>
 
+				<h2>Sensor de distancia de ultrasonido</h2>
+
+			<br>
+			<p>El sensor de ultrasonido envia una onda a la distancia retornando la distancia precisa a la que se encuentra el objetivo apoyandose de una frecuencia llamada ultrasonido, dependiendo el tiempo que la señal se demora en ir y volver lo podemos dividir en la velocidad de la luz y así obtener la distancia podemos ver en la siguiente imagen: </p>
+
+			<br>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=51087777009967605" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>		
+			<p>Este tipo de sensores como los proximos requieren más elementos para poder generar y recibir la señal, en el caso del sensor ultrasonido se requiere algún elemento que envie los pulsos que se traducen a las ondas enviadas, y un procesamiento posterior para hacer la respectiva operación que en muchos casos lo hace un microcontrolador como arduino (el cual se encuentra en la última parte del módulo).</p>
+
 			   <br>
-             <h2>Sensor de temperatura</h2>
-            <br>
-			<p>El primer sensor empleado en la electrónica es el lm35 el cual podemosver en la siguiente imagen donde cada grado equivale a 1mv</p>
+			<h3>Pulsos</h3>
+			<br>
+			<p>Un pulso es una onda que varia en dos estados en el tiempo, donde varia su amplitud y periodo(caracteristicas que comparten con las ondas ultrasonido e infrarrojo). Se suele medir con un osciloscopio como el que vemos en la siguiente imagen:</p>
+            		<br>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=295689531761973194" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>		
+			<br>
+			<h2>Sensor de temperatura</h2>
+                        <br>
+			<p>Un sensor para medir temperatura es el lm35 el cual podemos ver en la siguiente imagen donde cada grado equivale a 1mv:</p>
 			<br>
 			<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=168322104805399058" height="339" width="345" frameborder="0" scrolling="no" ></iframe>	
 			</div>
+			<p>Sin embargo la variación es muy pequeña, requiriendo un circuito que amplifique la variación. Una empleado por excelencia es el circuito integrado llamado <b>amplificador operacional</b> (el cual se encuentra en la última parte del módulo) que permite multiplicar el valor de la señal por alguno deseado.</p>
 			<br>
 			<h3>Joystick</h3>
 			<br>
-			<p>Para finalizar entre otros muchos sensores que no estan descritos aca, encontramos el Joystick el cual según la posición retorna la posición del eje x y del eje y del mismo.</p>			
+			<p>Para finalizar entre otros muchos sensores que faltan por describir como el sensor de humedad,PH,teclados(entre otros que toman información del entorno) , encontramos el Joystick el cual según la posición retorna la posición del eje x y del eje y del mismo.  A continuación podemos apreciar uno de ellos:</p>			
 			<br>
 
             		<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=608548968382917003" height="366" width="345" frameborder="0" scrolling="no" ></iframe>			</div>  
 
-			
-		
-
                         <br>
-		<h3> Transistores </h3>
+		  
+			<h3> Transistores </h3>
+
+			
             
             <br>
     			<div style="text-align:center;">
@@ -115,7 +121,7 @@
 			</div>
 			<br>
 
-			<p>En la imagen anterior podemos observar un transistor el cuál es un elemento con 3 pines(emisor,base,colector). Este componente con voltaje directo tiene un funcionamiento como interruptor,donde en el posterior circuito  permite por medio de un interruptor podemos controlar la iluminación de un LED. Así con esta configuración escogiendo correctamente las resistencias y si llega la corriente adecuada a la base, podemos adaptar múltiples sensores. </p>
+			<p>En la imagen anterior podemos observar un transistor el cuál es un elemento con 3 pines(emisor,base,colector). Este componente con voltaje directo tiene un funcionamiento como . </p>
 
                         <br>
 
@@ -124,9 +130,7 @@
 			</div>
 			<br>
 			<p>A continuación puedes interactuar con el respectivo circuito:</p>
-			<div style="text-align:center;">
-			<iframe width="560" height="350" src="https://www.tinkercad.com/embed/3c6zJgdOVv4" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-			</div>
+			
 			
 
                          <div id="ctrl">
