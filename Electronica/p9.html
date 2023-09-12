@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","420vh");
+	  $("#info").css("height","750vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -40,17 +40,38 @@
 
             <br>
             
-            <p>Los actuadores se encargan de convertir la energía electríca en energía fisica, luminica o quimica. Al contrario de los sensores que obtiene información del mundo real un actuador se encarga de trasnformar aspectos reales. A continuación se presentan algunos:</p>
+            <p>Los actuadores se encargan de convertir la energía electríca en energía fisica, luminica o quimica así permiten mover motores, mostrar letreros con LEDS o generar ondas, al contrario de los sensores que obtiene información del mundo real ingresandolos a un dispositivo electrónico. A continuación se presentan algunos:</p>
             <br>
+	    <h3>Comunicación serial</h3>
+	    <br>
+	    <p>Si bien la comunicación serial no hace parte de los sensores o actuadores es un tipo de comunicación indispensable para transmitir información entre los dispositivos electrónicos. Funciona con la generación de conjuntos de bits marcados por la modificación de pulsos generando codigos de 8 bits, lo cual da la posibilidad de enviar o recibir los siguientes caracteres los cuales se denominan codigo ASCII:</p>
+			<br>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=10907224080890313" height="840" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+			<br>
+			<p>Este tipo de caracteres y comunicación son generados desde los dispositivos electrónicos con la información de las señales electrícas, entre los más populares protocolos de comunicación encontramos el USB o el protocolo I2C con el cual funcionan algunos actuadores donde la finalidad es mostrar algún tipo de mensaje.</p>
+			<br>
 			<h3> Display 7 segmentos </h3>
 			<br>
 			
 			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=678988081340698704" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
+				
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=835206693412124711" height="345" width="345" frameborder="0" scrolling="no" ></iframe>			
 			</div>  
 
-			<p>El display 7 segmentos es una configuración de LED que según como se configura permite mostrar los digitos del 0 al 9.</p>
+			<p>Despues del led RGB que también actua como actuador el display 7 segmentos es una configuración de LED que según como se configura permite mostrar los digitos del 0 al 9.</p>
 			<br>
+			<h3>Display LCD</h3>
+			<br>
+
+			<div style="text-align:center;">
+				
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=455778424802693947" height="360" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>
+			<br>
+			<p>Es un actuador que también permite mostrar información, para su funcionamiento se emplean 3 entradas una que es la linea de negativo o tierra, y las dos entradas del protocolo i2c una lleva un pulso constante que soporta las funcionalidades de la otra linea que lleva la información generando así mejores caracteristicas que unicamente el puerto serial.</p>
+			
 
 			<h3>Motores </h3>
 
