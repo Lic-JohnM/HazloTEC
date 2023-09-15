@@ -5,7 +5,7 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
+	<title>Dibujo técnico</title>
 	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -16,7 +16,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","230vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,11 +35,10 @@
 
                 <div id="con">
 
-			<h2> Ciclos</h2>
+			<h2> Construcciones geometricas</h2>
 
 				<br>
-
-			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
+			<p> A parte del punto, los primeros elementos conceptuales a desarrollar son las lineas respecto a su ubicación y posición tanto individual como de forma grupal tanto en paralelamente como perpendicularmente. </p>
 
 			<br>
 
@@ -48,119 +47,38 @@
 						<div style="text-align:center;">
 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1006624954191138206" height="647" width="450" frameborder="0" scrolling="no" ></iframe>			
 			</div> 
-
+			<br>
+			<p>Un segundo elemento es trazar y reconocer perfectamente los ángulos así como su conversión de unidades, a continuación se presentan los conceptos técnicos:</p>
+			<br>
 				<div style="text-align:center;">
 <iframe src="https://assets.pinterest.com/ext/embed.html?id=13440498878500628" height="749" width="450" frameborder="0" scrolling="no" ></iframe>			
 			</div>  
-
-
+			<br>
+			<p>Los elementos formados por rectas son poligonos tantos regulares e irregulares. En la siguiente imagen se presentan algunos poligonos donde es fundamental reconocer las principales caracterisiticas de los poligonos.</p>
+			<br>
 
 						<div style="text-align:center;">
 
 							<iframe src="https://assets.pinterest.com/ext/embed.html?id=2955555998387291" height="607" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div> 
+			</div>
+			<br>
+			<p>Como ultimo elemento se encuentran las circunferencias, donde aparte de las caracteristicas previamente establecidas se generan los <b>arcos</b> que es el trazo de una parte de las circunferencia, a continuación se pueden ver algunos ejemplos:</p>
+			<br>
 
 						<div style="text-align:center;">
 
 							<iframe src="https://assets.pinterest.com/ext/embed.html?id=141511613282684839" height="833" width="450" frameborder="0" scrolling="no" ></iframe>
 			</div> 
+			<br>
+			<p>A continuación se presentan diferentes construcciones geometricas realizadas con los elementos anteriormente descritos.</p>
+			<br>
 
 						<div style="text-align:center;">
 
 							<iframe src="https://assets.pinterest.com/ext/embed.html?id=140806229837085" height="751" width="450" frameborder="0" scrolling="no" ></iframe>
 			</div> 
 
-						<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div> 
 			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
-
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
-
-			<h3> Contadores </h3>
-
-			<br>
-
-
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
-
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
-
-                        <br>
-
-                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
-
-
-
-			<a id="dcr" href="https://es.scribd.com/document/631668204/P7-1"  target="_blank"> Descarga ejercicio ciclos </a>
-
-
-
-                        <br>
 
 
                          <div id="ctrl">
