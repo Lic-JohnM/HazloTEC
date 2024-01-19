@@ -134,6 +134,12 @@
 
                  }
 
+		#info>#con>#b1>h2{
+		width:100%;
+		background-color:blue;
+		color:black;
+		}
+
                               #info>#con>p{
 
                          
