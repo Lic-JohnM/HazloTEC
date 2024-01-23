@@ -5,17 +5,13 @@ $(document).ready(function(){
 	 $("#info>#con>#b1>#e").click(function(){
   			
              
-
+			console.log($("#info>#con>#b1>#e>#signo").text().trim());
 		 	if($("#info>#con>#b1>#e>#signo").text().trim()=="+"){
 			     $("#info>#con>#b1").css("background-color","red");
 				$("#info>#con>#b1>#e>#signo").text("-");
 			}
 
-		 	 	else{
-			     $("#info>#con>#b1").css("background-color","green");
-				$("#info>#con>#b1>#e>#signo").text("+");
-			}
-
+	
 		 
                                                          
                                 		});
