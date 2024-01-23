@@ -7,10 +7,10 @@ $(document).ready(function(){
              		console.log("hola");
 			console.log($("#info>#con>#b1>#e>#signo").text().trim());
 		 	if($("#info>#con>#b1>#e>#signo").text().trim()=="+"){
-			     $("#info>#con>#b1").css("display","grid");
+			     $(" #info>#con>#b1>#p").css("display","grid");
 				$("#info>#con>#b1>#e>#signo").text("-");
 			}else if ($("#info>#con>#b1>#e>#signo").text().trim()=="-") {
-				$("#info>#con>#b1").css("display","none");
+				$(" #info>#con>#b1>#p").css("display","none");
 				$("#info>#con>#b1>#e>#signo").text("+");
 			} 
 
