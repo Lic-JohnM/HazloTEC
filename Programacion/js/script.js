@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+	//Controlar ocultar y aparecer la división
+
+	 $("#info>#con>#b1>#e").click(function(){
+  			
+                  $("#info>#con>#b1").css("background-color","red");
+               
+                                                         
+                                		});
+
 	
         //Controlar división de la página menu anterior y siguiente
         var divs = document.getElementsByClassName("n1").length;
