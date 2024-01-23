@@ -160,12 +160,17 @@
 			
 				}
 
-  		  #info>#con>#b1>p{           
-			  padding:8px;
-                         text-align:justify;
-                         line-height:160%;
+		  #info>#con>#b1>#p{  
+			    padding:8px;
 			        border-style: solid;
 			  border-color: rgba(246,223,202,255);
+		}
+
+  		  #info>#con>#b1>#p>p{           
+			
+                         text-align:justify;
+                         line-height:160%;
+
                 }
 
 
