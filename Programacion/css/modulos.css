@@ -147,7 +147,7 @@
 		padding-botom: 2px;
 		margin-right: 5px;
 		display:grid;
-		grid-template-columns: 70% 30%;
+		grid-template-columns: 90% 10%;
 		}
 
 		#info>#con>#b1>#e>#signo{
@@ -156,19 +156,25 @@
 		padding-top: 2px;
 		padding-botom: 2px;
 		margin-left: 5px;
+		align-text:center;
+		color:rgb(0,0,55);
 			
 				}
 
   		  #info>#con>#b1>p{                        
                          text-align:justify;
                          line-height:160%;
+			        border-style: solid;
+			  border-color: rgba(246,223,202,255);
                 }
+
+
 
 
                               #info>#con>p{
 
-                           border-style: solid;
- 				 border-color: rgba(246,223,202,255);
+                     
+ 				 
 
                          text-align:justify;
 
