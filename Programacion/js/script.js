@@ -11,7 +11,7 @@ $(document).ready(function(){
 				$("#info>#con>#b1>#e>#signo").text("-");
 			}
 
-		 	 	if($("#info>#con>#b1>#e>#signo").text().trim()=="-"){
+		 	 	else{
 			     $("#info>#con>#b1").css("background-color","green");
 				$("#info>#con>#b1>#e>#signo").text("+");
 			}
