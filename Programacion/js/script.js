@@ -9,11 +9,14 @@ $(document).ready(function(){
 		 	if($("#info>#con>#b1>#e>#signo").text().trim()=="+"){
 			     $("#info>#con>#b1").css("background-color","red");
 				$("#info>#con>#b1>#e>#signo").text("-");
-			}
+			}else if ($("#info>#con>#b1>#e>#signo").text().trim()=="-") {
+				 $("#info>#con>#b1").css("background-color","green");
+				$("#info>#con>#b1>#e>#signo").text("+");
+			} 
 
 	
 		 
-                                                         
+                      
                                 		});
 
 	
