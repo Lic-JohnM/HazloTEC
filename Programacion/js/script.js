@@ -4,8 +4,7 @@ $(document).ready(function(){
 
 	 $("#info>#con>#b1>#e").click(function(){
   			
-             		console.log("hola");
-			console.log($("#info>#con>#b1>#e>#signo").text().trim());
+
 		 	if($("#info>#con>#b1>#e>#signo").text().trim()=="+"){
 			     $(" #info>#con>#b1>#p").css("display","grid");
 				$("#info>#con>#b1>#e>#signo").text("-");
@@ -13,10 +12,19 @@ $(document).ready(function(){
 				$(" #info>#con>#b1>#p").css("display","none");
 				$("#info>#con>#b1>#e>#signo").text("+");
 			} 
+     
+                                		});
 
-	
-		 
-                      
+		 $("#info>#con>#b2>#e").click(function(){
+  	
+		 	if($("#info>#con>#b2>#e>#signo").text().trim()=="+"){
+			     $(" #info>#con>#b2>#p").css("display","grid");
+				$("#info>#con>#b2>#e>#signo").text("-");
+			}else if ($("#info>#con>#b2>#e>#signo").text().trim()=="-") {
+				$(" #info>#con>#b2>#p").css("display","none");
+				$("#info>#con>#b2>#e>#signo").text("+");
+			} 
+     
                                 		});
 
 	
