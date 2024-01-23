@@ -167,7 +167,8 @@
 
                               #info>#con>p{
 
-                         
+                           border-style: solid;
+ 				 border-color: rgba(246,223,202,255);
 
                          text-align:justify;
 
