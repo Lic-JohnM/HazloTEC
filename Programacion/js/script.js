@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	 $("#info>#con>#b1>#e").click(function(){
   			
-             
+             		console.log("hola");
 			console.log($("#info>#con>#b1>#e>#signo").text().trim());
 		 	if($("#info>#con>#b1>#e>#signo").text().trim()=="+"){
 			     $("#info>#con>#b1").css("background-color","red");
