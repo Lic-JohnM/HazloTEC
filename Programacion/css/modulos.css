@@ -144,8 +144,8 @@
 		background-color: rgb(0,0,55); 
 		color:white;
 		padding-top: 2px;
-		padding-botom: 2px;
-		margin-right: 5px;
+	
+		margin-left: 5px;
 		display:grid;
 		grid-template-columns: 90% 10%;
 		}
@@ -154,11 +154,13 @@
 		
 		background-color: rgba(246,223,202,255);
 		padding-top: 2px;
-		padding-botom: 2px;
-		margin-left: 5px;
+
+		margin-rigth: 5px;
+		display:grid;
 		align-text:center;
+		justify-content:center;
 		color:rgb(0,0,55);
-		font-size:25px;
+		font-size:30px;
 			
 				}
 
