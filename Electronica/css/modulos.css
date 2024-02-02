@@ -430,13 +430,18 @@
 
                     color:white;
 
-                    padding-top: 2%;
+                    padding-top: 1%;
 
 		    padding-bottom: 1%;
 
                     padding-left: 2%;
 
                     padding-right: 2%;
+
+		  display:grid;
+
+			align-items:center;
+			
 
                     text-decoration:none;
 
