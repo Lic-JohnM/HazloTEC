@@ -36,74 +36,171 @@
 
                 <div id="con">
 
-					<h2> Condicionales anidadas </h2>
+						<h2> Ciclos</h2>
 
 				<br>
 
-			<p> En algunas ocasiones un programa puede tener varios flujos según las decisiones o situaciones que pasen. Así por ejemplo al momento de saber cuál es el desempeño según la nota definitiva de una materia de un colegio, el diagrama podría ser el siguiente: </p>
+			<p>Los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
 
 			<br>
-						<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
+
+				<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
+			
 			</div>  
 
 			<br>
-
-			<h3> Condicionales anidadas en Python </h3>
-
+			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
 			<br>
-
-			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
-			<br>
-
 <pre>
     <code>
 
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-else:
-    if definitiva>=4.0 and definitiva<4.5:
-          print("tu desempeño es alto");
-    else:
-        if definitiva>=3.0 and definitiva<4.0:
-              print("tu desempeño es basico");
-        else:
-            if definitiva>=0.0 and definitiva<3.0:
-                print("tu desempeño es bajo");
-            else:
-                print("Esta nota no existe");
-
+print("ingrese el dinero");
+dinero=float(input());
+i = 1
+while dinero < 2500:
+  print("le falta dinero")
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
     </code>
-</pre>
+</pre>			
 
-	<br>
+<br>
+			   
+			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
 
-			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
+			<h3> Contadores </h3>
+
 			<br>
+
+
+ <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
+			<div style="text-align:center;">
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
+			
+			</div>  
+			<br>
+		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
+<pre>
+    <code>
+
+print("ingrese el dinero");
+dinero=int(input());
+i = 1
+while dinero < 2500:
+  a=2500-dinero;
+  print("le falta")
+  print(a);
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+   print("puede seguir");   
+    </code>
+</pre>	    
+
+			
+			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
+<br>
+<pre>
+    <code>
+print("ingrese el dinero");
+dinero=float(input());
+contador=0
+while dinero < 2500:
+  a=2500-dinero;
+  contador=contador+1;
+  print("le falta")
+  print(a);
+  print("intento:");
+  print(contador);
+  print("ingrese el dinero");
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
+    </code>
+</pre>	 
+
+                     
+             <br>
+
+			<div id="b1">
+				<div id="e">
+					<h3> Ciclos en arreglos </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+				<br>
+            
+					<p> Los ciclos en programación se emplean para repetir lineas de codigos hasta que se cumpla cierta condición, por ejemplo si para acceder a cada uno de los elementos de la lista estudiantes del ejemplo anterior podriamos hacerlo estudiantes[0], estudiantes[1]...etc. Sin embargo si la lista tuviese 40 estudiantes implicaria repetir 40 veces las linea de codigo. </p>
+		
+			  <br>
+			  
+			  <p>Existen varias estructuras de programación para hacer ciclos pero inicialmente emplearemos la estructura <b>for</b>, en donde para recorrer todo el vector y mostrar los elementos solamente basta con el siguiente codigo:</p>
 
 <pre>
     <code>
 
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-elif definitiva>=4.0 and definitiva<4.5:
-    print("tu desempeño es alto");
-elif definitiva>=3.0 and definitiva<4.0:
-    print("tu desempeño es basico");
-elif definitiva>=0.0 and definitiva<3.0:
-     print("tu desempeño es bajo");
-else:
-     print("Esta nota no existe");
+estudiantes=["Juan","Luis","Fabian","Elkin"]
+for x in estudiantes:
+  print(x)
      
     </code>
 </pre>
 
-  
-             <br>
+			  <p>Una utilidad de recorrer una lista es encontrar la posición de un elemento usando el comando <b>index</b>, a continuación se presenta el ejemplo empleando para encontrar la posición del estudiante fabian</p>	        	
+<pre>
+    <code>
+
+estudiantes=["Juan","Luis","Fabian","Elkin"]
+for x in estudiantes:
+    posicion = estudiantes.index("Fabian");
+print(posicion);
+     
+    </code>
+</pre>
+
+            
+				</div>
+			</div>
+	
+			<h2>Ciclos en Scratch </h2>
+
+			<br>
+
+			<p> Los ciclos se crean de la misma manera, con la ventaja que existen otras opciones para crear ciclos, como decidir cuantas veces necesitamos que se repita sin necesidad de variables adicionales así como detener el programa con el comando detener todo. A continuación se presenta el ejercicio del parqueadero empleando el ciclo While con Scratch: </p>
+
+            <br>
+            
+		<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+
+			<br>
+      
+
+			<p> Así también con Scratch podemos emplear listas, para almacenar datos en la misma variable, a continuación podemos ver un ejemplo de como llenar una lista empleando Scratch: </p>
+			<br>
+		<div style="text-align:center;">
+                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+			<br>
+		
+			<p> Para finalizar podemos observar como en scratch se pueden usar otros elementos como inicio, en esta caso empleando la flecha hacia arriba se puede ejecutar el programa para buscar si un estudiante se encuentra en la lista.</p>
+			<br>
+			
+
+			<br>
+			
+			
+			
+			
+			
+			<br>
 
                          <div id="ctrl">
 					
