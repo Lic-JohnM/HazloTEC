@@ -36,64 +36,180 @@
 
                 <div id="con">
 
-					<h2> Codificación - Lenguajes de programación</h2>
+				<h2> Condicionales </h2>
 
 				<br>
 
-			<p> Otra forma de representar los algoritmos, y de por sí de las más empleadas es la programación empleando líneas de código, para hacer nuestra práctica vamos a emplear el lenguaje Python. El cuál es un lenguaje con el que podemos desarrollar videojuegos, desarrollo WEB entre otras muchas aplicaciones. Para emplear Python, vamos a emplear la herramienta <b>Programiz</b>, en la cual puedes acceder haciendo click en el siguiente botón <a href="https://www.programiz.com/python-programming/online-compiler/">Pulsa aquí.</a> A continuación, vamos a ver el equivalente de diagrama de flujo a las principales operaciones:
+			<p> En la programación las condicionales dividen el flujo de un programa dependiendo de algún valor o una decisión, como puede ser por ejemplo una variable llamada clima y si toma el valor de lluvia puede hacer que cambiemos el atuendo o el accesorio para salir a la calle a que si fuese de valor sol. En un diagrama de flujo se ve de la siguiente manera.</p>
+
+			<br>
+					<div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249535" height="715" width="600" frameborder="0" scrolling="no" ></iframe>
+                  </div>  
 
 			<br>
 
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249439" height="403" width="345" frameborder="0" scrolling="no" ></iframe>
+			<h3> Condicionales en Python </h3>
+
+			<br>
+
+			<p> Las condicionales en Python manejan unos espacios y puntuaciones que se deben seguir para que funcione el programa, así también tenemos que saber que si queremos comparar con un valor puntual debemos emplear ==(doble igual) como se muestra en el siguiente programa que es el programa anterior escrito en Python:
+
+			<br>
+
+<pre>
+    <code>
+print("ingrese el clima ¿sol o lluvia?");
+clima=input();
+if clima=="lluvia":
+    print("lleva sombrilla");
+else:
+    print("lleva gafas de sol");
+
+    </code>
+</pre>
+
+            
+			<br>
+
+	
+
+			<h3> Operadores de relación </h3>
+
+			<br>
+
+			<p> Dependiendo la condición que necesitemos comparar se emplean después del if, distintos tipos de operadores de relación por ejemplo si necesitamos comparar una condición donde un número X sea mayor a 5, se escribiría de la siguiente manera <b>X>5</b>, si es un intervalo donde sean números mayores a 5 y menores a 10, se escribiría de la siguiente manera <b>X>5 AND X<10 </b>. </p>
+
+	        <br>
+	        
+	        	<p> Para finalizar si se requiere comparar con un valor puntual, como es por ejemplo si el número X debe ser igual a 8 para que se cumpla la condición se escribiria de la siguiente manera <b>X==8</b> </p>
+	        	
+	        	
+            <br>
+     <div id="b1">
+				<div id="e">
+					<h3> Condicionales anidadas </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+				<br>
+            
+									<h2> Condicionales anidadas </h2>
+
+				<br>
+
+			<p> En algunas ocasiones un programa puede tener varios flujos según las decisiones o situaciones que pasen. Así por ejemplo al momento de saber cuál es el desempeño según la nota definitiva de una materia de un colegio, el diagrama podría ser el siguiente: </p>
+
+			<br>
+						<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
 			</div>  
 
-            <br>
-
-			<p> Así copia el siguiente código que es el equivalente al programa creado con diagrama de flujo, ejecútalo donde dice run y escribe los datos con el teclado que solicita el programa.</p>
 			<br>
-			
-			<pre>
-			<code>
-print("ingrese la primera nota");
-n1=float(input());
-print("ingrese la segunda nota");
-n2=float(input());
-nf=(n1+n2)/2;
-print("su definitiva es");
-print(nf);
-			</code>
-			</pre>
-            
-            
-			<p>Si lo lograste hacer puedes concluir que es necesario trabajar con variables porque los valores siempre van a ser diferentes. Sin embargo, debes tener en cuenta lo siguiente: </p>
-		
-		<h3>Print</h3>
-		
-			<p>Cuando vas a mostrar un valor de texto debes poner "" en el programa con en este caso "ingrese la primera nota", cuando sea un valor de una variable no es necesario como en el ejemplo es n2.
 
-		<h3>input()</h3>
-		
-			<p>Si observas el código antes del input existe una palabra denominada float en ocasiones también int, esto quiere decir que se espera una variable numérica lo que implica que solamente se van a almacenar números. Cuando se quiere almacenar un texto no es necesario poner ninguna palabra previa. Puedes ver el siguiente ejemplo: </p>
-			
-                        <br>
-                        			<pre>
-			<code>
-print("ingrese su primer nombre");
-n1=input();
-print("ingrese su primer apellido");
-n2=input();
-print("Bienvenido");
-print(n1);
-print(n2);
-			</code>
-			</pre>
+			<h3> Condicionales anidadas en Python </h3>
+
+			<br>
+
+			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
+			<br>
+
+<pre>
+    <code>
+
+print("¿ Cuál es tu definitiva ?");
+definitiva=float(input());
+if definitiva>=4.5 and definitiva<5:
+    print("tu desempeño es superior");
+else:
+    if definitiva>=4.0 and definitiva<4.5:
+          print("tu desempeño es alto");
+    else:
+        if definitiva>=3.0 and definitiva<4.0:
+              print("tu desempeño es basico");
+        else:
+            if definitiva>=0.0 and definitiva<3.0:
+                print("tu desempeño es bajo");
+            else:
+                print("Esta nota no existe");
+
+    </code>
+</pre>
+
+	<br>
+
+			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
+			<br>
+
+<pre>
+    <code>
+
+print("¿ Cuál es tu definitiva ?");
+definitiva=float(input());
+if definitiva>=4.5 and definitiva<5:
+    print("tu desempeño es superior");
+elif definitiva>=4.0 and definitiva<4.5:
+    print("tu desempeño es alto");
+elif definitiva>=3.0 and definitiva<4.0:
+    print("tu desempeño es basico");
+elif definitiva>=0.0 and definitiva<3.0:
+     print("tu desempeño es bajo");
+else:
+     print("Esta nota no existe");
+     
+    </code>
+</pre>
 
   
-
+             <br>
+				
+				</div>
+			</div>
 
                         <br>
+	<h2>Condicionales en Scratch</h2>
 
+            <br>
+            
+            <p>Las condicionales en Scratch tienen la misma logica de programación de dividir el flujo de trabajo, a continuación se presenta un ejemplo para que lo realices y puedas observar su funcionamiento:</p>
+            
+			<br>
+			
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304858" height="691" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+
+			<p>En la parte izquierda de la imagen podemos encontrar los bloques con los condicionales y los ciclos, en el ejemplo anterior podemos observar otra logica de programación para el intervalo de -5 a 15 grados sin la necesidad de indicar el intervalo completo para los condicionales como lo es donde la temperatura se encuentra entre 25 y 40. Es importante recordar que en la programación existen multiples formas de solucionar los problemas propuestos. </p>
+
+			<br>
+
+			<h2>Ciclos en Scratch </h2>
+
+			<br>
+
+			<p> Los ciclos se crean de la misma manera, con la ventaja que existen otras opciones para crear ciclos, como decidir cuantas veces necesitamos que se repita sin necesidad de variables adicionales así como detener el programa con el comando detener todo. A continuación se presenta el ejercicio del parqueadero empleando el ciclo While con Scratch: </p>
+
+            <br>
+            
+		<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+
+			<br>
+      
+
+			<p> Así también con Scratch podemos emplear listas, para almacenar datos en la misma variable, a continuación podemos ver un ejemplo de como llenar una lista empleando Scratch: </p>
+			<br>
+		<div style="text-align:center;">
+                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+			<br>
+		
+			<p> Para finalizar podemos observar como en scratch se pueden usar otros elementos como inicio, en esta caso empleando la flecha hacia arriba se puede ejecutar el programa para buscar si un estudiante se encuentra en la lista.</p>
+			<br>
+			
+
+	<br>
                          <div id="ctrl">
 					
 				 <a class="n1" href="p2.html"> anterior </a>
