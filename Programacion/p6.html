@@ -37,101 +37,49 @@
                 <div id="con">
 
 		
-		<h2> LISTAS</h2>
+		<h2>Funciones</h2>
+
+            <br>
+            
+            <p>En ocasiones es necesario reutilizar codigos para evitar volver a escribir el codigo nuevamente, las librerias existen en multiples lenguajes de programación y no son más que compendios de codigos organizados que tienen una función determinada.</p>
+            
+			<h3>Funciones en scratch</h3>
 
 				<br>
 
-			<p> Las listas en Python son una forma de almacenar diferentes datos en una misma variable,a continuación tenemos varios ejemplos: </p>
-			<br>
-			<p>Numeros_pares=[0,2,4,6,8,10]</p>
-			<br>
-			<p>Numeros_primos=[1,2,3,5,7,11]</p>
-			<br>
-			<p>Colores=["rojo","azul","gris","blanco","negro",gris]</p>
-			<br>
-			<p>Ingredientes_ensalada=["lechuga","tomate","pepino","aceite","zanahoria"]</p>
-			<br>
-		
-			<p>Para la explicación de lo que podemos hacer con las listas vamos  guardar el nombre de 6 estudiantes de un curso, lo cuál se haria de la siguiente manera:</p>
+			<p> Aunque en Python existen librerias, vamos a explicarlo con Scratch por su editor en linea, inicialmente vamos a hacer una función que haga que el gato parezca que salte:
+            </p>
 
 			<br>
 			
 		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no" ></iframe>
+
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305049" height="279" width="450" frameborder="0" scrolling="no" ></iframe>
+			</div>  
+
+			<p>Así siempre va a saltar, sin embargo si es el desarrollo de un video juego y se requieren programar 3 tipos de salto, el ya creado, otro que llegue más alto y para finalizar uno que recorra más distancia horizontal. Aunque todos los codigos son parecidos no se puede solucionar con un ciclo porque siempre tienen valores diferentes, y si se acompaña de más comando se crea un codigo extremadamente largo para controlar. Por este motivo se crean las funciones para reducir la escritura de codigo, a continuación se muestra como se crearia la función <b>salto</b> en scratch. inicialmente vamos a ir al menu izquierdo> mis bloques> crear un bloque donde nos saldra la siguiente imagen:</p>
+
+			<br>
+
+            
+		<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305066" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
 			</div>  
 
 			<br>
-            <p>el codigo que vamos a emplear para explicar las listas es el siguiente:</p>
-            <br>
-<pre>
-    <code>
-estudiantes=["Juan","Andrea","Luis","Laura","Oscar"];
-print(estudiantes[2]);
-print(len(estudiantes));
-estudiantes.pop(1);
-print(estudiantes);
-estudiantes.insert(4,"Luna");
-print(estudiantes);
-    </code>
-</pre>
-            <br>
-	        <p>Todos los elementos tienen una posición que inicia desde 0, así Juan ocupa la posición 0, Andres ocupa la posición 1, Luis ocupa  la posición 2, Laura la posición 3 y Oscar la posición 4. Para acceder a un elemento solamente basta escribir su posición de la siguiente manera <b>estudiantes[2]</b> que en esta ocasión daria como resultado Luis.</p>
+            <p>Vamos a llamar la función salto  agregamos dos entradas, una demonimada altura y otra denominada ancho para poder definir los parametros del salto, una vez creado se observa de la siguiente manera:</p>
 
 			<br>
-
-			<p> Si queremos saber la longitud solo basta con escribir el siguiente codigo: <b>len(estudiantes)</b> que en este caso daria como resultado 4.</p>
-
+		<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305084" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
+                  </div>  
 			<br>
-
-			<p>Para añadir o eliminar basta con conocer la posición donde se encuentra el elemento que vamos a quitar o a la posición del elemento que vamos a añadir, por ejemplo de la lista vamos a eliminar a la estudiante Andrea que estaria en la posición 1 y empleamos el comando pop : <b>estudiantes.pop(1)</b> así la lista nos quedaria:</p>
-
-            <br>
-
-			<p>estudiantes=["Juan","Luis","Fabian","Elkin"]</p>
-
-			<br>
-
-			<p> Para añadir a un estudiante en la mitad de los estudiantes Laura y Oscar debemos inicialmente tener en cuenta la posición que seria la número 4 y empleamos el comando insert : <b>estudiantes.insert(4,"Luna")</b> </p>
-
-			<br>
+			<p> Donde podemos observar que dependiendo la tecla que empleemos, se realizan diferentes saltos. Así las funciones pueden reducir el trabajo, en el curso de video juegos vamos a aplicar todo lo visto, si quieres profundizar en el diseño de algoritmos te recomendamos averiguar sobre <b>eficiencia algoritmica</b> pues nos permitira hacer de forma más eficiente los algoritmos, por otra parte te invitamos a modificar e inventar los codigos vistos y para finalizar leer sobre los paradigmas de programación en particular la <b> POO: Programación orientada a objetos</b>.</p>
 			
-			<br>
 
-			<h3> Ciclos </h3>
+			
 
-			<br>
-
-			<p> Los ciclos en programación se emplean para repetir lineas de codigos hasta que se cumpla cierta condición, por ejemplo si para acceder a cada uno de los elementos de la lista estudiantes del ejemplo anterior podriamos hacerlo estudiantes[0], estudiantes[1]...etc. Sin embargo si la lista tuviese 40 estudiantes implicaria repetir 40 veces las linea de codigo. </p>
-		
-			  <br>
-			  
-			  <p>Existen varias estructuras de programación para hacer ciclos pero inicialmente emplearemos la estructura <b>for</b>, en donde para recorrer todo el vector y mostrar los elementos solamente basta con el siguiente codigo:</p>
-
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-  print(x)
-     
-    </code>
-</pre>
-
-			  <p>Una utilidad de recorrer una lista es encontrar la posición de un elemento usando el comando <b>index</b>, a continuación se presenta el ejemplo empleando para encontrar la posición del estudiante fabian</p>	        	
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-    posicion = estudiantes.index("Fabian");
-print(posicion);
-     
-    </code>
-</pre>
-
-            
-
-
+           
                         <br>
 
                          <div id="ctrl">
