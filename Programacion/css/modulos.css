@@ -220,6 +220,48 @@
                 }
 
 
+		#info>#con>#b3{
+		width:100%;
+		border-color:rgb(0,0,55);
+		margin-bottom:10px;
+		}
+
+		#info>#con>#b3>#e{
+	
+		background-color: rgb(0,0,55); 
+		color:white;
+		padding-top: 8px;
+		padding-left:5px;
+		display:grid;
+		grid-template-columns: 90% 10%;
+		}
+
+		#info>#con>#b3>#e>#signo{
+		
+		background-color: rgba(0,0,55,255);
+		display:grid;
+		justify-content:center;
+		color: rgba(246,223,202,255);
+		font-size:30px;
+			
+				}
+
+		  #info>#con>#b3>#p{  
+			  display: none;
+			    padding:8px;
+			        border-style: solid;
+			  border-left-color: rgba(246,223,202,255);
+			  border-right-color: rgba(246,223,202,255);
+			  border-bottom-color: rgba(246,223,202,255);
+		}
+
+  		  #info>#con>#b3>#p>p{           
+			
+                         text-align:justify;
+                         line-height:160%;
+
+                }
+
 
 
                               #info>#con>p{
