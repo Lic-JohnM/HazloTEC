@@ -60,6 +60,7 @@
 					<br>
 					
 					    <h3>Carga de un condensador:</h3>
+					    <br>
 					    <p>La fórmula para la carga de un condensador es:</p>
 					    <p>
 					        <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -93,6 +94,7 @@
 					    </p>
 					
 					    <h3>Descarga de un condensador:</h3>
+					    <br>
 					    <p>La fórmula para la descarga de un condensador es:</p>
 					    <p>
 					        <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -124,43 +126,46 @@
 					<p>Las formulas siguen el esquema que esta a la izquierda de la siguiente imagen, donde en la imagen derecha se encuentra el circuito con un led el cual queda encencido una vez se quita la fuente de voltaje generando un pequeño temporizador:</p>
 					<div style="text-align:center;">
 					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248265758" height="295" width="345" frameborder="0" scrolling="no" ></iframe>
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248265758" height="295" width="550" frameborder="0" scrolling="no" ></iframe>
 					</div>         
 					<br>
 
-					<p> Inicialmente trabajaremos sobre el concepto de algoritmos, pero en el desarrollo de estos y la solución de problemas de programación estaremos trabajando todo el pensamiento computacional.</p>
+					<p>Haciendo click en el siguiente botón <a href="https://colab.research.google.com/?hl=es">Pulsa aquí,</a> e ingresando el siguiente codigo se puede generar la gráfica de carga y descarga de un condensador así como calcular cuanto tiempo se demora en cargarse y descargarse: </p>
 
+					 	   <script type="text/python">
+							import numpy as np
+							import matplotlib.pyplot as plt
+							
+							# Crear el primer vector
+							x = np.arange(1, 11)
+							
+							# Definir la formula de carga de un condensador
+							def capacitor_charging(t, C, V0):
+							  return V0 * (1 - np.exp(-t / (C * R)))
+							
+							# Ajustar el valor de voltaje, resistencia y condensador
+							C = 10  # Farads
+							V0 = 10  # Volts
+							R = 1  # Ohms
+							
+							# Calcular el segundo vector
+							y = capacitor_charging(x, C, V0)
+							
+							# Gráficar los 2 vectores
+							plt.plot(x, y)
+							plt.xlabel("Time")
+							plt.ylabel("Voltage")
+							plt.show()
+						    </script>
+					<br>
+					<p>Para finalizar el circuito simulado es el siguiente:</p>
+					<br>
+					<iframe width="725" height="453" src="https://www.tinkercad.com/embed/gj5a00b6NA4" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 				
 				</div>
 			</div>
-			<p>Se mide en faradios, y según los faradios y el voltaje que pueda soportar funciona en los circuitos electrícos. Tiene una formula que permite saber según el tiempo cuanto carga o se descarga el condensador, haciendo el siguiente enlace  haciendo click en el siguiente botón <a href="https://colab.research.google.com/?hl=es">Pulsa aquí,</a> e ingresando el siguiente codigo se puede generar la gráfica de un carga de un condensador con la respectiva formula: </p>
 			<br>
-						<code>
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Crear el primer vector
-x = np.arange(1, 11)
-
-# Definir la formula de carga de un condensador
-def capacitor_charging(t, C, V0):
-  return V0 * (1 - np.exp(-t / (C * R)))
-
-# Ajustar el valor de voltaje, resistencia y condensador
-C = 10  # Farads
-V0 = 10  # Volts
-R = 1  # Ohms
-
-# Calcular el segundo vector
-y = capacitor_charging(x, C, V0)
-
-# Gráficar los 2 vectores
-plt.plot(x, y)
-plt.xlabel("Time")
-plt.ylabel("Voltage")
-plt.show()
-			</code>
 			<br>
 			<p>Para hacer los calculos de carga y descarga ya no es posible hacerlo usando una fuente de voltaje directo porque una vez se carga tocaria apagar la fuente para que se descargue, en este orden de ideas se utiliza una fuente de enregía alterna que genera pulsos electrícos como se ven a continuación: </p>
 			<br>
