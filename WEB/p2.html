@@ -44,7 +44,7 @@
 
 				<br>
 			<p>Con las etiquetas H1,H2... se puede hacer encabezados con diferentes tamaños, con las etiquetas p se pueden hacer diversos parrafos, a continuación se muestra el codigo y como se ve en la pagina WEB:</p>
-
+		<br>
 	<pre>
 		<code>
 						    &lt;h1&gt;Encabezado de nivel 1&lt;/h1&gt;
@@ -55,7 +55,7 @@
 						    &lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
 		</code>
   	 </pre>
-		
+		<br>
 			<p>El codigo anterior se ve como se encuentra a continuación:</p>
 			<br>
 			<h1>Encabezado de nivel 1</h1>
@@ -72,10 +72,47 @@
 
 			<br>
 
-			<p>En ocasiones es necesario generar tablas, para esta finalidad se usan las etiquetas TR y TD. </p>
+			<p>Para generar tablas se usan las etiquetas TR y TD. </p>
+		<br>
+			
+	<pre>
+		<code>
+			&lt;table border="1"&gt;
+			    &lt;tr&gt;
+			        &lt;th&gt;Nombre&lt;/th&gt;
+			        &lt;th&gt;Edad&lt;/th&gt;
+			    &lt;/tr&gt;
+			    &lt;tr&gt;
+			        &lt;td&gt;Juan&lt;/td&gt;
+			        &lt;td&gt;25&lt;/td&gt;
+			    &lt;/tr&gt;
+			    &lt;tr&gt;
+			        &lt;td&gt;María&lt;/td&gt;
+			        &lt;td&gt;30&lt;/td&gt;
+			    &lt;/tr&gt;
+			&lt;/table&gt;
+		</code>
+  	 </pre>
 
 			<br>
-			
+		<p>El codigo anterior se ve como se encuentra a continuación:</p>
+			<br>
+			<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+    </tr>
+    <tr>
+        <td>Juan</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>María</td>
+        <td>30</td>
+    </tr>
+</table>
+
+			<br>
 			            <h2> Formularios </h2>
 
             <br>
@@ -85,7 +122,25 @@
 			<p>radio button:Seleccionar entre varias opciones</p>
 			<p>Checkbox:Seleccionar entre varias opciones</p>
 			<p>Select: Seleccionar entre varias opciones.</p>
- 
+		<br>
+		<p>Un codigo de ejemplo es el siguiente:</p>
+ 		<br>
+	<pre>
+		<code>
+		&lt;form action="/submit_form" method="post"&gt;
+		    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+		    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;label for="email"&gt;Email:&lt;/label&gt;
+		    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
+		    &lt;textarea id="mensaje" name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;input type="submit" value="Enviar"&gt;
+		&lt;/form&gt;
+		</code>
+  	 </pre>
 
 			<br>
 
@@ -96,11 +151,14 @@
 
 						
 				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=762937993136574770" height="315" width="345" frameborder="0" scrolling="no" ></iframe>
-		 	</div>         
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242915948" height="244" width="450" frameborder="0" scrolling="no" ></iframe>		 	
+				</div>         
 			<br>
-			<p>El árbol DOM es la estructura jerarquica de una página WEB, la mayoria de elementos WEB se encuentran dentro de etiquetas como se muestra en la imagen anterior, y según este conformado un elemento dentro de otro elemento se genera lo que visualmente denominamos página WEB, así también modificamos su contenido.</p>
-
+			<p>El árbol DOM es la estructura jerarquica de una página WEB, la mayoria de elementos WEB se encuentran dentro de etiquetas como se muestra en la imagen anterior, y según este conformado un elemento dentro de otro elemento se genera lo que visualmente denominamos página WEB, así también modificamos su contenido, a continuación se presenta uno de un formulario:</p>
+			<br>
+					<div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242915958" height="362" width="450" frameborder="0" scrolling="no" ></iframe>
+				</div>       
 
 
 
