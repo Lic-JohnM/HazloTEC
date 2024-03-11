@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","380vh");
+	  $("#info").css("height","300vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -141,9 +141,21 @@
 		&lt;/form&gt;
 		</code>
   	 </pre>
-
 			<br>
-
+		<p>El codigo anterior se ve como se encuentra a continuación:</p>
+		<br>
+		<form action="/submit_form" method="post">
+		    <label for="nombre">Nombre:</label>
+		    <input type="text" id="nombre" name="nombre"><br><br>
+		    
+		    <label for="email">Email:</label>
+		    <input type="email" id="email" name="email"><br><br>
+		    
+		    <label for="mensaje">Mensaje:</label><br>
+		    <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br><br>
+		    
+		    <input type="submit" value="Enviar">
+		</form>
 		
 		<h3> Árbol DOM </h3>
 
