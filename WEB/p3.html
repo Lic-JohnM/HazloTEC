@@ -36,15 +36,42 @@
 
                 <div id="con">
 				<br>
-			<h3>Boostrap</h3>
+			<h3>Bootstrap</h3>
 			<br>
-			<p>Es una libreria que añade estilos a las etiquetas usando el lenguaje CSS, y entre uno de sus mayores aportes es generar páginas adaptables a todas las pantallas, para que funcionen en la parte de Head se declaran 5 lineas de codigo con el link de Bootstrap, una libreria de Jquery que revisaremos más adelante, una libreria llamada pooper.js </p>
+			<p>Es una libreria que añade estilos a las etiquetas usando el lenguaje CSS, y entre uno de sus mayores aportes es generar páginas adaptables a todas las pantallas, para que funcionen es necesario agregar al documento HTML algunas lineas de codigo, a continuación se presentan las lineas junto a algunas etiquetas fundamentales de HTML, para facilitar la construcción de codigo: </p>
 			<br>
+			
+		
+			&lt;!DOCTYPE html&gt;
+			&lt;html lang="es"&gt;
+			&lt;head&gt;
+			&lt;meta charset="UTF-8"&gt;
+			&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+			&lt;title&gt;Documento con Bootstrap&lt;/title&gt;
+			
+			&lt;!-- Agregar el enlace al archivo CSS de Bootstrap --&gt;
+			&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;
+			
+			&lt;/head&gt;
+			&lt;body&gt;
+			
+			&lt;!-- Tu contenido HTML aquí --&gt;
+			
+			&lt;!-- Agregar los scripts de Bootstrap (jQuery y Popper.js son requeridos) --&gt;
+			&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
+			&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"&gt;&lt;/script&gt;
+			&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+			
+			&lt;/body&gt;
+			&lt;/html&gt;
+			<br>
+
 			<h2>Contenedores y columnas</h2>
 			<br>
-			<p>Para que funcionen las columnas se debe poner el atributo class="container"a una división y dentro de ellas otra división con el atributo class="row", en donde se pueden hacer columnas que sean multiplos de doce (2 de 6 , 3 de 4 o 4 de 3)</p>
+			<p>Para que funcionen las columnas se debe poner el atributo class="container"a una división y dentro de ellas otra división con el atributo class="row", a continuación se presenta como se construyen dos columnas:</p>
+			<br>
 
-
+			
 				<h2>Navbar</h2>
 
 			<br>
