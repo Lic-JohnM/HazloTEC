@@ -282,20 +282,45 @@
     <td>
 	<pre>
 		<code>
-&lt;nav class="navbar "&gt
-    &lt;ul class="nav navbar-nav"&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtLogo&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtAcerca&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtContacto&lt;/a&gt
-    &lt;/li&gt
-   
-&lt;/ul&gt
-&lt;/nav&gt
+&lt;form&gt
+      &lt;!-- Campo de entrada --&gt
+      &lt;div class="mb-3"&gt
+        &lt;label for="nombre" class="form-label"&gtNombre&lt;/label&gt
+        &lt;input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre"&gt
+      &lt;/div&gt
+      &lt;!-- Casilla de verificación --&gt
+      &lt;div class="mb-3 form-check"&gt
+        &lt;input type="checkbox" class="form-check-input" id="acepto"&gt
+        &lt;label class="form-check-label" for="acepto"&gtAcepto los términos y condiciones&lt;/label&gt
+      &lt;/div&gt
+      &lt;!-- Botones de radio --&gt
+      &lt;div class="mb-3"&gt
+        &lt;div class="form-check"&gt
+          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked&gt
+          &lt;label class="form-check-label" for="opcion1"&gt
+            Opción 1
+          &lt;/label&gt
+        &lt;/div&gt
+        &lt;div class="form-check"&gt
+          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2"&gt
+          &lt;label class="form-check-label" for="opcion2"&gt
+            Opción 2
+          &lt;/label&gt
+        &lt;/div&gt
+      &lt;/div&gt
+      &lt;!-- Selector --&gt
+      &lt;div class="mb-3"&gt
+        &lt;label for="select" class="form-label"&gtSeleccione una opción&lt;/label&gt
+        &lt;select class="form-select" id="select"&gt
+          &lt;option selected&gtSeleccionar...&lt;/option&gt
+          &lt;option value="opcion1"&gtOpción 1&lt;/option&gt
+          &lt;option value="opcion2"&gtOpción 2&lt;/option&gt
+          &lt;option value="opcion3"&gtOpción 3&lt;/option&gt
+        &lt;/select&gt
+      &lt;/div&gt
+      &lt;!-- Botón de envío --&gt
+      &lt;button type="submit" class="btn btn-primary"&gtEnviar&lt;/button&gt
+    &lt;/form&gt
 		</code>
   	 </pre>
     </td>
