@@ -266,6 +266,85 @@
 	  </tr>
 </table>	
 
+		<br>
+			<h2>Formularios</h2>
+
+			<br>
+
+			<p>Los formularios para tomar datos de la página WEB, tambien se pueden hacer con bootstrap, a continuación se presenta un ejemplo con diversos ejemplos:</p>
+		<br>
+			<table border="1">
+  <tr>
+    <td style="text-align:center">Código</td>
+    <td style="text-align:center">Resultado</td>
+  </tr>
+  <tr>
+    <td>
+	<pre>
+		<code>
+&lt;nav class="navbar "&gt
+    &lt;ul class="nav navbar-nav"&gt
+    &lt;li class="nav-item"&gt
+        &lt;a class="nav-link" href="#"&gtLogo&lt;/a&gt
+    &lt;/li&gt
+    &lt;li class="nav-item"&gt
+        &lt;a class="nav-link" href="#"&gtAcerca&lt;/a&gt
+    &lt;/li&gt
+    &lt;li class="nav-item"&gt
+        &lt;a class="nav-link" href="#"&gtContacto&lt;/a&gt
+    &lt;/li&gt
+   
+&lt;/ul&gt
+&lt;/nav&gt
+		</code>
+  	 </pre>
+    </td>
+    <td>
+		 <form>
+      <!-- Campo de entrada -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+      </div>
+      <!-- Casilla de verificación -->
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="acepto">
+        <label class="form-check-label" for="acepto">Acepto los términos y condiciones</label>
+      </div>
+      <!-- Botones de radio -->
+      <div class="mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked>
+          <label class="form-check-label" for="opcion1">
+            Opción 1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2">
+          <label class="form-check-label" for="opcion2">
+            Opción 2
+          </label>
+        </div>
+      </div>
+      <!-- Selector -->
+      <div class="mb-3">
+        <label for="select" class="form-label">Seleccione una opción</label>
+        <select class="form-select" id="select">
+          <option selected>Seleccionar...</option>
+          <option value="opcion1">Opción 1</option>
+          <option value="opcion2">Opción 2</option>
+          <option value="opcion3">Opción 3</option>
+        </select>
+      </div>
+      <!-- Botón de envío -->
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+	    </td>
+	  </tr>
+</table>	
+
+
+			<br>
 
 			<br>
 
