@@ -27,6 +27,29 @@ $(document).ready(function(){
      
                                 		});
 
+			 $("#info>#con>#b3>#e").click(function(){
+  	
+		 	if($("#info>#con>#b2>#e>#signo").text().trim()=="+"){
+			     $(" #info>#con>#b2>#p").css("display","grid");
+				$("#info>#con>#b2>#e>#signo").text("-");
+			}else if ($("#info>#con>#b2>#e>#signo").text().trim()=="-") {
+				$(" #info>#con>#b2>#p").css("display","none");
+				$("#info>#con>#b2>#e>#signo").text("+");
+			} 
+     
+                                		});
+			 $("#info>#con>#b4>#e").click(function(){
+  	
+		 	if($("#info>#con>#b2>#e>#signo").text().trim()=="+"){
+			     $(" #info>#con>#b2>#p").css("display","grid");
+				$("#info>#con>#b2>#e>#signo").text("-");
+			}else if ($("#info>#con>#b2>#e>#signo").text().trim()=="-") {
+				$(" #info>#con>#b2>#p").css("display","none");
+				$("#info>#con>#b2>#e>#signo").text("+");
+			} 
+     
+                                		});
+
 	
         //Controlar división de la página menu anterior y siguiente
         var divs = document.getElementsByClassName("n1").length;
