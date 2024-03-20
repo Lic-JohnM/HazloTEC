@@ -428,12 +428,61 @@
 				<a id="signo">+</a>
 				</div>
 				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
+				<p>El carrusel permite mostrar en la página WEB diferentes imagenes, a continuación se muestra un ejemplo del codigo:</p>
+					<br>
+						<table border="1">
+			  <tr>
+			    <td style="text-align:center">Código</td>
+			    <td style="text-align:center">Resultado</td>
+			  </tr>
+			  <tr>
+			    <td>
+				<pre>
+					<code>
+ &lt;div class="container" &gt
+   &lt;div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" &gt
+     &lt;div class="carousel-inner" &gt
+       &lt;div class="carousel-item active" &gt
+         &lt;img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1" &gt
+       &lt;/div &gt
+       &lt;div class="carousel-item" &gt
+         &lt;img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2" &gt
+       &lt;/div &gt
+       &lt;div class="carousel-item" &gt
+         &lt;img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3" &gt
+       &lt;/div &gt
+     &lt;/div &gt
+   &lt;/div &gt
+ &lt;/div &gt
+					</code>
+			  	 </pre>
+			    </td>
+			    <td>
+		
+
+<div class="container">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+  </div>
+</div>
+	    </td>
+	  </tr>
+</table>	
+					
+
+
+					
+				
 			</div>
 			</div>
 			<br>
@@ -445,33 +494,44 @@
 				<a id="signo">+</a>
 				</div>
 				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-			</div>
-			</div>
-			<br>
-			
-			<h2> Medidas absolutas</h2>
-
 				<br>
-
-			<p>En el desarrollo WEB es indispensable el manerjo de medidas tanto absolutas como relativas, así se pueden hacer diseño respecto a unos centimetros en especifico o algunos pixeles en particular así también existen las pulgadas, milimetros y demas medidas asociadas que es indispensable manejar y convertir entre ellas.</p>
-
-			<br>
-
-		 
-
-            <br>
-			<h2>Medidas relativas</h2>
-
-			<p>En ocasiones es necesario fijar las medidas, según cambia el tamaño de la pantalla o el tipo de dispositivos para este tipo de medidas se usan las tipo em, rem así como los porcentajes.</p>
+				<p>Los botones permiten direccionar de un lugar a otro, dependiendo el texto tienen diferentes caracteristicas:</p>
+								<table border="1">
+			  <tr>
+			    <td style="text-align:center">Código</td>
+			    <td style="text-align:center">Resultado</td>
+			  </tr>
+			  <tr>
+			    <td>
+				<pre>
+					<code>
+  &lt;div class="container mt-5" &gt
+    &lt;button type="button" class="btn btn-primary mr-2" &gtBotón Primario  &lt;/button &gt
+    &lt;button type="button" class="btn btn-secondary mr-2" &gtBotón Secundario  &lt;/button &gt
+    &lt;button type="button" class="btn btn-success mr-2" &gtBotón Éxito  &lt;/button &gt
+    &lt;button type="button" class="btn btn-danger mr-2" &gtBotón Peligro  &lt;/button &gt
+    &lt;button type="button" class="btn btn-warning" &gtBotón Advertencia  &lt;/button &gt
+  &lt;/div &gt
+					</code>
+			  	 </pre>
+			    </td>
+			    <td>
+<div class="container mt-5">
+  <button type="button" class="btn btn-primary mr-2">Botón Primario</button>
+  <button type="button" class="btn btn-secondary mr-2">Botón Secundario</button>
+  <button type="button" class="btn btn-success mr-2">Botón Éxito</button>
+  <button type="button" class="btn btn-danger mr-2">Botón Peligro</button>
+  <button type="button" class="btn btn-warning">Botón Advertencia</button>
+</div>
+	    </td>
+	  </tr>
+</table>		
+				
+			</div>
+			</div>
 			<br>
 			
-
+			<h2>Bootstrap y los diferentes tamaños de dispositivos</h2>
 	
 		
 
