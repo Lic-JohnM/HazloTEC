@@ -35,18 +35,41 @@
         <div id="info">
 
                 <div id="con">
-
+		<H2>Objetos literales</H2>
 		
 	
 
-			  <p>Una utilidad de recorrer una lista es encontrar la posición de un elemento usando el comando <b>index</b>, a continuación se presenta el ejemplo empleando para encontrar la posición del estudiante fabian</p>	        	
+			  <p>Los objetos literales nos permiten guardar elementos partiendo de la descripción de los mismos a continuación se presenta un ejemplo:</p>	        	
 <pre>
     <code>
 
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-    posicion = estudiantes.index("Fabian");
-print(posicion);
+// Creación de un objeto literal
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid",
+    profesion: "Ingeniero"
+};
+
+// Acceder a las propiedades del objeto
+console.log("Nombre:", persona.nombre); // Salida: Juan
+console.log("Edad:", persona.edad); // Salida: 30
+
+// Modificar una propiedad del objeto
+persona.edad = 35;
+console.log("Edad modificada:", persona.edad); // Salida: 35
+
+// Añadir una nueva propiedad al objeto
+persona.telefono = "123-456-789";
+console.log("Teléfono:", persona.telefono); // Salida: 123-456-789
+
+// Eliminar una propiedad del objeto
+delete persona.profesion;
+console.log("Profesión eliminada:", persona.profesion); // Salida: undefined
+
+// Mostrar todo el objeto
+console.log("Objeto completo:", persona);
+
      
     </code>
 </pre>
@@ -54,14 +77,40 @@ print(posicion);
                <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
 			<br>
-
+			<h2>Programación orientada a objetos</h2>
                         
 
 			<br>
 
-           		 <a id="dcr" href="https://es.scribd.com/document/631658395/P6" target="_blank"> Descarga ejercicios de listas </a>
+           		<p>Cuando un objeto literal se emplea multiples veces con diferentes caracteristicas se emplea la programación orientada a objetos, a continuación se presenta un ejemplo:</p>
+<br>
+<pre>
+    <code>
+
+// Definición de una clase llamada Persona
+class Persona {
+    // Constructor de la clase Persona
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método para obtener la descripción de la persona
+    descripcion() {
+        return `${this.nombre} tiene ${this.edad} años.`;
+    }
+}
+
+// Creación de una instancia de la clase Persona
+let persona1 = new Persona("Juan", 30);
+
+// Llamada al método descripcion() de la instancia persona1
+console.log(persona1.descripcion()); // Salida: Juan tiene 30 años.
 
 
+     
+    </code>
+</pre>
                         <br>
 
                          <div id="ctrl">
