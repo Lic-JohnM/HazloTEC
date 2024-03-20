@@ -233,7 +233,68 @@ alert("El resultado de la multiplicación es: " + resultado);
 			<br>
 		</div>
 		</div>
-			
+				<h2> Funciones en Javascript</h2>
+
+				<br>
+
+			<p>Las funciones en javascript permiten generar modulos de codigo que se pueden reutilizar en diferentes ocasiones, a continuación se presentan un ejemplo:</p>
+			<br>
+<pre>
+    <code>
+let nombre="John";
+// Definición de una función
+function saludar(nombre) {
+    alert("¡Hola, " + nombre + "! Bienvenido.");
+}
+
+// Llamada a la función
+saludar("Juan");
+    </code>
+</pre>
+            <br>
+		<p>Asi en el ejemplo anterior solo es necesario cambiar el nombre en la función para generar diferentes saludos, la variable nombre, se llama parametro y es una variable interna del uso de las funciones.</p>
+			<br>
+
+<br>
+			<h2>Arreglos</h2>
+			<br>
+			<p>Los arreglos nos permiten guardar diferentes valores en una sola variable, las cuales se pueden agregar, quitar y recorrer entre muchas otras opciones que a continuación se presentan:</p>
+<pre>
+    <code>
+
+// Creación de un array vacío
+let frutas = [];
+
+// Añadir elementos al array usando push()
+frutas.push("Manzana");
+frutas.push("Banana");
+frutas.push("Naranja");
+
+// Acceder a elementos del array por índice
+console.log("Primera fruta:", frutas[0]); // Salida: Manzana
+console.log("Segunda fruta:", frutas[1]); // Salida: Banana
+
+// Modificar un elemento del array
+frutas[0] = "Pera";
+console.log("Primera fruta modificada:", frutas[0]); // Salida: Pera
+
+// Longitud del array
+console.log("Cantidad de frutas:", frutas.length); // Salida: 3
+
+// Recorrer el array usando un bucle for
+console.log("Frutas:");
+for (let i = 0; i < frutas.length; i++) {
+    console.log("- " + frutas[i]);
+}
+
+// Eliminar el último elemento del array usando pop()
+let ultimaFruta = frutas.pop();
+console.log("Última fruta eliminada:", ultimaFruta); // Salida: Naranja
+console.log("Frutas después de eliminar la última:", frutas); // Salida: ["Pera", "Banana"]
+
+     
+    </code>
+</pre>
 
                          <div id="ctrl">
 					
