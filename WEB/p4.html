@@ -28,7 +28,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","310vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -48,8 +48,9 @@
                 <div id="con">
 
 			<H2>CSS</H2>
+			<br>
 			<p>Es un lenguaje de diseño gráfico donde se estructura la presentación gráfica de la página WEB, a continuación se muestra un ejemplo desde el formato de un <b>footer</b> el cual es una etiqueta HTML que amplia la información de la página al usuario al final de ella:</p>
-			
+			<br>
 			<table border="1">
   <tr>
     <td style="text-align:center">Código</td>
@@ -105,21 +106,95 @@
 	    </td>
 	  </tr>
 </table>
-			
+			<br>
+			<p>Así con este lenguaje bootstrap le da los elementos gráficos a las etiquetas, los cuales se pueden hacer sin la libreria bootstrap, solo es necesario incluir la etiqueta <b>style</b> para agregar estilos a los elementos.</p>
+			<br>
 			<h2> Medidas absolutas</h2>
 
 				<br>
 
-			<p>En el desarrollo WEB es indispensable el manerjo de medidas tanto absolutas como relativas, así se pueden hacer diseño respecto a unos centimetros en especifico o algunos pixeles en particular así también existen las pulgadas, milimetros y demas medidas asociadas que es indispensable manejar y convertir entre ellas.</p>
-
+			<p>En el desarrollo WEB es indispensable el manejo de medidas tanto absolutas como relativas, las medidas absolutas <b> son las medidas que no cambian </b> así se pueden hacer diseño respecto a unos centimetros en especifico o algunos pixeles en particular así también existen las pulgadas, milimetros y demas medidas asociadas que es indispensable manejar y convertir entre ellas.</p>
+			
 			<br>
-
+<table>
+        <thead>
+            <tr>
+                <th>Medida Absoluta</th>
+                <th>Valor</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pixel (px)</td>
+                <td>1px</td>
+                <td>Representa un solo píxel en la pantalla. Es una unidad fija y no cambia de tamaño.</td>
+            </tr>
+            <tr>
+                <td>Punto (pt)</td>
+                <td>1pt</td>
+                <td>Equivalente a 1/72 de una pulgada. Es comúnmente usado para medidas en la tipografía.</td>
+            </tr>
+            <tr>
+                <td>Pulgada (in)</td>
+                <td>1in</td>
+                <td>Representa una pulgada física en la pantalla o en el papel impreso. Es menos comúnmente utilizado en diseño web.</td>
+            </tr>
+            <tr>
+                <td>Centímetro (cm)</td>
+                <td>1cm</td>
+                <td>Representa un centímetro físico en la pantalla o en el papel impreso. También es menos comúnmente utilizado en diseño web.</td>
+            </tr>
+            <tr>
+                <td>Milímetro (mm)</td>
+                <td>1mm</td>
+                <td>Representa un milímetro físico en la pantalla o en el papel impreso. Al igual que cm e in, es menos común en diseño web.</td>
+            </tr>
+        </tbody>
+    </table>
 		 
 
             <br>
 			<h2>Medidas relativas</h2>
 
 			<p>En ocasiones es necesario fijar las medidas, según cambia el tamaño de la pantalla o el tipo de dispositivos para este tipo de medidas se usan las tipo em, rem así como los porcentajes.</p>
+			<br>
+			    <table>
+        <thead>
+            <tr>
+                <th>Medida Relativa</th>
+                <th>Valor</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Porcentaje (%)</td>
+                <td>10%, 50%, etc.</td>
+                <td>Representa un porcentaje del tamaño del elemento padre. Por ejemplo, 50% de un contenedor de 100px sería 50px.</td>
+            </tr>
+            <tr>
+                <td>Em (em)</td>
+                <td>1em, 2em, etc.</td>
+                <td>Equivalente al tamaño de fuente del elemento actual. Por ejemplo, si el tamaño de fuente de un elemento es 16px, 1em sería igual a 16px.</td>
+            </tr>
+            <tr>
+                <td>Rem (rem)</td>
+                <td>1rem, 2rem, etc.</td>
+                <td>Equivalente al tamaño de fuente del elemento raíz (normalmente el tamaño de fuente del elemento `html`). Esto permite un control más predecible del tamaño en relación con el documento completo.</td>
+            </tr>
+            <tr>
+                <td>VH</td>
+                <td>10vh, 50vh, etc.</td>
+                <td>Representa el 1% de la altura del viewport. Por ejemplo, 50vh sería la mitad de la altura del viewport.</td>
+            </tr>
+            <tr>
+                <td>VW</td>
+                <td>10vw, 50vw, etc.</td>
+                <td>Representa el 1% del ancho del viewport. Por ejemplo, 50vw sería la mitad del ancho del viewport.</td>
+            </tr>
+        </tbody>
+    </table>
 			<br>
 			
 
