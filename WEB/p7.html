@@ -35,34 +35,34 @@
 
                 <div id="con">
 
-			<h2> Ciclos</h2>
+			<h2> Storage</h2>
 
 				<br>
 
-			<p> Aparte de recorrer listas, los ciclos nos permiten repetir instrucciones hasta que se cumpla una determinada condición, en la siguiente imagen de diagrama puedes observar como de un condicional como lo es  pagar el valor correcto para salir de un parqueadero de vehiculos podemos hacer que el programa entre en un ciclo hasta que el usuario ingrese el valor correcto. </p>
+			<p>Una forma de almacernar variables por mucho tiempo en una página WEB es usando Storage, a continuación se presenta un ejemplo; </p>
 
-			<br>
-
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
 			
-			</div>  
-
-			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
 <pre>
     <code>
 
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
+// Almacenar datos en localStorage
+localStorage.setItem('nombre', 'Juan');
+localStorage.setItem('edad', '30');
+
+// Obtener datos de localStorage
+let nombre = localStorage.getItem('nombre');
+let edad = localStorage.getItem('edad');
+
+// Mostrar los datos obtenidos
+console.log("Nombre:", nombre); // Salida: Nombre: Juan
+console.log("Edad:", edad); // Salida: Edad: 30
+
+// Eliminar un dato de localStorage
+localStorage.removeItem('edad');
+
+// Mostrar los datos restantes
+console.log("Datos restantes:", localStorage.getItem('nombre')); // Salida: Datos restantes: Juan
+console.log("Edad después de eliminar:", localStorage.getItem('edad')); // Salida: Edad después de eliminar: null
      
     </code>
 </pre>			
@@ -71,33 +71,17 @@ if dinero>=2500:
 			   
 			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
 
-			<h3> Contadores </h3>
+			<h3> JSON </h3>
 
 			<br>
 
 
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
+ <p> Una forma de guardar datos para despues almacenar es el protocolo JSON que permite ajustar un protocolo de enviar los datos que se conecta a multiples tenoclogías a continuación se presenta un ejemplo:</p>
+
 <pre>
     <code>
 
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
+ 
     </code>
 </pre>	    
 
@@ -106,35 +90,53 @@ if dinero>=2500:
 <br>
 <pre>
     <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
+// Definición de un objeto JSON
+let persona = {
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid"
+};
+
+// Convertir el objeto JSON a una cadena JSON
+let jsonStr = JSON.stringify(persona);
+
+// Mostrar la cadena JSON
+console.log(jsonStr); // Salida: {"nombre":"Juan","edad":30,"ciudad":"Madrid"}
+
+// Convertir una cadena JSON a un objeto JavaScript
+let personaDesdeJson = JSON.parse(jsonStr);
+
+// Mostrar el objeto JavaScript resultante
+console.log(personaDesdeJson); // Salida: { nombre: 'Juan', edad: 30, ciudad: 'Madrid' }
+
      
     </code>
 </pre>	 
 
                         <br>
 
-                       <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+			<h3>Eventos</h3>
 
+                       <p>Los eventos nos permiten modificar el DOM de nuestro HTML a continuación se presenta un ejemplo:</p>
 
+<br>
+<pre>
+    <code>
+// Obtener el botón por su id
+let miBoton = document.getElementById('miBoton');
 
-			<a id="dcr" href="https://es.scribd.com/document/631668204/P7-1"  target="_blank"> Descarga ejercicio ciclos </a>
-
-
+// Añadir un event listener para el evento 'click'
+miBoton.addEventListener('click', function() {
+    // Función que se ejecutará cuando se haga clic en el botón
+    alert('¡Has hecho click en el botón!');
+});
+     
+    </code>
+</pre>	 
 
                         <br>
+			<p>En donde existe un elemento HTML con un identificador llamado mi boton, y cuando se hace click en el se genera un letrero que dice has hecho click</p>
+			<br>
 
 
                          <div id="ctrl">
