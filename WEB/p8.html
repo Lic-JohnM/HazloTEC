@@ -38,70 +38,99 @@
 
             <br>
             
-		<p>En ocasiones es necesario realizar diversos codigos al mismo tiempo, para esta finalidad se emplea el concepto de asincronismo. Javascript genera las intrucciones y funciones según el programa se ejecute de orden secuencial, lo que quiere decir una tras otra cen un lugar llamado <b>call stack</b>, sin embargo en ocasiones una función puede demorar mucho esperando el servidor, o un evento del usuario. Así inicia el concepto de paralelismo donde si bien javascript no tiene una estructura para soportar multiples programas, tiene un <b>event loop</b> el cual es un inspector quien esta vigilando constantemente las funciones y tareas, en caso de que una se demore mucho le da paso a otras, generando así una estructura de realizar estructuras paralelas. A continuación se muestra una imagen de como funciona:</p>            
+		<p>En ocasiones es necesario realizar diversos codigos al mismo tiempo, para esta finalidad se emplea el concepto de asincronismo. Javascript genera las intrucciones y funciones según el programa se ejecute de orden secuencial, lo que quiere decir una tras otra cen un lugar llamado <b>call stack</b>, sin embargo en ocasiones una función puede demorar mucho esperando el servidor, o un evento del usuario. Así inicia el concepto de paralelismo donde si bien javascript no tiene una estructura para soportar multiples programas, tiene un <b>event loop</b> el cual es un inspector quien esta vigilando constantemente las funciones y tareas, en caso de que una se demore mucho le da paso a otras mientras termina, generando así una estructura de realizar estructuras paralelas. A continuación se muestra una imagen de como funciona:</p>            
 		<br>
+			
+				<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=336362665915526689" height="618" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>  
 			<br>
-			<h3>Inicio del flujo</h3>
+			<p>Así conociendo el funcionamiento del event loop es posible generar funciones con tiempo que se ejecutan de forma controlada. </p>
+			<br>
+			<h3>Set time out y Set interval</h3>
 
 				<br>
 
-			<p> Así como en el diagrama de flujo el inicio del programa se marca por un circulo que dice inicio, Scratch emplea una bandera verde la cuál se puede ver en la interfaz de la siguiente imagen:
-            </p>
+			<p> Son funciones que permiten controlar el tiempo, set time out funciona programando el tiempo que se requiere que se ejecute la función a continuación se presenta un ejemplo:            </p>
 
 			<br>
-			
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304667" height="414" width="600" frameborder="0" scrolling="no" ></iframe>				
-			</div>  
+<pre>
+    <code>
 
-			<p>En la imagen anterior se puede observar la interfaz de Scratch en su versión online (<b>es primordial cambiar inmediatamente el idioma, en el icono del recuadro rojo que se encuentra en la imagen</b>), en general consiste en emplear los bloques para programar e iniciar la programación con algún periferico del computador o con la bandera verde para hacer alguna animación ya sea con la imagen del gato u otra si se cambia.</p>
+console.log('Inicio del programa');
+
+// Función que simula una tarea asíncrona que tarda un segundo en completarse
+function tareaAsincrona() {
+  console.log('Inicio de la tarea asíncrona');
+  setTimeout(function() {
+    console.log('Fin de la tarea asíncrona');
+  }, 1000); // Espera 1 segundo antes de ejecutar la función
+}
+
+// Llamamos a la función tareaAsincrona
+tareaAsincrona();
+
+console.log('Fin del programa');
+
+     
+    </code>
+</pre>			
+
+
+			<p>Set interval repite una función las veces que se requiera en el codigo</p>
+
+			<pre>
+    <code>
+
+// Definimos una función que se ejecutará cada segundo
+function imprimirMensaje() {
+  console.log('¡Hola mundo!');
+}
+
+// Llamamos a setInterval para ejecutar la función imprimirMensaje cada segundo (1000 milisegundos)
+var intervalo = setInterval(imprimirMensaje, 1000);
+
+// Después de 5 segundos, detenemos el intervalo
+setTimeout(function() {
+  clearInterval(intervalo); // Detenemos el intervalo
+  console.log('Intervalo detenido después de 5 segundos.');
+}, 5000);
+     
+    </code>
+</pre>			
 
 			<br>
 
-			<h3> Print </h3>
+			<h3> Async - Await </h3>
 
 			<br>
 
-			<p> En la parte izquierda de la primer imagen existen diferentes bloques de codigo muy diferentes(apariencia,sonido,eventos...) y cada uno tiene utilidad muy diferente, busca los bloques que estan en la siguiente imagen y dale click en la bandera verde, vamos a recrear el ejercicio de encontrar el promedio de dos números </p>
-
-            <br>
-            
-				<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304695" height="326" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
+			<p>Junto a la libreria Fecth async con away permiten hacer el proceso con peticiones de elementos a un servidor a continuación se presenta un ejemplo:</p>
 			<br>
-            <p>Este es el codigo para imprimir un texto en la pantalla, lo que en Scratch seria que el gato u objeto tenga un texto de exclamación. Es importante considerar que es necesario manejar el tiempo(con el bloque esperar) que ocurre cada acción porque si no es así todo el codigo se ejecuta inmediatamente y no podriamos ver las acciones realizadas.</p>
-					<br>
+					<pre>
+    <code>
 
-			<h3> Input </h3>
+// Función que devuelve una promesa que se resuelve después de un cierto tiempo
+function esperarUnSegundo() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Resuelto');
+    }, 1000);
+  });
+}
 
-			<br>
+// Función asincrónica que espera un segundo antes de imprimir el mensaje
+async function imprimirMensaje() {
+  const resultado = await esperarUnSegundo();
+  console.log(resultado);
+}
 
-			<p> Para poder ingresar datos a Scratch por medio del teclado, es necesario crear las variables anteriormente, así como escribir un texto antes de ingresar la variables, en la siguiente imagen se muestran los respectivos codigos: </p>
-			<br>
-					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304726" height="311" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+// Llamada a la función asincrónica
+imprimirMensaje();
 
-			<br>
-			<p> Así inicialmente en la sección sensores, el bloque de pregunta "como te llamas", se debe reemplazar por la información de la variable que queremos ingresar. Así en el caso del promedio se cambiaria por "ingresa el primer número". Posteriormente en la sección variable, vamos a crear una nueva variable tal como muestra la imagen, llamandola <b>n1</b> y posteriormente vamos a repetir el procedimiento así como a acoplar los codigos tal como muestra la siguiente imagen:</p>
-			
-			<br>
-
-            		<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304760" height="418" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-            <br>
-			<p>Así en esta última parte se asigna la respuesta en una variable usando los bloques vistos anteriormente y empleando los bloques de aisngación matemática se encuentra el respectivo resultado.</p>
-			<br>
-			
-
-                        <br>
-
-                        <p>Te sugerimos hacer los ejercicios de la segunda y tercera actividad ahora en Scratch.</p>
+     
+    </code>
+</pre>		
                         <br>
                          <div id="ctrl">
 					
