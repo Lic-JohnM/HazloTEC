@@ -5,7 +5,7 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
+	<title>WEB</title>
 	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -35,6 +35,38 @@
 
                 <div id="con">
 
+			<h2>Evento Onclick y Modificar elementos por ID</h2>
+			<br>
+			<p>Los eventos son las posibles iteracciones que tiene un usuario con una página WEB como hacer click en un elemento, mover las teclas del teclado, enviar un formulario o se cambia el tamaño de la pantalla entre otros. Javascript permite cambiar elementos del árbol DOM, como quitarlos, ponerlos o modificar su contenido. En el codigo siguiente podemos ver un uso clasico y practico de las dos caracteristicas anteriormente expuestas: </p>
+<pre>
+    <code>
+
+&lt;!DOCTYPE html&gt
+&lt;html lang="en"&gt
+&lt;head&gt
+  &lt;meta charset="UTF-8"&gt
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+  &lt;title&gtModificar Texto con JavaScript&lt;/title&gt
+&lt;/head&gt
+&lt;body&gt
+  &lt;h1 id="titulo"&gtTexto Original&lt;/h1&gt
+  &lt;button onclick="cambiarTexto()"&gtCambiar Texto&lt;/button&gt
+
+  &lt;script&gt
+    function cambiarTexto() {
+      // Seleccionamos el elemento h1 por su id
+      const tituloElemento = document.getElementById('titulo');
+
+      // Modificamos el texto del elemento h1
+      tituloElemento.textContent = '¡Nuevo Texto Modificado!';
+    }
+  &lt;/script&gt
+&lt;/body&gt
+&lt;/html&gt
+     
+    </code>
+</pre>			
+			<br>
 			<h2> Storage</h2>
 
 				<br>
@@ -115,28 +147,65 @@ console.log(personaDesdeJson); // Salida: { nombre: 'Juan', edad: 30, ciudad: 'M
 
                         <br>
 
-			<h3>Eventos</h3>
+			<h3>Fetch</h3>
 
-                       <p>Los eventos nos permiten modificar el DOM de nuestro HTML a continuación se presenta un ejemplo:</p>
+                       <p>Cuando necesitamos recibir información de un servidor WEB empleamos el metodo Fetch para hacerlo a continuación se presenta un ejemplo:</p>
 
 <br>
 <pre>
     <code>
-// Obtener el botón por su id
-let miBoton = document.getElementById('miBoton');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Pokémon</title>
+</head>
+<body>
+  <h1>Información de Pikachu</h1>
+  <div id="pokemon-info"></div>
 
-// Añadir un event listener para el evento 'click'
-miBoton.addEventListener('click', function() {
-    // Función que se ejecutará cuando se haga clic en el botón
-    alert('¡Has hecho click en el botón!');
-});
-     
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Definimos la URL de la API para obtener información de un Pokémon específico (en este caso, Pikachu con ID 25)
+      const pokemonAPIUrl = 'https://pokeapi.co/api/v2/pokemon/25';
+
+      // Realizamos una solicitud GET a la URL de la API
+      fetch(pokemonAPIUrl)
+        .then(response => {
+          // Verificamos si la respuesta es exitosa
+          if (!response.ok) {
+            throw new Error('La solicitud no fue exitosa');
+          }
+          // Parseamos la respuesta JSON
+          return response.json();
+        })
+        .then(data => {
+          // Manejamos los datos obtenidos
+          const pokemonInfo = document.getElementById('pokemon-info');
+          pokemonInfo.innerHTML = `
+            <p><strong>Nombre:</strong> ${data.name}</p>
+            <p><strong>ID:</strong> ${data.id}</p>
+            <p><strong>Altura:</strong> ${data.height}</p>
+            <p><strong>Peso:</strong> ${data.weight}</p>
+            <p><strong>Tipos:</strong> ${data.types.map(type => type.type.name).join(', ')}</p>
+          `;
+        })
+        .catch(error => {
+          // Manejamos los errores de la solicitud
+          console.error('Ocurrió un error:', error);
+          const pokemonInfo = document.getElementById('pokemon-info');
+          pokemonInfo.innerHTML = '<p>Ocurrió un error al cargar la información del Pokémon.</p>';
+        });
+    });
+  </script>
+</body>
+</html>
     </code>
 </pre>	 
 
                         <br>
-			<p>En donde existe un elemento HTML con un identificador llamado mi boton, y cuando se hace click en el se genera un letrero que dice has hecho click</p>
-			<br>
+			
 			
 
                          <div id="ctrl">
