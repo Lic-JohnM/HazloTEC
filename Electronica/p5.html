@@ -290,6 +290,55 @@
 			<h2>Divisor de voltaje capacitivo</h2>
 
 			<p>Un divisor de voltaje capacitivo permite crear un filtro pasabandas y su formula es la siguiente, es muy util en contezto donde la frecuencia varia como la humedad de una zona, así tambien cuando se varia la frecuencia en algunas ocasiones puede ajustarse el voltaje de salida para iniciar un motor.</p>
+			  <h1>Filtros RLC: Pasa Altos, Pasa Bajos, Pasa Banda y Rechaza Banda</h1>
+    <p>Los filtros RLC son circuitos electrónicos que utilizan resistores (R), inductores (L) y capacitores (C) para permitir o bloquear ciertas frecuencias de señales eléctricas. A continuación, se describen los diferentes tipos de filtros y sus fórmulas asociadas:</p>
+
+    <div class="section">
+        <h2>Filtro Pasa Bajos</h2>
+        <p>Un filtro pasa bajos permite el paso de las señales de frecuencia por debajo de una frecuencia de corte \( f_c \) y atenúa las frecuencias más altas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
+        <div class="formula">
+            \( f_c = \frac{1}{2\pi RC} \)
+        </div>
+        <p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
+        <div class="formula">
+            \( f_c = \frac{1}{2\pi\sqrt{LC}} \)
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Filtro Pasa Altos</h2>
+        <p>Un filtro pasa altos permite el paso de señales de frecuencia por encima de una frecuencia de corte \( f_c \) y atenúa las frecuencias más bajas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
+        <div class="formula">
+            \( f_c = \frac{1}{2\pi RC} \)
+        </div>
+        <p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
+        <div class="formula">
+            \( f_c = \frac{1}{2\pi\sqrt{LC}} \)
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Filtro Pasa Banda</h2>
+        <p>Un filtro pasa banda permite el paso de un rango de frecuencias entre dos frecuencias de corte, \( f_{c1} \) y \( f_{c2} \), y atenúa las frecuencias fuera de este rango. La frecuencia de corte está dada por:</p>
+        <div class="formula">
+            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \)
+        </div>
+        <p>Para el filtro pasa banda, las dos frecuencias de corte son:</p>
+        <div class="formula">
+            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Filtro Rechaza Banda</h2>
+        <p>Un filtro rechaza banda bloquea un rango de frecuencias entre \( f_{c1} \) y \( f_{c2} \), permitiendo el paso de frecuencias fuera de este rango. La fórmula para la frecuencia de corte en un filtro RLC es:</p>
+        <div class="formula">
+            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
+        </div>
+    </div>
+				<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=627900373044518359" height="266" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>
 			
                          <div id="ctrl">
 					
