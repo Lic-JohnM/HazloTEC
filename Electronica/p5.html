@@ -36,372 +36,104 @@
 
                 <div id="con">
 
-		
-			<h2>Condensadores</h2>
-
+			
+		<h2> Semiconductores </h2>
+				<br>
+			<p>Los electrones fluyen con más facilidad en ciertos materiales que en otros, por ejemplo en materiales como la madera el flujo es nulo por la composición física y química de esta. Sin embargo en otros materiales se presta más el flujo como lo son los metales y el agua. El <b>silicio</b> es el segundo más material abundante en el planeta tierra y es la base de los materiales semiconductores, de este material estan hechas las resistencias electronicas permitiendo según las franjas el respectivo paso de electrones.Entre los semiconductores más empleados en la electrónica que vamos a emplear se encuentran los diodos, los transistores y los circuitos integrados.</p>
 			<br>
-			<p>Los condensadores son elementos denominados dielectricos porque funcionan con dos placas que almacenan electrones en forma de voltaje y se mide en faradios la capacidad que puede almacenar, en la siguiente imagen se pueden visualizar dos de ellos:</p>
+			<h3>Diodos</h3>
+			<br>
+
+		<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=938156166103307270" height="309" width="450" frameborder="0" scrolling="no" ></iframe>			</div>
+			
+			<br>
+			<p>Los diodos son elementos que permiten el paso de corriente solamente cuando esta conectado de una manera, en el proceso de transformación de energía alterna apoya el proceso de rectificación. A continuacións se aclara el proceso despues que la energía alterna llega a las tomas de corriente.
+       </p>
+       
+			 		<br>
+
+			<p> Si no existiera la parte de transformación no seria posible usar todos los dispositivos electrónicos que empleamos cotidianamente. Siguiendo la imagen que esta a continuación inicialmente usando el transformador se reduce el voltaje al deseado, posteriormente empleando el  <b>diodo</b> permite el paso solamente de la carga de electrones en un sentido y para finalizar con un ultimo elemento de electrónica llamado condensador se almacena la energía y se termina de rectificar, generando asi el voltaje directo VDC.</p>
+
+
 			<br>
 			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=472807660874871133" height="745" width="345" frameborder="0" scrolling="no" ></iframe>
-				<br>
-			</div>
-
-			<div id="b1">
-				<div id="e">
-					<h3> Circuito con resistencias y condensadores</h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            
-					<p>Una primera utilidad de los circuitos denominados RC(Resistencia-Condensador) es un temporizador, el cual funciona cargando y descargando el condensador con las siguientes formulas:</p>
-					<br>
-					
-					    <h3>Carga de un condensador:</h3>
-					    <br>
-					    <p>La fórmula para la carga de un condensador es:</p>
-					    <p>
-					        <math xmlns="http://www.w3.org/1998/Math/MathML">
-					            <mi>V</mi>
-					            <mo stretchy="false">(</mo>
-					            <mi>t</mi>
-					            <mo stretchy="false">)</mo>
-					            <mo>=</mo>
-					            <mi>V</mi>
-					            <mo>×</mo>
-					            <mo stretchy="false">(</mo>
-					            <mn>1</mn>
-					            <mo>-</mo>
-					            <msup>
-					                <mi>e</mi>
-					                <mrow class="MJX-TeXAtom-ORD">
-					                    <mrow class="MJX-TeXAtom-ORD">
-					                        <mo>-</mo>
-					                        <mfrac>
-					                            <mi>t</mi>
-					                            <mrow>
-					                                <mi>R</mi>
-					                                <mi>C</mi>
-					                            </mrow>
-					                        </mfrac>
-					                    </mrow>
-					                </mrow>
-					            </msup>
-					            <mo stretchy="false">)</mo>
-					        </math>
-					    </p>
-					    <br>
-					    <h3>Descarga de un condensador:</h3>
-					    <br>
-					    <p>La fórmula para la descarga de un condensador es:</p>
-					    <p>
-					        <math xmlns="http://www.w3.org/1998/Math/MathML">
-					            <mi>V</mi>
-					            <mo stretchy="false">(</mo>
-					            <mi>t</mi>
-					            <mo stretchy="false">)</mo>
-					            <mo>=</mo>
-					            <mi>V</mi>
-					            <mo>×</mo>
-					            <msup>
-					                <mi>e</mi>
-					                <mrow class="MJX-TeXAtom-ORD">
-					                    <mrow class="MJX-TeXAtom-ORD">
-					                        <mo>-</mo>
-					                        <mfrac>
-					                            <mi>t</mi>
-					                            <mrow>
-					                                <mi>R</mi>
-					                                <mi>C</mi>
-					                            </mrow>
-					                        </mfrac>
-					                    </mrow>
-					                </mrow>
-					            </msup>
-					        </math>
-					    </p>
-					<br>
-					<p>Las formulas siguen el esquema que esta a la izquierda de la siguiente imagen, donde en la imagen derecha se encuentra el circuito con un led el cual queda encencido una vez se quita la fuente de voltaje generando un pequeño temporizador:</p>
-					<div style="text-align:center;">
-					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
-					</div>         
-					<br>
-
-					<p>Haciendo click en el siguiente botón <a href="https://colab.research.google.com/?hl=es">Pulsa aquí,</a> e ingresando el siguiente codigo se puede generar la gráfica de carga y descarga de un condensador así como calcular cuanto tiempo se demora en cargarse y descargarse: </p>
-
-					 	   <script type="text/python">
-							import numpy as np
-							import matplotlib.pyplot as plt
-							
-							# Crear el primer vector
-							x = np.arange(1, 11)
-							
-							# Definir la formula de carga de un condensador
-							def capacitor_charging(t, C, V0):
-							  return V0 * (1 - np.exp(-t / (C * R)))
-							
-							# Ajustar el valor de voltaje, resistencia y condensador
-							C = 10  # Farads
-							V0 = 10  # Volts
-							R = 1  # Ohms
-							
-							# Calcular el segundo vector
-							y = capacitor_charging(x, C, V0)
-							
-							# Gráficar los 2 vectores
-							plt.plot(x, y)
-							plt.xlabel("Time")
-							plt.ylabel("Voltage")
-							plt.show()
-						    </script>
-					<br>
-					<p>Para finalizar el circuito creado para simular en ThinkerCAD es el siguiente:</p>
-					<br>
-					<div style="text-align:center;">
-					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
-						
-					</div>   
-					<br>
+			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238335142" height="382" width="600" frameborder="0" scrolling="no" ></iframe>
 				
-				</div>
 			</div>
+			 <br>
+			 <h2>LED</h2>
+			 <br>
+			 <p>En la imágen siguiente podemos observar un LED(Diodo Emisor de Luz), el cuál es empleado en la transformación de la iluminación actual, es importante considerar que según el color enciende el LED el cual a su vez el voltaje que emplea de la fuente de voltaje y que tiene restricciones de corrientes los cuales se indican en la imagen:</p>
+		  		<br>
+			 	<div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=9640586696294186" height="797" width="450" frameborder="0" scrolling="no" ></iframe>				</div>
+			 <br>
+			 <h5>Circuito de iluminación</h5>
 			<br>
-
-			<br>
-			<p>Para hacer los calculos de carga y descarga ya no es posible hacerlo usando una fuente de voltaje directo porque una vez se carga tocaria apagar la fuente para que se descargue, en este orden de ideas se utiliza una fuente de enregía alterna que genera pulsos electrícos como se ven a continuación: </p>
-			<br>
-					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=850195235898016255" height="366" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
-
-			<br>
-			<p>Así el generador permite hacer modificaciones a las señales de energía alterna, algunos de su usos son filtrar señales que no son convenientes en aplicaciones, ayudar a arreancar motores gracias a su acumulación de energía o generar temporizadores aprovechando su carga o descarga.</p>
-			
-			
-			<div id="b2">
-				<div id="e">
-					<h3>Bobina </h3>
-				<a id="signo">+</a>
+			<p>El primer circuito de iluminación mostrado a continuación es un circuito en serie, como se puede observar en la siguiente imagen cuando el interruptor se abre el circuito deja de alumbrar, <b>es importante tener en cuenta que la suma de los voltajes no depe pasar el voltaje de la fuente</b>.</p>
+				<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715069" height="435" width="345" frameborder="0" scrolling="no" ></iframe>
 				</div>
-				<div id="p">
-			
-				<br>
-			<p>La bobina tiene un inicio parecido al condensador, solamente que almacena corriente en lugar de voltaje y se puede visualizar a continuación:</p>
-                        <br>
-            				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
 					<br>
-			<br>
+			<p>Como se muestra en la imagen anterior, el cálculo de corriente es util para proteger los LED y conocer el consumo electríco, a continuación se presenta la configuración en paralelo que aunque un interruptor controla los dos diodos, si alguno se daña y obstruye el paso de electrones el otro puede continuar funcionando.</p>
+
+				<div style="text-align:center;">
+
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715119" height="336" width="345" frameborder="0" scrolling="no" ></iframe>
 				</div>
-			</div>
-		
-
-			<div id="b3">
-				<div id="e">
-					<h3> Generador de funciones y multimetro </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				
-			<h3> Generador de funciones</h3>
-
+					
 			<br>
+			<p>A continuación se muestra el circuito con diferentes ramas, donde es posible calcular la corriente consumida y tener un control de cada rama con interruptores diferentes. </p>
+				<div style="text-align:center;">
 
-			<p>Una vez finalizado el analisis de algunos circuitos que funcionan con energía directa, se continua con el analisis de circuitos con energía alterna las cuales vienen desde la red electríca o se puede generar con un artefacto denominado generador de funciones, el cual se muestra a continuación:</p>
-			<br>
-					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=912541943231335740" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-						
-					</div>
-			<p>Así el generador de funciones permite generar la onda que queremos generar y valores como su amplitud, periodo, frecuencias, fase, entre muchas otras variables.</p>
-			<br>
-
-				<h2>Osciloscopio</h2>
-
-			<br>
-
-			<p>El osciloscopio es un equivalente al multimetro para medir señales electrícas que varian en el tiempo, el multimetro permite mirar por frecuencia las señales, revisando amplitudes así como que la calidad de la señal sea la más optima.</p>
-			<br>
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1145532855353128000" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>		
-
-
-			<br>
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715142" height="440" width="345" frameborder="0" scrolling="no" ></iframe>
 	
 				</div>
+			
+			<br>
+			<h3>LED RGB</h3>
+			<br>
+			<p>El Led RGB es un led que permite generar cualquier color, desde que en sus terminales se emplee la combinación de colores RGB que se desee. En la siguiente imagen podemos observar uno de ellos:</p>
+          	<br>
+			<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1042653751204642485" height="431" width="345" frameborder="0" scrolling="no" ></iframe>
+		</div>
+			
+			<br>		
+               <h3> Transistores </h3>
+			<br>
+
+			<p>Los transistores historicamente han permitido la transición de gran parte de la electrónica a lo que conocemos hoy en día en un microprocesador de un computador puede tener 700 millones de amplificadores. En la siguiente imagen podemos ver su simbologia y constitución de 3 pines(emisor,base,colector):</p>
+            
+            <br>
+    			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=622481979768750291" height="393" width="345" frameborder="0" scrolling="no" ></iframe>	
 			</div>
-			
-			<br>
-			<h3>Reactancia capacitiva</h3>
 			<br>
 
-			<p>Cuando ponemos un condensador en un circuito alterno, la oposición a la corriente electríca ya no se llama resistencia si no impedancia la cuál tiene la resistencia normal con un componenete llamado reactancia la cual puede ser capacitiva o inductiva dependiendo la presencia de condensadores o bobinas, la formula que define la reactancia capacitiva(X<sub>C</sub>) es la siguiente:</p>
-			<br>	
-			<p>X<sub>C</sub> = 1 / (2πfC)</p>
-			<br>
-			    <p>Donde:</p>
-			    <ul>
-			        <li>X<sub>C</sub>: Reactancia capacitiva en ohmios (Ω).</li>
-			        <li>f: Frecuencia en hercios (Hz).</li>
-			        <li>C: Capacitancia en faradios (F).</li>
-			        <li>π: Constante Pi (~3.14159).</li>
-			    </ul>
-			
-			<p>Así entre más frecuencia menos resistencia va a tener el circuito, una aplicación de la misma son los filtros de frecuencias pasabajos, que según los valores que se seleccinonen de resistencia y condensador permiten pasar unas frecuencias especificas</p>
-			<br>
+			<h2>El transistor como adaptador</h2>
+			 <br>
+			<p>El transistor también se puede hacer una pequeña amplificación pero sobre todo podemos ajustarlo como un interruptor y según el diseño adaptarlo a un rango de voltaje deseado para su posterior etapa de procesamiento. A continuación podemos observar el circuito de adaptación  </p>
 
-			<h3>Impedancia</h3>
-			<br>
-			<p>La impedancia (Z) en un circuito que contiene una reactancia capacitiva (X<sub>C</sub>) y una resistencia (R) se calcula como:</p>
-			    <p>Z = √(R<sup>2</sup> + X<sub>C</sub><sup>2</sup>)</p>
-			
-			    <p>Donde:</p>
-			    <ul>
-			        <li>Z: Impedancia en ohmios (Ω).</li>
-			        <li>R: Resistencia en ohmios (Ω).</li>
-			        <li>X<sub>C</sub>: Reactancia capacitiva en ohmios (Ω).</li>
-			    </ul>
-
-
-			<div id="b4">
-				<div id="e">
-					<h3>Decibeles y Diagrama de Bode </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<br>
-			<p>Una forma de representar la cantidad de frecuencia es el diagrama de bode, y matemáticamente una herramienta para usar las magnitudes de una mejor manera son los decibeles</p>
                         <br>
-            				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
-					<br>
-			<br>
-				</div>
+
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564274533473" height="353" width="450" frameborder="0" scrolling="no" ></iframe>
 			</div>
+			<br>
+			<br>
+			<p>Gran parte de los tienen como una finalidad un voltaje dado apoyado por divisores de voltaje. A continuación podemos observar el circuito de adaptación  </p>
 
-			<h2>Divisor de voltaje capacitivo</h2>
+                        <br>
 
-			<p>Un divisor de voltaje capacitivo permite crear un filtro pasabandas y su formula es la siguiente, es muy util en contezto donde la frecuencia varia como la humedad de una zona, así tambien cuando se varia la frecuencia en algunas ocasiones puede ajustarse el voltaje de salida para iniciar un motor.</p>
-			  <h1>Filtros RLC: Pasa Altos, Pasa Bajos, Pasa Banda y Rechaza Banda</h1>
-    <p>Los filtros RLC son circuitos electrónicos que utilizan resistores (R), inductores (L) y capacitores (C) para permitir o bloquear ciertas frecuencias de señales eléctricas. A continuación, se describen los diferentes tipos de filtros y sus fórmulas asociadas:</p>
-
-    <div class="section">
-        <h2>Filtro Pasa Bajos</h2>
-        <p>Un filtro pasa bajos permite el paso de las señales de frecuencia por debajo de una frecuencia de corte \( f_c \) y atenúa las frecuencias más altas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
-        <div class="formula">
-            \( f_c = \frac{1}{2\pi RC} \)
-        </div>
-        <p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
-        <div class="formula">
-            \( f_c = \frac{1}{2\pi\sqrt{LC}} \)
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Filtro Pasa Altos</h2>
-        <p>Un filtro pasa altos permite el paso de señales de frecuencia por encima de una frecuencia de corte \( f_c \) y atenúa las frecuencias más bajas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
-        <div class="formula">
-            \( f_c = \frac{1}{2\pi RC} \)
-        </div>
-        <p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
-        <div class="formula">
-            \( f_c = \frac{1}{2\pi\sqrt{LC}} \)
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Filtro Pasa Banda</h2>
-        <p>Un filtro pasa banda permite el paso de un rango de frecuencias entre dos frecuencias de corte, \( f_{c1} \) y \( f_{c2} \), y atenúa las frecuencias fuera de este rango. La frecuencia de corte está dada por:</p>
-        <div class="formula">
-            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \)
-        </div>
-        <p>Para el filtro pasa banda, las dos frecuencias de corte son:</p>
-        <div class="formula">
-            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Filtro Rechaza Banda</h2>
-        <p>Un filtro rechaza banda bloquea un rango de frecuencias entre \( f_{c1} \) y \( f_{c2} \), permitiendo el paso de frecuencias fuera de este rango. La fórmula para la frecuencia de corte en un filtro RLC es:</p>
-        <div class="formula">
-            \( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
-        </div>
-    </div>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=627900373044518359" height="266" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
-			   <h1>Bobinas e Inductancia</h1>
-        <p>Las bobinas, también conocidas como inductores, son componentes electrónicos que almacenan energía en un campo magnético cuando la corriente eléctrica pasa a través de ellas. La inductancia, medida en henrios (H), es una propiedad fundamental de las bobinas, la cual determina su capacidad para oponerse a cambios en la corriente.</p>
-        <h2>Fórmula de Inductancia</h2>
-        <p>La inductancia de una bobina se calcula con la siguiente fórmula:</p>
-        <div class="formula">
-            \( L = \frac{{N^2 \cdot A \cdot \mu}}{{l}} \)
-        </div>
-        <ul>
-            <li><strong>N:</strong> Número de vueltas del alambre.</li>
-            <li><strong>A:</strong> Área transversal del núcleo de la bobina (m²).</li>
-            <li><strong>l:</strong> Longitud de la bobina (m).</li>
-            <li><strong>\(\mu\):</strong> Permeabilidad magnética del material del núcleo.</li>
-        </ul>
-
-        <h2>Ejemplo Práctico</h2>
-        <p>Supongamos una bobina con las siguientes características:</p>
-        <ul>
-            <li>Número de vueltas, \(N = 500\)</li>
-            <li>Área del núcleo, \(A = 1 \times 10^{-6} \, \text{m}^2\)</li>
-            <li>Longitud de la bobina, \(l = 0.2 \, \text{m}\)</li>
-            <li>Material del núcleo: hierro (\(\mu_r \approx 1000\))</li>
-        </ul>
-        <p>La permeabilidad total \(\mu\) para el hierro es:</p>
-        <div class="formula">
-            \( \mu = \mu_0 \times \mu_r = (4\pi \times 10^{-7} \, \text{H/m}) \times 1000 \approx 4\pi \times 10^{-4} \, \text{H/m} \)
-        </div>
-        <p>Calculando la inductancia usando la fórmula:</p>
-        <div class="formula">
-            \( L = \frac{{500^2 \times 1 \times 10^{-6} \times 4\pi \times 10^{-4}}}{{0.2}} \approx 1.57 \times 10^{-3} \, \text{H} = 1.57 \, \text{mH} \)
-        </div>
-
-        <h2>Aplicaciones de las Bobinas e Inductores</h2>
-        <p>Las bobinas e inductores se utilizan en una variedad de aplicaciones debido a sus propiedades para almacenar energía y su capacidad de filtrar señales eléctricas. Algunas de sus aplicaciones incluyen:</p>
-        <ul>
-            <li><strong>Transformadores:</strong> Utilizados para cambiar niveles de voltaje en sistemas de energía eléctrica.</li>
-            <li><strong>Filtros:</strong> Empleados en circuitos electrónicos para filtrar señales, permitiendo el paso de ciertas frecuencias y bloqueando otras.</li>
-            <li><strong>Almacenamiento de Energía:</strong> En aplicaciones como fuentes de alimentación y sistemas de gestión de energía, donde la bobina almacena energía en un campo magnético.</li>
-            <li><strong>Detección de Oscilaciones:</strong> Utilizados en circuitos de sintonización y en receptores de radio para detectar frecuencias específicas.</li>
-            <li><strong>Desarrolladores de Campos Electromagnéticos:</strong> En dispositivos como motores eléctricos y generadores, donde los campos magnéticos son esenciales para el funcionamiento.</li>
-        </ul>
-
-        <h2>Carga y Descarga de un Inversor</h2>
-        <p>En un circuito LC, como el formado por un inductor y un capacitor, la carga y descarga de energía sigue un comportamiento exponencial. La corriente a través del inductor mientras carga y descarga se describe por la siguiente ecuación:</p>
-        <div class="example">
-            La ecuación de la corriente \(I(t)\) en un circuito de carga y descarga es:
-            \[
-            I(t) = I_0 e^{-\frac{t}{\tau}}
-            \]
-            donde:
-            - \(I_0\) es la corriente inicial en el circuito.
-            - \(\tau = \frac{L}{R}\) es la constante de tiempo del circuito, donde \(L\) es la inductancia y \(R\) es la resistencia del circuito.
-        </div>
-        <p>En este contexto, un ejemplo práctico sería:</p>
-        <div class="example">
-            Supongamos que \(L = 1 \, \text{mH}\), \(R = 100 \, \Omega\), y la corriente inicial es \(I_0 = 5 \, \text{A}\). La constante de tiempo \(\tau\) sería:
-            \[
-            \tau = \frac{L}{R} = \frac{1 \times 10^{-3} \, \text{H}}{100 \, \Omega} = 10^{-5} \, \text{s}
-            \]
-            La corriente en función del tiempo \(I(t)\) sería:
-            \[
-            I(t) = 5 e^{-\frac{t}{10^{-5}}}
-            \]
-        </div>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564241126602" height="492" width="450" frameborder="0" scrolling="no" ></iframe>
+			</div>
+			<br>
+			
+			 
                          <div id="ctrl">
 					
 				 <a class="n1" href="p4.html"> anterior </a>
