@@ -129,49 +129,14 @@
 					</div>         
 					<br>
 
-					<p>Haciendo click en el siguiente botón <a href="https://colab.research.google.com/?hl=es">Pulsa aquí,</a> e ingresando el siguiente codigo se puede generar la gráfica de carga y descarga de un condensador así como calcular cuanto tiempo se demora en cargarse y descargarse: </p>
-
-					 	   <script type="text/python">
-							import numpy as np
-							import matplotlib.pyplot as plt
-							
-							# Crear el primer vector
-							x = np.arange(1, 11)
-							
-							# Definir la formula de carga de un condensador
-							def capacitor_charging(t, C, V0):
-							  return V0 * (1 - np.exp(-t / (C * R)))
-							
-							# Ajustar el valor de voltaje, resistencia y condensador
-							C = 10  # Farads
-							V0 = 10  # Volts
-							R = 1  # Ohms
-							
-							# Calcular el segundo vector
-							y = capacitor_charging(x, C, V0)
-							
-							# Gráficar los 2 vectores
-							plt.plot(x, y)
-							plt.xlabel("Time")
-							plt.ylabel("Voltage")
-							plt.show()
-						    </script>
-					<br>
-					<p>Para finalizar el circuito creado para simular en ThinkerCAD es el siguiente:</p>
-					<br>
-					<div style="text-align:center;">
 					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
-						
-					</div>   
-					<br>
 				
 				</div>
 			</div>
 			<br>
 
 			<br>
-			<p>Para hacer los calculos de carga y descarga ya no es posible hacerlo usando una fuente de voltaje directo porque una vez se carga tocaria apagar la fuente para que se descargue, en este orden de ideas se utiliza una fuente de enregía alterna que genera pulsos electrícos como se ven a continuación: </p>
+			<p>Para hacer los calculos de carga y descarga ya no es posible hacerlo usando una fuente de voltaje directa porque una vez se carga tocaria apagar la fuente para que se descargue, en este orden de ideas se utiliza una fuente de energía alterna que genera pulsos electrícos como se ven a continuación: </p>
 			<br>
 					<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=850195235898016255" height="366" width="345" frameborder="0" scrolling="no" ></iframe>
@@ -194,6 +159,30 @@
             				<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
 					</div>
+			<p>Las formulas a seguir de carga y descarga son las siguientes:</p>
+					<br>
+					 <h2>Carga (Q) en una Bobina</h2>
+    <p class="formula">Q(t) = L * (1 - e^(-t / (L / R)))</p>
+    <p class="explanation">
+        <strong>Q(t)</strong>: Carga almacenada en la bobina en el tiempo <strong>t</strong>.<br>
+        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
+        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
+        <strong>t</strong>: Tiempo en segundos (s).<br>
+        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
+    </p>
+
+    <h2>Voltaje (V) en una Bobina</h2>
+    <p class="formula">V(t) = R * (1 - e^(-t / (L / R)))</p>
+    <p class="explanation">
+        <strong>V(t)</strong>: Voltaje a través de la bobina en el tiempo <strong>t</strong>.<br>
+        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
+        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
+        <strong>t</strong>: Tiempo en segundos (s).<br>
+        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
+    </p>
+
+
+					
 					<br>
 			<br>
 				</div>
