@@ -111,7 +111,7 @@ header>#crea>#img{
       height: 180vh;
       display: grid;
       grid-template-columns: 5% 30% 30% 30% 5%;
-      grid-template-rows: 2% 24% 24% 24% 24%  2%;
+      grid-template-rows: 2% 19.6% 19.6% 19.6% 19.6% 19.6%  2%;
 
     }
     .info{
@@ -728,8 +728,8 @@ header>#crea>#img{
      margin-right: 5%;
      display:grid;
      grid-template-rows: 30% 50% 20%;
-     grid-row-start: 5;
-     grod-row-end:6;
+     grid-row-start: 7;
+     grod-row-end:8;
      grid-column-start: 2;
      grid-column-end:3;
 
@@ -779,8 +779,8 @@ header>#crea>#img{
      margin-right: 5%;
      display:grid;
      grid-template-rows: 30% 50% 20%;
-     grid-row-start: 5;
-     grod-row-end:6;
+     grid-row-start: 6;
+     grod-row-end:7;
      grid-column-start: 3;
      grid-column-end:4;
 
@@ -830,8 +830,8 @@ header>#crea>#img{
      margin-right: 5%;
      display:grid;
      grid-template-rows: 30% 50% 20%;
-     grid-row-start: 5;
-     grod-row-end:6;
+     grid-row-start: 6;
+     grod-row-end:7;
      grid-column-start: 4;
      grid-column-end:5;
 
