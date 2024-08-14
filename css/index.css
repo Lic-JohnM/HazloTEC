@@ -717,7 +717,157 @@ header>#crea>#img{
     }
 
 
-    
+ #SLC>#a13{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 2;
+     grid-column-end:3;
+
+    }
+    #SLC>#a13>#a131{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a13>#a132{
+ background-image: url(https://lic-johnm.github.io/HazloTEC/MyE/Ilustracion_MYE.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a13>#a133{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+
+    #SLC>#a14:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+ #SLC>#a14{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 3;
+     grid-column-end:4;
+
+    }
+    #SLC>#a14>#a141{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a14>#a142{
+      background-image: url(https://lic-johnm.github.io/HazloTEC/WEB/Ilustracion_WEB.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a14>#a143{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a14:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
+
+
+ #SLC>#a15{
+     border-color: rgba(47,65,89,0.9) ;
+     background-color: rgba(47,65,89,0.9) ;
+     color:white;
+     border-style: solid;
+     margin-top: 5%;
+     margin-left:5%;
+     margin-bottom: 5%;
+     margin-right: 5%;
+     display:grid;
+     grid-template-rows: 30% 50% 20%;
+     grid-row-start: 5;
+     grod-row-end:6;
+     grid-column-start: 4;
+     grid-column-end:5;
+
+    }
+    #SLC>#a15>#a151{
+    text-align: center;
+         display:flex;
+      align-items:center;
+      justify-content:center;
+     text-decoration: none;
+           color:white;
+    }
+
+    #SLC>#a15>#a152{
+      background-image: url(https://lic-johnm.github.io/HazloTEC/NyH/Ilustracion_NyH.png);
+      background-color:white;
+      background-size: 80% 90%;
+      background-position: center center;
+      background-repeat:no-repeat;
+      text-decoration: none;
+      color:white;
+    }
+    #SLC>#a15>#a153{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    text-decoration: none;
+    color:white;
+    }
+
+    #SLC>#a15:hover{
+    color: rgba(47,65,89,0.9) ;
+    background-color:#f6dfca;
+    border-style: solid;
+    border-color:#f6dfca;
+    }
     
            #LC>H1{
             font-size:35px;
