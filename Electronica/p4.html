@@ -40,7 +40,7 @@
 			<h2>Condensadores</h2>
 
 			<br>
-			<p>Los condensadores son elementos denominados dielectricos porque funcionan con dos placas que almacenan electrones en forma de voltaje y se mide en faradios la capacidad que puede almacenar, en la siguiente imagen se pueden visualizar dos de ellos:</p>
+			<p>Los condensadores, también conocidos como capacitores, son dispositivos que almacenan energía en forma de carga eléctrica mediante dos placas separadas por un material dieléctrico. La capacidad de un condensador para almacenar carga se mide en faradios. A continuación, se muestra una imagen con dos ejemplos de condensadores, ilustrando su diseño y funcionamiento.</p>
 			<br>
 			<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=472807660874871133" height="745" width="345" frameborder="0" scrolling="no" ></iframe>
@@ -55,7 +55,7 @@
 				<div id="p">
 				<br>
             
-					<p>Una primera utilidad de los circuitos denominados RC(Resistencia-Condensador) es un temporizador, el cual funciona cargando y descargando el condensador con las siguientes formulas:</p>
+					<p>Una de las primeras utilidades de los circuitos RC (Resistencia-Condensador) es como temporizador. Estos circuitos funcionan cargando y descargando el condensador, y su comportamiento temporal se describe mediante las siguientes fórmulas:</p>
 					<br>
 					
 					    <h3>Carga de un condensador:</h3>
@@ -122,7 +122,8 @@
 					        </math>
 					    </p>
 					<br>
-					<p>Las formulas siguen el esquema que esta a la izquierda de la siguiente imagen, donde en la imagen derecha se encuentra el circuito con un led el cual queda encencido una vez se quita la fuente de voltaje generando un pequeño temporizador:</p>
+					<p>Las fórmulas utilizadas siguen el esquema mostrado a la izquierda en la siguiente imagen. A la derecha, se encuentra el circuito que incluye un LED, el cual permanece encendido durante un breve período después de retirar la fuente de voltaje, funcionando así como un pequeño temporizador.</p>
+					
 					<div style="text-align:center;">
 					
 					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
@@ -135,16 +136,18 @@
 			</div>
 			<br>
 
-			<br>
-			<p>Para hacer los calculos de carga y descarga ya no es posible hacerlo usando una fuente de voltaje directa porque una vez se carga tocaria apagar la fuente para que se descargue, en este orden de ideas se utiliza una fuente de energía alterna que genera pulsos electrícos como se ven a continuación: </p>
+			<br>	
+			<h2>Generador de Señales</h2>
+			 <br>
+			<p>Para realizar los cálculos de carga y descarga en un circuito RC, no es práctico usar una fuente de voltaje directa, ya que una vez que el condensador se carga, la fuente debe apagarse para permitir la descarga. En su lugar, se utiliza una fuente de energía alterna que genera pulsos eléctricos, como se muestra a continuación:</p>
 			<br>
 					<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=850195235898016255" height="366" width="345" frameborder="0" scrolling="no" ></iframe>
 					</div>
 
 			<br>
-			<p>Así el generador permite hacer modificaciones a las señales de energía alterna, algunos de su usos son filtrar señales que no son convenientes en aplicaciones, ayudar a arreancar motores gracias a su acumulación de energía o generar temporizadores aprovechando su carga o descarga.</p>
-			
+			<p>El generador de señales permite modificar las señales de energía alterna de diversas maneras. Algunos de sus usos incluyen filtrar señales no deseadas en aplicaciones electrónicas, ayudar a arrancar motores gracias a su capacidad de acumular y liberar energía, y generar temporizadores aprovechando los ciclos de carga y descarga del condensador.</p>
+			<br>
 			
 			<div id="b2">
 				<div id="e">
@@ -154,16 +157,16 @@
 				<div id="p">
 			
 				<br>
-			<p>La bobina tiene un inicio parecido al condensador, solamente que almacena corriente en lugar de voltaje y se puede visualizar a continuación:</p>
+		<p>La bobina, al igual que el condensador, es un componente fundamental en los circuitos eléctricos, pero en lugar de almacenar energía en forma de voltaje, almacena energía en forma de campo magnético. Esto ocurre cuando una corriente eléctrica pasa a través de la bobina, creando un campo magnético alrededor de ella. La bobina está formada por un hilo conductor enrollado en espiral, y su capacidad para almacenar energía se mide en henrios (H). A continuación, se puede visualizar una bobina y su funcionamiento básico:</p>
                         <br>
             				<div style="text-align:center;">
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
 					</div>
-			<p>Las formulas a seguir de carga y descarga son las siguientes:</p>
-					<br>
-					 <h2>Carga (Q) en una Bobina</h2>
-    <p class="formula">Q(t) = L * (1 - e^(-t / (L / R)))</p>
-    <p class="explanation">
+			<p>Las fórmulas para la carga y descarga en una bobina son las siguientes:</p>
+
+    <h2>Carga (Q) en una Bobina</h2>
+    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
+    <p>
         <strong>Q(t)</strong>: Carga almacenada en la bobina en el tiempo <strong>t</strong>.<br>
         <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
         <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
@@ -172,8 +175,8 @@
     </p>
 
     <h2>Voltaje (V) en una Bobina</h2>
-    <p class="formula">V(t) = R * (1 - e^(-t / (L / R)))</p>
-    <p class="explanation">
+    <p>V(t) = R * e<sup>-t / (L / R)</sup></p>
+    <p>
         <strong>V(t)</strong>: Voltaje a través de la bobina en el tiempo <strong>t</strong>.<br>
         <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
         <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
@@ -181,6 +184,17 @@
         <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
     </p>
 
+    <h2>Ejemplo de Cálculo</h2>
+    <p>Para ilustrar cómo aplicar la fórmula de carga en una bobina, consideremos el siguiente ejemplo:</p>
+    <p>Supongamos que tenemos una bobina con una inductancia de 2 Henrios (H) y una resistencia en el circuito de 10 Ohmios (Ω). Queremos calcular la carga almacenada en la bobina después de 5 segundos (s). Usamos la fórmula:</p>
+    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
+    <p>Reemplazamos los valores:</p>
+    <p>Q(5) = 2 * (1 - e<sup>-5 / (2 / 10)</sup>)</p>
+    <p>Para calcular el valor, primero resolvemos el exponente:</p>
+    <p>e<sup>-5 / (2 / 10)</sup> = e<sup>-25</sup> ≈ 0.000002</p>
+    <p>Luego, la carga almacenada en la bobina después de 5 segundos es:</p>
+    <p>Q(5) = 2 * (1 - 0.000002) ≈ 2 * 0.999998 ≈ 1.999996 C</p>
+    <p>Esto indica que, después de 5 segundos, la bobina habrá almacenado aproximadamente 1.999996 Coulombs de carga.</p>
 
 					
 					<br>
