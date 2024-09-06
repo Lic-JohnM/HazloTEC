@@ -91,7 +91,7 @@ print(mensaje)
 		</code></pre>
 		<br>
 		<p>En estos ejemplos, `nombre` y `mensaje` son variables no numéricas, mientras que `edad` y `altura` son variables numéricas. Comprender cómo utilizar estas variables es fundamental para comenzar a programar en Python.</p>
-
+		<br>
 					
 			<div id="b1">
 				<div id="e">
@@ -112,11 +112,12 @@ print(mensaje)
 					<iframe src="https://assets.pinterest.com/ext/embed.html?id=237635317826738318" height="517" width="345" frameborder="0" scrolling="no" ></iframe>				
 					</div>     
 					<br>
-					<p>El siguiente diagrama de flujo ilustra cómo se utilizan las funciones <code>print</code> e <code>input</code> en un proceso típico de giagrama de flujo:</p>
-
+					<p>El siguiente diagrama de flujo ilustra cómo se utilizan las funciones <code>print</code> e <code>input</code> en un proceso típico de diagrama de flujo:</p>
+					<br>
 						<div style="text-align:center;">
 					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249439" height="403" width="345" frameborder="0" scrolling="no" ></iframe>
 					</div>  
+					<br>
 					<p>Los esquemas más básicos que emplea un diagrama de flujo son los siguientes: </p>
 					<br>
 		 
@@ -132,21 +133,19 @@ print(mensaje)
 			</div>
 				
 
-            <h2> Variables </h2>
+          
             <br>
-			<p> Una variable es un concepto abstracto de algo que tiene ciertas características, por ejemplo, si pensamos en una silla ideamos un objeto quizás con 4 patas un espaldar donde su principal función es permitir el descanso de las personas. Así todos los programas se diseñan con variables que simbolizan todas las posibles opciones que puede tener porque conocemos que tipo de información se va a guardar y suelen tener un nombre que las relacione fácilmente como en este caso es n1 que simboliza todos los posibles primeros números que se pueden guardar, en ocasiones posteriores profundizaremos más sobre estas. </p>
+			<p>Una variable es un concepto abstracto que representa un espacio de almacenamiento en un programa, destinado a guardar datos que pueden cambiar durante la ejecución del mismo. Por ejemplo, si pensamos en una silla, podríamos imaginar un objeto con ciertas características como cuatro patas y un respaldo, cuya principal función es permitir el descanso de las personas. De manera similar, en la programación, las variables se utilizan para representar diferentes tipos de datos o valores que el programa puede manejar. Las variables tienen nombres que ayudan a identificar y relacionar los datos que almacenan, como en el caso de <code>n1</code>, que podría simbolizar un conjunto de números o valores. En ocasiones posteriores, profundizaremos más en el uso y la gestión de variables.</p>
 			<br>
 				<div style="text-align:center;">
 			
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249255" height="847" width="600" frameborder="0" scrolling="no" ></iframe>		 	</div>     
 
         		    <br>
-			<p> Así en la figura anterior podemos observar en la parte izquierda con notas genéricas y en la parte derecha con variables donde el usuario guarda un número en una variable llamada n1, otra con la variable llamada n2 y posteriormente se opera para dar el resultado final que a su vez se guarda en una variable llamada nf, Permitiendo simbolicamente generalizar un algoritmo.</p>
-			<br>
+		<p>En la figura anterior, se puede observar un diagrama de flujo donde, en la parte izquierda, se presentan notas genéricas, y en la parte derecha, se utilizan variables para almacenar información. En este diagrama, el usuario guarda un número en una variable llamada <code>n1</code>, otro número en una variable llamada <code>n2</code>, y luego realiza una operación para obtener un resultado final, el cual se almacena en una variable llamada <code>nf</code>. Este proceso ilustra cómo se puede representar simbólicamente un algoritmo utilizando variables.</p>
+		<br>
+		<p>A continuación, se presentan otros dos ejemplos de diagramas de flujo, donde se puede observar claramente la función de cada tipo de bloque en el diagrama y cómo contribuyen al flujo general del proceso.</p>
 
-			<br>
-            
-			<p>  A continuación, se muestran otros dos ejemplos de diagrama de flujos en donde podemos observar claramente que la finalidad de cada tipo de bloque del diagrama de flujo.</p>
 		
 			<br>
 			
@@ -158,64 +157,47 @@ print(mensaje)
 
 			<div id="b2">
 				<div id="e">
-					<h3> Codificación - Lenguajes de programación </h3>
+					<h3> Cómo y Por Qué Comentar el Código </h3>
 				<a id="signo">+</a>
 				</div>
 				<div id="p">
 				<br>
+					    <h2>¿Qué Son los Comentarios en el Código?</h2>
+    <p>Comentar el código es una técnica que consiste en incluir notas explicativas dentro del código fuente para clarificar su funcionamiento. Los comentarios son esenciales para que otros programadores, o incluso tú mismo en el futuro, puedan entender el propósito y la lógica detrás del código. Los comentarios no son ejecutados por la computadora; su único propósito es ayudar a la comprensión del código.</p>
+    
+    <h3>Tipos de Comentarios</h3>
+    <ul>
+        <li><strong>Comentarios de Línea:</strong> Se usan para explicar una sola línea o una sección breve del código. En muchos lenguajes, se denotan con un símbolo específico, como <code>//</code> en JavaScript y C++ o <code>#</code> en Python.</li>
+        <li><strong>Comentarios de Bloque:</strong> Se utilizan para explicar secciones más extensas del código y se pueden abarcar múltiples líneas. En muchos lenguajes, se denotan con <code>/*</code> y <code>*/</code> en C++ y Java, o <code>"""</code> en Python.</li>
+    </ul>
 
-			<p> Otra forma de representar los algoritmos, y de por sí de las más empleadas es la programación empleando líneas de código, para hacer nuestra práctica vamos a emplear el lenguaje Python. El cuál es un lenguaje con el que podemos desarrollar videojuegos, desarrollo WEB entre otras muchas aplicaciones <b>la codificación emplea variables todo el tiempo</b>. Para emplear Python, vamos a emplear la herramienta <b>Programiz</b>, en la cual puedes acceder haciendo click en el siguiente botón <a href="https://www.programiz.com/python-programming/online-compiler/">Pulsa aquí.</a> A continuación, vamos a ver el equivalente de diagrama de flujo a las principales operaciones:
+    <h3>Ejemplo</h3>
+    <p>A continuación, se muestra un ejemplo en Python que ilustra ambos tipos de comentarios:</p>
+    <pre><code>
+# Este es un comentario de línea que explica la siguiente línea de código
+print("Hola, mundo!")  # Imprime un mensaje en la consola
 
-			<br>
+"""
+Este es un comentario de bloque.
+A continuación, realizamos una operación básica de suma
+y mostramos el resultado en la consola.
+"""
+a = 5
+b = 3
+resultado = a + b
+print("La suma de", a, "y", b, "es", resultado)
+    </code></pre>
+    
+    <p>En este ejemplo:</p>
+    <ul>
+        <li>El comentario de línea (<code># Este es un comentario de línea...</code>) proporciona una breve explicación sobre el propósito de la línea de código siguiente.</li>
+        <li>El comentario de bloque (<code>""" Este es un comentario de bloque... """</code>) explica en detalle una sección más amplia del código.</li>
+    </ul>
 
-		
+    <p>Los comentarios son una herramienta poderosa para hacer que el código sea más legible y fácil de mantener, y su uso adecuado es una práctica recomendada en el desarrollo de software.</p>
 
-            <br>
-
-			<p> Así si se copia el siguiente código que es el equivalente al programa creado con diagrama de flujo, ejecútalo donde dice run y escribe los datos con el teclado que solicita el programa.</p>
-			<br>
 			
-			<pre>
-			<code>
-print("ingrese la primera nota");
-n1=float(input());
-print("ingrese la segunda nota");
-n2=float(input());
-nf=(n1+n2)/2;
-print("su definitiva es");
-print(nf);
-			</code>
-			</pre>
-            
-            
-			<p>Se puede concluir que es necesario trabajar con variables porque los valores siempre van a ser diferentes. Sin embargo, debes tener en cuenta lo siguiente: </p>
-		
-			<h3>Print</h3>
-		
-			<p>Cuando se va a mostrar un valor de texto se debe poner "" en el programa con en este caso "ingrese la primera nota", cuando sea un valor de una variable no es necesario como en el ejemplo es n2.
-
-			<h3>input()</h3>
-		
-			<p>Antes del input existe una palabra denominada float en ocasiones también int, esto quiere decir que se espera una variable numérica lo que implica que solamente se van a almacenar números. Cuando se quiere almacenar un texto no es necesario poner ninguna palabra previa. Se puede seguir el ejemplo su uso: </p>
-			
-                        <br>
-                        			<pre>
-			<code>
-print("ingrese su primer nombre");
-n1=input();
-print("ingrese su primer apellido");
-n2=input();
-print("Bienvenido");
-print(n1);
-print(n2);
-			</code>
-			</pre>
-			<p> Escribir el codigo se hace de diferentes formas unas buenas practicas son: </p>
-				<br>
-                   		     <h5>Usar tabuladores </h5>
-                    		    <h5> Emplear diferentes archivos que enlacen </h5>
-				    <h5>Comentar el codigo</h5>
- 
+                        			
 				</div>
 			</div>
 			
@@ -238,7 +220,7 @@ print(n2);
             <br>
             
             <p>Scratch es una plataforma libre  y gratuita <b>de programación gráfica</b> la cual se puede descargar para el computador o acceder en linea haciendo click <a href="https://scratch.mit.edu/projects/editor/?tutorial=getStarted" >aca</a>. A continuación vamos a mostrar una descripción pequeña de la plataforma enfocado a los temas vistos anteriormente.</p>
-            
+            		<br>
 			<h3>Inicio del flujo</h3>
 
 				<br>
