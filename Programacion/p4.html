@@ -36,63 +36,68 @@
 
                 <div id="con">
 
-				<h2> LISTAS</h2>
+ <h2>Listas</h2>
+    <br>
+    <p>Las listas en Python son una forma de almacenar diferentes datos en una misma variable. A continuación, se muestran varios ejemplos:</p>
+    <br>
+    <p><code>Numeros_pares = [0, 2, 4, 6, 8, 10]</code></p>
+    <br>
+    <p><code>Numeros_primos = [1, 2, 3, 5, 7, 11]</code></p>
+    <br>
+    <p><code>Colores = ["rojo", "azul", "gris", "blanco", "negro"]</code></p>
+    <br>
+    <p><code>Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria"]</code></p>
+    <br>
+    <p>Para ilustrar cómo trabajar con listas, guardaremos los nombres de 6 estudiantes de un curso. Esto se haría de la siguiente manera:</p>
+    <br>
+    <div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no"></iframe>
+    </div>  
+    <br>
+    <p>El código que usaremos para explicar las listas es el siguiente:</p>
+    <br>
+    <pre>
+        <code>
+estudiantes = ["Juan", "Andrea", "Luis", "Laura", "Oscar"]
+print(estudiantes[2])
+print(len(estudiantes))
+estudiantes.pop(1)
+print(estudiantes)
+estudiantes.insert(4, "Luna")
+print(estudiantes)
+        </code>
+    </pre>
+    <br>
+    <p>Todos los elementos tienen una posición que inicia desde 0. Así, "Juan" ocupa la posición 0, "Andrea" ocupa la posición 1, "Luis" ocupa la posición 2, "Laura" la posición 3 y "Oscar" la posición 4. Para acceder a un elemento, simplemente escribe su posición de la siguiente manera: <b>estudiantes[2]</b>, lo que en este caso daría como resultado "Luis".</p>
+    <br>
+    <p>Para saber la longitud de la lista, puedes usar el siguiente código: <b>len(estudiantes)</b>, que en este caso daría como resultado 4.</p>
+    <br>
+    <p>Para añadir o eliminar elementos, necesitas conocer la posición del elemento que deseas quitar o añadir. Por ejemplo, para eliminar a la estudiante "Andrea", que está en la posición 1, utilizamos el comando <code>pop</code>: <b>estudiantes.pop(1)</b>. Así, la lista quedaría:</p>
+    <br>
+    <p><code>estudiantes = ["Juan", "Luis", "Laura", "Oscar"]</code></p>
+    <br>
+    <p>Para añadir un estudiante en la posición entre "Laura" y "Oscar", debemos tener en cuenta la posición 4 y utilizar el comando <code>insert</code>: <b>estudiantes.insert(4, "Luna")</b>.</p>
+    <br>
+    <p>Como ejemplo adicional para principiantes, aquí hay una lista de frutas:</p>
+    <br>
+    <p><code>Frutas = ["manzana", "banana", "naranja", "fresa"]</code></p>
+    <br>
+    <p>Puedes probar a añadir, eliminar o acceder a elementos en esta lista de frutas utilizando los métodos <code>append</code>, <code>remove</code> y <code>index</code>:</p>
+    <pre>
+        <code>
+# Añadir una fruta
+Frutas.append("kiwi")
+print(Frutas)
 
-				<br>
+# Eliminar una fruta
+Frutas.remove("banana")
+print(Frutas)
 
-			<p> Las listas en Python son una forma de almacenar diferentes datos en una misma variable,a continuación tenemos varios ejemplos: </p>
-			<br>
-			<p>Numeros_pares=[0,2,4,6,8,10]</p>
-			<br>
-			<p>Numeros_primos=[1,2,3,5,7,11]</p>
-			<br>
-			<p>Colores=["rojo","azul","gris","blanco","negro",gris]</p>
-			<br>
-			<p>Ingredientes_ensalada=["lechuga","tomate","pepino","aceite","zanahoria"]</p>
-			<br>
-		
-			<p>Para la explicación de lo que podemos hacer con las listas vamos  guardar el nombre de 6 estudiantes de un curso, lo cuál se haria de la siguiente manera:</p>
-
-			<br>
-			
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-            <p>el codigo que vamos a emplear para explicar las listas es el siguiente:</p>
-            <br>
-<pre>
-    <code>
-estudiantes=["Juan","Andrea","Luis","Laura","Oscar"];
-print(estudiantes[2]);
-print(len(estudiantes));
-estudiantes.pop(1);
-print(estudiantes);
-estudiantes.insert(4,"Luna");
-print(estudiantes);
-    </code>
-</pre>
-            <br>
-	        <p>Todos los elementos tienen una posición que inicia desde 0, así Juan ocupa la posición 0, Andres ocupa la posición 1, Luis ocupa  la posición 2, Laura la posición 3 y Oscar la posición 4. Para acceder a un elemento solamente basta escribir su posición de la siguiente manera <b>estudiantes[2]</b> que en esta ocasión daria como resultado Luis.</p>
-
-			<br>
-
-			<p> Si queremos saber la longitud solo basta con escribir el siguiente codigo: <b>len(estudiantes)</b> que en este caso daria como resultado 4.</p>
-
-			<br>
-
-			<p>Para añadir o eliminar basta con conocer la posición donde se encuentra el elemento que vamos a quitar o a la posición del elemento que vamos a añadir, por ejemplo de la lista vamos a eliminar a la estudiante Andrea que estaria en la posición 1 y empleamos el comando pop : <b>estudiantes.pop(1)</b> así la lista nos quedaria:</p>
-
-            <br>
-
-			<p>estudiantes=["Juan","Luis","Fabian","Elkin"]</p>
-
-			<br>
-
-			<p> Para añadir a un estudiante en la mitad de los estudiantes Laura y Oscar debemos inicialmente tener en cuenta la posición que seria la número 4 y empleamos el comando insert : <b>estudiantes.insert(4,"Luna")</b> </p>
-
-			<br>
+# Acceder a la posición de una fruta
+print(Frutas.index("fresa"))
+        </code>
+    </pre>
+    <br>
 			
 
                          <div id="ctrl">
