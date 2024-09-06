@@ -40,7 +40,7 @@
 
 				<br>
 
-			<p> En la programación las condicionales dividen el flujo de un programa dependiendo de algún valor o una decisión, como puede ser por ejemplo una variable llamada clima y si toma el valor de lluvia puede hacer que cambiemos el atuendo o el accesorio para salir a la calle a que si fuese de valor sol. En un diagrama de flujo se ve de la siguiente manera.</p>
+			<p>En programación, las condicionales permiten dividir el flujo de un programa en función de un valor o una decisión. Por ejemplo, si tenemos una variable llamada <code>clima</code> y su valor es <code>lluvia</code>, podemos decidir cambiar nuestro atuendo o accesorio para salir a la calle, en comparación con el caso en que el valor sea <code>sol</code>. En un diagrama de flujo, esto se representa de la siguiente manera:</p>
 
 			<br>
 					<div style="text-align:center;">
@@ -53,21 +53,36 @@
 
 			<br>
 
-			<p> Las condicionales en Python manejan unos espacios y puntuaciones que se deben seguir para que funcione el programa, así también tenemos que saber que si queremos comparar con un valor puntual debemos emplear ==(doble igual) como se muestra en el siguiente programa que es el programa anterior escrito en Python:
-
-			<br>
+	<p>Las condicionales en Python requieren seguir ciertas reglas de espaciado y puntuación para que el programa funcione correctamente. Por ejemplo, para comparar un valor puntual con una variable, se utiliza el operador <code>==</code> (doble igual). A continuación, se muestra un programa que utiliza este operador para decidir qué llevar en función del clima:</p>
 
 <pre>
     <code>
-print("ingrese el clima ¿sol o lluvia?");
-clima=input();
-if clima=="lluvia":
-    print("lleva sombrilla");
+print("Ingrese el clima (sol o lluvia):")
+clima = input()
+if clima == "lluvia":
+    print("Lleva sombrilla")
 else:
-    print("lleva gafas de sol");
-
+    print("Lleva gafas de sol")
     </code>
 </pre>
+
+<p>Además de comparar valores exactos, las condicionales también pueden utilizar operadores de relación para comparar valores numéricos. Por ejemplo, si queremos verificar si una temperatura es mayor o menor que un umbral, podemos usar los operadores <code>&gt;</code> (mayor que) y <code>&lt;</code> (menor que). A continuación, se muestra un programa que utiliza estos operadores:</p>
+
+<pre>
+    <code>
+print("Ingrese la temperatura en grados Celsius:")
+temperatura = float(input())
+if temperatura &gt; 30:
+    print("Hace mucho calor. Considera usar ropa ligera.")
+elif temperatura &lt; 10:
+    print("Hace frío. Considera usar abrigo.")
+else:
+    print("La temperatura es moderada.")
+    </code>
+</pre>
+
+<p>En este ejemplo, se utilizan operadores de relación para comparar la temperatura ingresada con los valores umbral y decidir qué mensaje mostrar.</p>
+
 
             
 			<br>
@@ -78,11 +93,11 @@ else:
 
 			<br>
 
-			<p> Dependiendo la condición que necesitemos comparar se emplean después del if, distintos tipos de operadores de relación por ejemplo si necesitamos comparar una condición donde un número X sea mayor a 5, se escribiría de la siguiente manera <b>X>5</b>, si es un intervalo donde sean números mayores a 5 y menores a 10, se escribiría de la siguiente manera <b>X>5 AND X<10 </b>. </p>
+		<p>Dependiendo de la condición que necesitemos comparar, se emplean diferentes operadores de relación después de la palabra clave <code>if</code>. Por ejemplo, si queremos verificar si un número <code>X</code> es mayor que 5, la condición se escribiría como <b>X &gt; 5</b>. Si queremos comprobar si <code>X</code> está en un intervalo, es decir, si es mayor que 5 y menor que 10, la condición se escribiría como <b>X &gt; 5 y X &lt; 10</b>. En algunos lenguajes de programación, como Python, se utiliza la palabra clave <code>and</code> en lugar de <b>AND</b>, resultando en <b>X &gt; 5 and X &lt; 10</b>.</p>
 
 	        <br>
 	        
-	        	<p> Para finalizar si se requiere comparar con un valor puntual, como es por ejemplo si el número X debe ser igual a 8 para que se cumpla la condición se escribiria de la siguiente manera <b>X==8</b> </p>
+<p>Para finalizar, si se necesita comparar un valor puntual, como verificar si el número <code>X</code> es igual a 8, se utilizaría el operador de igualdad <code>==</code>. La condición se escribiría de la siguiente manera: <b>X == 8</b>.</p>
 	        	
 	        	
             <br>
@@ -94,11 +109,11 @@ else:
 				<div id="p">
 				<br>
             
-									<h2> Condicionales anidadas </h2>
+									
 
 				<br>
 
-			<p> En algunas ocasiones un programa puede tener varios flujos según las decisiones o situaciones que pasen. Así por ejemplo al momento de saber cuál es el desempeño según la nota definitiva de una materia de un colegio, el diagrama podría ser el siguiente: </p>
+			<p>En algunos casos, un programa puede tener varios flujos de ejecución dependiendo de las decisiones o situaciones que se presenten. Por ejemplo, para determinar el desempeño de un estudiante basado en la nota definitiva de una materia en un colegio, el flujo del programa podría representarse mediante el siguiente diagrama:</p>
 
 			<br>
 						<div style="text-align:center;">
@@ -171,7 +186,7 @@ else:
 
             <br>
             
-            <p>Las condicionales en Scratch tienen la misma logica de programación de dividir el flujo de trabajo, a continuación se presenta un ejemplo para que lo realices y puedas observar su funcionamiento:</p>
+			<p>Las condicionales en Scratch siguen la misma lógica de programación para dividir el flujo de trabajo. A continuación, se presenta un ejemplo que puedes realizar para observar cómo funciona esta lógica en Scratch:</p>
             
 			<br>
 			
@@ -179,7 +194,7 @@ else:
 			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304858" height="691" width="600" frameborder="0" scrolling="no" ></iframe>
 			</div>  
 
-			<p>En la parte izquierda de la imagen podemos encontrar los bloques con los condicionales y los ciclos, en el ejemplo anterior podemos observar otra logica de programación para el intervalo de -5 a 15 grados sin la necesidad de indicar el intervalo completo para los condicionales como lo es donde la temperatura se encuentra entre 25 y 40. Es importante recordar que en la programación existen multiples formas de solucionar los problemas propuestos. </p>
+			<p>En la parte izquierda de la imagen, podemos encontrar los bloques que representan condicionales y ciclos. En el ejemplo mostrado anteriormente, se utiliza una lógica de programación para manejar un intervalo de temperaturas de -5 a 15 grados sin tener que especificar el intervalo completo en los condicionales. Por ejemplo, en lugar de definir condiciones específicas para cada rango, el programa puede manejar un intervalo general, como cuando la temperatura está entre 25 y 40 grados. Es importante recordar que en programación existen múltiples formas de abordar y resolver los problemas propuestos.</p>
 
 			<br>
 
