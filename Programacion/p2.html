@@ -50,42 +50,49 @@
 		<h2>Print & Input</h2>
 		<br>
 		<p>Ahora que conoces algunas de las características de Python, es importante entender cómo interactuar con el programa. Dos funciones básicas y fundamentales en Python son `print` e `input`. La función `print` se utiliza para mostrar información en la pantalla. Por ejemplo:</p>
-
+<br>
 <pre><code>print("¡Hola, mundo!")
 print("Python es divertido.")
 print("Este es un ejemplo de print.")
 </code></pre>
-
+<br>
 		<p>Estos ejemplos muestran cómo `print` puede usarse para mostrar diferentes tipos de mensajes. Puedes experimentar con `print` en Google Colab, una herramienta en línea donde puedes ejecutar código Python directamente desde tu navegador. Haz clic en el siguiente enlace para probarlo: <a target="_blank" href="https://colab.research.google.com">Google Colab</a>.</p>
-		
+		<br>
 		<h2>Variables</h2>
-		
+		<br>
 		<p>La función `input` te permite recibir información del usuario. Por ejemplo, puedes pedir al usuario su nombre o edad y luego usar esa información en tu programa. Las variables son como contenedores donde guardamos datos. En Python, hay dos tipos principales de variables que puedes usar:</p>
 		
 		<ul>
 		    <li><b>Variables no numéricas:</b> Estas variables guardan texto y se definen con comillas. Por ejemplo:</li>
 		</ul>
-
+		<br>
 <pre><code>nombre = "Juan"
 mensaje = "Hola, " + nombre + "!"
 print(mensaje)
 </code></pre>
+		<br>
+		<p>En las variables no numéricas, el símbolo `+` se utiliza para unir cadenas de texto, una operación conocida como <b>concatenación</b>. Por ejemplo, al usar `nombre = "Juan"` y `mensaje = "Hola, " + nombre`, el resultado es "Hola, Juan".</p>
 
 		<ul>
 		    <li><b>Variables numéricas:</b> Estas variables guardan números y pueden ser enteros o flotantes (decimales). Para operar con números decimales, utilizamos el tipo de dato `float`. Por ejemplo:</li>
 		</ul>
-		
-		<pre><code>edad = 15
+		<br>
+		<pre><code>
+		peso = 70.5
 		altura = 1.75
-		print("Edad:", edad)
+
+		# Calculamos el índice de masa corporal (IMC)
+		imc = peso / (altura ** 2)
+
+		# Imprimimos los resultados
+		print("Peso:", peso)
 		print("Altura:", altura)
-		print("Edad en 5 años:", edad + 5)
-		print("Altura en metros:", altura)
+		print("Índice de Masa Corporal (IMC):", imc)
 		</code></pre>
-		
+		<br>
 		<p>En estos ejemplos, `nombre` y `mensaje` son variables no numéricas, mientras que `edad` y `altura` son variables numéricas. Comprender cómo utilizar estas variables es fundamental para comenzar a programar en Python.</p>
 
-				
+		<br>		
 		<h2>Representación de algoritmos</h2>
 		
 		<br>
