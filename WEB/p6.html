@@ -74,62 +74,67 @@ console.log("Objeto completo:", persona);
     </code>
 </pre>
 
-              <h1>Uso del Operador de Spread en JavaScript</h1>
 
     <h2>¿Qué es el Operador de Spread?</h2>
+    <br>
     <p>
         El operador de spread en JavaScript, representado por <code>...</code>, se utiliza para expandir los elementos de un iterable (como arreglos u objetos) en contextos donde se esperan varios elementos. Facilita la manipulación de arreglos y objetos sin necesidad de recurrir a técnicas más complejas.
     </p>
-
+    <br>
     <h2>Uso del Spread con Arreglos</h2>
+   <br>
     <p>
         <strong>Copiar un Arreglo:</strong> El operador de spread permite crear una copia superficial de un arreglo. Esto significa que puedes duplicar un arreglo sin modificar el original.
     </p>
+<br>
     <pre><code>let numerosOriginales = [1, 2, 3];
 let numerosCopiados = [...numerosOriginales];
 
 console.log(numerosCopiados); // [1, 2, 3]</code></pre>
-
+<br>
     <p>
         <strong>Concatenar Arreglos:</strong> Puedes usar el operador de spread para combinar varios arreglos en uno solo, sin modificar los arreglos originales.
     </p>
+<br>
     <pre><code>let arreglo1 = [1, 2, 3];
 let arreglo2 = [4, 5, 6];
 let arregloConcatenado = [...arreglo1, ...arreglo2];
 
 console.log(arregloConcatenado); // [1, 2, 3, 4, 5, 6]</code></pre>
-
+<br>
     <h2>Uso del Spread con Objetos</h2>
+<br>
     <p>
         <strong>Copiar un Objeto:</strong> El operador de spread permite crear una copia superficial de un objeto. Esto es útil para evitar modificar el objeto original al hacer cambios.
     </p>
+<br>
     <pre><code>let personaOriginal = { nombre: "Alice", edad: 30 };
 let personaCopiada = { ...personaOriginal };
 
 console.log(personaCopiada); // { nombre: "Alice", edad: 30 }</code></pre>
-
+<br>
     <p>
         <strong>Combinar Objetos:</strong> Puedes combinar varias propiedades de objetos en un nuevo objeto sin alterar los objetos originales.
     </p>
+<br>
     <pre><code>let persona = { nombre: "Alice", edad: 30 };
 let direccion = { ciudad: "Wonderland", pais: "Fantasia" };
 let personaCompleta = { ...persona, ...direccion };
 
 console.log(personaCompleta);
 // { nombre: "Alice", edad: 30, ciudad: "Wonderland", pais: "Fantasia" }</code></pre>
-
+<br>
     <h2>¿Cómo Evita la Duplicación de Objetos?</h2>
+<br>
     <p>
         El operador de spread no evita la duplicación de objetos en el sentido de la memoria, pero facilita la creación de nuevas instancias con los datos deseados. Al usar <code>...</code> para copiar o combinar objetos, creas nuevas instancias con los datos que puedes manipular independientemente, lo que ayuda a gestionar datos sin alterar los originales.
     </p>
-
+<br>
     <p>
         Por ejemplo, al copiar un objeto con <code>...</code>, la copia es un nuevo objeto con las mismas propiedades, pero cualquier cambio en la copia no afecta al objeto original. Esto permite trabajar con datos de manera más segura y organizada.
     </p>
-
+<br>
 			<br>
-			<h2>Programación orientada a objetos</h2>
-                        
 
 			<br>
 
