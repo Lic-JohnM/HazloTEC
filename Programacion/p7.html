@@ -39,92 +39,84 @@
 
 				<br>
 
-			<p>Actualmente la forma como programa, sigue algunos paradigmas que hacen referencia a la forma como se programa. Una primer forma es la programación estructurada donde se sigue código por código y es la trabajada en el desarrollo de curso por python, existen el paradigma de programación funcional que hace referencia a programar todos por bloques de codigo con su funcionalidad y para finalizar existe la programación orientada a objetos</p>
-
+<p>En el ámbito de la programación, existen varios paradigmas que definen cómo se escribe y organiza el código. Uno de los enfoques tradicionales es la programación estructurada, que se basa en seguir un flujo secuencial de instrucciones. En el desarrollo del curso de Python, este paradigma es ampliamente utilizado. Otro enfoque es la programación funcional, que organiza el código en bloques funcionales independientes que realizan tareas específicas. Finalmente, la programación orientada a objetos es un paradigma que organiza el código en torno a objetos y clases, como se ilustra en la siguiente imagen muestra cómo la programación orientada a objetos utiliza conceptos como clases y objetos usando como ejemplos los perros, en donde si bien todos son diferentes tienen unas caracteristicas unicas.</p>
 			<br>
 
 				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
+			<iframe src="	https://tecsify.com/blog/wp-content/uploads/2022/05/pooperritos.jpg" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
 			
 			</div>  
 
-			<br>
-			<p>Siguiendo el diagrama de flujo anterior si el usuario no ingresa el valor correcto infinitamente el programa va a pedir el dinero,Así una forma de implementar el codigo en Python es el siguiente:</p>
-			<br>
-<pre>
-    <code>
+			 <h1>Sistema de Gestión de Biblioteca</h1>
+    <p>El siguiente código Python implementa un sencillo sistema de gestión de biblioteca utilizando la programación orientada a objetos (POO). La POO es un paradigma que organiza el código en torno a "objetos" y "clases", facilitando la modularidad y reutilización del código.</p>
+    
+    <h2>Código Python</h2>
+    <pre>
+<code>
+class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponible = True
+    
+    def cambiar_estado(self):
+        self.disponible = not self.disponible
+    
+    def __str__(self):
+        estado = "Disponible" if self.disponible else "Prestado"
+        return f"{self.titulo} por {self.autor} - {estado}"
 
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
+class Biblioteca:
+    def __init__(self):
+        self.libros = []
+    
+    def agregar_libro(self, libro):
+        self.libros.append(libro)
+    
+    def prestar_libro(self, titulo):
+        for libro in self.libros:
+            if libro.titulo == titulo:
+                if libro.disponible:
+                    libro.cambiar_estado()
+                    print(f"El libro '{titulo}' ha sido prestado.")
+                else:
+                    print(f"El libro '{titulo}' ya está prestado.")
+                return
+        print(f"El libro '{titulo}' no está disponible en la biblioteca.")
+    
+    def consultar_inventario(self):
+        for libro in self.libros:
+            print(libro)
 
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
+# Uso del sistema
+biblioteca = Biblioteca()
+libro1 = Libro("1984", "George Orwell")
+libro2 = Libro("To Kill a Mockingbird", "Harper Lee")
 
-			<h3> Contadores </h3>
+biblioteca.agregar_libro(libro1)
+biblioteca.agregar_libro(libro2)
 
-			<br>
+print("Inventario de la biblioteca:")
+biblioteca.consultar_inventario()
 
+print("\nPrestando '1984':")
+biblioteca.prestar_libro("1984")
 
- <p> En este nuevo flujo podemos agregar información que guie al usuario a entregar la información de cuanto dinero le hace falta guardando el resultado en la variable <b>a</b> y mostrandola posteriormente:</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
+print("\nInventario después del préstamo:")
+biblioteca.consultar_inventario()
 
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
+print("\nIntentando prestar '1984' nuevamente:")
+biblioteca.prestar_libro("1984")
+</code>
+    </pre>
 
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
-
-                     
+    <h2>Explicación de la Programación Orientada a Objetos</h2>
+    <p>En este código:</p>
+    <ul>
+        <li><strong>Clase <code>Libro</code>:</strong> Representa un libro con atributos como título, autor y estado. Incluye métodos para cambiar el estado del libro y para representar el libro en una cadena.</li>
+        <li><strong>Clase <code>Biblioteca</code>:</strong> Administra una colección de libros. Incluye métodos para agregar libros, prestar libros y consultar el inventario.</li>
+    </ul>
+    <p>La <strong>programación orientada a objetos</strong> permite organizar el código en clases y objetos que interactúan entre sí. Esto facilita la creación de sistemas modulares y reutilizables, como el sistema de gestión de biblioteca mostrado aquí.</p>
                         <br>
 
 
