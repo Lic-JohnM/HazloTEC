@@ -34,7 +34,74 @@
         <div id="info">
 
                 <div id="con">
+ <h1>Análisis de Datos</h1>
 
+    <h2>Análisis de un archivo Excel</h2>
+    <p>En este ejemplo, utilizaremos <strong>Pandas</strong> y <strong>Seaborn</strong> para analizar un archivo Excel y visualizar los resultados.</p>
+    <pre>
+# Cargar las librerías
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Cargar el archivo Excel
+data = pd.read_excel('archivo_datos.xlsx')
+
+# Mostrar las primeras filas
+print(data.head())
+
+# Crear un gráfico de dispersión
+sns.scatterplot(x='columna_x', y='columna_y', data=data)
+plt.title('Gráfico de Dispersión')
+plt.savefig('grafico.png')  # Guardar el gráfico como imagen
+plt.show()
+    </pre>
+
+    <h2>Generación de un PDF</h2>
+    <p>Usaremos <strong>ReportLab</strong> para generar un PDF con los resultados del análisis.</p>
+    <pre>
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
+# Crear un PDF
+pdf = canvas.Canvas("analisis_datos.pdf", pagesize=letter)
+pdf.drawString(100, 750, "Análisis de Datos")
+pdf.drawString(100, 730, "Resultados del análisis en Excel.")
+pdf.save()
+    </pre>
+
+    <h2>Análisis de una Imagen con OpenCV</h2>
+    <p>A continuación, realizaremos un análisis básico de una imagen utilizando <strong>OpenCV</strong>.</p>
+    <pre>
+import cv2
+
+# Cargar la imagen
+imagen = cv2.imread('imagen.jpg')
+
+# Convertir a escala de grises
+gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+
+# Mostrar la imagen original y la de escala de grises
+cv2.imshow('Imagen Original', imagen)
+cv2.imshow('Escala de Grises', gris)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+    </pre>
+
+    <h2>Ejercicio Básico de Matrices</h2>
+    <p>Veamos un ejercicio básico de manipulación de matrices con NumPy.</p>
+    <pre>
+import numpy as np
+
+# Crear una matriz 3x3
+matriz = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
+
+# Calcular la suma de cada fila
+suma_filas = np.sum(matriz, axis=1)
+print("Suma de cada fila:", suma_filas)
+    </pre>
 
 			
    
