@@ -37,44 +37,114 @@
                 <div id="con">
 
 	
-            
-            <p>Las condicionales en Scratch tienen la misma logica de programación de dividir el flujo de trabajo, a continuación se presenta un ejemplo para que lo realices y puedas observar su funcionamiento:</p>
-            
-			<br>
-			
-		
+              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
 
-			<p>En la parte izquierda de la imagen podemos encontrar los bloques con los condicionales y los ciclos, en el ejemplo anterior podemos observar otra logica de programación para el intervalo de -5 a 15 grados sin la necesidad de indicar el intervalo completo para los condicionales como lo es donde la temperatura se encuentra entre 25 y 40. Es importante recordar que en la programación existen multiples formas de solucionar los problemas propuestos. </p>
+    <h2>1. Clasificación de Números con KNN</h2>
+    <p>Usaremos el algoritmo K-Nearest Neighbors para clasificar números basados en características simples.</p>
+    <pre>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 
-			<br>
+# Cargar el conjunto de datos Iris
+iris = load_iris()
+X, y = iris.data, iris.target
 
-			<h2>Ciclos en Scratch </h2>
+# Dividir el conjunto de datos en entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-			<br>
+# Crear y entrenar el clasificador
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
 
-			<p> Los ciclos se crean de la misma manera, con la ventaja que existen otras opciones para crear ciclos, como decidir cuantas veces necesitamos que se repita sin necesidad de variables adicionales así como detener el programa con el comando detener todo. A continuación se presenta el ejercicio del parqueadero empleando el ciclo While con Scratch: </p>
+# Hacer predicciones
+predicciones = knn.predict(X_test)
+print("Predicciones:", predicciones)
+    </pre>
 
-            <br>
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+    <h2>2. Regresión Lineal Sencilla</h2>
+    <p>Realizaremos una regresión lineal sencilla para predecir valores.</p>
+    <pre>
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
-			<br>
-      
+# Datos de ejemplo
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 3, 5, 7, 11])
 
-			<p> Así también con Scratch podemos emplear listas, para almacenar datos en la misma variable, a continuación podemos ver un ejemplo de como llenar una lista empleando Scratch: </p>
-			<br>
-		<div style="text-align:center;">
-                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-			<br>
-		
-			<p> Para finalizar podemos observar como en scratch se pueden usar otros elementos como inicio, en esta caso empleando la flecha hacia arriba se puede ejecutar el programa para buscar si un estudiante se encuentra en la lista.</p>
-			<br>
-			
+# Crear el modelo de regresión lineal
+modelo = LinearRegression()
+modelo.fit(X, y)
 
-			<br>
+# Hacer predicciones
+predicciones = modelo.predict(X)
+
+# Graficar los resultados
+plt.scatter(X, y, color='blue')
+plt.plot(X, predicciones, color='red')
+plt.title('Regresión Lineal')
+plt.xlabel('X')
+plt.ylabel('y')
+plt.show()
+    </pre>
+
+    <h2>3. Creación de un Juego Simple: Adivina el Número</h2>
+    <p>Escribamos un juego donde el usuario debe adivinar un número aleatorio.</p>
+    <pre>
+import random
+
+# Generar un número aleatorio
+numero_secreto = random.randint(1, 100)
+
+# Juego de adivinanza
+while True:
+    intento = int(input("Adivina un número entre 1 y 100: "))
+    if intento < numero_secreto:
+        print("Demasiado bajo. Intenta de nuevo.")
+    elif intento > numero_secreto:
+        print("Demasiado alto. Intenta de nuevo.")
+    else:
+        print("¡Felicidades! Adivinaste el número.")
+        break
+    </pre>
+
+    <h2>4. Procesamiento de Imágenes con OpenCV</h2>
+    <p>Realizaremos un simple procesamiento de imágenes utilizando OpenCV.</p>
+    <pre>
+import cv2
+
+# Cargar la imagen
+imagen = cv2.imread('imagen.jpg')
+
+# Convertir a escala de grises
+gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+
+# Mostrar la imagen de escala de grises
+cv2.imshow('Escala de Grises', gris)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+    </pre>
+
+    <h2>5. Chatbot Simple con Respuestas Predefinidas</h2>
+    <p>Crearemos un chatbot que responda a preguntas simples.</p>
+    <pre>
+def chatbot():
+    print("¡Hola! Soy un chatbot simple. ¿Cómo puedo ayudarte?")
+    while True:
+        pregunta = input("Tú: ")
+        if pregunta.lower() in ['salir', 'exit']:
+            print("Chatbot: ¡Adiós!")
+            break
+        elif "hola" in pregunta.lower():
+            print("Chatbot: ¡Hola! ¿Cómo estás?")
+        elif "nombre" in pregunta.lower():
+            print("Chatbot: Soy un chatbot sin nombre.")
+        else:
+            print("Chatbot: No entiendo esa pregunta.")
+
+chatbot()
+    </pre>
 
 
                          <div id="ctrl">
