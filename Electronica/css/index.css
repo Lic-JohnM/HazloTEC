@@ -159,5 +159,20 @@
         text-decoration:none;
     }
     
+ header>#I2>#prev{
+        background-color: #f6dfca;
+        padding: 2%;
+        color:rgba(47,65,89,0.9);
+        text-decoration:none;
+
+    }
+
+ header>#I2>#sig{
+        background-color: #f6dfca;
+        padding: 2%;
+        color:rgba(47,65,89,0.9);
+        text-decoration:none;
+
+    }
 
         
