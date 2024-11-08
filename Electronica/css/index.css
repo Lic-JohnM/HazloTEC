@@ -127,8 +127,8 @@
         color:rgba(47,65,89,0.9);
         border-color: rgba(47,65,89,0.9);
         border-style: solid;
-        grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6%;
         align-items: center;
         justify-items: center;
         margin-right: 10%;
