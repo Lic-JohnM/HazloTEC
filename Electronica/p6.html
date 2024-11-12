@@ -36,83 +36,33 @@
 
                 <div id="con">
 
-		<br>
-            	<h2>Sensores</h2>
 			<br>
-		<p>Un sensor es un dispositivo electrónico que detecta señales físicas del entorno y las convierte en señales eléctricas para su procesamiento. Por ejemplo, el sensor de obstáculos con LED IR es un tipo común de sensor que se utiliza para detectar la presencia de objetos. Este sensor emite una señal infrarroja (IR) y mide la cantidad de luz reflejada por los objetos cercanos. Si el sensor detecta un cambio en la cantidad de luz reflejada, puede concluir que hay un obstáculo presente. Este es un ejemplo práctico de cómo los sensores convierten información física en señales eléctricas para su procesamiento.</p>
 
-			<br>
-			<h3>Fotoresistencia LDR</h3>
+			<h2>El transistor como adaptador</h2>
+			 <br>
 
-			<br>
-			<p>La fotoresistencia es un sensor que responde a la cantidad de luz que recibe, medida en luxes. A continuación, se muestra una imagen de una fotoresistencia:</p>
-			<br>
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=46584177389547263" height="775" width="450" frameborder="0" scrolling="no" ></iframe>			</div>
-			<br>
-			<p>La fotoresistencia cambia su resistencia en función de la variación de la luz. Utilizando un <b>circuito divisor de voltaje</b>, este cambio en la resistencia puede producir una variación en el voltaje que se aplica a un circuito eléctrico generando que el LED se enciende cuando este oscuro(pocos Lux), en la siguiente imagen se muestran algunos circuitos con su funcionamiento.</p>
-			
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564278906830" height="305" width="345" frameborder="0" scrolling="no" ></iframe>	
-			</div>
-			
-			<br>
-			<h3> Potenciometro </h3>
+			<p>El transistor es un componente versátil que permite tanto la amplificación de señales como su uso como interruptor en circuitos de corriente continua (DC) y alterna (AC). Una característica fundamental del transistor es que la corriente que pasa por la base (<strong>I<sub>B</sub></strong>) se amplifica por un factor conocido como <em>beta</em> (β), resultando en una corriente mayor en el colector (<strong>I<sub>C</sub></strong>). Esta relación se expresa como <strong>I<sub>C</sub> = β * I<sub>B</sub></strong>. A su vez, la corriente del emisor (<strong>I<sub>E</sub></strong>) es la suma de la corriente de la base y la del colector, es decir, <strong>I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub></strong>. En la configuración de emisor común, que se presentará a continuación, el transistor permite el control preciso de grandes corrientes mediante pequeñas señales en la base, lo que lo convierte en un componente clave en el diseño de circuitos de amplificación y control.</p>
 
-			<br>
-			<p>El potenciómetro puede utilizarse como un sensor en aplicaciones como los joysticks de controles o las perillas de volumen en equipos de sonido. Funciona mediante la variación de resistencia que ocurre al girar su perilla, similar a la fotocelda. Esta variación de resistencia se puede usar para crear un <b>circuito divisor de voltaje</b> entre sus terminales, si se desea. Existen diferentes tipos de potenciómetros que varían en su resistencia de forma lineal o logarítmica, y también según la cantidad de vueltas que se le dé al potenciómetro. A continuación, podemos observar uno:</p>
                         <br>
-            				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=692639617695812420" height="441" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>
-					<br>
-			<p>En la siguiente imagen se puede visualizar un potenciómetro que controla cuándo enciende cada LED, empleando la configuración en paralelo y los diodos como elementos que aíslan las resistencias, evitando que se reduzca su valor. Además, se aprovechan los 0.7V que consumen los diodos, lo cual genera una diferencia en los voltajes, permitiendo que los LEDs se enciendan en diferentes momentos conforme se gira el potenciómetro. </p>
-			<br>
-				<div style="text-align:center;">
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564278908697" height="602" width="345" frameborder="0" scrolling="no" ></iframe>
-				</div>
-			<br>
-			
 
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564275579411" height="389" width="345" frameborder="0" scrolling="no" ></iframe>		
+			</div>
 			<br>
-			<h2>Sensor de temperatura</h2>
+			<br>
+			<p>Gran parte de los circuitos electrónicos utilizan transistores para manejar un voltaje dado, generalmente apoyados por divisores de voltaje. En la configuración que se desarrollo anteriormente, se muestra un circuito de adaptación donde la corriente <strong>I<sub>1</sub></strong> se refiere a la corriente de base (<strong>I<sub>B</sub></strong>), que ha sido multiplicada por un factor de 100, representando el valor de <em>beta</em> (β). La corriente de emisor se ha etiquetado como <strong>I<sub>2</sub></strong>, que es la suma de la corriente de base y la corriente de colector. En el divisor de voltaje, es común encontrar una resistencia conectada a la base del transistor; sin embargo, lo más importante es ajustar el voltaje en ese punto para que active el transistor adecuadamente. A continuación, se presenta el circuito de adaptación que demuestra este principio.</p>
+
                         <br>
-			<p>El LM35 es un sensor utilizado para medir la temperatura, y cada grado Celsius se traduce en 1 mV. A continuación, podemos ver una imagen del sensor LM35:</p>
-			<br>
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1131670212594992143" height="404" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>
-			<p>Sin embargo, la variación es muy pequeña, requiriendo un circuito que amplifique la señal. Un componente empleado por excelencia para esta tarea es el amplificador operacional, que permite multiplicar el valor de la señal por el factor deseado.</p>
-			<br>
 
-			
-		<h2>Sensor de Efecto Hall</h2>
-<br>
-<p>El sensor de efecto Hall es un dispositivo que mide la presencia y la intensidad de un campo magnético. Cuando un campo magnético atraviesa el sensor, genera una pequeña tensión eléctrica que es proporcional a la intensidad del campo. Esta señal se puede usar para detectar la presencia de imanes, medir la velocidad de rotación de motores o incluso contar objetos en movimiento.</p>
-<br>
-<div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=775463629607820051" height="480" width="345" frameborder="0" scrolling="no" ></iframe>
-</div>
-<p>El sensor de efecto Hall puede ser muy sensible y proporciona una salida de voltaje que puede ser medida y utilizada en diversos sistemas electrónicos. La señal generada puede ser amplificada y procesada utilizando circuitos integrados especializados para obtener lecturas precisas y útiles. Este tipo de sensor es ampliamente utilizado en aplicaciones como interruptores sin contacto, sistemas de monitoreo de velocidad y aplicaciones de automoción.</p>
-<br>
-<h2>Adaptación de un Pulsador como Sensor</h2>
-<br> 
 			<div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=800585271259278887" height="376" width="345" frameborder="0" scrolling="no" ></iframe>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564241126602" height="492" width="450" frameborder="0" scrolling="no" ></iframe>
 			</div>
-<br>
-<p>Un pulsador es un componente electrónico simple que normalmente se utiliza para encender o apagar un circuito al ser presionado. Sin embargo, al combinarlo con un transistor, se puede adaptar para funcionar como un sensor en diferentes aplicaciones, incluso aprovechando la conductividad se puede utilizar para crear un sensor de agua.</p>
-<br> 
-		
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p5.html"> anterior </a>
-				<a class="n1" href="p7.html"> siguiente </a>
-                             
-
-                        </div>
+			<br>
+				<br>
 			
-			   <br>
+
+		<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Electronica/Talleres/ActP5_1.pdf">Descargar actividad</a>
+			<br>	
 	   </div>
 			
       </div>
