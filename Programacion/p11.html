@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Programación</title>
+	<meta name="description" content="Presentación de las estructuras logicas de condicionales tanto en diagrama de flujo como en Pyhton.">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","190vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+ <h2>Listas</h2>
+    <br>
+ <p>Las listas en Python son una forma de almacenar diferentes datos en una misma variable. A continuación, se muestran varios ejemplos:</p>
+<br>
+    <pre><code>Numeros_pares = [0, 2, 4, 6, 8, 10]</code></pre>
+    <pre><code>Numeros_primos = [1, 2, 3, 5, 7, 11]</code></pre>
+    <pre><code>Colores = ["rojo", "azul", "gris", "blanco", "negro"]</code></pre>
+    <pre><code>Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria"]</code></pre>
+<br>
+    <p>Para ilustrar cómo trabajar con listas, guardaremos los nombres de 6 estudiantes de un curso. Esto se haría de la siguiente manera:</p>
+
+    <div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no"></iframe>
+    </div>
+<br>
+    <h2>Ejemplo 1: Acceder a Elementos de la Lista</h2>
+<br>
+    <pre><code># Lista de números pares
+Numeros_pares = [0, 2, 4, 6, 8, 10]
+
+# Acceder al primer elemento
+print(Numeros_pares[0])  # Imprime: 0
+
+# Acceder al cuarto elemento
+print(Numeros_pares[3])  # Imprime: 6</code></pre>
+<br>
+    <h2>Ejemplo 2: Modificar un Elemento de la Lista</h2>
+    <br>
+			<pre><code># Lista de colores
+Colores = ["rojo", "azul", "gris", "blanco", "negro"]
+
+# Modificar el tercer elemento
+Colores[2] = "verde"
+print(Colores)  # Imprime: ['rojo', 'azul', 'verde', 'blanco', 'negro']</code></pre>
+<br>
+    <h2>Ejemplo 3: Añadir Elementos a la Lista</h2>
+<br>
+    <pre><code># Lista de ingredientes para ensalada
+Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria"]
+
+# Añadir un nuevo ingrediente
+Ingredientes_ensalada.append("aceitunas")
+print(Ingredientes_ensalada)  # Imprime: ['lechuga', 'tomate', 'pepino', 'aceite', 'zanahoria', 'aceitunas']</code></pre>
+<br>
+    <h2>Ejemplo 4: Insertar Elementos en una Posición Específica</h2>
+<br>
+    <pre><code># Lista de números primos
+Numeros_primos = [1, 2, 3, 5, 7, 11]
+
+# Insertar un nuevo número en la segunda posición
+Numeros_primos.insert(1, 4)
+print(Numeros_primos)  # Imprime: [1, 4, 2, 3, 5, 7, 11]</code></pre>
+<br>
+    <h2>Ejemplo 5: Eliminar Elementos de la Lista</h2>
+<br>
+    <pre><code># Lista de colores
+Colores = ["rojo", "azul", "verde", "blanco", "negro"]
+
+# Eliminar un color específico
+Colores.remove("blanco")
+print(Colores)  # Imprime: ['rojo', 'azul', 'verde', 'negro']
+
+# Eliminar el último color
+ultimo_color = Colores.pop()
+print(ultimo_color)  # Imprime: negro
+print(Colores)  # Imprime: ['rojo', 'azul', 'verde']</code></pre>
+<br>
+    <h2>Ejemplo 6: Ordenar una Lista</h2>
+<br>
+    <pre><code># Lista de números pares
+Numeros_pares = [0, 2, 4, 6, 8, 10]
+
+# Ordenar la lista en orden ascendente
+Numeros_pares.sort()
+print(Numeros_pares)  # Imprime: [0, 2, 4, 6, 8, 10]
+
+# Ordenar en orden descendente
+Numeros_pares.sort(reverse=True)
+print(Numeros_pares)  # Imprime: [10, 8, 6, 4, 2, 0]</code></pre>
+<br>
+    <h2>Ejemplo 7: Contar Elementos en una Lista</h2>
+<br>
+    <pre><code># Lista de ingredientes para ensalada con repetidos
+Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria", "tomate"]
+
+# Contar cuántas veces aparece 'tomate'
+cantidad_tomates = Ingredientes_ensalada.count("tomate")
+print(cantidad_tomates)  # Imprime: 2</code></pre>
+<br>
+    <h2>Ejemplo 8: Obtener la Longitud de la Lista</h2>
+<br>
+    <pre><code># Lista de nombres de estudiantes
+Nombres_estudiantes = ["Ana", "Luis", "Pedro", "Sofia", "María", "Juan"]
+
+# Obtener la longitud de la lista
+numero_estudiantes = len(Nombres_estudiantes)
+print(numero_estudiantes)  # Imprime: 6</code></pre>
+
+ 
+   
+		
+			
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p10.html"> anterior </a>
+				<a class="n1" href="p12.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
