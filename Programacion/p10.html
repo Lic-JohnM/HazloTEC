@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción de como se emplean las funciones en la aplicación libre Scratch.">	
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,69 +35,84 @@
         <div id="info">
 
                 <div id="con">
-   <h1>Desarrollo Web y Multimedia</h1>
 
-    <h2>Flask</h2>
-    <p>Flask es un microframework para Python que permite crear aplicaciones web de manera sencilla y rápida. Es ideal para proyectos pequeños y prototipos.</p>
-    <h3>Ejemplo de Flask</h3>
-    <pre>
-from flask import Flask
+				<h2> Condicionales anidadas </h2>
 
-app = Flask(__name__)
+			<p>En algunos casos, un programa puede tener varios flujos de ejecución dependiendo de las decisiones o situaciones que se presenten. Por ejemplo, para determinar el desempeño de un estudiante basado en la nota definitiva de una materia en un colegio, el flujo del programa podría representarse mediante el siguiente diagrama:</p>
 
-@app.route('/')
-def home():
-    return "¡Bienvenido a mi aplicación Flask!"
+			<br>
+						<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
+			</div>  
 
-if __name__ == '__main__':
-    app.run(debug=True)
-    </pre>
+			<br>
 
-    <h2>Django</h2>
-    <p>Django es un framework web de alto nivel que fomenta el desarrollo rápido de aplicaciones web. Proporciona muchas funcionalidades integradas.</p>
-    <h3>Ejemplo de Django</h3>
-    <pre>
-# En la terminal
-django-admin startproject mi_proyecto
-cd mi_proyecto
-python manage.py startapp mi_aplicacion
+			<h3> Condicionales anidadas en Python </h3>
 
-# views.py en mi_aplicacion
-from django.http import HttpResponse
+			<br>
 
-def home(request):
-    return HttpResponse("¡Bienvenido a mi aplicación Django!")
-    </pre>
+			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
+			<br>
 
-    <h2>Pygame</h2>
-    <p>Pygame es una biblioteca diseñada para crear videojuegos en Python. Proporciona herramientas para gestionar gráficos y sonido.</p>
-    <h3>Ejemplo de Pygame</h3>
-    <pre>
-import pygame
-import sys
+<pre>
+    <code>
 
-pygame.init()
+print("¿ Cuál es tu definitiva ?");
+definitiva=float(input());
+if definitiva>=4.5 and definitiva<5:
+    print("tu desempeño es superior");
+else:
+    if definitiva>=4.0 and definitiva<4.5:
+          print("tu desempeño es alto");
+    else:
+        if definitiva>=3.0 and definitiva<4.0:
+              print("tu desempeño es basico");
+        else:
+            if definitiva>=0.0 and definitiva<3.0:
+                print("tu desempeño es bajo");
+            else:
+                print("Esta nota no existe");
 
-# Configurar la ventana
-screen = pygame.display.set_mode((400, 300))
-pygame.display.set_caption('Hola Pygame')
+    </code>
+</pre>
 
-# Bucle principal
-while True:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            pygame.quit()
-            sys.exit()
-    
-    screen.fill((255, 255, 255))  # Fondo blanco
-    pygame.display.flip()
-    </pre>
-                        
-<br>
+	<br>
+
+			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
+			<br>
+
+<pre>
+    <code>
+
+print("¿ Cuál es tu definitiva ?");
+definitiva=float(input());
+if definitiva>=4.5 and definitiva<5:
+    print("tu desempeño es superior");
+elif definitiva>=4.0 and definitiva<4.5:
+    print("tu desempeño es alto");
+elif definitiva>=3.0 and definitiva<4.0:
+    print("tu desempeño es basico");
+elif definitiva>=0.0 and definitiva<3.0:
+     print("tu desempeño es bajo");
+else:
+     print("Esta nota no existe");
+     
+    </code>
+</pre>
+
+  
+             <br>
+	
+
+			
+			
+
+	
                          <div id="ctrl">
 					
 				 <a class="n1" href="p9.html"> anterior </a>
-				                           
+				<a class="n1" href="p11.html"> siguiente </a>
+                             
 
                         </div>
 			
@@ -111,3 +126,4 @@ while True:
 
 	
 </html>
+
