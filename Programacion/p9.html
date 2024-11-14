@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -36,117 +36,25 @@
 
                 <div id="con">
 
+
+
 	
-              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
 
-    <h2>1. Clasificación de Números con KNN</h2>
-    <p>Usaremos el algoritmo K-Nearest Neighbors para clasificar números basados en características simples.</p>
-    <pre>
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+			<h3> Operadores de relación </h3>
 
-# Cargar el conjunto de datos Iris
-iris = load_iris()
-X, y = iris.data, iris.target
+			<br>
 
-# Dividir el conjunto de datos en entrenamiento y prueba
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+		<p>Dependiendo de la condición que necesitemos comparar, se emplean diferentes operadores de relación después de la palabra clave <code>if</code>. Por ejemplo, si queremos verificar si un número <code>X</code> es mayor que 5, la condición se escribiría como <b>X &gt; 5</b>. Si queremos comprobar si <code>X</code> está en un intervalo, es decir, si es mayor que 5 y menor que 10, la condición se escribiría como <b>X &gt; 5 y X &lt; 10</b>. En algunos lenguajes de programación, como Python, se utiliza la palabra clave <code>and</code> en lugar de <b>AND</b>, resultando en <b>X &gt; 5 and X &lt; 10</b>.</p>
 
-# Crear y entrenar el clasificador
-knn = KNeighborsClassifier(n_neighbors=3)
-knn.fit(X_train, y_train)
+	        <br>
+	        
+<p>Para finalizar, si se necesita comparar un valor puntual, como verificar si el número <code>X</code> es igual a 8, se utilizaría el operador de igualdad <code>==</code>. La condición se escribiría de la siguiente manera: <b>X == 8</b>.</p>
+	        	
+	        	
+            <br>
+    
 
-# Hacer predicciones
-predicciones = knn.predict(X_test)
-print("Predicciones:", predicciones)
-    </pre>
-
-    <h2>2. Regresión Lineal Sencilla</h2>
-    <p>Realizaremos una regresión lineal sencilla para predecir valores.</p>
-    <pre>
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
-
-# Datos de ejemplo
-X = np.array([[1], [2], [3], [4], [5]])
-y = np.array([2, 3, 5, 7, 11])
-
-# Crear el modelo de regresión lineal
-modelo = LinearRegression()
-modelo.fit(X, y)
-
-# Hacer predicciones
-predicciones = modelo.predict(X)
-
-# Graficar los resultados
-plt.scatter(X, y, color='blue')
-plt.plot(X, predicciones, color='red')
-plt.title('Regresión Lineal')
-plt.xlabel('X')
-plt.ylabel('y')
-plt.show()
-    </pre>
-
-    <h2>3. Creación de un Juego Simple: Adivina el Número</h2>
-    <p>Escribamos un juego donde el usuario debe adivinar un número aleatorio.</p>
-    <pre>
-import random
-
-# Generar un número aleatorio
-numero_secreto = random.randint(1, 100)
-
-# Juego de adivinanza
-while True:
-    intento = int(input("Adivina un número entre 1 y 100: "))
-    if intento < numero_secreto:
-        print("Demasiado bajo. Intenta de nuevo.")
-    elif intento > numero_secreto:
-        print("Demasiado alto. Intenta de nuevo.")
-    else:
-        print("¡Felicidades! Adivinaste el número.")
-        break
-    </pre>
-
-    <h2>4. Procesamiento de Imágenes con OpenCV</h2>
-    <p>Realizaremos un simple procesamiento de imágenes utilizando OpenCV.</p>
-    <pre>
-import cv2
-
-# Cargar la imagen
-imagen = cv2.imread('imagen.jpg')
-
-# Convertir a escala de grises
-gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
-
-# Mostrar la imagen de escala de grises
-cv2.imshow('Escala de Grises', gris)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-    </pre>
-
-    <h2>5. Chatbot Simple con Respuestas Predefinidas</h2>
-    <p>Crearemos un chatbot que responda a preguntas simples.</p>
-    <pre>
-def chatbot():
-    print("¡Hola! Soy un chatbot simple. ¿Cómo puedo ayudarte?")
-    while True:
-        pregunta = input("Tú: ")
-        if pregunta.lower() in ['salir', 'exit']:
-            print("Chatbot: ¡Adiós!")
-            break
-        elif "hola" in pregunta.lower():
-            print("Chatbot: ¡Hola! ¿Cómo estás?")
-        elif "nombre" in pregunta.lower():
-            print("Chatbot: Soy un chatbot sin nombre.")
-        else:
-            print("Chatbot: No entiendo esa pregunta.")
-
-chatbot()
-    </pre>
-
-
+	
                          <div id="ctrl">
 					
 				 <a class="n1" href="p8.html"> anterior </a>
@@ -162,6 +70,3 @@ chatbot()
 
 
      	</body>
-
-	
-</html>
