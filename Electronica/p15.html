@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Electrónica</title>
+	<meta name="description" content="Ejercicios con las configuraciones de las resistencias electrícas.">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","320vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+		 <div id="con">
+
+     	 <h2>Condensadores y bobinas en AC</h2>
+
+		 <br>
+		
+<h3>Reactancia capacitiva</h3>
+		<br>
+
+		<p>Cuando ponemos un condensador en un circuito alterno, la oposición a la corriente electríca ya no se llama resistencia si no impedancia la cuál tiene la resistencia normal con un componenete llamado reactancia la cual puede ser capacitiva o inductiva dependiendo la presencia de condensadores o bobinas, la formula que define la reactancia capacitiva(X<sub>C</sub>) es la siguiente:</p>
+		<br>	
+		<p>X<sub>C</sub> = 1 / (2πfC)</p>
+		<br>
+			<p>Donde:</p>
+			<ul>
+				<li>X<sub>C</sub>: Reactancia capacitiva en ohmios (Ω).</li>
+				<li>f: Frecuencia en hercios (Hz).</li>
+				<li>C: Capacitancia en faradios (F).</li>
+				<li>π: Constante Pi (~3.14159).</li>
+			</ul>
+		
+		<p>Así entre más frecuencia menos resistencia va a tener el circuito, una aplicación de la misma son los filtros de frecuencias pasabajos, que según los valores que se seleccinonen de resistencia y condensador permiten pasar unas frecuencias especificas</p>
+		<br>
+
+		<h3>Impedancia</h3>
+		<br>
+		<p>La impedancia (Z) en un circuito que contiene una reactancia capacitiva (X<sub>C</sub>) y una resistencia (R) se calcula como:</p>
+			<p>Z = √(R<sup>2</sup> + X<sub>C</sub><sup>2</sup>)</p>
+		
+			<p>Donde:</p>
+			<ul>
+				<li>Z: Impedancia en ohmios (Ω).</li>
+				<li>R: Resistencia en ohmios (Ω).</li>
+				<li>X<sub>C</sub>: Reactancia capacitiva en ohmios (Ω).</li>
+			</ul>
+
+
+		
+				<h3>Decibeles y Diagrama de Bode </h3>
+			
+		
+			<br>
+		<p>Una forma de representar la cantidad de frecuencia es el diagrama de bode, y matemáticamente una herramienta para usar las magnitudes de una mejor manera son los decibeles</p>
+					<br>
+		 <h2>Divisor de voltaje capacitivo</h2>
+
+		<p>Un divisor de voltaje capacitivo permite crear un filtro pasabandas y su formula es la siguiente, es muy util en contezto donde la frecuencia varia como la humedad de una zona, así tambien cuando se varia la frecuencia en algunas ocasiones puede ajustarse el voltaje de salida para iniciar un motor.</p>
+		 
+		 <br>
+		<p>Los <b>condensadores y bobinas</b> permiten modificar las señales de energía alterna de diversas maneras, no solamente proveniente de generadores de señales, tambien pueden ser de audio o electrícas. Algunos de sus usos incluyen filtrar señales no deseadas en aplicaciones electrónicas, ayudar a arrancar motores gracias a su capacidad de acumular y liberar energía, y generar temporizadores aprovechando los ciclos de carga y descarga del condensador.</p>
+		<br>
+			
+	
+			
+
+			
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p14.html"> anterior </a>
+				<a class="n1" href="p16.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
