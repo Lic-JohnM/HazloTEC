@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
+	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","210vh");
+	  $("#info").css("height","380vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,177 +36,25 @@
         <div id="info">
 
                 <div id="con">
-
-				<h2> Condicionales </h2>
-
-				<br>
-
-			<p>En programación, las condicionales permiten dividir el flujo de un programa en función de un valor o una decisión. Por ejemplo, si tenemos una variable llamada <code>clima</code> y su valor es <code>lluvia</code>, podemos decidir cambiar nuestro atuendo o accesorio para salir a la calle, en comparación con el caso en que el valor sea <code>sol</code>. En un diagrama de flujo, esto se representa de la siguiente manera:</p>
-
-			<br>
-					<div style="text-align:center;">
-        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249535" height="715" width="600" frameborder="0" scrolling="no" ></iframe>
-                  </div>  
-
-			<br>
-
-			<h3> Condicionales en Python </h3>
-
-			<br>
-
-	<p>Las condicionales en Python requieren seguir ciertas reglas de espaciado y puntuación para que el programa funcione correctamente. Por ejemplo, para comparar un valor puntual con una variable, se utiliza el operador <code>==</code> (doble igual). A continuación, se muestra un programa que utiliza este operador para decidir qué llevar en función del clima:</p>
-
-<pre>
-    <code>
-print("Ingrese el clima (sol o lluvia):")
-clima = input()
-if clima == "lluvia":
-    print("Lleva sombrilla")
-else:
-    print("Lleva gafas de sol")
-    </code>
-</pre>
-
-<p>Además de comparar valores exactos, las condicionales también pueden utilizar operadores de relación para comparar valores numéricos. Por ejemplo, si queremos verificar si una temperatura es mayor o menor que un umbral, podemos usar los operadores <code>&gt;</code> (mayor que) y <code>&lt;</code> (menor que). A continuación, se muestra un programa que utiliza estos operadores:</p>
-
-<pre>
-    <code>
-print("Ingrese la temperatura en grados Celsius:")
-temperatura = float(input())
-if temperatura &gt; 30:
-    print("Hace mucho calor. Considera usar ropa ligera.")
-elif temperatura &lt; 10:
-    print("Hace frío. Considera usar abrigo.")
-else:
-    print("La temperatura es moderada.")
-    </code>
-</pre>
-
-<p>En este ejemplo, se utilizan operadores de relación para comparar la temperatura ingresada con los valores umbral y decidir qué mensaje mostrar.</p>
-
-
-            
-			<br>
-
+		<br>
+		<h2>Python</h2>
+		<br>
+		<p>Python es uno de los lenguajes de programación más populares y versátiles en el mundo de la tecnología. Su sintaxis sencilla y clara lo convierte en una excelente opción para principiantes, mientras que su robustez lo hace valioso para desarrolladores experimentados. Aprender Python no solo te permite escribir código de manera más rápida y eficiente, sino que también abre la puerta a una amplia gama de aplicaciones, desde desarrollo web y análisis de datos hasta inteligencia artificial y automatización.</p>
+		<br>
+		<div style="text-align:center;">
+		<iframe src="https://assets.pinterest.com/ext/embed.html?id=46654546134711528" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
+		</div>    
+                <br>
+		<p>Para entender por qué Python es tan especial, imagina que estás armando un rompecabezas. Python es como un rompecabezas con piezas grandes y coloridas que encajan fácilmente, lo que facilita que los principiantes comiencen a armarlo. La sintaxis clara y la estructura intuitiva de Python permiten que te concentres en resolver el problema en lugar de luchar con la complejidad del lenguaje.</p>
+			
+		
 	
 
-			<h3> Operadores de relación </h3>
 
-			<br>
-
-		<p>Dependiendo de la condición que necesitemos comparar, se emplean diferentes operadores de relación después de la palabra clave <code>if</code>. Por ejemplo, si queremos verificar si un número <code>X</code> es mayor que 5, la condición se escribiría como <b>X &gt; 5</b>. Si queremos comprobar si <code>X</code> está en un intervalo, es decir, si es mayor que 5 y menor que 10, la condición se escribiría como <b>X &gt; 5 y X &lt; 10</b>. En algunos lenguajes de programación, como Python, se utiliza la palabra clave <code>and</code> en lugar de <b>AND</b>, resultando en <b>X &gt; 5 and X &lt; 10</b>.</p>
-
-	        <br>
-	        
-<p>Para finalizar, si se necesita comparar un valor puntual, como verificar si el número <code>X</code> es igual a 8, se utilizaría el operador de igualdad <code>==</code>. La condición se escribiría de la siguiente manera: <b>X == 8</b>.</p>
-	        	
-	        	
-            <br>
-     <div id="b1">
-				<div id="e">
-					<h3> Condicionales anidadas </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            
-									
-
-				<br>
-
-			<p>En algunos casos, un programa puede tener varios flujos de ejecución dependiendo de las decisiones o situaciones que se presenten. Por ejemplo, para determinar el desempeño de un estudiante basado en la nota definitiva de una materia en un colegio, el flujo del programa podría representarse mediante el siguiente diagrama:</p>
-
-			<br>
-						<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-
-			<h3> Condicionales anidadas en Python </h3>
-
-			<br>
-
-			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-else:
-    if definitiva>=4.0 and definitiva<4.5:
-          print("tu desempeño es alto");
-    else:
-        if definitiva>=3.0 and definitiva<4.0:
-              print("tu desempeño es basico");
-        else:
-            if definitiva>=0.0 and definitiva<3.0:
-                print("tu desempeño es bajo");
-            else:
-                print("Esta nota no existe");
-
-    </code>
-</pre>
-
-	<br>
-
-			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-elif definitiva>=4.0 and definitiva<4.5:
-    print("tu desempeño es alto");
-elif definitiva>=3.0 and definitiva<4.0:
-    print("tu desempeño es basico");
-elif definitiva>=0.0 and definitiva<3.0:
-     print("tu desempeño es bajo");
-else:
-     print("Esta nota no existe");
-     
-    </code>
-</pre>
-
-  
-             <br>
-				
-				</div>
-			</div>
-
-                        <br>
-	<h2>Condicionales en Scratch</h2>
-
-            <br>
-            
-			<p>Las condicionales en Scratch siguen la misma lógica de programación para dividir el flujo de trabajo. A continuación, se presenta un ejemplo que puedes realizar para observar cómo funciona esta lógica en Scratch:</p>
-            
-			<br>
-			
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304858" height="691" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<p>En la parte izquierda de la imagen, podemos encontrar los bloques que representan condicionales y ciclos. En el ejemplo mostrado anteriormente, se utiliza una lógica de programación para manejar un intervalo de temperaturas de -5 a 15 grados sin tener que especificar el intervalo completo en los condicionales. Por ejemplo, en lugar de definir condiciones específicas para cada rango, el programa puede manejar un intervalo general, como cuando la temperatura está entre 25 y 40 grados. Es importante recordar que en programación existen múltiples formas de abordar y resolver los problemas propuestos.</p>
-
-			<br>
-
-			
-			
-
-	
                          <div id="ctrl">
 					
-				 <a class="n1" href="p2.html"> anterior </a>
-				<a class="n1" href="p4.html"> siguiente </a>
+				 <a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p3.html"> siguiente </a>
                              
 
                         </div>
