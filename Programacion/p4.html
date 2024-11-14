@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Presentación de las estructuras logicas de condicionales tanto en diagrama de flujo como en Pyhton.">
+	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","380vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -36,213 +37,97 @@
 
                 <div id="con">
 
- <h2>Listas</h2>
-    <br>
- <p>Las listas en Python son una forma de almacenar diferentes datos en una misma variable. A continuación, se muestran varios ejemplos:</p>
+		<br>
+		<h2>Print </h2>
+		<br>
+		<p>Ahora que conoces algunas de las características de Python, es importante entender cómo interactuar con el programa. Dos funciones básicas y fundamentales en Python son `print` e `input`. La función `print` se utiliza para mostrar información en la pantalla. Por ejemplo:</p>
 <br>
-    <pre><code>Numeros_pares = [0, 2, 4, 6, 8, 10]</code></pre>
-    <pre><code>Numeros_primos = [1, 2, 3, 5, 7, 11]</code></pre>
-    <pre><code>Colores = ["rojo", "azul", "gris", "blanco", "negro"]</code></pre>
-    <pre><code>Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria"]</code></pre>
+<pre><code>print("¡Hola, mundo!")
+print("Python es divertido.")
+print("Este es un ejemplo de print.")
+</code></pre>
 <br>
-    <p>Para ilustrar cómo trabajar con listas, guardaremos los nombres de 6 estudiantes de un curso. Esto se haría de la siguiente manera:</p>
+		<p>Estos ejemplos muestran cómo `print` puede usarse para mostrar diferentes tipos de mensajes. Puedes experimentar con `print` en Google Colab, una herramienta en línea donde puedes ejecutar código Python directamente desde tu navegador. Haz clic en el siguiente enlace para probarlo: <a target="_blank" href="https://colab.research.google.com">Google Colab</a>.</p>
+		<br>
+		<h2>Variables</h2>
+		<br>
+		<p>La función `input` te permite recibir información del usuario. Por ejemplo, puedes pedir al usuario su nombre o edad y luego usar esa información en tu programa. Las variables son como contenedores donde guardamos datos. En Python, hay dos tipos principales de variables que puedes usar:</p>
+		<br>
+		<ul>
+		    <li><b>Variables no numéricas:</b> Estas variables guardan texto y se definen con comillas. Por ejemplo:</li>
+		</ul>
+		<br>
+<pre><code>nombre = "Juan"
+mensaje = "Hola, " + nombre + "!"
+print(mensaje)
+</code></pre>
+		<br>
+		<p>En las variables no numéricas, el símbolo `+` se utiliza para unir cadenas de texto, una operación conocida como <b>concatenación</b>. Por ejemplo, al usar `nombre = "Juan"` y `mensaje = "Hola, " + nombre`, el resultado es "Hola, Juan".</p>
+		<br>
+		<ul>
+		    <li><b>Variables numéricas:</b> Estas variables guardan números y pueden ser enteros o flotantes (decimales). Para operar con números decimales, utilizamos el tipo de dato `float`. Por ejemplo:</li>
+		</ul>
+		<br>
+		<pre><code>
+		peso = 70.5
+		altura = 1.75
 
-    <div style="text-align:center;">
-        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238302924" height="191" width="450" frameborder="0" scrolling="no"></iframe>
-    </div>
-<br>
-    <h2>Ejemplo 1: Acceder a Elementos de la Lista</h2>
-<br>
-    <pre><code># Lista de números pares
-Numeros_pares = [0, 2, 4, 6, 8, 10]
+		# Calculamos el índice de masa corporal (IMC)
+		imc = peso / (altura ** 2)
 
-# Acceder al primer elemento
-print(Numeros_pares[0])  # Imprime: 0
-
-# Acceder al cuarto elemento
-print(Numeros_pares[3])  # Imprime: 6</code></pre>
-<br>
-    <h2>Ejemplo 2: Modificar un Elemento de la Lista</h2>
-    <br>
-			<pre><code># Lista de colores
-Colores = ["rojo", "azul", "gris", "blanco", "negro"]
-
-# Modificar el tercer elemento
-Colores[2] = "verde"
-print(Colores)  # Imprime: ['rojo', 'azul', 'verde', 'blanco', 'negro']</code></pre>
-<br>
-    <h2>Ejemplo 3: Añadir Elementos a la Lista</h2>
-<br>
-    <pre><code># Lista de ingredientes para ensalada
-Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria"]
-
-# Añadir un nuevo ingrediente
-Ingredientes_ensalada.append("aceitunas")
-print(Ingredientes_ensalada)  # Imprime: ['lechuga', 'tomate', 'pepino', 'aceite', 'zanahoria', 'aceitunas']</code></pre>
-<br>
-    <h2>Ejemplo 4: Insertar Elementos en una Posición Específica</h2>
-<br>
-    <pre><code># Lista de números primos
-Numeros_primos = [1, 2, 3, 5, 7, 11]
-
-# Insertar un nuevo número en la segunda posición
-Numeros_primos.insert(1, 4)
-print(Numeros_primos)  # Imprime: [1, 4, 2, 3, 5, 7, 11]</code></pre>
-<br>
-    <h2>Ejemplo 5: Eliminar Elementos de la Lista</h2>
-<br>
-    <pre><code># Lista de colores
-Colores = ["rojo", "azul", "verde", "blanco", "negro"]
-
-# Eliminar un color específico
-Colores.remove("blanco")
-print(Colores)  # Imprime: ['rojo', 'azul', 'verde', 'negro']
-
-# Eliminar el último color
-ultimo_color = Colores.pop()
-print(ultimo_color)  # Imprime: negro
-print(Colores)  # Imprime: ['rojo', 'azul', 'verde']</code></pre>
-<br>
-    <h2>Ejemplo 6: Ordenar una Lista</h2>
-<br>
-    <pre><code># Lista de números pares
-Numeros_pares = [0, 2, 4, 6, 8, 10]
-
-# Ordenar la lista en orden ascendente
-Numeros_pares.sort()
-print(Numeros_pares)  # Imprime: [0, 2, 4, 6, 8, 10]
-
-# Ordenar en orden descendente
-Numeros_pares.sort(reverse=True)
-print(Numeros_pares)  # Imprime: [10, 8, 6, 4, 2, 0]</code></pre>
-<br>
-    <h2>Ejemplo 7: Contar Elementos en una Lista</h2>
-<br>
-    <pre><code># Lista de ingredientes para ensalada con repetidos
-Ingredientes_ensalada = ["lechuga", "tomate", "pepino", "aceite", "zanahoria", "tomate"]
-
-# Contar cuántas veces aparece 'tomate'
-cantidad_tomates = Ingredientes_ensalada.count("tomate")
-print(cantidad_tomates)  # Imprime: 2</code></pre>
-<br>
-    <h2>Ejemplo 8: Obtener la Longitud de la Lista</h2>
-<br>
-    <pre><code># Lista de nombres de estudiantes
-Nombres_estudiantes = ["Ana", "Luis", "Pedro", "Sofia", "María", "Juan"]
-
-# Obtener la longitud de la lista
-numero_estudiantes = len(Nombres_estudiantes)
-print(numero_estudiantes)  # Imprime: 6</code></pre>
-
-  <br>
-
-     <div id="b1">
-				<div id="e">
-					<h3> Listas con variables</h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-					<p>En Python, puedes crear listas usando variables, lo cual es muy útil cuando los datos de la lista provienen de cálculos, entradas del usuario o cualquier otra fuente dinámica.</p>
-
-			    <pre><code># Variables
-			elemento1 = "manzana"
-			elemento2 = "banana"
-			elemento3 = "cereza"
-			
-			# Crear lista con variables
-			frutas = [elemento1, elemento2, elemento3]
-			
-			print(frutas)  # Imprime: ['manzana', 'banana', 'cereza']</code></pre>
-
-  
-				
-				</div>
-		
-		</div>
-			<br>
-			<h2>Libreria matplotlib </h2>
-			<br>
-			<p>La libreria matplotlib permite apartir de listas generar diversos gráficos, a continuación se presenta un ejemplo con su respectivo gráfico:</p>
-			<br>
-			   <pre><code>
-import matplotlib.pyplot as plt
-
-# Ejemplo de gráfico de líneas
-x = [1, 2, 3, 4]
-y = [10, 20, 15, 30]
-
-plt.plot(x, y)
-plt.title("Ejemplo de Gráfico de Líneas")
-plt.xlabel("Tiempo")
-plt.ylabel("Nivel de Energía")
-plt.show()
-			   </code></pre>
-
-			<br>
-			<p>La imagen es la siguiente:</p>
-    <div style="text-align:center;">
-	 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239150" height="373" width="345" frameborder="0" scrolling="no" ></iframe>
-    </div>
-
-  <div id="b2">
-				<div id="e">
-					<h3> Gráficas de barras y circulares</h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-				<p>Para generar una gráfica de barras se utiliza el siguiente código:</p>
-  <br>
-			   <pre><code>
-import matplotlib.pyplot as plt
-
-# Datos del estado de ánimo durante la semana
-dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-estado_animo = [7, 5, 6, 8, 4, 7, 6]
-
-plt.bar(dias, estado_animo, color='skyblue')
-plt.title("Estado de Ánimo Semanal")
-plt.xlabel("Días de la Semana")
-plt.ylabel("Nivel de Ánimo (1-10)")
-plt.show()
-			   </code></pre>
-
-			<p>La imagen es la siguiente:</p>
-    			<div style="text-align:center;">
-    			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239359" height="384" width="345" frameborder="0" scrolling="no" ></iframe>
-    			</div>
+		# Imprimimos los resultados
+		print("Peso:", peso)
+		print("Altura:", altura)
+		print("Índice de Masa Corporal (IMC):", imc)
+		</code></pre>
+		<br>
+		<p>En estos ejemplos, `nombre` y `mensaje` son variables no numéricas, mientras que `edad` y `altura` son variables numéricas. Comprender cómo utilizar estas variables es fundamental para comenzar a programar en Python.</p>
+		<br>
 					
-			<br>
-			<p>Para generar un diagrama circular se utiliza el siguiente código:</p>
- 			 <br>
-			   <pre><code>
-import matplotlib.pyplot as plt
-
-# Actividades del día y el tiempo dedicado
-actividades = ["Estudio", "Descanso", "Ejercicio", "Tiempo Libre"]
-tiempo_dedicado = [5, 3, 1, 2]
-
-plt.pie(tiempo_dedicado, labels=actividades, autopct="%1.1f%%", colors=['lightcoral', 'lightblue', 'yellowgreen', 'violet'])
-plt.title("Distribución del Tiempo en Actividades Diarias")
-plt.show()
-			   </code></pre>
-
-			<br>
-			<p>La imagen es la siguiente:</p>
-    <div style="text-align:center;">
-
-	    <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239452" height="416" width="345" frameborder="0" scrolling="no" ></iframe>
-    </div>
-
-					</div>	
-				</div>
 		
+				
+
+          
+        
+     
+    <h3>Tipos de Comentarios</h3>
+    <br>
+   
+        <p><b>Comentarios de Línea:</b> Se usan para explicar una sola línea o una sección breve del código. Se denotan con <code>#</code> en Python.</p>
+        <p><b>Comentarios de Bloque:</b> Se utilizan para explicar secciones más extensas del código y se pueden abarcar múltiples líneas. Se denotan con <code>"""</code> en Python.</p>
+    
+    <br>
+    <h3>Ejemplo</h3>
+    <p>A continuación, se muestra un ejemplo en Python que ilustra ambos tipos de comentarios:</p>
+    <br>
+    <pre><code>
+# Este es un comentario de línea que explica la siguiente línea de código
+print("Hola, mundo!")  # Imprime un mensaje en la consola
+
+"""
+Este es un comentario de bloque.
+A continuación, realizamos una operación básica de suma
+y mostramos el resultado en la consola.
+"""
+a = 5
+b = 3
+resultado = a + b
+print("La suma de", a, "y", b, "es", resultado)
+    </code></pre>
+    
+  
+    <p>Los comentarios son una herramienta poderosa para hacer que el código sea más legible y fácil de mantener, y su uso adecuado es una práctica recomendada en el desarrollo de software.</p>
+
 			
+                        
+
+	
+
+
                          <div id="ctrl">
 					
-				 <a class="n1" href="p3.html"> anterior </a>
-				<a class="n1" href="p5.html"> siguiente </a>
+				 <a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p3.html"> siguiente </a>
                              
 
                         </div>
