@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Programación</title>
+	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","390vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+ <h1>Análisis de Datos</h1>
+
+    <h2>Análisis de un archivo Excel</h2>
+    <p>En este ejemplo, utilizaremos <strong>Pandas</strong> y <strong>Seaborn</strong> para analizar un archivo Excel y visualizar los resultados.</p>
+    <pre>
+# Cargar las librerías
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Cargar el archivo Excel
+data = pd.read_excel('archivo_datos.xlsx')
+
+# Mostrar las primeras filas
+print(data.head())
+
+# Crear un gráfico de dispersión
+sns.scatterplot(x='columna_x', y='columna_y', data=data)
+plt.title('Gráfico de Dispersión')
+plt.savefig('grafico.png')  # Guardar el gráfico como imagen
+plt.show()
+    </pre>
+
+         
+                        <br>
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p18.html"> anterior </a>
+				<a class="n1" href="p20.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
