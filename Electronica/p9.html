@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Descripción del funcionamiento de diversos circuitos integrados.">	
+	<meta name="description" content="Descripción del uso los semiconductores, enfatizando entre los diodos y transistores.">	
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","550vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -36,90 +36,85 @@
 
                 <div id="con">
 
-				<br>
+
+			<br>
+            	<h2>Sensores</h2>
+			<br>
+		<p>Un sensor es un dispositivo electrónico que detecta señales físicas del entorno y las convierte en señales eléctricas para su procesamiento. Por ejemplo, el sensor de obstáculos con LED IR es un tipo común de sensor que se utiliza para detectar la presencia de objetos. Este sensor emite una señal infrarroja (IR) y mide la cantidad de luz reflejada por los objetos cercanos. Si el sensor detecta un cambio en la cantidad de luz reflejada, puede concluir que hay un obstáculo presente. Este es un ejemplo práctico de cómo los sensores convierten información física en señales eléctricas para su procesamiento.</p>
+
+			<br>
+			<h3>Fotoresistencia LDR</h3>
+
+			<br>
+			<p>La fotoresistencia es un sensor que responde a la cantidad de luz que recibe, medida en luxes. A continuación, se muestra una imagen de una fotoresistencia:</p>
+			<br>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=46584177389547263" height="775" width="450" frameborder="0" scrolling="no" ></iframe>			</div>
+			<br>
+			<p>La fotoresistencia cambia su resistencia en función de la variación de la luz. Utilizando un <b>circuito divisor de voltaje</b>, este cambio en la resistencia puede producir una variación en el voltaje que se aplica a un circuito eléctrico generando que el LED se enciende cuando este oscuro(pocos Lux), en la siguiente imagen se muestran algunos circuitos con su funcionamiento.</p>
 			
-            
-			<h2>Circuitos integrados</h2>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564278906830" height="305" width="345" frameborder="0" scrolling="no" ></iframe>	
+			</div>
+			
+			<br>
+			<h3> Potenciometro </h3>
 
-		  <br>
-		  
-		  <p>Algunos circuitos están integrados dentro de chips, conocidos como circuitos integrados. En la siguiente imagen, podemos ver un circuito integrado y su correspondiente circuito equivalente:</p>
-				  <div style="text-align:center;">
+			<br>
+			<p>El potenciómetro puede utilizarse como un sensor en aplicaciones como los joysticks de controles o las perillas de volumen en equipos de sonido. Funciona mediante la variación de resistencia que ocurre al girar su perilla, similar a la fotocelda. Esta variación de resistencia se puede usar para crear un <b>circuito divisor de voltaje</b> entre sus terminales, si se desea. Existen diferentes tipos de potenciómetros que varían en su resistencia de forma lineal o logarítmica, y también según la cantidad de vueltas que se le dé al potenciómetro. A continuación, podemos observar uno:</p>
+                        <br>
+            				<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=692639617695812420" height="441" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>
+					<br>
+			<p>En la siguiente imagen se puede visualizar un potenciómetro que controla cuándo enciende cada LED, empleando la configuración en paralelo y los diodos como elementos que aíslan las resistencias, evitando que se reduzca su valor. Además, se aprovechan los 0.7V que consumen los diodos, lo cual genera una diferencia en los voltajes, permitiendo que los LEDs se enciendan en diferentes momentos conforme se gira el potenciómetro. </p>
+			<br>
+				<div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564278908697" height="602" width="345" frameborder="0" scrolling="no" ></iframe>
+				</div>
+			<br>
+			
 
-		  <iframe src="https://assets.pinterest.com/ext/embed.html?id=865676359601946651" height="676" width="450" frameborder="0" scrolling="no" ></iframe>			
-		  </div>  
+			<br>
+			<h2>Sensor de temperatura</h2>
+                        <br>
+			<p>El LM35 es un sensor utilizado para medir la temperatura, y cada grado Celsius se traduce en 1 mV. A continuación, podemos ver una imagen del sensor LM35:</p>
+			<br>
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1131670212594992143" height="404" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>
+			<p>Sin embargo, la variación es muy pequeña, requiriendo un circuito que amplifique la señal. Un componente empleado por excelencia para esta tarea es el amplificador operacional, que permite multiplicar el valor de la señal por el factor deseado.</p>
+			<br>
 
-		  
-	 
-		  <h3>LM555</h3>
-
-			  <br>
-
-		  <p>El circuito LM555 se utiliza como temporizador o para generar diferentes frecuencias. Muchos transductores, como los que funcionan con señales PWM o bocinas, operan con pulsos. A continuación, se presentan dos de sus configuraciones principales: la primera, denominada monoestable, permite configurar la duración de un solo pulso; y la segunda, denominada astable, genera un pulso constante. Variando su amplitud y frecuencia, se pueden obtener las señales vistas anteriormente:</p>
-
-		  <br>
-		  
-	  <div style="text-align:center;">
-		  <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564241892402" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
-		  </div>  
-		  <br>
-			<h3>Electrónica Digital</h3>
-		  <br>
-			  <p>Una área fundamental es la electrónica digital, que se basa en la creación de estados lógicos mediante el flujo de electrones. Esta área ha sido crucial para el desarrollo de todos los sistemas digitales que conocemos hoy en día, como videojuegos, computadoras y teléfonos celulares.</p>
-			  <div style="text-align:center;">
-				  <iframe src="https://assets.pinterest.com/ext/embed.html?id=422001427594798418" height="550" width="450" frameborder="0" scrolling="no"></iframe>
-			  </div>
-		  <br>
-		  <h3>Compuertas logicas</h3>
-		  <br>
-		  <p>Los circuitos lógicos son fundamentales en la electrónica digital, ya que permiten realizar operaciones lógicas básicas como AND, OR, NOT, entre otras. Estas operaciones son esenciales para construir sistemas electrónicos complejos, ya que facilitan la manipulación y coordinación de las señales provenientes de sensores y actuadores. Por ejemplo, mediante puertas lógicas, podemos diseñar sistemas que tomen decisiones basadas en múltiples entradas, controlen dispositivos de manera automática y ejecuten tareas específicas en función de las condiciones detectadas. Así, los circuitos lógicos son cruciales para el desarrollo de aplicaciones en áreas como la automatización, el control de procesos y el procesamiento de señales, contribuyendo a la creación de dispositivos inteligentes y sistemas electrónicos eficientes.</p>
-
-		  <br>
-
-		  
-	  <div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=2251868551864006" height="906" width="450" frameborder="0" scrolling="no" ></iframe>
-	  </div>  
-		  <br>
-	  
-	  
-					  
-		  <h3>Amplificador operacional</h3>
-		  <br>
-
-		  <p>El amplificador operacional es un componente esencial en la electrónica que permite realizar diversas operaciones con señales eléctricas. Entre sus usos más comunes está la amplificación de señales, lo cual es particularmente útil cuando se trabaja con señales que varían en magnitudes muy pequeñas, como en el caso de un sensor de temperatura. Al amplificar estas señales, el amplificador operacional facilita la lectura y procesamiento de datos precisos. A continuación, se presenta una imagen de un amplificador operacional para ilustrar su apariencia y conexión en circuitos.</p>
-
-
-		  <br>
-
-		  
-	  <div style="text-align:center;">
-		  <iframe src="https://assets.pinterest.com/ext/embed.html?id=880946377093754181" height="349" width="345" frameborder="0" scrolling="no" ></iframe>
-	  </div>  
-		  <br>
-
-		  <h2>Convertidores de Analógico a Digital (ADC)</h2>
-		  <br>
-<p>Los convertidores de analógico a digital (ADC) son dispositivos esenciales en la electrónica que transforman señales continuas, como las provenientes de sensores, en datos digitales que pueden ser procesados por microcontroladores y sistemas digitales. El uso de ADCs es fundamental en aplicaciones donde se requiere monitorear y procesar señales analógicas, como en sistemas de medición, control de procesos y adquisición de datos. Estos convertidores permiten a los sistemas digitales interpretar señales de voltaje, corriente, temperatura, entre otras, mediante un proceso de muestreo y cuantificación. En aplicaciones prácticas, los ADCs se utilizan en instrumentos de medición, sistemas de audio digital, cámaras digitales y dispositivos de comunicación, facilitando la interacción entre el mundo analógico y el digital.</p>
-
-  <br>
+			
+		<h2>Sensor de Efecto Hall</h2>
+<br>
+<p>El sensor de efecto Hall es un dispositivo que mide la presencia y la intensidad de un campo magnético. Cuando un campo magnético atraviesa el sensor, genera una pequeña tensión eléctrica que es proporcional a la intensidad del campo. Esta señal se puede usar para detectar la presencia de imanes, medir la velocidad de rotación de motores o incluso contar objetos en movimiento.</p>
+<br>
 <div style="text-align:center;">
-  
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=504825439483558029" height="370" width="345" frameborder="0" scrolling="no" ></iframe>
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=775463629607820051" height="480" width="345" frameborder="0" scrolling="no" ></iframe>
+</div>
+<p>El sensor de efecto Hall puede ser muy sensible y proporciona una salida de voltaje que puede ser medida y utilizada en diversos sistemas electrónicos. La señal generada puede ser amplificada y procesada utilizando circuitos integrados especializados para obtener lecturas precisas y útiles. Este tipo de sensor es ampliamente utilizado en aplicaciones como interruptores sin contacto, sistemas de monitoreo de velocidad y aplicaciones de automoción.</p>
+<br>
+<h2>Adaptación de un Pulsador como Sensor</h2>
+<br> 
+			<div style="text-align:center;">
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=800585271259278887" height="376" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>
+<br>
+<p>Un pulsador es un componente electrónico simple que normalmente se utiliza para encender o apagar un circuito al ser presionado. Sin embargo, al combinarlo con un transistor, se puede adaptar para funcionar como un sensor en diferentes aplicaciones, incluso aprovechando la conductividad se puede utilizar para crear un sensor de agua.</p>
+<br> 
+		
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p8.html"> anterior </a>
+				<a class="n1" href="p10.html"> siguiente </a>
+                             
 
-</div>  
-		  <br>
-					   <div id="ctrl">
-				  
-			   <a class="n1" href="p8.html"> anterior </a>
-			  <a class="n1" href="p10.html"> siguiente </a>
-						   
-
-					  </div>
-		  
-			 <br>
+                        </div>
 			
 			   <br>
+
 	   </div>
 			
       </div>
