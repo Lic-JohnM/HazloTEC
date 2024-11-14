@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Programación</title>
+	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","190vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+			<h2> Programación orientada a objetos</h2>
+
+				<br>
+
+<p>En el ámbito de la programación, existen varios paradigmas que definen cómo se escribe y organiza el código. Uno de los enfoques tradicionales es la programación estructurada, que se basa en seguir un flujo secuencial de instrucciones. En el desarrollo del curso de Python, este paradigma es ampliamente utilizado. Otro enfoque es la programación funcional, que organiza el código en bloques funcionales independientes que realizan tareas específicas. Finalmente, la programación orientada a objetos es un paradigma que organiza el código en torno a objetos y clases, como se ilustra en la siguiente imagen muestra cómo la programación orientada a objetos utiliza conceptos como clases y objetos usando como ejemplos los perros, en donde si bien todos son diferentes tienen unas caracteristicas unicas.</p>
+			<br>
+
+				<div style="text-align:center;">
+     			   <img src="https://tecsify.com/blog/wp-content/uploads/2022/05/pooperritos.jpg" alt="Programación Orientada a Objetos" />
+			
+			</div>  
+   <br>
+			 <h2>Sistema de Gestión de Biblioteca</h2>
+  <br>
+    <p>El siguiente código Python implementa un sencillo sistema de gestión de biblioteca utilizando la programación orientada a objetos (POO). La POO es un paradigma que organiza el código en torno a "objetos" y "clases", facilitando la modularidad y reutilización del código.</p>
+    <br>
+    <h2>Código Python</h2>
+    <pre>
+<code>
+class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponible = True
+    
+    def cambiar_estado(self):
+        self.disponible = not self.disponible
+    
+    def __str__(self):
+        estado = "Disponible" if self.disponible else "Prestado"
+        return f"{self.titulo} por {self.autor} - {estado}"
+
+class Biblioteca:
+    def __init__(self):
+        self.libros = []
+    
+    def agregar_libro(self, libro):
+        self.libros.append(libro)
+    
+    def prestar_libro(self, titulo):
+        for libro in self.libros:
+            if libro.titulo == titulo:
+                if libro.disponible:
+                    libro.cambiar_estado()
+                    print(f"El libro '{titulo}' ha sido prestado.")
+                else:
+                    print(f"El libro '{titulo}' ya está prestado.")
+                return
+        print(f"El libro '{titulo}' no está disponible en la biblioteca.")
+    
+    def consultar_inventario(self):
+        for libro in self.libros:
+            print(libro)
+
+# Uso del sistema
+biblioteca = Biblioteca()
+libro1 = Libro("1984", "George Orwell")
+libro2 = Libro("To Kill a Mockingbird", "Harper Lee")
+
+biblioteca.agregar_libro(libro1)
+biblioteca.agregar_libro(libro2)
+
+print("Inventario de la biblioteca:")
+biblioteca.consultar_inventario()
+
+print("\nPrestando '1984':")
+biblioteca.prestar_libro("1984")
+
+print("\nInventario después del préstamo:")
+biblioteca.consultar_inventario()
+
+print("\nIntentando prestar '1984' nuevamente:")
+biblioteca.prestar_libro("1984")
+</code>
+    </pre>
+
+    <h2>Explicación de la Programación Orientada a Objetos</h2>
+    <br>
+    <p>En este código:</p>
+    <ul>
+        <li><strong>Clase <code>Libro</code>:</strong> Representa un libro con atributos como título, autor y estado. Incluye métodos para cambiar el estado del libro y para representar el libro en una cadena.</li>
+        <li><strong>Clase <code>Biblioteca</code>:</strong> Administra una colección de libros. Incluye métodos para agregar libros, prestar libros y consultar el inventario.</li>
+    </ul>
+   <br>
+    <p>La <strong>programación orientada a objetos</strong> permite organizar el código en clases y objetos que interactúan entre sí. Esto facilita la creación de sistemas modulares y reutilizables, como el sistema de gestión de biblioteca mostrado aquí.</p>
+                        <br>
+
+<div id="b1">
+				<div id="e">
+					<h3>Instalación de Python y CLI  </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+				<br>
+            
+			
+    				<p>Un <strong>CLI</strong> (Command Line Interface) o <strong>terminal</strong> es una interfaz de usuario que permite a los usuarios interactuar con el sistema operativo mediante la entrada de comandos en texto. A diferencia de las interfaces gráficas de usuario (GUI), el CLI permite un control más directo y a menudo más poderoso del sistema operativo y las aplicaciones. Los usuarios pueden ejecutar programas, manejar archivos y realizar tareas administrativas usando comandos escritos en el terminal.</p
+     
+            			<p>Inicialmente descargamos Python del siguiente link :https://www.python.org/downloads/</p>
+
+				</div>
+			</div>
+			<br>
+			<br>
+			   <h3> Creación de Figuras Geométricas con POO en Python</h3>
+    			<br>
+			<p>Para ilustrar cómo usar la programación orientada a objetos (POO) en Python para crear figuras geométricas y mostrarlas en la pantalla, utilizaremos la biblioteca <strong>Turtle</strong>. Esta biblioteca permite dibujar gráficos en una ventana de forma sencilla.</p>
+    <br>
+    <h3>Instalación de la Biblioteca</h3>
+	<br>
+    <p>La biblioteca <code>Turtle</code> viene incluida con Python, por lo que no es necesario instalarla por separado. Solo necesitas tener Python instalado en tu sistema.</p>
+	<br>
+    <h3>Código Python</h3>
+    <pre>
+<code>
+import turtle
+
+# Clase base para las figuras geométricas
+class FiguraGeometrica:
+    def __init__(self, color):
+        self.color = color
+
+    def dibujar(self):
+        raise NotImplementedError("Método 'dibujar' no implementado en la clase base")
+
+# Clase para un cuadrado
+class Cuadrado(FiguraGeometrica):
+    def __init__(self, color, longitud_lado):
+        super().__init__(color)
+        self.longitud_lado = longitud_lado
+
+    def dibujar(self):
+        turtle.begin_fill()
+        turtle.fillcolor(self.color)
+        for _ in range(4):
+            turtle.forward(self.longitud_lado)
+            turtle.right(90)
+        turtle.end_fill()
+
+# Clase para un círculo
+class Circulo(FiguraGeometrica):
+    def __init__(self, color, radio):
+        super().__init__(color)
+        self.radio = radio
+
+    def dibujar(self):
+        turtle.begin_fill()
+        turtle.fillcolor(self.color)
+        turtle.circle(self.radio)
+        turtle.end_fill()
+
+# Configuración de la ventana de dibujo
+turtle.speed(2)
+turtle.bgcolor("white")
+
+# Crear y dibujar un cuadrado rojo
+cuadrado = Cuadrado("red", 100)
+cuadrado.dibujar()
+
+# Mover la tortuga para no sobreponer las figuras
+turtle.penup()
+turtle.goto(200, 0)
+turtle.pendown()
+
+# Crear y dibujar un círculo azul
+circulo = Circulo("blue", 50)
+circulo.dibujar()
+
+# Finalizar el dibujo
+turtle.hideturtle()
+turtle.done()
+</code>
+    </pre>
+
+    <h3>Explicación</h3>
+    <p>En este código:</p>
+    <ul>
+        <li><strong>Clase <code>FiguraGeometrica</code>:</strong> Es una clase base que define un método abstracto <code>dibujar</code>, que debe ser implementado por las clases derivadas.</li>
+        <li><strong>Clase <code>Cuadrado</code>:</strong> Hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un cuadrado.</li>
+        <li><strong>Clase <code>Circulo</code>:</strong> También hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un círculo.</li>
+    </ul>
+   <br>
+    <p>La biblioteca <strong>Turtle</strong> es ideal para este tipo de tareas, ya que proporciona una forma sencilla de dibujar gráficos y visualizar resultados en una ventana gráfica.</p>
+			<BR>
+		
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p17.html"> anterior </a>
+				<a class="n1" href="p19.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
