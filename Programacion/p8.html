@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","390vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -34,81 +36,57 @@
         <div id="info">
 
                 <div id="con">
- <h1>Análisis de Datos</h1>
 
-    <h2>Análisis de un archivo Excel</h2>
-    <p>En este ejemplo, utilizaremos <strong>Pandas</strong> y <strong>Seaborn</strong> para analizar un archivo Excel y visualizar los resultados.</p>
-    <pre>
-# Cargar las librerías
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+				<h2> Condicionales </h2>
 
-# Cargar el archivo Excel
-data = pd.read_excel('archivo_datos.xlsx')
+				<br>
 
-# Mostrar las primeras filas
-print(data.head())
+			<p>En programación, las condicionales permiten dividir el flujo de un programa en función de un valor o una decisión. Por ejemplo, si tenemos una variable llamada <code>clima</code> y su valor es <code>lluvia</code>, podemos decidir cambiar nuestro atuendo o accesorio para salir a la calle, en comparación con el caso en que el valor sea <code>sol</code>. En un diagrama de flujo, esto se representa de la siguiente manera:</p>
 
-# Crear un gráfico de dispersión
-sns.scatterplot(x='columna_x', y='columna_y', data=data)
-plt.title('Gráfico de Dispersión')
-plt.savefig('grafico.png')  # Guardar el gráfico como imagen
-plt.show()
-    </pre>
+			<br>
+					<div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249535" height="715" width="600" frameborder="0" scrolling="no" ></iframe>
+                  </div>  
 
-    <h2>Generación de un PDF</h2>
-    <p>Usaremos <strong>ReportLab</strong> para generar un PDF con los resultados del análisis.</p>
-    <pre>
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+			<br>
 
-# Crear un PDF
-pdf = canvas.Canvas("analisis_datos.pdf", pagesize=letter)
-pdf.drawString(100, 750, "Análisis de Datos")
-pdf.drawString(100, 730, "Resultados del análisis en Excel.")
-pdf.save()
-    </pre>
+			<h3> Condicionales en Python </h3>
 
-    <h2>Análisis de una Imagen con OpenCV</h2>
-    <p>A continuación, realizaremos un análisis básico de una imagen utilizando <strong>OpenCV</strong>.</p>
-    <pre>
-import cv2
+			<br>
 
-# Cargar la imagen
-imagen = cv2.imread('imagen.jpg')
+	<p>Las condicionales en Python requieren seguir ciertas reglas de espaciado y puntuación para que el programa funcione correctamente. Por ejemplo, para comparar un valor puntual con una variable, se utiliza el operador <code>==</code> (doble igual). A continuación, se muestra un programa que utiliza este operador para decidir qué llevar en función del clima:</p>
 
-# Convertir a escala de grises
-gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+<pre>
+    <code>
+print("Ingrese el clima (sol o lluvia):")
+clima = input()
+if clima == "lluvia":
+    print("Lleva sombrilla")
+else:
+    print("Lleva gafas de sol")
+    </code>
+</pre>
 
-# Mostrar la imagen original y la de escala de grises
-cv2.imshow('Imagen Original', imagen)
-cv2.imshow('Escala de Grises', gris)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-    </pre>
+<p>Además de comparar valores exactos, las condicionales también pueden utilizar operadores de relación para comparar valores numéricos. Por ejemplo, si queremos verificar si una temperatura es mayor o menor que un umbral, podemos usar los operadores <code>&gt;</code> (mayor que) y <code>&lt;</code> (menor que). A continuación, se muestra un programa que utiliza estos operadores:</p>
 
-    <h2>Ejercicio Básico de Matrices</h2>
-    <p>Veamos un ejercicio básico de manipulación de matrices con NumPy.</p>
-    <pre>
-import numpy as np
+<pre>
+    <code>
+print("Ingrese la temperatura en grados Celsius:")
+temperatura = float(input())
+if temperatura &gt; 30:
+    print("Hace mucho calor. Considera usar ropa ligera.")
+elif temperatura &lt; 10:
+    print("Hace frío. Considera usar abrigo.")
+else:
+    print("La temperatura es moderada.")
+    </code>
+</pre>
 
-# Crear una matriz 3x3
-matriz = np.array([[1, 2, 3],
-                   [4, 5, 6],
-                   [7, 8, 9]])
-
-# Calcular la suma de cada fila
-suma_filas = np.sum(matriz, axis=1)
-print("Suma de cada fila:", suma_filas)
-    </pre>
+<p>En este ejemplo, se utilizan operadores de relación para comparar la temperatura ingresada con los valores umbral y decidir qué mensaje mostrar.</p>
 
 			
-   
-                 
 
-                
-                        <br>
+	
                          <div id="ctrl">
 					
 				 <a class="n1" href="p7.html"> anterior </a>
