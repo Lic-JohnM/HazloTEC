@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html>
 
@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Actividad sobre el consumo de potencia electríca.">	
+	<meta name="description" content="Ejercicios con las configuraciones de las resistencias electrícas.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","280vh");
+	  $("#info").css("height","320vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -33,36 +33,66 @@
 
 
         <div id="info">
+		 <div id="con">
 
-                <div id="con">
-
-			<br>
-
-			<h2>El transistor como adaptador</h2>
-			 <br>
-
-			<p>El transistor es un componente versátil que permite tanto la amplificación de señales como su uso como interruptor en circuitos de corriente continua (DC) y alterna (AC). Una característica fundamental del transistor es que la corriente que pasa por la base (<strong>I<sub>B</sub></strong>) se amplifica por un factor conocido como <em>beta</em> (β), resultando en una corriente mayor en el colector (<strong>I<sub>C</sub></strong>). Esta relación se expresa como <strong>I<sub>C</sub> = β * I<sub>B</sub></strong>. A su vez, la corriente del emisor (<strong>I<sub>E</sub></strong>) es la suma de la corriente de la base y la del colector, es decir, <strong>I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub></strong>. En la configuración de emisor común, que se presentará a continuación, el transistor permite el control preciso de grandes corrientes mediante pequeñas señales en la base, lo que lo convierte en un componente clave en el diseño de circuitos de amplificación y control.</p>
-
-                        <br>
-
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564275579411" height="389" width="345" frameborder="0" scrolling="no" ></iframe>		
-			</div>
-			<br>
-			<br>
-			<p>Gran parte de los circuitos electrónicos utilizan transistores para manejar un voltaje dado, generalmente apoyados por divisores de voltaje. En la configuración que se desarrollo anteriormente, se muestra un circuito de adaptación donde la corriente <strong>I<sub>1</sub></strong> se refiere a la corriente de base (<strong>I<sub>B</sub></strong>), que ha sido multiplicada por un factor de 100, representando el valor de <em>beta</em> (β). La corriente de emisor se ha etiquetado como <strong>I<sub>2</sub></strong>, que es la suma de la corriente de base y la corriente de colector. En el divisor de voltaje, es común encontrar una resistencia conectada a la base del transistor; sin embargo, lo más importante es ajustar el voltaje en ese punto para que active el transistor adecuadamente. A continuación, se presenta el circuito de adaptación que demuestra este principio.</p>
-
-                        <br>
-
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564241126602" height="492" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>
-			<br>
-				<br>
+      		
+			 
 			
 
-		<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Electronica/Talleres/ActP5_1.pdf">Descargar actividad</a>
-			<br>	
+			<h3>Bobina </h3>
+
+			 			<br>
+		<p>La bobina, al igual que el condensador, es un componente fundamental en los circuitos eléctricos, pero en lugar de almacenar energía en forma de voltaje, almacena energía en forma de campo magnético. Esto ocurre cuando una corriente eléctrica pasa a través de la bobina, creando un campo magnético alrededor de ella. La bobina está formada por un hilo conductor enrollado en espiral, y su capacidad para almacenar energía se mide en henrios (H). A continuación, se puede visualizar una bobina y su funcionamiento básico:</p>
+                        <br>
+            				<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>
+			<p>Las fórmulas para la carga y descarga en una bobina son las siguientes:</p>
+
+    <h3>Carga (Q) en una Bobina</h3>
+    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
+    <p>
+        <strong>Q(t)</strong>: Carga almacenada en la bobina en el tiempo <strong>t</strong>.<br>
+        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
+        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
+        <strong>t</strong>: Tiempo en segundos (s).<br>
+        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
+    </p>
+
+    <h3>Voltaje (V) en una Bobina</h3>
+    <p>V(t) = R * e<sup>-t / (L / R)</sup></p>
+    <p>
+        <strong>V(t)</strong>: Voltaje a través de la bobina en el tiempo <strong>t</strong>.<br>
+        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
+        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
+        <strong>t</strong>: Tiempo en segundos (s).<br>
+        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
+    </p>
+
+    <h2>Ejemplo de Cálculo</h2>
+    <p>Para ilustrar cómo aplicar la fórmula de carga en una bobina, consideremos el siguiente ejemplo:</p>
+    <p>Supongamos que tenemos una bobina con una inductancia de 2 Henrios (H) y una resistencia en el circuito de 10 Ohmios (Ω). Queremos calcular la carga almacenada en la bobina después de 5 segundos (s). Usamos la fórmula:</p>
+    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
+    <p>Reemplazamos los valores:</p>
+    <p>Q(5) = 2 * (1 - e<sup>-5 / (2 / 10)</sup>)</p>
+    <p>Para calcular el valor, primero resolvemos el exponente:</p>
+    <p>e<sup>-5 / (2 / 10)</sup> = e<sup>-25</sup> ≈ 0.000002</p>
+    <p>Luego, la carga almacenada en la bobina después de 5 segundos es:</p>
+    <p>Q(5) = 2 * (1 - 0.000002) ≈ 2 * 0.999998 ≈ 1.999996 C</p>
+    <p>Esto indica que, después de 5 segundos, la bobina habrá almacenado aproximadamente 1.999996 Coulombs de carga.</p>
+
+					
+					<br>
+			
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p5.html"> anterior </a>
+				<a class="n1" href="p7.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
 	   </div>
 			
       </div>
