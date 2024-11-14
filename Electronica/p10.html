@@ -6,8 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Descripción del funcionamiento de diversos circuitos integrados.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Introducción a los sensores básicos en electrónica.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,7 +16,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","250vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,136 +34,126 @@
         <div id="info">
 
                 <div id="con">
-		
- 	<p><p> Para entender claramente como funciona la electrícidad (de donde proviene la electrónica) es necesario comprender los principales conceptos de energía electríca a los cuales puedes acceder haciendo <a target="_blank" href="https://lic-johnm.github.io/HazloTEC/Energia/p4.html">click acá.</a> La electrónica es una rama de la física que estudia el movimiento de electrones para controlar diversos artefactos así como diferentes datos e información.una de sus áreas más importantes se encuentran los sistemas de control los cuales permiten controlar elementos como los drones con la estabilización en el aire o las patinetas segway que permiten que una persona se estabilice en ellas.</p>
-			<br>
-					<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=444800900702287988" height="400" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>
-			
-		
-		 		
-  <h2>Microcontroladores</h2>
-  <br>
-	  <p>Los microcontroladores combinan la electrónica con la programación, permitiendo que, mediante líneas de código, se puedan configurar dispositivos electrónicos para realizar diversas tareas. Entre los más populares, encontramos diferentes familias según los fabricantes. Por ejemplo, Microchip produce los microcontroladores PIC, Atmel ofrece los conocidos ATtiny y ATmega, siendo el último utilizado por la empresa Arduino para fabricar sus placas de desarrollo. Además, nuevas empresas como BBC Microbit también han desarrollado sus propias placas, como la Microbit.</p>
-	 <br>
-  <div style="text-align:center;">
-		  <iframe src="https://assets.pinterest.com/ext/embed.html?id=883901864344626485" height="382" width="345" frameborder="0" scrolling="no"></iframe>
-	  </div>
-<br>
-	  <h3>¿Qué es Arduino?</h3>
-<br>	
-	  <p>Arduino es una plataforma de hardware libre basada en microcontroladores que simplifica el proceso de diseño y desarrollo de sistemas electrónicos. Consiste en una serie de placas de circuito impresas (PCBs) con microcontroladores integrados, junto con un entorno de desarrollo integrado (IDE) que permite programar los microcontroladores fácilmente. Arduino se destaca por su accesibilidad y facilidad de uso, lo que lo convierte en una opción popular tanto para principiantes como para expertos. La comunidad de Arduino también ofrece una gran cantidad de bibliotecas de software y recursos, facilitando la implementación de proyectos complejos.</p>
-	  <br>
-  <h3>¿Cómo funciona Arduino?</h3>
-	  <p>Las placas de Arduino están equipadas con un microcontrolador que se puede programar para realizar tareas específicas. El proceso de programación se realiza mediante el entorno de desarrollo integrado (IDE) de Arduino, que permite escribir y cargar código al microcontrolador a través de una conexión USB. Una vez programada, la placa ejecuta el código y controla los componentes conectados, como sensores, actuadores y módulos externos. La facilidad para conectar y controlar diferentes dispositivos, junto con la disponibilidad de módulos y shields, permite a los usuarios crear una amplia gama de aplicaciones, desde proyectos sencillos hasta sistemas complejos.</p>
-	  <br>
-  
-  <h3>Modularidad y Shields en Arduino</h3>
-<br>
-	  <p>Una de las principales ventajas de Arduino es la capacidad de expandir sus funcionalidades mediante módulos y shields. Los shields son placas adicionales que se conectan directamente a la placa de Arduino, proporcionando funcionalidades adicionales como conectividad Ethernet, control de motores o pantallas LCD. Los módulos, por otro lado, son componentes independientes que se comunican con la placa de Arduino a través de pines o interfaces específicas, como I2C o SPI. Esta modularidad permite a los usuarios adaptar y personalizar sus proyectos de manera flexible, incorporando fácilmente nuevas características y capacidades. A continuación se presentan unas de estas funcionalidades:</p>
-	 <br>
-	  <div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=239394536435518688" height="536" width="450" frameborder="0" scrolling="no" ></iframe>	
-	  </div>
-		  <br>
-<br>	
-<h3>Comunicación Inalámbrica</h3>
-<br>
-	  <p>Un aspecto muy importante de la electrónica es la comunicación inalámbrica, que permite enviar información de forma inalámbrica utilizando el espectro radioeléctrico (ondas del aire). Esto incluye tecnologías como Wifi, Bluetooth e infrarrojas, utilizadas en diversas aplicaciones como llamadas telefónicas y redes de comunicación.</p>
-	 <h3>Comunicación serial</h3>
-<br>
-<p>Esta comunicación se basa en la transmisión de datos en forma de conjuntos de bits y es escencial en los microcontroladores y en la electrónica en general, que se generan mediante la modulación de pulsos. Cada conjunto de 8 bits forma un código, conocido como código ASCII, que permite enviar y recibir caracteres. A continuación, se presentan algunos ejemplos de estos códigos:</p>
-  <br>
-  <div style="text-align:center;">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=10907224080890313" height="840" width="600" frameborder="0" scrolling="no" ></iframe>
-  </div>  
-  <br>
-  <p>Este tipo de comunicación permite que los dispositivos electrónicos transmitan información mediante señales eléctricas en forma de caracteres. Entre los protocolos de comunicación más populares se encuentran el USB y el I2C. Estos protocolos son utilizados por diversos actuadores para transmitir y recibir datos, como por ejemplo para mostrar mensajes o controlar dispositivos.</p>
-  <br>
-  <h3>Display LCD</h3>
-  <br>
+	<h2>Actuadores</h2>
 
-  <div style="text-align:center;">
-	  
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=455778424802693947" height="360" width="345" frameborder="0" scrolling="no" ></iframe>
-  </div>
-  <br>
-  <p>Es un actuador que también permite mostrar información. Para su funcionamiento, se utilizan tres entradas: una para la línea de negativo o tierra, y dos para el protocolo I2C. Una de las entradas I2C recibe un pulso constante que soporta las funcionalidades de la otra línea, la cual lleva la información. Este método proporciona mejores características que el uso exclusivo del puerto serial.</p>
-  
-  <br>
-  <br>
-  <h3>PWM</h3>
-  <br>
-	  <div style="text-align:center;">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=702702348087658659" height="516" width="450" frameborder="0" scrolling="no" ></iframe>
-				  </div> 
-  <br>
-  <p>La técnica empleada para enviar energía a un artefacto de manera controlada usando pulsos se conoce como <b>duty cycle</b>. Esta técnica regula el porcentaje del ciclo en el que se envía la señal, controlando así la cantidad de energía enviada al dispositivo. A continuación, puedes ver la imagen que ilustra cómo se aplica el duty cycle para controlar la energía.</p>
-			  
-
-
-  <br>
-	  <br>
-  <h3>Servomotor</h3>
-  <br>
-  <p>Este motor permite una gran precisión en su movimiento, tanto en términos de ángulo como de velocidad. Para su funcionamiento, se utiliza una señal PWM (Pulse Width Modulation). A continuación, puedes ver en la imagen cómo varía el ángulo del motor en función del porcentaje del pulso emitido.</p>
-				  <div style="text-align:center;">
-				  <iframe src="https://assets.pinterest.com/ext/embed.html?id=1077275173355217255" height="507" width="345" frameborder="0" scrolling="no" ></iframe>	
-				  </div> 
-
-
-  <br>
-
-	<br>
-  <h3>Pulsos</h3>
-  <br>
-  <p>Un pulso es una onda que cambia entre dos estados en el tiempo, variando su amplitud y periodo. Estas características son similares a las ondas de ultrasonido e infrarrojo. Los pulsos se suelen medir con un osciloscopio, como el que se muestra en la siguiente imagen:</p>
-		  <br>
-  <div style="text-align:center;">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=295689531761973194" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-  </div>	
-  <br>
-	  <h3>Sensor de distancia de ultrasonido</h3>
-
-  <br>
-  <p>El sensor de ultrasonido emite una onda ultrasónica que viaja hasta el objetivo y regresa al sensor. La distancia al objeto se calcula basándose en el tiempo que tarda la onda en ir y volver. La frecuencia utilizada es el ultrasonido, y al dividir el tiempo de viaje de la señal por la velocidad del sonido en el aire, se obtiene la distancia precisa. A continuación, podemos ver el sensor:</p>
-
-  <br>
-  <div style="text-align:center;">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=51087777009967605" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-  </div>		
-<p>Este tipo de sensores, como los próximos, requieren más elementos para generar y recibir la señal. En el caso del sensor ultrasonido, se necesita un componente que emita los pulsos que se traducen en las ondas enviadas, así como un procesamiento posterior para realizar la operación correspondiente. En muchos casos, este procesamiento lo realiza un microcontrolador, del cual se verá más adelante. Otros elementos también pueden producir esas señales.</p>
-
-	   
-  <h3>Joystick</h3>
-  <br>
-  <p>Para finalizar entre otros muchos sensores que faltan por describir como el sensor de humedad,PH,teclados(entre otros que toman información del entorno) , encontramos el Joystick el cual según la posición retorna la posición del eje x y del eje y del mismo.  A continuación podemos apreciar uno de ellos:</p>			
-  <br>
-
-		  <div style="text-align:center;">
-  <iframe src="https://assets.pinterest.com/ext/embed.html?id=608548968382917003" height="366" width="345" frameborder="0" scrolling="no" ></iframe>			</div>  
-
-			  <br>
-
-	<div id="ctrl">
-			 
-  <a class="n1" href="p8.html">anterior</a>
-	  <a class="n1" href="p10.html">siguiente</a>
-
-
-			  </div>
-                                              
-
-                         <div id="ctrl">
+				<br>
+				
+			 <p>Los actuadores son dispositivos que convierten la energía eléctrica en energía física, luminosa o química. Estos permiten realizar acciones como mover motores, mostrar mensajes con LEDs o generar ondas. A diferencia de los sensores, que capturan información del mundo real y la introducen en un dispositivo electrónico, los actuadores realizan una acción basada en la señal eléctrica recibida. A continuación, se presentan algunos ejemplos:</p>
+			   
+				<h3> Display 7 segmentos </h3>
+				<br>
+				
+				<div style="text-align:center;">
 					
-				 <a class="n1" href="p9.html"> anterior </a>
-				                           
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=835206693412124711" height="345" width="345" frameborder="0" scrolling="no" ></iframe>			
+				</div>  
+	
+				<p>Después del LED RGB, que también actúa como actuador, el display de 7 segmentos es una configuración de LEDs que, según cómo se configure, permite mostrar los dígitos del 0 al 9. A continuación, se muestra cómo funciona esta configuración:</p>
+				<br>
+	
+				
+	
+				<h3>Motores</h3>
+	
+				<br>
+				<p>Los motores convierten la energía eléctrica en movimiento. Dependiendo del tipo de motor, pueden funcionar con corriente alterna (AC) o corriente continua (DC). Los motores AC funcionan con corriente alterna, generando un voltaje y una corriente alterna durante su operación. Por otro lado, los motores DC funcionan con corriente continua, generando y utilizando energía directa. A continuación, se muestran ejemplos de ambos tipos de motores:</p>
+				<br>
+							<div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=621426448602959343" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
+				</div> 
+				<br>
+				<p>A continuación se muestran las caracteristicas de voltaje y corriente de cada uno:</p>
+				<br>
+		<table>
+			<tr>
+				<th>Tipo de Motor</th>
+				<th>Voltaje (V)</th>
+				<th>Corriente sin carga (A)</th>
+				<th>Corriente con carga (A)</th>
+				<th>Torque (Nm)</th>
+			</tr>
+			<tr>
+				<td>Motor DC Estándar</td>
+				<td>12</td>
+				<td>0.5</td>
+				<td>2.0</td>
+				<td>0.1</td>
+			</tr>
+			<tr>
+				<td>Motoreductor</td>
+				<td>24</td>
+				<td>0.3</td>
+				<td>1.5</td>
+				<td>0.3</td>
+			</tr>
+			<tr>
+				<td>Motor de Alta Velocidad</td>
+				<td>6</td>
+				<td>0.7</td>
+				<td>3.0</td>
+				<td>0.05</td>
+			</tr>
+			<tr>
+				<td>Motor de Alto Torque</td>
+				<td>48</td>
+				<td>0.4</td>
+				<td>2.5</td>
+				<td>0.5</td>
+			</tr>
+			<tr>
+				<td>Micro Motor DC</td>
+				<td>3</td>
+				<td>0.2</td>
+				<td>1.0</td>
+				<td>0.01</td>
+			</tr>
+		</table>
+	
+	<br>
+				<p>El torque, también conocido como momento de fuerza, es una medida de la fuerza que puede causar que un objeto gire alrededor de un eje. El torque se calcula utilizando la siguiente fórmula:</p>
+		<div class="formula">
+			Fuerza = Torque / Radio
+		</div>
+		<h2>Ejemplos</h2>
+		<div class="example">
+			<h3>Ejemplo 1:</h3>
+			<p>Si tienes un torque de 10 Nm (Newton metros) y un radio de 2 metros:</p>
+			<p><strong>Fuerza = 10 Nm / 2 m = 5 N</strong></p>
+		</div>
+		<div class="example">
+			<h3>Ejemplo 2:</h3>
+			<p>Si tienes un torque de 15 Nm y un radio de 3 metros:</p>
+			<p><strong>Fuerza = 15 Nm / 3 m = 5 N</strong></p>
+		</div>
+				
+				<h3>Motoreductor</h3>
+				<br>
+				<p>Un motor adaptado con piñones y sistemas mecánicos convierte la velocidad en fuerza. Por ejemplo, si un motor opera a 80 RPM (revoluciones por minuto), puede reducirse a 20 RPM, aumentando así su torque, que es la fuerza medida al momento de girar. Esta adaptación es útil en aplicaciones de robótica o automatización, donde se requiere un ajuste preciso de la velocidad y la fuerza. A continuación, se muestra un sistema de reducción y cambio de dirección:</p>
+								<div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=594334482088845635" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
+								</div> 
+	
+	 <br>
+			<h2>¿Qué es un Buzzer?</h2>
+	<br>
+	<p>Un buzzer es un dispositivo electrónico que emite un sonido cuando se le aplica una corriente eléctrica. Esencialmente, es un altavoz pequeño diseñado para generar señales acústicas. Para que un buzzer funcione, simplemente necesitas conectarlo a una fuente de alimentación adecuada; no requiere circuitos adicionales ni programación. Al conectar el buzzer, comenzará a emitir un sonido continuo o intermitente dependiendo del tipo de buzzer y el voltaje aplicado.</p>
+	
+					<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=744219907218165374" height="356" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div> 
+	<p>El buzzer es ampliamente utilizado en dispositivos electrónicos como alarmas, notificaciones y señales sonoras en una variedad de aplicaciones.</p>
+	<br>
 
-                        </div>
-			
-			   <br>
+					 <div id="ctrl">
+						
+					 <a class="n1" href="p9.html"> anterior </a>
+					<a class="n1" href="p11.html"> siguiente </a>
+								 
+	
+							</div>
+				
+				   <br>
+
 	   </div>
 			
       </div>
