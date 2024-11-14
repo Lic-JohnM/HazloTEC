@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
+	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","380vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,72 +36,51 @@
         <div id="info">
 
                 <div id="con">
-
+		<br>
+	
+					
 		
-		<h2>Funciones</h2>
-
-            <br>
             
-		<p>Una función es un bloque de código reutilizable que realiza una tarea específica y puede recibir datos de entrada y devolver resultados. En ocasiones, es necesario reutilizar código para evitar tener que escribirlo nuevamente. Las bibliotecas, presentes en muchos lenguajes de programación, son colecciones de código organizado que cumplen funciones específicas. Dentro de estas bibliotecas, encontrarás muchas funciones predefinidas que puedes usar directamente en tu programa, lo que facilita la programación y evita la duplicación de esfuerzos.</p>
-            <br>
-			<h2>Funciones en Python</h2>
-	<br>
-    <p>Las funciones en Python son bloques de código reutilizables que realizan una tarea específica. Se definen utilizando la palabra clave <code>def</code> seguida del nombre de la función y paréntesis. Las funciones pueden aceptar parámetros y devolver valores. Utilizar funciones ayuda a organizar el código y evitar la repetición.</p>
+					<h2> Diagrama de flujo</h2>
 
-    <h3>Ejemplo: Función para Saludar</h3>
-    <pre><code># Definir una función que saluda a una persona
-def saludar(nombre):
-    return f"Hola, {nombre}!"
+					<br>
+					
+					<p>Un diagrama de flujo es una herramienta gráfica que permite especificar cómo funciona un proceso o un algoritmo, ya sea en programación o en actividades cotidianas, sin necesidad de ejecutarlo en una computadora. A continuación se muestra un ejemplo: </p>
+		
+		
+					<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=237635317826738318" height="517" width="345" frameborder="0" scrolling="no" ></iframe>				
+					</div>     
+					<br>
+					<p>El siguiente diagrama de flujo ilustra cómo se utilizan las funciones <code>print</code> e <code>input</code> en un proceso típico de diagrama de flujo:</p>
+					<br>
+						<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249439" height="403" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>  
+					<br>
+					<p>Los esquemas más básicos que emplea un diagrama de flujo son los siguientes: </p>
+					<br>
+		 
+		
+					<div style="text-align:center;">
+					
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249238" height="655" width="600" frameborder="0" scrolling="no" ></iframe>
+					</div>     
+					
+		
+		
 
-# Llamar a la función con un nombre
-mensaje = saludar("Ana")
-print(mensaje)  # Imprime: Hola, Ana!</code></pre>
-
-    <p>En el ejemplo anterior, la función <code>saludar</code> toma un parámetro <code>nombre</code> y devuelve un saludo personalizado. Luego, la función se llama con el argumento <code>"Ana"</code>, y el saludo resultante se imprime en la consola.</p>
-			<br>
-			<h3>Funciones en scratch</h3>
-
-				<br>
-
-			<p> Iinicialmente vamos a hacer una función que haga que el gato parezca que salte:
-            </p>
-
-			<br>
+         
 			
-		<div style="text-align:center;">
-
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305049" height="279" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<p>En el desarrollo de un videojuego, es común necesitar diferentes tipos de salto, como un salto estándar, uno que llegue más alto, y otro que recorra más distancia horizontal. Aunque todos los códigos para estos saltos son similares, no se puede resolver el problema con un solo ciclo debido a que cada tipo de salto requiere valores diferentes. Además, si se usan muchos comandos, el código puede volverse extremadamente largo y difícil de manejar. Por esta razón, se utilizan funciones para simplificar la escritura y organización del código. A continuación, se muestra cómo se puede crear la función <b>salto</b> en Scratch. Primero, ve al menú izquierdo, selecciona <i>Mis bloques</i> y luego elige <i>Crear un bloque</i>, lo que abrirá la siguiente imagen:</p>
-
 			<br>
 
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305066" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+	
 
-			<br>
-		<p>Vamos a definir la función <b>salto</b> añadiendo dos parámetros: uno llamado <i>altura</i> y otro llamado <i>ancho</i>, para poder ajustar los valores del salto. Una vez creada, la función se verá de la siguiente manera:</p>
-
-			<br>
-		<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305084" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
-                  </div>  
-			<br>
-			<p>Así, dependiendo de la tecla que presionemos, se realizan diferentes tipos de saltos. Esto demuestra cómo las funciones pueden simplificar y reducir el trabajo en la programación.</p>
-			
-
-			
-
-           
-                        <br>
 
                          <div id="ctrl">
 					
-				 <a class="n1" href="p5.html"> anterior </a>
-				<a class="n1" href="p7.html"> siguiente </a>
+				 <a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p3.html"> siguiente </a>
                              
 
                         </div>
