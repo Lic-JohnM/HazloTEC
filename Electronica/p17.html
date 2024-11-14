@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Electrónica</title>
+	<meta name="description" content="Ejercicios con las configuraciones de las resistencias electrícas.">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","320vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+		 <div id="con">
+
+      		
+	
+		 <br>
+		<h3>Filtros de frecuencia</h3>
+		<br>
+		<p>Los filtros de frecuencia permite seleccinar un tipo de frecuencia especifica, existen los filtros pasa alto, pasa bajo y pasabandas. </p>
+						
+
+  <h2>Filtros RLC: Pasa Altos, Pasa Bajos, Pasa Banda y Rechaza Banda</h2>
+			<br>
+			<p>Los filtros RLC son circuitos electrónicos que utilizan resistores (R), inductores (L) y capacitores (C) para permitir o bloquear ciertas frecuencias de señales eléctricas. A continuación, se describen los diferentes tipos de filtros y sus fórmulas asociadas:</p>
+
+			<br>
+				 <h2>Filtro Pasa Bajos</h2>
+	<p>Un filtro pasa bajos permite el paso de las señales de frecuencia por debajo de una frecuencia de corte \( f_c \) y atenúa las frecuencias más altas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
+	<div class="formula">
+		\( f_c = \frac{1}{2\pi RC} \)
+	</div>
+	<p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
+	<div class="formula">
+		\( f_c = \frac{1}{2\pi\sqrt{LC}} \)
+	</div>
+	<br>
+				 <h2>Filtro Pasa Altos</h2>
+	<p>Un filtro pasa altos permite el paso de señales de frecuencia por encima de una frecuencia de corte \( f_c \) y atenúa las frecuencias más bajas. La fórmula para la frecuencia de corte en un filtro RC es:</p>
+	<div class="formula">
+		\( f_c = \frac{1}{2\pi RC} \)
+	</div>
+	<p>Para un filtro RLC, la frecuencia de corte está dada por:</p>
+	<div class="formula">
+		\( f_c = \frac{1}{2\pi\sqrt{LC}} \)
+	</div>
+
+<br>
+			 <h2>Filtro Pasa Banda</h2>
+	<p>Un filtro pasa banda permite el paso de un rango de frecuencias entre dos frecuencias de corte, \( f_{c1} \) y \( f_{c2} \), y atenúa las frecuencias fuera de este rango. La frecuencia de corte está dada por:</p>
+	<div class="formula">
+		\( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \)
+	</div>
+	<p>Para el filtro pasa banda, las dos frecuencias de corte son:</p>
+	<div class="formula">
+		\( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
+	</div>
+		<br>
+
+	<h2>Filtro Rechaza Banda</h2>
+	<p>Un filtro rechaza banda bloquea un rango de frecuencias entre \( f_{c1} \) y \( f_{c2} \), permitiendo el paso de frecuencias fuera de este rango. La fórmula para la frecuencia de corte en un filtro RLC es:</p>
+	<div class="formula">
+		\( f_{c1} = \frac{1}{2\pi\sqrt{LC}} \quad \text{y} \quad f_{c2} = \frac{1}{2\pi\sqrt{L(\frac{1}{C} - \frac{1}{R})}} \)
+	</div>
+<br>
+	<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Electronica/Talleres/ActP4_1.pdf">Descargar actividad</a>
+		<br>		
+
+
+	
+					
+			
+
+			
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p16.html"> anterior </a>
+				<a class="n1" href="p17.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
