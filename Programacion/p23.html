@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Programación</title>
+	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","190vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+	
+              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
+
+    <h2>1. Clasificación de Números con KNN</h2>
+    <p>Usaremos el algoritmo K-Nearest Neighbors para clasificar números basados en características simples.</p>
+    <pre>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+
+# Cargar el conjunto de datos Iris
+iris = load_iris()
+X, y = iris.data, iris.target
+
+# Dividir el conjunto de datos en entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Crear y entrenar el clasificador
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
+
+# Hacer predicciones
+predicciones = knn.predict(X_test)
+print("Predicciones:", predicciones)
+    </pre>
+
+
+
+
+    <h2>5. Chatbot Simple con Respuestas Predefinidas</h2>
+    <p>Crearemos un chatbot que responda a preguntas simples.</p>
+    <pre>
+def chatbot():
+    print("¡Hola! Soy un chatbot simple. ¿Cómo puedo ayudarte?")
+    while True:
+        pregunta = input("Tú: ")
+        if pregunta.lower() in ['salir', 'exit']:
+            print("Chatbot: ¡Adiós!")
+            break
+        elif "hola" in pregunta.lower():
+            print("Chatbot: ¡Hola! ¿Cómo estás?")
+        elif "nombre" in pregunta.lower():
+            print("Chatbot: Soy un chatbot sin nombre.")
+        else:
+            print("Chatbot: No entiendo esa pregunta.")
+
+chatbot()
+    </pre>
+
+
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p22.html"> anterior </a>
+				<a class="n1" href="p24.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
