@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Uso de las condicionales anidadas tanto en Python como en diagrama de flujo.">
+	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","380vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,177 +36,51 @@
         <div id="info">
 
                 <div id="con">
-
-						<h2> Ciclos</h2>
-
-				<br>
-
-			<p>Los ciclos en programación nos permiten repetir instrucciones hasta que se cumpla una condición específica. En el siguiente diagrama, puedes ver cómo un ciclo puede ser utilizado para asegurar que el usuario ingrese el valor correcto para salir de un parqueadero de vehículos. El programa continuará repitiendo la solicitud hasta que se ingrese el monto adecuado.</p>
-
-			<br>
-
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303251" height="845" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-
-			<br>
-			<p>Siguiendo el diagrama de flujo anterior, si el usuario no ingresa el valor correcto, el programa continuará solicitando el dinero indefinidamente. A continuación, se muestra un ejemplo de cómo implementar este comportamiento en Python:</p>
-			<br>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=float(input());
-i = 1
-while dinero < 2500:
-  print("le falta dinero")
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>			
-
-<br>
-			   
-			<p>Así, en el diagrama de flujo surge una nueva figura para organizar los ciclos, denominada <code>while</code> (o "mientras" en español).</p>
-			<br>
-			<h3> Contadores </h3>
-
-			<br>
-
-
-<p>En este nuevo flujo, podemos agregar información para guiar al usuario a ingresar cuánto dinero le hace falta, almacenando el resultado en la variable <b>a</b> y mostrándolo posteriormente.</p>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238303260" height="693" width="600" frameborder="0" scrolling="no" ></iframe>
-			
-			</div>  
-			<br>
-		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
-<pre>
-    <code>
-
-print("ingrese el dinero");
-dinero=int(input());
-i = 1
-while dinero < 2500:
-  a=2500-dinero;
-  print("le falta")
-  print(a);
-  print("ingrese el dinero")
-  dinero=float(input());
-if dinero>=2500:
-   print("puede seguir");   
-    </code>
-</pre>	    
-
-			
-<p>Un contador se utiliza para llevar el control de cuántas veces se repite un ciclo, y es útil en códigos donde es necesario contar eventos. Por ejemplo, puede ser empleado para contar cuántas veces un usuario falla al intentar salir del parqueadero.</p>
-<br>
-<pre>
-    <code>
-print("ingrese el dinero");
-dinero=float(input());
-contador=0
-while dinero < 2500:
-  a=2500-dinero;
-  contador=contador+1;
-  print("le falta")
-  print(a);
-  print("intento:");
-  print(contador);
-  print("ingrese el dinero");
-  dinero=float(input());
-if dinero>=2500:
-  print("puede seguir");
-     
-    </code>
-</pre>	 
-
-                     
-             <br>
-
-			<div id="b1">
-				<div id="e">
-					<h3> Ciclos en listas </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            
-				<p>Los ciclos en programación se utilizan para repetir líneas de código hasta que se cumpla una condición específica. Por ejemplo, para acceder a cada uno de los elementos de una lista de estudiantes, podríamos usar <code>estudiantes[0]</code>, <code>estudiantes[1]</code>, y así sucesivamente. Sin embargo, si la lista tuviera 40 estudiantes, tendríamos que repetir el código 40 veces. En su lugar, podemos usar un ciclo para recorrer la lista de manera más eficiente.</p>
+		<br>
 		
-			  <br>
-			  
-				<p>Existen varias estructuras de programación para hacer ciclos, pero inicialmente usaremos la estructura <b>for</b>. Para recorrer toda la lista y mostrar sus elementos, solo necesitas el siguiente código:</p>
+		<h2>Variables</h2>
+		<br>
+		<p>La función `input` te permite recibir información del usuario. Por ejemplo, puedes pedir al usuario su nombre o edad y luego usar esa información en tu programa. Las variables son como contenedores donde guardamos datos. En Python, hay dos tipos principales de variables que puedes usar:</p>
+		<br>
+		<ul>
+		    <li><b>Variables no numéricas:</b> Estas variables guardan texto y se definen con comillas. Por ejemplo:</li>
+		</ul>
+		<br>
+<pre><code>nombre = "Juan"
+mensaje = "Hola, " + nombre + "!"
+print(mensaje)
+</code></pre>
+		<br>
+		<p>En las variables no numéricas, el símbolo `+` se utiliza para unir cadenas de texto, una operación conocida como <b>concatenación</b>. Por ejemplo, al usar `nombre = "Juan"` y `mensaje = "Hola, " + nombre`, el resultado es "Hola, Juan".</p>
+		<br>
+		<ul>
+		    <li><b>Variables numéricas:</b> Estas variables guardan números y pueden ser enteros o flotantes (decimales). Para operar con números decimales, utilizamos el tipo de dato `float`. Por ejemplo:</li>
+		</ul>
+		<br>
+		<pre><code>
+		peso = 70.5
+		altura = 1.75
 
-<pre>
-    <code>
+		# Calculamos el índice de masa corporal (IMC)
+		imc = peso / (altura ** 2)
 
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-  print(x)
-     
-    </code>
-</pre>
-
-		<p>Una utilidad de recorrer una lista es encontrar la posición de un elemento utilizando el comando <b>index</b>. A continuación, se muestra un ejemplo de cómo usarlo para encontrar la posición del estudiante "Fabián".</p>
-<pre>
-    <code>
-
-estudiantes=["Juan","Luis","Fabian","Elkin"]
-for x in estudiantes:
-    posicion = estudiantes.index("Fabian");
-print(posicion);
-     
-    </code>
-</pre>
-
-            
-				</div>
-			</div>
-			<br>
-			<h2>Ciclos en Scratch </h2>
-
-			<br>
-
-			<p>En Scratch, los ciclos se crean de manera similar a otros lenguajes de programación, pero con la ventaja de que ofrece opciones adicionales para controlar la repetición. Por ejemplo, puedes decidir cuántas veces deseas que se repita un ciclo sin necesidad de variables adicionales y detener el programa con el comando "Detener todo". A continuación, se presenta un ejercicio sobre el parqueadero utilizando el ciclo <b>While</b> en Scratch:</p>
-
-            <br>
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-      
-
-			<p>También podemos utilizar listas para almacenar varios datos en una sola variable. A continuación, se muestra un ejemplo de cómo llenar una lista utilizando Scratch:</p>
-			<br>
-		<div style="text-align:center;">
-                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-			<br>
+		# Imprimimos los resultados
+		print("Peso:", peso)
+		print("Altura:", altura)
+		print("Índice de Masa Corporal (IMC):", imc)
+		</code></pre>
+		<br>
+		<p>En estos ejemplos, `nombre` y `mensaje` son variables no numéricas, mientras que `edad` y `altura` son variables numéricas. Comprender cómo utilizar estas variables es fundamental para comenzar a programar en Python.</p>
+		<br>
+					
 		
-			<p>Para finalizar, podemos ver cómo en Scratch se pueden utilizar otros elementos, como el botón de inicio. En este caso, al hacer clic en la flecha verde, se puede ejecutar el programa para verificar si un estudiante se encuentra en la lista.</p>
-			<br>
-			
+	
 
-			<br>
-			
-			
-			
-			
-			
-			<br>
 
                          <div id="ctrl">
 					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
+				 <a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p3.html"> siguiente </a>
                              
 
                         </div>
