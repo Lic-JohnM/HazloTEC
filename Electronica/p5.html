@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 
 <html>
 
@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Descripción de las fuentes de voltaje y corriente que funcionan con energía directa.">
+	<meta name="description" content="Ejercicios con las configuraciones de las resistencias electrícas.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","420vh");
+	  $("#info").css("height","320vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -33,86 +33,108 @@
 
 
         <div id="info">
+		 <div id="con">
 
-                <div id="con">
-
-			
-		<h2> Semiconductores </h2>
-				<br>
-		<p>Los electrones fluyen con mayor facilidad en algunos materiales que en otros. Por ejemplo, en materiales como la madera, el flujo de electrones es prácticamente nulo debido a su composición física y química. En contraste, materiales como los metales y el agua facilitan el flujo de electrones. El <b>silicio</b> es el segundo elemento más abundante en la Tierra y es fundamental en la fabricación de materiales semiconductores. Este material se utiliza en la fabricación de componentes electrónicos como resistencias, diodos, transistores y circuitos integrados. En las resistencias electrónicas, el silicio ayuda a controlar el flujo de electrones, permitiendo ajustar la cantidad de corriente que pasa a través de ellas según sus características y franjas.</p>
-			<br>
-			<h3>Diodos</h3>
-			<br>
-
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=938156166103307270" height="309" width="450" frameborder="0" scrolling="no" ></iframe>			</div>
-			
-			<br>
-		<p>Los diodos son componentes electrónicos que permiten el paso de corriente únicamente en una dirección específica. En el proceso de transformación de energía alterna, los diodos son fundamentales para la rectificación, que es el proceso de convertir corriente alterna (AC) en corriente continua (DC). A continuación, se explica cómo se lleva a cabo la rectificación una vez que la energía alterna llega a las tomas de corriente.</p>
-
-       
-			 <br>
-			 <h2>LED</h2>
-			 <br>
-			<p>En la imagen siguiente, podemos observar un LED (Diodo Emisor de Luz), un componente clave en la iluminación moderna. Es importante tener en cuenta que el color del LED influye en su funcionamiento, así como el voltaje que utiliza de la fuente de alimentación. Además, cada LED tiene restricciones específicas de corriente, que se detallan en la imagen.</p>
-		  		<br>
-			 	<div style="text-align:center;">
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=9640586696294186" height="797" width="450" frameborder="0" scrolling="no" ></iframe>				</div>
-			 <br>
-			 <h5>Circuito de iluminación</h5>
-			<br>
-			<p>El primer circuito de iluminación mostrado a continuación es un circuito en serie. Como se puede observar en la imagen, cuando el interruptor se abre, el circuito deja de funcionar y las luces se apagan. <b>Es importante tener en cuenta que en un circuito en serie, la suma de los voltajes de todos los componentes no debe exceder el voltaje de la fuente de alimentación</b>.</p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715069" height="435" width="345" frameborder="0" scrolling="no" ></iframe>
-				</div>
-					<br>
-			<p>Como se muestra en la imagen anterior, el cálculo de corriente es util para proteger los LED y conocer el consumo electríco, a continuación se presenta la configuración en paralelo que aunque un interruptor controla los dos diodos, si alguno se daña y obstruye el paso de electrones el otro puede continuar funcionando.</p>
-
-				<div style="text-align:center;">
-
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715119" height="336" width="345" frameborder="0" scrolling="no" ></iframe>
-				</div>
-					
-			<br>
-			<p>En este tipo de circuito, aunque un interruptor controle ambos LEDs, si uno de ellos se daña o falla, el otro LED puede seguir funcionando sin interrupciones, ya que cada LED tiene su propio camino para el flujo de electrones.</p>
-				<div style="text-align:center;">
-
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242715142" height="440" width="345" frameborder="0" scrolling="no" ></iframe>
+      		
 	
-				</div>
-			<br>
-			<h3> Diodo emisor y receptor infrarrojo</h3>
+			<h2>Condensadores</h2>
 
 			<br>
-
-			<p>El sensor infrarrojo consta de dos partes: un LED emisor que genera una señal en el espectro electromagnético de frecuencia infrarroja, y un fototransistor o fotodiodo que recibe esta radiación. El fototransistor o fotodiodo convierte la radiación infrarroja en una corriente mayor a la que circula por él, y también puede generar un mayor voltaje si el circuito está conectado a una resistencia. A continuación, podemos observar el sensor:</p>
+			<p>Los condensadores, también conocidos como capacitores, son dispositivos que almacenan energía en forma de carga eléctrica mediante dos placas separadas por un material dieléctrico. La capacidad de un condensador para almacenar carga se mide en faradios. A continuación, se muestra una imagen con dos ejemplos de condensadores, ilustrando su diseño y funcionamiento.</p>
 			<br>
-					<div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279347995" height="475" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
-
-			<br>
-			<br>
-			<h3>LED RGB</h3>
-			<br>
-			<p>El LED RGB es un tipo de LED que permite generar una amplia gama de colores, simplemente ajustando la intensidad de sus terminales correspondientes a los colores rojo, verde y azul. Esto facilita la creación de diferentes tonalidades según se necesite, permitiendo una gran versatilidad en aplicaciones donde el color es importante. En la siguiente imagen se puede observar un LED RGB:</p>
-          	<br>
 			<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1042653751204642485" height="431" width="345" frameborder="0" scrolling="no" ></iframe>
-		</div>
-			<br>
-			<p>Es importante asegurarse de que las señales enviadas al LED no excedan los límites de corriente y voltaje que puede manejar, ya que un exceso podría dañar el componente. El LED RGB está diseñado para mezclar colores a partir de las señales recibidas en cada terminal, por lo tanto, si se gestionan correctamente las señales, se obtendrá la combinación de colores deseada sin problemas.</p>
-			<br>		
-               <h3> Transistores </h3>
-			<br>
-
-		<p>Históricamente, los transistores han sido fundamentales en la evolución de la electrónica hasta lo que conocemos hoy en día. En un microprocesador moderno, por ejemplo, puede haber hasta 700 millones de estos componentes actuando como interruptores. En la siguiente imagen se puede observar su simbología y su constitución de tres pines: emisor, base y colector.</p>            
-            <br>
-    			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=622481979768750291" height="393" width="345" frameborder="0" scrolling="no" ></iframe>	
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=472807660874871133" height="745" width="345" frameborder="0" scrolling="no" ></iframe>
+				<br>
 			</div>
-			
+
+		
+			<br>	
+
+			 <h3> Condensadores con señales DC</h3>
+
+			 <br>
 			 
+					<p>Una de las primeras utilidades de los circuitos RC (Resistencia-Condensador) es como temporizador. Estos circuitos funcionan cargando y descargando el condensador, y su comportamiento temporal se describe mediante las siguientes fórmulas:</p>
+					<br>
+					
+					    <h3>Carga de un condensador:</h3>
+					    <br>
+					    <p>La fórmula para la carga de un condensador es:</p>
+					    <p>
+					        <math xmlns="http://www.w3.org/1998/Math/MathML">
+					            <mi>V</mi>
+					            <mo stretchy="false">(</mo>
+					            <mi>t</mi>
+					            <mo stretchy="false">)</mo>
+					            <mo>=</mo>
+					            <mi>V</mi>
+					            <mo>×</mo>
+					            <mo stretchy="false">(</mo>
+					            <mn>1</mn>
+					            <mo>-</mo>
+					            <msup>
+					                <mi>e</mi>
+					                <mrow class="MJX-TeXAtom-ORD">
+					                    <mrow class="MJX-TeXAtom-ORD">
+					                        <mo>-</mo>
+					                        <mfrac>
+					                            <mi>t</mi>
+					                            <mrow>
+					                                <mi>R</mi>
+					                                <mi>C</mi>
+					                            </mrow>
+					                        </mfrac>
+					                    </mrow>
+					                </mrow>
+					            </msup>
+					            <mo stretchy="false">)</mo>
+					        </math>
+					    </p>
+					    <br>
+					    <h3>Descarga de un condensador:</h3>
+					    <br>
+					    <p>La fórmula para la descarga de un condensador es:</p>
+					    <p>
+					        <math xmlns="http://www.w3.org/1998/Math/MathML">
+					            <mi>V</mi>
+					            <mo stretchy="false">(</mo>
+					            <mi>t</mi>
+					            <mo stretchy="false">)</mo>
+					            <mo>=</mo>
+					            <mi>V</mi>
+					            <mo>×</mo>
+					            <msup>
+					                <mi>e</mi>
+					                <mrow class="MJX-TeXAtom-ORD">
+					                    <mrow class="MJX-TeXAtom-ORD">
+					                        <mo>-</mo>
+					                        <mfrac>
+					                            <mi>t</mi>
+					                            <mrow>
+					                                <mi>R</mi>
+					                                <mi>C</mi>
+					                            </mrow>
+					                        </mfrac>
+					                    </mrow>
+					                </mrow>
+					            </msup>
+					        </math>
+					    </p>
+					<br>
+					<p>Las fórmulas utilizadas siguen el esquema mostrado a la izquierda en la siguiente imagen. A la derecha, se encuentra el circuito que incluye un LED, el cual permanece encendido durante un breve período después de retirar la fuente de voltaje, funcionando así como un pequeño temporizador.</p>
+					
+					<div style="text-align:center;">
+					
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
+					</div>         
+					<br>
+
+					
+			 <br>
+	
+			
+
+			
                          <div id="ctrl">
 					
 				 <a class="n1" href="p4.html"> anterior </a>
