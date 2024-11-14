@@ -128,7 +128,8 @@
         border-color: rgba(47,65,89,0.9);
         border-style: solid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
+         grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 15% 15% 15% 15% 15% 10%;
         align-items: center;
         justify-items: center;
         margin-right: 10%;
@@ -159,5 +160,24 @@
         text-decoration:none;
     }
     
+header>#I2>#prev{
+        background-color: #f6dfca;
+        padding: 2%;
+        color:rgba(47,65,89,0.9);
+        text-decoration:none;
+        width: 60%; 
+    margin: 0 auto;  /* Centra el elemento en su contenedor */
+    text-align: center; /* Centra el texto dentro del elemento */
+    }
 
+ header>#I2>#sig{
+        background-color: #f6dfca;
+        padding: 2%;
+        color:rgba(47,65,89,0.9);
+        text-decoration:none;
+           width: 60%; 
+    margin: 0 auto;  /* Centra el elemento en su contenedor */
+    text-align: center; /* Centra el texto dentro del elemento */
+
+    }
         
