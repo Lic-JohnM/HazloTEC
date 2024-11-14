@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -6,7 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Introducción a los sensores básicos en electrónica.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Actividad sobre el consumo de potencia electríca.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","250vh");
+	  $("#info").css("height","280vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -34,126 +35,43 @@
         <div id="info">
 
                 <div id="con">
-	<h2>Actuadores</h2>
 
+			<br>
+
+			<h2>El transistor como adaptador</h2>
+			 <br>
+
+			<p>El transistor es un componente versátil que permite tanto la amplificación de señales como su uso como interruptor en circuitos de corriente continua (DC) y alterna (AC). Una característica fundamental del transistor es que la corriente que pasa por la base (<strong>I<sub>B</sub></strong>) se amplifica por un factor conocido como <em>beta</em> (β), resultando en una corriente mayor en el colector (<strong>I<sub>C</sub></strong>). Esta relación se expresa como <strong>I<sub>C</sub> = β * I<sub>B</sub></strong>. A su vez, la corriente del emisor (<strong>I<sub>E</sub></strong>) es la suma de la corriente de la base y la del colector, es decir, <strong>I<sub>E</sub> = I<sub>B</sub> + I<sub>C</sub></strong>. En la configuración de emisor común, que se presentará a continuación, el transistor permite el control preciso de grandes corrientes mediante pequeñas señales en la base, lo que lo convierte en un componente clave en el diseño de circuitos de amplificación y control.</p>
+
+                        <br>
+
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564275579411" height="389" width="345" frameborder="0" scrolling="no" ></iframe>		
+			</div>
+			<br>
+			<br>
+			<p>Gran parte de los circuitos electrónicos utilizan transistores para manejar un voltaje dado, generalmente apoyados por divisores de voltaje. En la configuración que se desarrollo anteriormente, se muestra un circuito de adaptación donde la corriente <strong>I<sub>1</sub></strong> se refiere a la corriente de base (<strong>I<sub>B</sub></strong>), que ha sido multiplicada por un factor de 100, representando el valor de <em>beta</em> (β). La corriente de emisor se ha etiquetado como <strong>I<sub>2</sub></strong>, que es la suma de la corriente de base y la corriente de colector. En el divisor de voltaje, es común encontrar una resistencia conectada a la base del transistor; sin embargo, lo más importante es ajustar el voltaje en ese punto para que active el transistor adecuadamente. A continuación, se presenta el circuito de adaptación que demuestra este principio.</p>
+
+                        <br>
+
+			<div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564241126602" height="492" width="450" frameborder="0" scrolling="no" ></iframe>
+			</div>
+			<br>
 				<br>
-				
-			 <p>Los actuadores son dispositivos que convierten la energía eléctrica en energía física, luminosa o química. Estos permiten realizar acciones como mover motores, mostrar mensajes con LEDs o generar ondas. A diferencia de los sensores, que capturan información del mundo real y la introducen en un dispositivo electrónico, los actuadores realizan una acción basada en la señal eléctrica recibida. A continuación, se presentan algunos ejemplos:</p>
-			   
-				<h3> Display 7 segmentos </h3>
-				<br>
-				
-				<div style="text-align:center;">
+			
+
+		<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Electronica/Talleres/ActP5_1.pdf">Descargar actividad</a>
+			<br>	
+
+			   <div id="ctrl">
 					
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=835206693412124711" height="345" width="345" frameborder="0" scrolling="no" ></iframe>			
-				</div>  
-	
-				<p>Después del LED RGB, que también actúa como actuador, el display de 7 segmentos es una configuración de LEDs que, según cómo se configure, permite mostrar los dígitos del 0 al 9. A continuación, se muestra cómo funciona esta configuración:</p>
-				<br>
-	
-				
-	
-				<h3>Motores</h3>
-	
-				<br>
-				<p>Los motores convierten la energía eléctrica en movimiento. Dependiendo del tipo de motor, pueden funcionar con corriente alterna (AC) o corriente continua (DC). Los motores AC funcionan con corriente alterna, generando un voltaje y una corriente alterna durante su operación. Por otro lado, los motores DC funcionan con corriente continua, generando y utilizando energía directa. A continuación, se muestran ejemplos de ambos tipos de motores:</p>
-				<br>
-							<div style="text-align:center;">
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=621426448602959343" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
-				</div> 
-				<br>
-				<p>A continuación se muestran las caracteristicas de voltaje y corriente de cada uno:</p>
-				<br>
-		<table>
-			<tr>
-				<th>Tipo de Motor</th>
-				<th>Voltaje (V)</th>
-				<th>Corriente sin carga (A)</th>
-				<th>Corriente con carga (A)</th>
-				<th>Torque (Nm)</th>
-			</tr>
-			<tr>
-				<td>Motor DC Estándar</td>
-				<td>12</td>
-				<td>0.5</td>
-				<td>2.0</td>
-				<td>0.1</td>
-			</tr>
-			<tr>
-				<td>Motoreductor</td>
-				<td>24</td>
-				<td>0.3</td>
-				<td>1.5</td>
-				<td>0.3</td>
-			</tr>
-			<tr>
-				<td>Motor de Alta Velocidad</td>
-				<td>6</td>
-				<td>0.7</td>
-				<td>3.0</td>
-				<td>0.05</td>
-			</tr>
-			<tr>
-				<td>Motor de Alto Torque</td>
-				<td>48</td>
-				<td>0.4</td>
-				<td>2.5</td>
-				<td>0.5</td>
-			</tr>
-			<tr>
-				<td>Micro Motor DC</td>
-				<td>3</td>
-				<td>0.2</td>
-				<td>1.0</td>
-				<td>0.01</td>
-			</tr>
-		</table>
-	
-	<br>
-				<p>El torque, también conocido como momento de fuerza, es una medida de la fuerza que puede causar que un objeto gire alrededor de un eje. El torque se calcula utilizando la siguiente fórmula:</p>
-		<div class="formula">
-			Fuerza = Torque / Radio
-		</div>
-		<h2>Ejemplos</h2>
-		<div class="example">
-			<h3>Ejemplo 1:</h3>
-			<p>Si tienes un torque de 10 Nm (Newton metros) y un radio de 2 metros:</p>
-			<p><strong>Fuerza = 10 Nm / 2 m = 5 N</strong></p>
-		</div>
-		<div class="example">
-			<h3>Ejemplo 2:</h3>
-			<p>Si tienes un torque de 15 Nm y un radio de 3 metros:</p>
-			<p><strong>Fuerza = 15 Nm / 3 m = 5 N</strong></p>
-		</div>
-				
-				<h3>Motoreductor</h3>
-				<br>
-				<p>Un motor adaptado con piñones y sistemas mecánicos convierte la velocidad en fuerza. Por ejemplo, si un motor opera a 80 RPM (revoluciones por minuto), puede reducirse a 20 RPM, aumentando así su torque, que es la fuerza medida al momento de girar. Esta adaptación es útil en aplicaciones de robótica o automatización, donde se requiere un ajuste preciso de la velocidad y la fuerza. A continuación, se muestra un sistema de reducción y cambio de dirección:</p>
-								<div style="text-align:center;">
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=594334482088845635" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
-								</div> 
-	
-	 <br>
-			<h2>¿Qué es un Buzzer?</h2>
-	<br>
-	<p>Un buzzer es un dispositivo electrónico que emite un sonido cuando se le aplica una corriente eléctrica. Esencialmente, es un altavoz pequeño diseñado para generar señales acústicas. Para que un buzzer funcione, simplemente necesitas conectarlo a una fuente de alimentación adecuada; no requiere circuitos adicionales ni programación. Al conectar el buzzer, comenzará a emitir un sonido continuo o intermitente dependiendo del tipo de buzzer y el voltaje aplicado.</p>
-	
-					<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=744219907218165374" height="356" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div> 
-	<p>El buzzer es ampliamente utilizado en dispositivos electrónicos como alarmas, notificaciones y señales sonoras en una variedad de aplicaciones.</p>
-	<br>
+				 <a class="n1" href="p7.html"> anterior </a>
+				<a class="n1" href="p9.html"> siguiente </a>
+                             
 
-					 <div id="ctrl">
-						
-					 <a class="n1" href="p6.html"> anterior </a>
-					<a class="n1" href="p8.html"> siguiente </a>
-								 
-	
-							</div>
-				
-				   <br>
-
+                        </div>
+			
 	   </div>
 			
       </div>
