@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>Programación</title>
+	<meta name="description" content="Descripción de como se emplean las funciones en la aplicación libre Scratch.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","190vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+   <h1>Desarrollo Web y Multimedia</h1>
+
+    <h2>Flask</h2>
+    <p>Flask es un microframework para Python que permite crear aplicaciones web de manera sencilla y rápida. Es ideal para proyectos pequeños y prototipos.</p>
+    <h3>Ejemplo de Flask</h3>
+    <pre>
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "¡Bienvenido a mi aplicación Flask!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    </pre>
+
+    <h2>Django</h2>
+    <p>Django es un framework web de alto nivel que fomenta el desarrollo rápido de aplicaciones web. Proporciona muchas funcionalidades integradas.</p>
+    <h3>Ejemplo de Django</h3>
+    <pre>
+# En la terminal
+django-admin startproject mi_proyecto
+cd mi_proyecto
+python manage.py startapp mi_aplicacion
+
+# views.py en mi_aplicacion
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("¡Bienvenido a mi aplicación Django!")
+    </pre>
+
+    <h2>Pygame</h2>
+    <p>Pygame es una biblioteca diseñada para crear videojuegos en Python. Proporciona herramientas para gestionar gráficos y sonido.</p>
+    <h3>Ejemplo de Pygame</h3>
+    <pre>
+import pygame
+import sys
+
+pygame.init()
+
+# Configurar la ventana
+screen = pygame.display.set_mode((400, 300))
+pygame.display.set_caption('Hola Pygame')
+
+# Bucle principal
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+    
+    screen.fill((255, 255, 255))  # Fondo blanco
+    pygame.display.flip()
+    </pre>
+                        
+<br>
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p23.html"> anterior </a>
+				                           
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
