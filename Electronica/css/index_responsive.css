@@ -19,7 +19,7 @@
           
           header{
             display: grid;
-            grid-template-rows: 20% 80%;
+
             grid-template-columns:100%;
             margin-left: 2%;
             margin-right: 2%;
