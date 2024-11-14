@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Electrónica</title>
-	<meta name="description" content="Ejercicios con las configuraciones de las resistencias electrícas.">
+	<meta name="description" content="Descripción de la resistencia electríca y sus valores.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -17,7 +17,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","320vh");
+	  $("#info").css("height","400vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -33,155 +33,49 @@
 
 
         <div id="info">
-		 <div id="con">
 
-      		
-	
-			<h2>Condensadores</h2>
+                <div id="con">
 
+
+			<h2> Ley de OHM </h2>
+		            <br>
+				<p>La ley de Ohm describe la relación entre el voltaje, la corriente y la resistencia eléctrica, que se mide en ohmios. Esta ley establece que la resistencia es el factor que determina cómo se distribuye el voltaje a través de un circuito y cómo afecta la corriente. A continuación, se presentan los cálculos basados en esta ley para circuitos de corriente continua (DC). La fórmula que utilizamos es la siguiente:</p>
+		            <br>
+
+			 <div style="text-align:center;">
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564274162478" height="295" width="345" frameborder="0" scrolling="no" ></iframe>		
+			</div>
+		            <br>
 			<br>
-			<p>Los condensadores, también conocidos como capacitores, son dispositivos que almacenan energía en forma de carga eléctrica mediante dos placas separadas por un material dieléctrico. La capacidad de un condensador para almacenar carga se mide en faradios. A continuación, se muestra una imagen con dos ejemplos de condensadores, ilustrando su diseño y funcionamiento.</p>
+			<h3>Divisor de voltaje</h3>
 			<br>
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=472807660874871133" height="745" width="345" frameborder="0" scrolling="no" ></iframe>
-				<br>
+			<p>Este circuito se utiliza para dividir el voltaje de acuerdo con las necesidades específicas, manteniendo la misma corriente en todo el circuito. Por ejemplo, si tenemos un sensor que requiere 5 V y un cargador de celular que suministra 12 V, podemos ajustar las resistencias en el circuito para reducir el voltaje a 5 V y así alimentar el sensor adecuadamente.</p>
+                         <br>              			
+			 <div style="text-align:center;">
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564239265800"  height="280" width="550" frameborder="0" scrolling="no" ></iframe>
+							
 			</div>
 
-		
-			<br>	
-
-			 <h3> Condensadores con señales DC</h3>
-
-			 <br>
-			 
-					<p>Una de las primeras utilidades de los circuitos RC (Resistencia-Condensador) es como temporizador. Estos circuitos funcionan cargando y descargando el condensador, y su comportamiento temporal se describe mediante las siguientes fórmulas:</p>
-					<br>
-					
-					    <h3>Carga de un condensador:</h3>
-					    <br>
-					    <p>La fórmula para la carga de un condensador es:</p>
-					    <p>
-					        <math xmlns="http://www.w3.org/1998/Math/MathML">
-					            <mi>V</mi>
-					            <mo stretchy="false">(</mo>
-					            <mi>t</mi>
-					            <mo stretchy="false">)</mo>
-					            <mo>=</mo>
-					            <mi>V</mi>
-					            <mo>×</mo>
-					            <mo stretchy="false">(</mo>
-					            <mn>1</mn>
-					            <mo>-</mo>
-					            <msup>
-					                <mi>e</mi>
-					                <mrow class="MJX-TeXAtom-ORD">
-					                    <mrow class="MJX-TeXAtom-ORD">
-					                        <mo>-</mo>
-					                        <mfrac>
-					                            <mi>t</mi>
-					                            <mrow>
-					                                <mi>R</mi>
-					                                <mi>C</mi>
-					                            </mrow>
-					                        </mfrac>
-					                    </mrow>
-					                </mrow>
-					            </msup>
-					            <mo stretchy="false">)</mo>
-					        </math>
-					    </p>
-					    <br>
-					    <h3>Descarga de un condensador:</h3>
-					    <br>
-					    <p>La fórmula para la descarga de un condensador es:</p>
-					    <p>
-					        <math xmlns="http://www.w3.org/1998/Math/MathML">
-					            <mi>V</mi>
-					            <mo stretchy="false">(</mo>
-					            <mi>t</mi>
-					            <mo stretchy="false">)</mo>
-					            <mo>=</mo>
-					            <mi>V</mi>
-					            <mo>×</mo>
-					            <msup>
-					                <mi>e</mi>
-					                <mrow class="MJX-TeXAtom-ORD">
-					                    <mrow class="MJX-TeXAtom-ORD">
-					                        <mo>-</mo>
-					                        <mfrac>
-					                            <mi>t</mi>
-					                            <mrow>
-					                                <mi>R</mi>
-					                                <mi>C</mi>
-					                            </mrow>
-					                        </mfrac>
-					                    </mrow>
-					                </mrow>
-					            </msup>
-					        </math>
-					    </p>
-					<br>
-					<p>Las fórmulas utilizadas siguen el esquema mostrado a la izquierda en la siguiente imagen. A la derecha, se encuentra el circuito que incluye un LED, el cual permanece encendido durante un breve período después de retirar la fuente de voltaje, funcionando así como un pequeño temporizador.</p>
-					
-					<div style="text-align:center;">
-					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564248266260" height="354" width="450" frameborder="0" scrolling="no" ></iframe>
-					</div>         
-					<br>
-
-					
-			 <br>
-			
-			
 			<br>
-			 
+				 
+		
+				
+                        <h2>Potencia en circuitos</h2>
+			<br>
+						<div style="text-align:center;">
 			
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564239266966" height="236" width="600" frameborder="0" scrolling="no" ></iframe>			</div>
+			<p>Como se muestra en la imagen anterior, al aplicar la ley de Ohm para calcular la corriente eléctrica y luego multiplicarla por el voltaje, obtenemos la potencia eléctrica. Un análisis de un circuito divisor de voltaje revela que parte de la potencia se pierde en las resistencias que no están siendo utilizadas de manera eficiente. Por esta razón, existen otros circuitos y configuraciones electrónicas diseñados para minimizar la pérdida de energía y mejorar la eficiencia en la utilización de la potencia. Estos circuitos optimizados permiten un ahorro significativo de energía y un funcionamiento más efectivo.</p>
+			<br>
 
-			<h3>Bobina </h3>
+			
+              
+			<br>
+		<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Electronica/Talleres/ActP3_1.pdf"> Descargar actividad</a>
+			<br>		
 
-			 			<br>
-		<p>La bobina, al igual que el condensador, es un componente fundamental en los circuitos eléctricos, pero en lugar de almacenar energía en forma de voltaje, almacena energía en forma de campo magnético. Esto ocurre cuando una corriente eléctrica pasa a través de la bobina, creando un campo magnético alrededor de ella. La bobina está formada por un hilo conductor enrollado en espiral, y su capacidad para almacenar energía se mide en henrios (H). A continuación, se puede visualizar una bobina y su funcionamiento básico:</p>
                         <br>
-            				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=623115298470094987" height="414" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>
-			<p>Las fórmulas para la carga y descarga en una bobina son las siguientes:</p>
 
-    <h3>Carga (Q) en una Bobina</h3>
-    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
-    <p>
-        <strong>Q(t)</strong>: Carga almacenada en la bobina en el tiempo <strong>t</strong>.<br>
-        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
-        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
-        <strong>t</strong>: Tiempo en segundos (s).<br>
-        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
-    </p>
-
-    <h3>Voltaje (V) en una Bobina</h3>
-    <p>V(t) = R * e<sup>-t / (L / R)</sup></p>
-    <p>
-        <strong>V(t)</strong>: Voltaje a través de la bobina en el tiempo <strong>t</strong>.<br>
-        <strong>R</strong>: Resistencia del circuito en Ohmios (Ω).<br>
-        <strong>L</strong>: Inductancia de la bobina en Henrios (H).<br>
-        <strong>t</strong>: Tiempo en segundos (s).<br>
-        <strong>e</strong>: Base del logaritmo natural (aproximadamente 2.71828).
-    </p>
-
-    <h2>Ejemplo de Cálculo</h2>
-    <p>Para ilustrar cómo aplicar la fórmula de carga en una bobina, consideremos el siguiente ejemplo:</p>
-    <p>Supongamos que tenemos una bobina con una inductancia de 2 Henrios (H) y una resistencia en el circuito de 10 Ohmios (Ω). Queremos calcular la carga almacenada en la bobina después de 5 segundos (s). Usamos la fórmula:</p>
-    <p>Q(t) = L * (1 - e<sup>-t / (L / R)</sup>)</p>
-    <p>Reemplazamos los valores:</p>
-    <p>Q(5) = 2 * (1 - e<sup>-5 / (2 / 10)</sup>)</p>
-    <p>Para calcular el valor, primero resolvemos el exponente:</p>
-    <p>e<sup>-5 / (2 / 10)</sup> = e<sup>-25</sup> ≈ 0.000002</p>
-    <p>Luego, la carga almacenada en la bobina después de 5 segundos es:</p>
-    <p>Q(5) = 2 * (1 - 0.000002) ≈ 2 * 0.999998 ≈ 1.999996 C</p>
-    <p>Esto indica que, después de 5 segundos, la bobina habrá almacenado aproximadamente 1.999996 Coulombs de carga.</p>
-
-					
-					<br>
-			
                          <div id="ctrl">
 					
 				 <a class="n1" href="p3.html"> anterior </a>
