@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+   		<!DOCTYPE html>
 
 <html>
 
@@ -6,11 +7,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>WEB</title>
-	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
+	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-		
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
@@ -18,7 +18,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","210vh");
+	  $("#info").css("height","300vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -36,44 +36,21 @@
         <div id="info">
 
                 <div id="con">
-				<br>
-			<h3>Bootstrap</h3>
-			<br>
-			<p>Es una libreria que añade estilos a las etiquetas usando el lenguaje CSS, y entre uno de sus mayores aportes es generar páginas adaptables a todas las pantallas, para que funcionen es necesario agregar al documento HTML algunas lineas de codigo, a continuación se presentan las lineas junto a algunas etiquetas fundamentales de HTML, para facilitar la construcción de codigo: </p>
-			<br>
-			<pre>
-			<code>
-			&lt;!DOCTYPE html&gt;
-			&lt;html lang="es"&gt;
-			&lt;head&gt;
-			&lt;meta charset="UTF-8"&gt;
-			&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-			&lt;title&gt;Documento con Bootstrap&lt;/title&gt;
-			
-			&lt;!-- Agregar el enlace al archivo CSS de Bootstrap --&gt;
-			&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;
-			
-			&lt;/head&gt;
-			&lt;body&gt;
-			
-			&lt;!-- Tu contenido HTML aquí --&gt;
-			
-			&lt;!-- Agregar los scripts de Bootstrap (jQuery y Popper.js son requeridos) --&gt;
-			&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
-			&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"&gt;&lt;/script&gt;
-			&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
-			
-			&lt;/body&gt;
-			&lt;/html&gt;
-			</code>
-  			 </pre>
-			
 
-			<h2>Contenedores y columnas</h2>
+			<H2>HEAD Y BODY</H2>
 			<br>
-			<p>Para que funcionen las columnas se debe poner el atributo class="container"a una división y dentro de ellas otra división con el atributo class="row", a continuación se presenta como se construyen dos columnas:</p>
+
+			<p>Las etiquetas más fundamentales de HTML son <head></head> y <body></body> en las etiquetas head se escribe toda la información de la página respecto a su configuración y en la etiqueta body todo el contenido. A continuación se presentan algunas etiquetas muy recurrentes que se emplean en la parte de las etiquetas de Body de HTML: </p>
 			<br>
-			<table border="1">
+				<h3>Estructura de un texto</h3>
+
+				<br>
+			
+			<p>Con las etiquetas H1,H2... se puede hacer encabezados con diferentes tamaños, con las etiquetas p se pueden hacer diversos parrafos, a continuación se muestra el codigo y como se ve en la pagina WEB:</p>
+		<br>
+
+			
+<table border="1">
   <tr>
     <td style="text-align:center">Código</td>
     <td style="text-align:center">Resultado</td>
@@ -82,514 +59,36 @@
     <td>
 	    <pre>
 		<code>
-			&lt;div class="container"&gt
-			  &lt;div class="row"&gt
-			    &lt;div class="col-6"&gt
-			      Primer columna
-			    &lt;/div&gt
-			    &lt;div class="col-6"&gt
-			      Segunda columna
-			    &lt;/div&gt
-			  &lt;/div&gt
+		        &lt;h1&gt;Encabezado de nivel 1&lt;/h1&gt;
+		        &lt;h2&gt;Encabezado de nivel 2&lt;/h2&gt;
+		        &lt;h3&gt;Encabezado de nivel 3&lt;/h3&gt;
+		        &lt;h4&gt;Encabezado de nivel 4&lt;/h4&gt;
+			&lt;h5&gt;Encabezado de nivel 5&lt;/h5&gt;
+			&lt;br&gt;salto de linea.&lt;/br&gt;
+			&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
+			&lt;b&gt;Texo en negrilla&lt;/b&gt;
 		</code>
   	 </pre>
     </td>
     <td>
-			<div class="container">
-			  <div class="row">
-			    <div class="col-6">
-			      Primer columna
-			    </div>
-			    <div class="col-6">
-			        Segunda columna
-			    </div>
-			
-		 </div>
-	    </td>
-	  </tr>
+			<h1>Encabezado de nivel 1</h1>
+			<h2>Encabezado de nivel 2</h2>
+			<h3>Encabezado de nivel 3</h3>
+			<h4>Encabezado de nivel 4</h4>
+			<h5>Encabezado de nivel 5</h5>
+	    		<br>
+			<p>Este es un párrafo de ejemplo</p>    
+	                <b>Texto en negrilla</b>  
+    </td>
+  </tr>
 </table>
-		<p>Así dependiendo el número de columnas que se quieran se debe indicar en el número despues de col- la cantidad de espacio ocupado sea el total 12. Así en el ejemplo anterior dos columnas cada una equivale 6, si se quisieran 3 columnas el numero a escribir seria col-4 como podemos ver en el siguiente ejemplo: </p>	
-		<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	    <pre>
-		<code>
-			&lt;div class="container"&gt
-			  &lt;div class="row"&gt
-			    &lt;div class="col-4"&gt
-			      Primer columna
-			    &lt;/div&gt
-			    &lt;div class="col-4"&gt
-			      Segunda columna
-			    &lt;/div&gt
-			    &lt;div class="col-4"&gt
-			      Tercer columna
-			    &lt;/div&gt
-			  &lt;/div&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-			<div class="container">
-			  <div class="row">
-			    <div class="col-4">
-			      Primer columna
-			    </div>
-			    <div class="col-4">
-			        Segunda columna
-			    </div>
-			   <div class="col-4">
-			        Tercer columna
-			    </div>
-			
-		 </div>
-	    </td>
-	  </tr>
-</table>	
-
-
-				<br>
-	<div id="b1">
-				<div id="e">
-					<h3> Cards </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			<p>Las tarjetas o cards, permiten mostrar información de diferentes caracteristicas de las páginas WEB, a continuación se muestra el ejemplo de una:</p>
-					
-	<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	    <pre>
-		<code>
-	 &lt;div class="container"&gt;
-  	 &lt;div class="card" style="width: 18rem;"&gt;
-   	  &lt;img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image"&gt;
-  	   &lt;div class="card-body"&gt;
-    	   &lt;h5 class="card-title"&gt;Ejemplo tarjeta &lt;/h5&gt;
-     	  &lt;p class="card-text"&gt;Aqui encontramos un ejemplo de una tarjeta &lt;/p&gt;
-     	  &lt;a href="#" class="btn btn-primary"&gt;Go somewhere &lt;/a&gt;
-   	  &lt;/div&gt;
- 	  &lt;/div&gt;
-	 &lt;/div&gt;
-		</code>
-  	 </pre>
-    </td>
-    <td>
-	    
-	<div class="container">
-  	<div class="card" style="width: 18rem;">
-   	 <img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image">
-  	  <div class="card-body">
-    	  <h5 class="card-title">Ejemplo tarjeta</h5>
-     	 <p class="card-text">Aqui encontramos un ejemplo de una tarjeta</p>
-     	 <a href="#" class="btn btn-primary">Go somewhere</a>
-   	 </div>
- 	 </div>
-	</div>
-			
-		 </div>
-	    </td>
-	  </tr>
-</table>	
-
-
-					
-			</div>
-			</div>
-			<br>
-			<br>
-			<h2>Navbar</h2>
-
-			<br>
-
-			<p>Hace referencia a las tablas de navegación de una página WEB como lo son los menus de las páginas WEB, y son por lo general los que determinan la navegación de los sitios WEB</p>
-		<br>
-			<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-&lt;nav class="navbar "&gt
-    &lt;ul class="nav navbar-nav"&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtLogo&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtAcerca&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtContacto&lt;/a&gt
-    &lt;/li&gt
-   
-&lt;/ul&gt
-&lt;/nav&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-		
-
-			<nav class="navbar">
-			    <ul class="nav navbar-nav">
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Logo</a>
-			    </li>
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Acerca</a>
-			    </li>
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Contacto</a>
-			    </li>
-			   
-			</ul>
-			</nav>
-			
-	
-		 </div>
-	    </td>
-	  </tr>
-</table>	
-
-			<br>
-
-		<br>
-			<div id="b2">
-				<div id="e">
-					<h3>Jumbotron</h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            			<br>
-			
-
-						<p>El Jumbotron permite generar un contenido gráfico para generar interes en una página WEB como anuncio o una presentación del sitio, a continuación se presenta el respectivo codigo: </p>
-					<br>
-						<table border="1">
-			  <tr>
-			    <td style="text-align:center">Código</td>
-			    <td style="text-align:center">Resultado</td>
-			  </tr>
-			  <tr>
-			    <td>
-				<pre>
-					<code>
-&lt;div class="jumbotron"&gt
-&lt;h1 class="display-4"&gt¡Bienvenido!&lt;/h1&gt
-&lt;p class="lead"&gtEste es un ejemplo .&lt;/p&gt
-&lt;hr class="my-4"&gt
-&lt;p&gtPuedes utilizarlo para destacar contenido .&lt;/p&gt
- &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gtLeer más&lt;/a&gt
-&lt;/div&gt
-					</code>
-			  	 </pre>
-			    </td>
-			    <td>
-		
-
-			<div class="jumbotron">
-		  <h1 class="display-4">¡Bienvenido!</h1>
-		  <p class="lead">Este es un ejemplo de Jumbotron de Bootstrap. Un Jumbotron es una gran caja de contenido para resaltar información clave.</p>
-		  <hr class="my-4">
-		  <p>Puedes utilizarlo para destacar contenido importante en tu página web.</p>
-		  <a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a>
-		</div>
-	    </td>
-	  </tr>
-</table>	
-					
-				</div>
-			</div>
-
-
-
-		
-
-		<br>
-			<h2>Formularios</h2>
-
-			<br>
-
-			<p>Los formularios para tomar datos de la página WEB, tambien se pueden hacer con bootstrap, a continuación se presenta un ejemplo con diversos ejemplos:</p>
-		<br>
-			<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-&lt;form&gt
-      &lt;!-- Campo de entrada --&gt
-      &lt;div class="mb-3"&gt
-        &lt;label for="nombre" class="form-label"&gtNombre&lt;/label&gt
-        &lt;input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre"&gt
-      &lt;/div&gt
-      &lt;!-- Casilla de verificación --&gt
-      &lt;div class="mb-3 form-check"&gt
-        &lt;input type="checkbox" class="form-check-input" id="acepto"&gt
-        &lt;label class="form-check-label" for="acepto"&gtAcepto los términos y condiciones&lt;/label&gt
-      &lt;/div&gt
-      &lt;!-- Botones de radio --&gt
-      &lt;div class="mb-3"&gt
-        &lt;div class="form-check"&gt
-          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked&gt
-          &lt;label class="form-check-label" for="opcion1"&gt
-            Opción 1
-          &lt;/label&gt
-        &lt;/div&gt
-        &lt;div class="form-check"&gt
-          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2"&gt
-          &lt;label class="form-check-label" for="opcion2"&gt
-            Opción 2
-          &lt;/label&gt
-        &lt;/div&gt
-      &lt;/div&gt
-      &lt;!-- Selector --&gt
-      &lt;div class="mb-3"&gt
-        &lt;label for="select" class="form-label"&gtSeleccione una opción&lt;/label&gt
-        &lt;select class="form-select" id="select"&gt
-          &lt;option selected&gtSeleccionar...&lt;/option&gt
-          &lt;option value="opcion1"&gtOpción 1&lt;/option&gt
-          &lt;option value="opcion2"&gtOpción 2&lt;/option&gt
-          &lt;option value="opcion3"&gtOpción 3&lt;/option&gt
-        &lt;/select&gt
-      &lt;/div&gt
-      &lt;!-- Botón de envío --&gt
-      &lt;button type="submit" class="btn btn-primary"&gtEnviar&lt;/button&gt
-    &lt;/form&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-		 <form>
-      <!-- Campo de entrada -->
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
-      </div>
-      <!-- Casilla de verificación -->
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="acepto">
-        <label class="form-check-label" for="acepto">Acepto los términos y condiciones</label>
-      </div>
-      <!-- Botones de radio -->
-      <div class="mb-3">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked>
-          <label class="form-check-label" for="opcion1">
-            Opción 1
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2">
-          <label class="form-check-label" for="opcion2">
-            Opción 2
-          </label>
-        </div>
-      </div>
-      <!-- Selector -->
-      <div class="mb-3">
-        <label for="select" class="form-label">Seleccione una opción</label>
-        <select class="form-select" id="select">
-          <option selected>Seleccionar...</option>
-          <option value="opcion1">Opción 1</option>
-          <option value="opcion2">Opción 2</option>
-          <option value="opcion3">Opción 3</option>
-        </select>
-      </div>
-      <!-- Botón de envío -->
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-	    </td>
-	  </tr>
-</table>	
-
-
-			<br>
-	<div id="b3">
-				<div id="e">
-					<h3> carrusel </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<p>El carrusel permite mostrar en la página WEB diferentes imagenes, a continuación se muestra un ejemplo del codigo:</p>
-					<br>
-						<table border="1">
-			  <tr>
-			    <td style="text-align:center">Código</td>
-			    <td style="text-align:center">Resultado</td>
-			  </tr>
-			  <tr>
-			    <td>
-				<pre>
-					<code>
- &lt;div class="container" &gt
-   &lt;div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" &gt
-     &lt;div class="carousel-inner" &gt
-       &lt;div class="carousel-item active" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1" &gt
-       &lt;/div &gt
-       &lt;div class="carousel-item" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2" &gt
-       &lt;/div &gt
-       &lt;div class="carousel-item" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3" &gt
-       &lt;/div &gt
-     &lt;/div &gt
-   &lt;/div &gt
- &lt;/div &gt
-					</code>
-			  	 </pre>
-			    </td>
-			    <td>
-		
-
-<div class="container">
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3">
-      </div>
-    </div>
-  </div>
-</div>
-	    </td>
-	  </tr>
-</table>	
-					
-
-
-					
-				
-			</div>
-			</div>
-			<br>
-			<br>
-
-						<div id="b4">
-				<div id="e">
-					<h3> Botones </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-				<p>Los botones permiten direccionar de un lugar a otro, dependiendo el texto tienen diferentes caracteristicas:</p>
-								<table border="1">
-			  <tr>
-			    <td style="text-align:center">Código</td>
-			    <td style="text-align:center">Resultado</td>
-			  </tr>
-			  <tr>
-			    <td>
-				<pre>
-					<code>
-  &lt;div class="container mt-5" &gt
-    &lt;button type="button" class="btn btn-primary mr-2" &gtBotón Primario  &lt;/button &gt
-    &lt;button type="button" class="btn btn-secondary mr-2" &gtBotón Secundario  &lt;/button &gt
-    &lt;button type="button" class="btn btn-success mr-2" &gtBotón Éxito  &lt;/button &gt
-    &lt;button type="button" class="btn btn-danger mr-2" &gtBotón Peligro  &lt;/button &gt
-    &lt;button type="button" class="btn btn-warning" &gtBotón Advertencia  &lt;/button &gt
-  &lt;/div &gt
-					</code>
-			  	 </pre>
-			    </td>
-			    <td>
-<div class="container mt-5">
-  <button type="button" class="btn btn-primary mr-2">Botón Primario</button>
-  <button type="button" class="btn btn-secondary mr-2">Botón Secundario</button>
-  <button type="button" class="btn btn-success mr-2">Botón Éxito</button>
-  <button type="button" class="btn btn-danger mr-2">Botón Peligro</button>
-  <button type="button" class="btn btn-warning">Botón Advertencia</button>
-</div>
-	    </td>
-	  </tr>
-</table>		
-				
-			</div>
-			</div>
-			<br>
-			
-			<h2>Bootstrap y los diferentes tamaños de dispositivos</h2>
-			<br>
-			<p>Una ventaja de Bootstrap es que la disposición de los elementos puede varias según el tipo de pantalla a continuación se muestran los tipos de pantalla </p>
-			<br>
-		
-<div class="container mt-5">
-  <h2>Tamaños de Dispositivos en Bootstrap</h2>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Tipo de Dispositivo</th>
-        <th>Tamaño de Pantalla</th>
-        <th>Clase Bootstrap</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Extra pequeño</td>
-        <td>Menos de 576px</td>
-        <td>col-</td>
-      </tr>
-      <tr>
-        <td>Pequeño</td>
-        <td>576px o más</td>
-        <td>col-sm-</td>
-      </tr>
-      <tr>
-        <td>Mediano</td>
-        <td>768px o más</td>
-        <td>col-md-</td>
-      </tr>
-      <tr>
-        <td>Grande</td>
-        <td>992px o más</td>
-        <td>col-lg-</td>
-      </tr>
-      <tr>
-        <td>Extra grande</td>
-        <td>1200px o más</td>
-        <td>col-xl-</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
 	
-		
+		<br>
+			
+	<br>
 
-
-                        
-
-			<br>
-
-			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
-			<br>
-           	
-
-
-                        <br>
+			
 
                          <div id="ctrl">
 					
@@ -604,10 +103,9 @@
 			
       </div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
      	</body>
 
 	
 </html>
+
