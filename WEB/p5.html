@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+
+
+   		<!DOCTYPE html>
 
 <html>
 
@@ -17,7 +20,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","150vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -36,270 +39,69 @@
 
                 <div id="con">
 
-					<h2> Javascript </h2>
-
-				<br>
-
-			<p>Javascript es un lenguaje de programación el cual le añade interactividad a las páginas WEB, a continuación se ejecuta un codigo básico el cual genera una alerta en el navegador</p>
+		
+	
+			
 			<br>
-	    <pre>
+			            <h2> Formularios </h2>
+
+            <br>
+		<p>Las etiquetas input permiten ingresar los datos a  la página WEB, los más empleados son:  </p>
+			<br>
+			<p>text:Cuadro de texto</p>
+			<p>radio button:Seleccionar entre varias opciones</p>
+			<p>Checkbox:Seleccionar entre varias opciones</p>
+			<p>Select: Seleccionar entre varias opciones.</p>
+		<br>
+		<p>A continuación se presenta el codigo en la parte izquierda y su visualización en la parte derecha:</p>
+
+	<table border="1">
+  <tr>
+    <td style="text-align:center">Código</td>
+    <td style="text-align:center">Resultado</td>
+  </tr>
+  <tr>
+    <td>
+	<pre>
 		<code>
-&lt;!DOCTYPE html&gt
-&lt;html lang="es"&gt
-&lt;head&gt
-    &lt;meta charset="UTF-8"&gt
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-    &lt;title&gtAlerta "Hola Mundo"&lt;/title&gt
-&lt;/head&gt
-&lt;body&gt
-    &lt;script&gt
-            alert("¡Hola Mundo!");     
-    &lt;/script&gt
-&lt;/body&gt
-&lt;/html&gt
+	
+		    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+		    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;label for="email"&gt;Email:&lt;/label&gt;
+		    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
+		    &lt;textarea id="mensaje" name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+		    
+		    &lt;input type="submit" value="Enviar"&gt;
+	
 		</code>
   	 </pre>
-		
-			<br>
-
-			<h3>Variables en Javascript</h3>
-
-			<br>
-
-			<p>Las variables en javascript se guardan según su caracter de ser fijas durante todo el programa <b>const</b> o que varien su valor <b>let</b>, así como los datos que guarda, si son de tipo númerico o caracteres. A continuación se presentan diversos ejemplos de variables:</p>
-			<br>
-
-<pre>
-    <code>
-
-let entero = 10; // Variable entera
-const pi = 3.14; // Variable decimal
-const cadena = "Hola Mundo"; // Variable de cadena (string)
-let booleano = true; // Variable booleana (true o false)
-
-
-    </code>
-</pre>
-
-	<br>
-			<h3>Operaciones con variables numericas</h3>
-			<br>
-			<p>Las variables numericas pueden ser modificables y operables según los operadores matemáticos que se requieran, a continuación se muestra un ejemplo:</p>
-			<br>
-
-<pre>
-    <code>
-
-// Declaración de variables
-let numero1 = 10;
-let numero2 = 5;
-
-// Operaciones matemáticas
-let suma = numero1 + numero2;
-let resta = numero1 - numero2;
-let multiplicacion = numero1 * numero2;
-let division = numero1 / numero2;
-let modulo = numero1 % numero2; // Operación de módulo (resto de la división)
-     
-    </code>
-</pre>
-		
-            <br>
-
-			<h2>Visualización de variables en javascript</h2>
-
-			<br>
-	        	
-            <p>En javascript, se puede mostrar la información de las variables usando la consola con el comando <b>console.log</b>, modificando las etiquetas HTML o usando las alertas como se puede visualizar el siguiente codigo: </p>
-
-			<br>
-<pre>
-    <code>
-
-// Declaración de variables
-let numero1 = 10;
-let numero2 = 5;
-
-// Operación matemática
-let resultado = numero1 * numero2; // Multiplicación de 10 por 5
-
-// Mostrar el resultado usando un alert
-alert("El resultado de la multiplicación es: " + resultado);
-     
-    </code>
-</pre>
-			<br>
-
-			<h2>Obtener variables en Javascript</h2>
-
-			<br>
-
-			<p>Para obtener variables en Javascript se puede realizar desde las etiquetas HTML, o con los comandos prompt o confirm(si son de caracter booleano). A continuación se muestra un ejemplo:</p>
-			<br>
+    </td>
+    <td>
+   		<label for="nombre">Nombre:</label>
+		    <input type="text" id="nombre" name="nombre"><br><br>
+		    
+		    <label for="email">Email:</label>
+		    <input type="email" id="email" name="email"><br><br>
+		    
+		    <label for="mensaje">Mensaje:</label><br>
+		    <textarea id="mensaje" name="mensaje" rows="8" cols="8"></textarea><br><br>
+		    
+		    <input type="submit" value="Enviar"> 
+    </td>
+  </tr>
+</table>
 			
-	<pre>
-    <code>
+ 		<br>
 
-// Pedir al usuario que ingrese los valores mediante prompts
-let numero1 = prompt("Ingrese el primer número:");
-let numero2 = prompt("Ingrese el segundo número:");
-
-// Convertir los valores ingresados a números
-numero1 = parseFloat(numero1);
-numero2 = parseFloat(numero2);
-
-// Operación matemática
-let resultado = numero1 * numero2; // Multiplicación de los números ingresados
-
-// Mostrar el resultado usando un alert
-alert("El resultado de la multiplicación es: " + resultado);
-     
-    </code>
-</pre>
-
-             <br>
-
-			<div id="b1">
-				<div id="e">
-					<h3> Condicionales </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-
-			<br>
-		</div>
-			</div>
-
-		
-			<div id="b2">
-				<div id="e">
-					<h3> Condicionales anidadas </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-
-			<br>
-						</div>
-			</div>
-				
-
-		<div id="b3">
-				<div id="e">
-					<h3> Switch </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-
-			<br>
-
-		
-
-				
-				</div>
-			</div>
-
-				
-						<div id="b4">
-				<div id="e">
-					<h3> Ciclos </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-
-			<br>
-		</div>
-		</div>
-				<h2> Funciones en Javascript</h2>
-
-				<br>
-
-			<p>Las funciones en javascript permiten generar modulos de codigo que se pueden reutilizar en diferentes ocasiones, a continuación se presentan un ejemplo:</p>
-			<br>
-<pre>
-    <code>
-let nombre="John";
-// Definición de una función
-function saludar(nombre) {
-    alert("¡Hola, " + nombre + "! Bienvenido.");
-}
-
-// Llamada a la función
-saludar("Juan");
-    </code>
-</pre>
-            <br>
-		<p>Asi en el ejemplo anterior solo es necesario cambiar el nombre en la función para generar diferentes saludos, la variable nombre, se llama parametro y es una variable interna del uso de las funciones.</p>
-			<br>
-
-<br>
-			<h2>Arreglos</h2>
-			<br>
-			<p>Los arreglos nos permiten guardar diferentes valores en una sola variable, las cuales se pueden agregar, quitar y recorrer entre muchas otras opciones que a continuación se presentan:</p>
-<pre>
-    <code>
-
-// Creación de un array vacío
-let frutas = [];
-
-// Añadir elementos al array usando push()
-frutas.push("Manzana");
-frutas.push("Banana");
-frutas.push("Naranja");
-
-// Acceder a elementos del array por índice
-console.log("Primera fruta:", frutas[0]); // Salida: Manzana
-console.log("Segunda fruta:", frutas[1]); // Salida: Banana
-
-// Modificar un elemento del array
-frutas[0] = "Pera";
-console.log("Primera fruta modificada:", frutas[0]); // Salida: Pera
-
-// Longitud del array
-console.log("Cantidad de frutas:", frutas.length); // Salida: 3
-
-// Recorrer el array usando un bucle for
-console.log("Frutas:");
-for (let i = 0; i < frutas.length; i++) {
-    console.log("- " + frutas[i]);
-}
-
-// Eliminar el último elemento del array usando pop()
-let ultimaFruta = frutas.pop();
-console.log("Última fruta eliminada:", ultimaFruta); // Salida: Naranja
-console.log("Frutas después de eliminar la última:", frutas); // Salida: ["Pera", "Banana"]
-
-     
-    </code>
-</pre>
+	
 
                          <div id="ctrl">
 					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
+				 <a class="n1" href="p1.html"> anterior </a>
+				<a class="n1" href="p3.html"> siguiente </a>
                              
 
                         </div>
@@ -314,3 +116,4 @@ console.log("Frutas después de eliminar la última:", frutas); // Salida: ["Per
 
 	
 </html>
+
