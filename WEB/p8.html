@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -6,9 +7,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>WEB</title>
-	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-
+		
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
@@ -16,7 +19,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","390vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -34,104 +37,119 @@
         <div id="info">
 
                 <div id="con">
-   <h2>Asincronismo</h2>
-
-            <br>
-            
-		<p>En ocasiones es necesario realizar diversos codigos al mismo tiempo, para esta finalidad se emplea el concepto de asincronismo. Javascript genera las intrucciones y funciones según el programa se ejecute de orden secuencial, lo que quiere decir una tras otra cen un lugar llamado <b>call stack</b>, sin embargo en ocasiones una función puede demorar mucho esperando el servidor, o un evento del usuario. Así inicia el concepto de paralelismo donde si bien javascript no tiene una estructura para soportar multiples programas, tiene un <b>event loop</b> el cual es un inspector quien esta vigilando constantemente las funciones y tareas, en caso de que una se demore mucho le da paso a otras mientras termina, generando así una estructura de realizar estructuras paralelas. A continuación se muestra una imagen de como funciona:</p>            
-		<br>
-			
-				<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=336362665915526689" height="618" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<br>
-			<p>Así conociendo el funcionamiento del event loop es posible generar funciones con tiempo que se ejecutan de forma controlada. </p>
-			<br>
-			<h3>Set time out y Set interval</h3>
-
 				<br>
+			
 
-			<p> Son funciones que permiten controlar el tiempo, set time out funciona programando el tiempo que se requiere que se ejecute la función a continuación se presenta un ejemplo:            </p>
+
+					<h3> Cards </h3>
+			
+			<p>Las tarjetas o cards, permiten mostrar información de diferentes caracteristicas de las páginas WEB, a continuación se muestra el ejemplo de una:</p>
+					
+	<table border="1">
+  <tr>
+    <td style="text-align:center">Código</td>
+    <td style="text-align:center">Resultado</td>
+  </tr>
+  <tr>
+    <td>
+	    <pre>
+		<code>
+	 &lt;div class="container"&gt;
+  	 &lt;div class="card" style="width: 18rem;"&gt;
+   	  &lt;img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image"&gt;
+  	   &lt;div class="card-body"&gt;
+    	   &lt;h5 class="card-title"&gt;Ejemplo tarjeta &lt;/h5&gt;
+     	  &lt;p class="card-text"&gt;Aqui encontramos un ejemplo de una tarjeta &lt;/p&gt;
+     	  &lt;a href="#" class="btn btn-primary"&gt;Go somewhere &lt;/a&gt;
+   	  &lt;/div&gt;
+ 	  &lt;/div&gt;
+	 &lt;/div&gt;
+		</code>
+  	 </pre>
+    </td>
+    <td>
+	    
+	<div class="container">
+  	<div class="card" style="width: 18rem;">
+   	 <img src="https://via.placeholder.com/150" class="card-img-top" alt="Placeholder Image">
+  	  <div class="card-body">
+    	  <h5 class="card-title">Ejemplo tarjeta</h5>
+     	 <p class="card-text">Aqui encontramos un ejemplo de una tarjeta</p>
+     	 <a href="#" class="btn btn-primary">Go somewhere</a>
+   	 </div>
+ 	 </div>
+	</div>
+			
+		 </div>
+	    </td>
+	  </tr>
+</table>	
+
+
+					
+			
+			<br>
+		
+
+		
+					<h3>Jumbotron</h3>
+			
+				<br>
+            			<br>
+			
+
+						<p>El Jumbotron permite generar un contenido gráfico para generar interes en una página WEB como anuncio o una presentación del sitio, a continuación se presenta el respectivo codigo: </p>
+					<br>
+						<table border="1">
+			  <tr>
+			    <td style="text-align:center">Código</td>
+			    <td style="text-align:center">Resultado</td>
+			  </tr>
+			  <tr>
+			    <td>
+				<pre>
+					<code>
+&lt;div class="jumbotron"&gt
+&lt;h1 class="display-4"&gt¡Bienvenido!&lt;/h1&gt
+&lt;p class="lead"&gtEste es un ejemplo .&lt;/p&gt
+&lt;hr class="my-4"&gt
+&lt;p&gtPuedes utilizarlo para destacar contenido .&lt;/p&gt
+ &lt;a class="btn btn-primary btn-lg" href="#" role="button"&gtLeer más&lt;/a&gt
+&lt;/div&gt
+					</code>
+			  	 </pre>
+			    </td>
+			    <td>
+		
+
+			<div class="jumbotron">
+		  <h1 class="display-4">¡Bienvenido!</h1>
+		  <p class="lead">Este es un ejemplo de Jumbotron de Bootstrap. Un Jumbotron es una gran caja de contenido para resaltar información clave.</p>
+		  <hr class="my-4">
+		  <p>Puedes utilizarlo para destacar contenido importante en tu página web.</p>
+		  <a class="btn btn-primary btn-lg" href="#" role="button">Leer más</a>
+		</div>
+	    </td>
+	  </tr>
+</table>	
+					
+			
+
+
+		
+
+			
+                        
 
 			<br>
-<pre>
-    <code>
 
-console.log('Inicio del programa');
-
-// Función que simula una tarea asíncrona que tarda un segundo en completarse
-function tareaAsincrona() {
-  console.log('Inicio de la tarea asíncrona');
-  setTimeout(function() {
-    console.log('Fin de la tarea asíncrona');
-  }, 1000); // Espera 1 segundo antes de ejecutar la función
-}
-
-// Llamamos a la función tareaAsincrona
-tareaAsincrona();
-
-console.log('Fin del programa');
-
-     
-    </code>
-</pre>			
-
-
-			<p>Set interval repite una función las veces que se requiera en el codigo</p>
-
-			<pre>
-    <code>
-
-// Definimos una función que se ejecutará cada segundo
-function imprimirMensaje() {
-  console.log('¡Hola mundo!');
-}
-
-// Llamamos a setInterval para ejecutar la función imprimirMensaje cada segundo (1000 milisegundos)
-var intervalo = setInterval(imprimirMensaje, 1000);
-
-// Después de 5 segundos, detenemos el intervalo
-setTimeout(function() {
-  clearInterval(intervalo); // Detenemos el intervalo
-  console.log('Intervalo detenido después de 5 segundos.');
-}, 5000);
-     
-    </code>
-</pre>			
-
+			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
 			<br>
+           	
 
-			<h3> Async - Await </h3>
 
-			<br>
-
-			<p>Junto a la libreria Fecth async con away permiten hacer el proceso con peticiones de elementos a un servidor a continuación se presenta un ejemplo:</p>
-			<br>
-					<pre>
-    <code>
-
-// Función que devuelve una promesa que se resuelve después de un cierto tiempo
-function esperarUnSegundo() {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve('Resuelto');
-    }, 1000);
-  });
-}
-
-// Función asincrónica que espera un segundo antes de imprimir el mensaje
-async function imprimirMensaje() {
-  const resultado = await esperarUnSegundo();
-  console.log(resultado);
-}
-
-// Llamada a la función asincrónica
-imprimirMensaje();
-
-     
-    </code>
-</pre>		
                         <br>
+
                          <div id="ctrl">
 					
 				 <a class="n1" href="p7.html"> anterior </a>
@@ -145,8 +163,11 @@ imprimirMensaje();
 			
       </div>
 
-
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
      	</body>
 
 	
 </html>
+
