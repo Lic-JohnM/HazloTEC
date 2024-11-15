@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>WEB</title>
+	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","100vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+
+			<h3>Variables en Javascript</h3>
+
+			<br>
+
+			<p>Las variables en javascript se guardan según su caracter de ser fijas durante todo el programa <b>const</b> o que varien su valor <b>let</b>, así como los datos que guarda, si son de tipo númerico o caracteres. A continuación se presentan diversos ejemplos de variables:</p>
+			<br>
+
+<pre>
+    <code>
+
+let entero = 10; // Variable entera
+const pi = 3.14; // Variable decimal
+const cadena = "Hola Mundo"; // Variable de cadena (string)
+let booleano = true; // Variable booleana (true o false)
+
+
+    </code>
+</pre>
+
+	<br>
+			<h3>Operaciones con variables numericas</h3>
+			<br>
+			<p>Las variables numericas pueden ser modificables y operables según los operadores matemáticos que se requieran, a continuación se muestra un ejemplo:</p>
+			<br>
+
+<pre>
+    <code>
+
+// Declaración de variables
+let numero1 = 10;
+let numero2 = 5;
+
+// Operaciones matemáticas
+let suma = numero1 + numero2;
+let resta = numero1 - numero2;
+let multiplicacion = numero1 * numero2;
+let division = numero1 / numero2;
+let modulo = numero1 % numero2; // Operación de módulo (resto de la división)
+     
+    </code>
+</pre>
+		
+            <br>
+
+			<h2>Visualización de variables en javascript</h2>
+
+			<br>
+	        	
+            <p>En javascript, se puede mostrar la información de las variables usando la consola con el comando <b>console.log</b>, modificando las etiquetas HTML o usando las alertas como se puede visualizar el siguiente codigo: </p>
+
+			<br>
+<pre>
+    <code>
+
+// Declaración de variables
+let numero1 = 10;
+let numero2 = 5;
+
+// Operación matemática
+let resultado = numero1 * numero2; // Multiplicación de 10 por 5
+
+// Mostrar el resultado usando un alert
+alert("El resultado de la multiplicación es: " + resultado);
+     
+    </code>
+</pre>
+			<br>
+
+			<h2>Obtener variables en Javascript</h2>
+
+			<br>
+
+			<p>Para obtener variables en Javascript se puede realizar desde las etiquetas HTML, o con los comandos prompt o confirm(si son de caracter booleano). A continuación se muestra un ejemplo:</p>
+			<br>
+			
+	<pre>
+    <code>
+
+// Pedir al usuario que ingrese los valores mediante prompts
+let numero1 = prompt("Ingrese el primer número:");
+let numero2 = prompt("Ingrese el segundo número:");
+
+// Convertir los valores ingresados a números
+numero1 = parseFloat(numero1);
+numero2 = parseFloat(numero2);
+
+// Operación matemática
+let resultado = numero1 * numero2; // Multiplicación de los números ingresados
+
+// Mostrar el resultado usando un alert
+alert("El resultado de la multiplicación es: " + resultado);
+     
+    </code>
+</pre>
+
+             <br>
+
+			<div id="b1">
+				<div id="e">
+					<h3> Condicionales </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+			
+				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
+				<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>  
+			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
+
+			<br>
+		</div>
+			</div>
+
+		
+			<div id="b2">
+				<div id="e">
+					<h3> Condicionales anidadas </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+			
+				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
+				<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>  
+			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
+
+			<br>
+						</div>
+			</div>
+				
+
+		<div id="b3">
+				<div id="e">
+					<h3> Switch </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+			
+				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
+				<div style="text-align:center;">
+					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
+					</div>  
+			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
+
+			<br>
+
+		
+
+				
+				</div>
+			</div>
+<br>
+
+
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p15.html"> anterior </a>
+				<a class="n1" href="p17.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
