@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -5,11 +8,12 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Diseño WEB</title>
-	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
+	<title>WEB</title>
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-
+		
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
@@ -17,7 +21,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -35,144 +39,108 @@
         <div id="info">
 
                 <div id="con">
-		<H2>Objetos literales</H2>
+				<br>
+			<h3>Bootstrap</h3>
+			<br>
+			<p>Es una libreria que añade estilos a las etiquetas usando el lenguaje CSS, y entre uno de sus mayores aportes es generar páginas adaptables a todas las pantallas, para que funcionen es necesario agregar al documento HTML algunas lineas de codigo, a continuación se presentan las lineas junto a algunas etiquetas fundamentales de HTML, para facilitar la construcción de codigo: </p>
+			<br>
+			<pre>
+			<code>
+			&lt;!DOCTYPE html&gt;
+			&lt;html lang="es"&gt;
+			&lt;head&gt;
+			&lt;meta charset="UTF-8"&gt;
+			&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+			&lt;title&gt;Documento con Bootstrap&lt;/title&gt;
+			
+			&lt;!-- Agregar el enlace al archivo CSS de Bootstrap --&gt;
+			&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;
+			
+			&lt;/head&gt;
+			&lt;body&gt;
+			
+			&lt;!-- Tu contenido HTML aquí --&gt;
+			
+			&lt;!-- Agregar los scripts de Bootstrap (jQuery y Popper.js son requeridos) --&gt;
+			&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
+			&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"&gt;&lt;/script&gt;
+			&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
+			
+			&lt;/body&gt;
+			&lt;/html&gt;
+			</code>
+  			 </pre>
+			
+
+			
+
+
+			<br>
+			
+			<h2>Bootstrap y los diferentes tamaños de dispositivos</h2>
+			<br>
+			<p>Una ventaja de Bootstrap es que la disposición de los elementos puede varias según el tipo de pantalla a continuación se muestran los tipos de pantalla </p>
+			<br>
 		
+<div class="container mt-5">
+  <h2>Tamaños de Dispositivos en Bootstrap</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Tipo de Dispositivo</th>
+        <th>Tamaño de Pantalla</th>
+        <th>Clase Bootstrap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Extra pequeño</td>
+        <td>Menos de 576px</td>
+        <td>col-</td>
+      </tr>
+      <tr>
+        <td>Pequeño</td>
+        <td>576px o más</td>
+        <td>col-sm-</td>
+      </tr>
+      <tr>
+        <td>Mediano</td>
+        <td>768px o más</td>
+        <td>col-md-</td>
+      </tr>
+      <tr>
+        <td>Grande</td>
+        <td>992px o más</td>
+        <td>col-lg-</td>
+      </tr>
+      <tr>
+        <td>Extra grande</td>
+        <td>1200px o más</td>
+        <td>col-xl-</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 	
-
-			  <p>Los objetos literales nos permiten guardar elementos partiendo de la descripción de los mismos a continuación se presenta un ejemplo:</p>	        	
-<pre>
-    <code>
-
-// Creación de un objeto literal
-let persona = {
-    nombre: "Juan",
-    edad: 30,
-    ciudad: "Madrid",
-    profesion: "Ingeniero"
-};
-
-// Acceder a las propiedades del objeto
-console.log("Nombre:", persona.nombre); // Salida: Juan
-console.log("Edad:", persona.edad); // Salida: 30
-
-// Modificar una propiedad del objeto
-persona.edad = 35;
-console.log("Edad modificada:", persona.edad); // Salida: 35
-
-// Añadir una nueva propiedad al objeto
-persona.telefono = "123-456-789";
-console.log("Teléfono:", persona.telefono); // Salida: 123-456-789
-
-// Eliminar una propiedad del objeto
-delete persona.profesion;
-console.log("Profesión eliminada:", persona.profesion); // Salida: undefined
-
-// Mostrar todo el objeto
-console.log("Objeto completo:", persona);
-
-     
-    </code>
-</pre>
+		
 
 
-    <h2>¿Qué es el Operador de Spread?</h2>
-    <br>
-    <p>
-        El operador de spread en JavaScript, representado por <code>...</code>, se utiliza para expandir los elementos de un iterable (como arreglos u objetos) en contextos donde se esperan varios elementos. Facilita la manipulación de arreglos y objetos sin necesidad de recurrir a técnicas más complejas.
-    </p>
-    <br>
-    <h2>Uso del Spread con Arreglos</h2>
-   <br>
-    <p>
-        <strong>Copiar un Arreglo:</strong> El operador de spread permite crear una copia superficial de un arreglo. Esto significa que puedes duplicar un arreglo sin modificar el original.
-    </p>
-<br>
-    <pre><code>let numerosOriginales = [1, 2, 3];
-let numerosCopiados = [...numerosOriginales];
-
-console.log(numerosCopiados); // [1, 2, 3]</code></pre>
-<br>
-    <p>
-        <strong>Concatenar Arreglos:</strong> Puedes usar el operador de spread para combinar varios arreglos en uno solo, sin modificar los arreglos originales.
-    </p>
-<br>
-    <pre><code>let arreglo1 = [1, 2, 3];
-let arreglo2 = [4, 5, 6];
-let arregloConcatenado = [...arreglo1, ...arreglo2];
-
-console.log(arregloConcatenado); // [1, 2, 3, 4, 5, 6]</code></pre>
-<br>
-    <h2>Uso del Spread con Objetos</h2>
-<br>
-    <p>
-        <strong>Copiar un Objeto:</strong> El operador de spread permite crear una copia superficial de un objeto. Esto es útil para evitar modificar el objeto original al hacer cambios.
-    </p>
-<br>
-    <pre><code>let personaOriginal = { nombre: "Alice", edad: 30 };
-let personaCopiada = { ...personaOriginal };
-
-console.log(personaCopiada); // { nombre: "Alice", edad: 30 }</code></pre>
-<br>
-    <p>
-        <strong>Combinar Objetos:</strong> Puedes combinar varias propiedades de objetos en un nuevo objeto sin alterar los objetos originales.
-    </p>
-<br>
-    <pre><code>let persona = { nombre: "Alice", edad: 30 };
-let direccion = { ciudad: "Wonderland", pais: "Fantasia" };
-let personaCompleta = { ...persona, ...direccion };
-
-console.log(personaCompleta);
-// { nombre: "Alice", edad: 30, ciudad: "Wonderland", pais: "Fantasia" }</code></pre>
-<br>
-    <h2>¿Cómo Evita la Duplicación de Objetos?</h2>
-<br>
-    <p>
-        El operador de spread no evita la duplicación de objetos en el sentido de la memoria, pero facilita la creación de nuevas instancias con los datos deseados. Al usar <code>...</code> para copiar o combinar objetos, creas nuevas instancias con los datos que puedes manipular independientemente, lo que ayuda a gestionar datos sin alterar los originales.
-    </p>
-<br>
-    <p>
-        Por ejemplo, al copiar un objeto con <code>...</code>, la copia es un nuevo objeto con las mismas propiedades, pero cualquier cambio en la copia no afecta al objeto original. Esto permite trabajar con datos de manera más segura y organizada.
-    </p>
-<br>
-			<br>
+                        
 
 			<br>
 
-           		<p>Cuando un objeto literal se emplea multiples veces con diferentes caracteristicas se emplea la programación orientada a objetos, a continuación se presenta un ejemplo:</p>
-<br>
-<pre>
-    <code>
-
-// Definición de una clase llamada Persona
-class Persona {
-    // Constructor de la clase Persona
-    constructor(nombre, edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-
-    // Método para obtener la descripción de la persona
-    descripcion() {
-        return `${this.nombre} tiene ${this.edad} años.`;
-    }
-}
-
-// Creación de una instancia de la clase Persona
-let persona1 = new Persona("Juan", 30);
-
-// Llamada al método descripcion() de la instancia persona1
-console.log(persona1.descripcion()); // Salida: Juan tiene 30 años.
+			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
+			<br>
+           	
 
 
-     
-    </code>
-</pre>
                         <br>
 
                          <div id="ctrl">
 					
-				 <a class="n1" href="p5.html"> anterior </a>
-				<a class="n1" href="p7.html"> siguiente </a>
+				 <a class="n1" href="p2.html"> anterior </a>
+				<a class="n1" href="p4.html"> siguiente </a>
                              
 
                         </div>
@@ -182,8 +150,11 @@ console.log(persona1.descripcion()); // Salida: Juan tiene 30 años.
 			
       </div>
 
-
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
      	</body>
 
 	
 </html>
+
