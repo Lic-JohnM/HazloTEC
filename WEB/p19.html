@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>WEB</title>
+	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","250vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+
+<h2> Funciones en Javascript</h2>
+
+				<br>
+
+			<p>Las funciones en javascript permiten generar modulos de codigo que se pueden reutilizar en diferentes ocasiones, a continuación se presentan un ejemplo:</p>
+			<br>
+<pre>
+    <code>
+let nombre="John";
+// Definición de una función
+function saludar(nombre) {
+    alert("¡Hola, " + nombre + "! Bienvenido.");
+}
+
+// Llamada a la función
+saludar("Juan");
+    </code>
+</pre>
+            <br>
+		<p>Asi en el ejemplo anterior solo es necesario cambiar el nombre en la función para generar diferentes saludos, la variable nombre, se llama parametro y es una variable interna del uso de las funciones.</p>
+			<br>
+		<H2>Objetos literales</H2>
+		
+	
+
+			  <p>Los objetos literales nos permiten guardar elementos partiendo de la descripción de los mismos a continuación se presenta un ejemplo:</p>	        	
+<pre>
+    <code>
+
+// Creación de un objeto literal
+let persona = {
+    nombre: "Juan",
+    edad: 30,
+    ciudad: "Madrid",
+    profesion: "Ingeniero"
+};
+
+// Acceder a las propiedades del objeto
+console.log("Nombre:", persona.nombre); // Salida: Juan
+console.log("Edad:", persona.edad); // Salida: 30
+
+// Modificar una propiedad del objeto
+persona.edad = 35;
+console.log("Edad modificada:", persona.edad); // Salida: 35
+
+// Añadir una nueva propiedad al objeto
+persona.telefono = "123-456-789";
+console.log("Teléfono:", persona.telefono); // Salida: 123-456-789
+
+// Eliminar una propiedad del objeto
+delete persona.profesion;
+console.log("Profesión eliminada:", persona.profesion); // Salida: undefined
+
+// Mostrar todo el objeto
+console.log("Objeto completo:", persona);
+
+     
+    </code>
+</pre>
+
+
+    <h2>¿Qué es el Operador de Spread?</h2>
+    <br>
+    <p>
+        El operador de spread en JavaScript, representado por <code>...</code>, se utiliza para expandir los elementos de un iterable (como arreglos u objetos) en contextos donde se esperan varios elementos. Facilita la manipulación de arreglos y objetos sin necesidad de recurrir a técnicas más complejas.
+    </p>
+    <br>
+    <h2>Uso del Spread con Arreglos</h2>
+   <br>
+    <p>
+        <strong>Copiar un Arreglo:</strong> El operador de spread permite crear una copia superficial de un arreglo. Esto significa que puedes duplicar un arreglo sin modificar el original.
+    </p>
+<br>
+    <pre><code>let numerosOriginales = [1, 2, 3];
+let numerosCopiados = [...numerosOriginales];
+
+console.log(numerosCopiados); // [1, 2, 3]</code></pre>
+<br>
+    <p>
+        <strong>Concatenar Arreglos:</strong> Puedes usar el operador de spread para combinar varios arreglos en uno solo, sin modificar los arreglos originales.
+    </p>
+<br>
+    <pre><code>let arreglo1 = [1, 2, 3];
+let arreglo2 = [4, 5, 6];
+let arregloConcatenado = [...arreglo1, ...arreglo2];
+
+console.log(arregloConcatenado); // [1, 2, 3, 4, 5, 6]</code></pre>
+<br>
+    <h2>Uso del Spread con Objetos</h2>
+<br>
+    <p>
+        <strong>Copiar un Objeto:</strong> El operador de spread permite crear una copia superficial de un objeto. Esto es útil para evitar modificar el objeto original al hacer cambios.
+    </p>
+<br>
+    <pre><code>let personaOriginal = { nombre: "Alice", edad: 30 };
+let personaCopiada = { ...personaOriginal };
+
+console.log(personaCopiada); // { nombre: "Alice", edad: 30 }</code></pre>
+<br>
+    <p>
+        <strong>Combinar Objetos:</strong> Puedes combinar varias propiedades de objetos en un nuevo objeto sin alterar los objetos originales.
+    </p>
+<br>
+    <pre><code>let persona = { nombre: "Alice", edad: 30 };
+let direccion = { ciudad: "Wonderland", pais: "Fantasia" };
+let personaCompleta = { ...persona, ...direccion };
+
+console.log(personaCompleta);
+// { nombre: "Alice", edad: 30, ciudad: "Wonderland", pais: "Fantasia" }</code></pre>
+<br>
+    <h2>¿Cómo Evita la Duplicación de Objetos?</h2>
+<br>
+    <p>
+        El operador de spread no evita la duplicación de objetos en el sentido de la memoria, pero facilita la creación de nuevas instancias con los datos deseados. Al usar <code>...</code> para copiar o combinar objetos, creas nuevas instancias con los datos que puedes manipular independientemente, lo que ayuda a gestionar datos sin alterar los originales.
+    </p>
+<br>
+    <p>
+        Por ejemplo, al copiar un objeto con <code>...</code>, la copia es un nuevo objeto con las mismas propiedades, pero cualquier cambio en la copia no afecta al objeto original. Esto permite trabajar con datos de manera más segura y organizada.
+    </p>
+<br>
+			<br>
+
+			<br>
+
+           		<p>Cuando un objeto literal se emplea multiples veces con diferentes caracteristicas se emplea la programación orientada a objetos, a continuación se presenta un ejemplo:</p>
+<br>
+<pre>
+    <code>
+
+// Definición de una clase llamada Persona
+class Persona {
+    // Constructor de la clase Persona
+    constructor(nombre, edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método para obtener la descripción de la persona
+    descripcion() {
+        return `${this.nombre} tiene ${this.edad} años.`;
+    }
+}
+
+// Creación de una instancia de la clase Persona
+let persona1 = new Persona("Juan", 30);
+
+// Llamada al método descripcion() de la instancia persona1
+console.log(persona1.descripcion()); // Salida: Juan tiene 30 años.
+
+
+     
+    </code>
+</pre>
+                        <br>
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p18.html"> anterior </a>
+				<a class="n1" href="p20.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
