@@ -1,5 +1,4 @@
-
-        @media only screen and (max-width: 1000px) {
+ @media only screen and (max-width: 1000px) {
         #menu{
            grid-template-columns:40% 60%;
            font-size:35px;
@@ -19,7 +18,7 @@
           
           header{
             display: grid;
-            grid-template-rows: 20% 80%;
+
             grid-template-columns:100%;
             margin-left: 2%;
             margin-right: 2%;
@@ -54,10 +53,10 @@
         background-color:white;
         display: grid;
         color:rgba(47,65,89,0.9);
-        border-color: rgba(47,65,89,0.9);
+        border-color: white;
         border-style: solid;
         grid-template-columns: 100%;
-        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-rows: 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 7% 8% 8%;
         align-items: center;
         justify-items: center;
         margin-right: 0%;
