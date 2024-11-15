@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -6,9 +9,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>WEB</title>
-	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-
+		
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
@@ -16,7 +21,7 @@
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
+	  $("#info").css("height","210vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -34,179 +39,113 @@
         <div id="info">
 
                 <div id="con">
-
-			<h2>Evento Onclick y Modificar elementos por ID</h2>
-			<br>
-			<p>Los eventos son las posibles iteracciones que tiene un usuario con una página WEB como hacer click en un elemento, mover las teclas del teclado, enviar un formulario o se cambia el tamaño de la pantalla entre otros. Javascript permite cambiar elementos del árbol DOM, como quitarlos, ponerlos o modificar su contenido. En el codigo siguiente podemos ver un uso clasico y practico de las dos caracteristicas anteriormente expuestas: </p>
-<pre>
-    <code>
-
-&lt;!DOCTYPE html&gt
-&lt;html lang="en"&gt
-&lt;head&gt
-  &lt;meta charset="UTF-8"&gt
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt
-  &lt;title&gtModificar Texto con JavaScript&lt;/title&gt
-&lt;/head&gt
-&lt;body&gt
-  &lt;h1 id="titulo"&gtTexto Original&lt;/h1&gt
-  &lt;button onclick="cambiarTexto()"&gtCambiar Texto&lt;/button&gt
-
-  &lt;script&gt
-    function cambiarTexto() {
-      // Seleccionamos el elemento h1 por su id
-      const tituloElemento = document.getElementById('titulo');
-
-      // Modificamos el texto del elemento h1
-      tituloElemento.textContent = '¡Nuevo Texto Modificado!';
-    }
-  &lt;/script&gt
-&lt;/body&gt
-&lt;/html&gt
-     
-    </code>
-</pre>			
-			<br>
-			<h2> Storage</h2>
-
 				<br>
-
-			<p>Una forma de almacernar variables por mucho tiempo en una página WEB es usando Storage, a continuación se presenta un ejemplo; </p>
-
+		
+  			 </pre>
 			
-<pre>
-    <code>
 
-// Almacenar datos en localStorage
-localStorage.setItem('nombre', 'Juan');
-localStorage.setItem('edad', '30');
+			<h2>Contenedores y columnas</h2>
+			<br>
+			<p>Para que funcionen las columnas se debe poner el atributo class="container"a una división y dentro de ellas otra división con el atributo class="row", a continuación se presenta como se construyen dos columnas:</p>
+			<br>
+			<table border="1">
+  <tr>
+    <td style="text-align:center">Código</td>
+    <td style="text-align:center">Resultado</td>
+  </tr>
+  <tr>
+    <td>
+	    <pre>
+		<code>
+			&lt;div class="container"&gt
+			  &lt;div class="row"&gt
+			    &lt;div class="col-6"&gt
+			      Primer columna
+			    &lt;/div&gt
+			    &lt;div class="col-6"&gt
+			      Segunda columna
+			    &lt;/div&gt
+			  &lt;/div&gt
+		</code>
+  	 </pre>
+    </td>
+    <td>
+			<div class="container">
+			  <div class="row">
+			    <div class="col-6">
+			      Primer columna
+			    </div>
+			    <div class="col-6">
+			        Segunda columna
+			    </div>
+			
+		 </div>
+	    </td>
+	  </tr>
+</table>
+		<p>Así dependiendo el número de columnas que se quieran se debe indicar en el número despues de col- la cantidad de espacio ocupado sea el total 12. Así en el ejemplo anterior dos columnas cada una equivale 6, si se quisieran 3 columnas el numero a escribir seria col-4 como podemos ver en el siguiente ejemplo: </p>	
+		<table border="1">
+  <tr>
+    <td style="text-align:center">Código</td>
+    <td style="text-align:center">Resultado</td>
+  </tr>
+  <tr>
+    <td>
+	    <pre>
+		<code>
+			&lt;div class="container"&gt
+			  &lt;div class="row"&gt
+			    &lt;div class="col-4"&gt
+			      Primer columna
+			    &lt;/div&gt
+			    &lt;div class="col-4"&gt
+			      Segunda columna
+			    &lt;/div&gt
+			    &lt;div class="col-4"&gt
+			      Tercer columna
+			    &lt;/div&gt
+			  &lt;/div&gt
+		</code>
+  	 </pre>
+    </td>
+    <td>
+			<div class="container">
+			  <div class="row">
+			    <div class="col-4">
+			      Primer columna
+			    </div>
+			    <div class="col-4">
+			        Segunda columna
+			    </div>
+			   <div class="col-4">
+			        Tercer columna
+			    </div>
+			
+		 </div>
+	    </td>
+	  </tr>
+</table>	
 
-// Obtener datos de localStorage
-let nombre = localStorage.getItem('nombre');
-let edad = localStorage.getItem('edad');
 
-// Mostrar los datos obtenidos
-console.log("Nombre:", nombre); // Salida: Nombre: Juan
-console.log("Edad:", edad); // Salida: Edad: 30
+				
+	
 
-// Eliminar un dato de localStorage
-localStorage.removeItem('edad');
 
-// Mostrar los datos restantes
-console.log("Datos restantes:", localStorage.getItem('nombre')); // Salida: Datos restantes: Juan
-console.log("Edad después de eliminar:", localStorage.getItem('edad')); // Salida: Edad después de eliminar: null
-     
-    </code>
-</pre>			
+		
 
-<br>
-			   
-			<p>Así surge una nueva figura en el diagrama de flujo para organizar los ciclos denominado while(mientras en español).</p>
+		
 
-			<h3> JSON </h3>
+
+                        
 
 			<br>
 
+			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
+			<br>
+           	
 
- <p> Una forma de guardar datos para despues almacenar es el protocolo JSON que permite ajustar un protocolo de enviar los datos que se conecta a multiples tenoclogías a continuación se presenta un ejemplo:</p>
-
-<pre>
-    <code>
-
- 
-    </code>
-</pre>	    
-
-			
-			<p>Un contador permite llevar un control de cuantas veces se repite un ciclo y es util para codigos donde se debe llevar un conteo, por ejemplo si en este caso se quiere llevar un conteo de cuantas veces fallo al momento de salir del parqueadero</p>
-<br>
-<pre>
-    <code>
-// Definición de un objeto JSON
-let persona = {
-    "nombre": "Juan",
-    "edad": 30,
-    "ciudad": "Madrid"
-};
-
-// Convertir el objeto JSON a una cadena JSON
-let jsonStr = JSON.stringify(persona);
-
-// Mostrar la cadena JSON
-console.log(jsonStr); // Salida: {"nombre":"Juan","edad":30,"ciudad":"Madrid"}
-
-// Convertir una cadena JSON a un objeto JavaScript
-let personaDesdeJson = JSON.parse(jsonStr);
-
-// Mostrar el objeto JavaScript resultante
-console.log(personaDesdeJson); // Salida: { nombre: 'Juan', edad: 30, ciudad: 'Madrid' }
-
-     
-    </code>
-</pre>	 
 
                         <br>
-
-			<h3>Fetch</h3>
-
-                       <p>Cuando necesitamos recibir información de un servidor WEB empleamos el metodo Fetch para hacerlo a continuación se presenta un ejemplo:</p>
-
-<br>
-<pre>
-    <code>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Consulta de Pokémon</title>
-</head>
-<body>
-  <h1>Información de Pikachu</h1>
-  <div id="pokemon-info"></div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Definimos la URL de la API para obtener información de un Pokémon específico (en este caso, Pikachu con ID 25)
-      const pokemonAPIUrl = 'https://pokeapi.co/api/v2/pokemon/25';
-
-      // Realizamos una solicitud GET a la URL de la API
-      fetch(pokemonAPIUrl)
-        .then(response => {
-          // Verificamos si la respuesta es exitosa
-          if (!response.ok) {
-            throw new Error('La solicitud no fue exitosa');
-          }
-          // Parseamos la respuesta JSON
-          return response.json();
-        })
-        .then(data => {
-          // Manejamos los datos obtenidos
-          const pokemonInfo = document.getElementById('pokemon-info');
-          pokemonInfo.innerHTML = `
-            <p><strong>Nombre:</strong> ${data.name}</p>
-            <p><strong>ID:</strong> ${data.id}</p>
-            <p><strong>Altura:</strong> ${data.height}</p>
-            <p><strong>Peso:</strong> ${data.weight}</p>
-            <p><strong>Tipos:</strong> ${data.types.map(type => type.type.name).join(', ')}</p>
-          `;
-        })
-        .catch(error => {
-          // Manejamos los errores de la solicitud
-          console.error('Ocurrió un error:', error);
-          const pokemonInfo = document.getElementById('pokemon-info');
-          pokemonInfo.innerHTML = '<p>Ocurrió un error al cargar la información del Pokémon.</p>';
-        });
-    });
-  </script>
-</body>
-</html>
-    </code>
-</pre>	 
-
-                        <br>
-			
-			
 
                          <div id="ctrl">
 					
@@ -221,8 +160,11 @@ console.log(personaDesdeJson); // Salida: { nombre: 'Juan', edad: 30, ciudad: 'M
 			
       </div>
 
-
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
      	</body>
 
 	
 </html>
+
