@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+	<title>WEB</title>
+	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+		
+	<script>
+	$(document).ready(function(){
+	  //Ajustar longitud de la página
+	  $("#info").css("height","250vh");
+	 });
+	</script>
+	<script src="js/script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div id="menu">
+                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
+                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                </div>
+
+
+        <div id="info">
+
+                <div id="con">
+
+<h2>Evento Onclick y Modificar elementos por ID</h2>
+			<br>
+			<p>Los eventos son las posibles iteracciones que tiene un usuario con una página WEB como hacer click en un elemento, mover las teclas del teclado, enviar un formulario o se cambia el tamaño de la pantalla entre otros. Javascript permite cambiar elementos del árbol DOM, como quitarlos, ponerlos o modificar su contenido. En el codigo siguiente podemos ver un uso clasico y practico de las dos caracteristicas anteriormente expuestas: </p>
+<pre>
+    <code>
+
+&lt;!DOCTYPE html&gt
+&lt;html lang="en"&gt
+&lt;head&gt
+  &lt;meta charset="UTF-8"&gt
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt
+  &lt;title&gtModificar Texto con JavaScript&lt;/title&gt
+&lt;/head&gt
+&lt;body&gt
+  &lt;h1 id="titulo"&gtTexto Original&lt;/h1&gt
+  &lt;button onclick="cambiarTexto()"&gtCambiar Texto&lt;/button&gt
+
+  &lt;script&gt
+    function cambiarTexto() {
+      // Seleccionamos el elemento h1 por su id
+      const tituloElemento = document.getElementById('titulo');
+
+      // Modificamos el texto del elemento h1
+      tituloElemento.textContent = '¡Nuevo Texto Modificado!';
+    }
+  &lt;/script&gt
+&lt;/body&gt
+&lt;/html&gt
+     
+    </code>
+</pre>			
+			<br>
+                        <br>
+                         <div id="ctrl">
+					
+				 <a class="n1" href="p18.html"> anterior </a>
+				<a class="n1" href="p20.html"> siguiente </a>
+                             
+
+                        </div>
+			
+			   <br>
+	   </div>
+			
+      </div>
+
+
+     	</body>
+
+	
+</html>
