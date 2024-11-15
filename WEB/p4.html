@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -5,7 +6,7 @@
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>CSS</title>
+	<title>WEB</title>
 	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
@@ -14,21 +15,10 @@
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
 		
-  <style>
-       
-    footer{
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      text-align: center;
-      bottom: 0;
-      width: 100%;
-    }
-   
-  </style>
 	<script>
 	$(document).ready(function(){
 	  //Ajustar longitud de la página
-	  $("#info").css("height","310vh");
+	  $("#info").css("height","100vh");
 	 });
 	</script>
 	<script src="js/script.js"></script>
@@ -47,197 +37,69 @@
 
                 <div id="con">
 
-			<H2>CSS</H2>
+		
+
+			<h2>Tablas</h2>
+
 			<br>
-			<p>Es un lenguaje de diseño gráfico donde se estructura la presentación gráfica de la página WEB, a continuación se muestra un ejemplo desde el formato de un <b>footer</b> el cual es una etiqueta HTML que amplia la información de la página al usuario al final de ella:</p>
-			<br>
-			<table border="1">
+
+			<p>Para generar tablas se usan las etiquetas TR y TD. </p>
+		<br>
+
+
+						
+<table border="1">
   <tr>
     <td style="text-align:center">Código</td>
     <td style="text-align:center">Resultado</td>
   </tr>
   <tr>
     <td>
-	    <pre>
+	<pre>
 		<code>
-&lt;!DOCTYPE html&gt
-&lt;html lang="en"&gt
-&lt;head&gt
-  &lt;title&gtBootstrap Example&lt;/title&gt
-  &lt;meta charset="utf-8"&gt
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt
- 
-  &lt;style&gt
-       
-    footer{
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      text-align: center;
-      bottom: 0;
-      width: 100%;
-    }
-   
-  &lt;/style&gt
-
-&lt;/head&gt
-&lt;body&gt
-
-&lt;br&gt
-
-  &lt;footer&gt
-    &lt;div class="container"&gt
-      &lt;p&gt&copy; 2024 Mi Empresa. Todos los derechos reservados.&lt;/p&gt
-    &lt;/div&gt
-  &lt;/footer&gt
-
-&lt;/body&gt
-&lt;/html&gt
+			&lt;table border="1"&gt;
+			    &lt;tr&gt;
+			        &lt;th&gt;Nombre&lt;/th&gt;
+			        &lt;th&gt;Edad&lt;/th&gt;
+			    &lt;/tr&gt;
+			    &lt;tr&gt;
+			        &lt;td&gt;Juan&lt;/td&gt;
+			        &lt;td&gt;25&lt;/td&gt;
+			    &lt;/tr&gt;
+			    &lt;tr&gt;
+			        &lt;td&gt;María&lt;/td&gt;
+			        &lt;td&gt;30&lt;/td&gt;
+			    &lt;/tr&gt;
+			&lt;/table&gt;
 		</code>
   	 </pre>
+
     </td>
+
     <td>
+		<table border="1">
+			    <tr>
+			        <th>Nombre</th>
+			        <th>Edad</th>
+			    </tr>
+			    <tr>
+			        <td>Juan</td>
+			        <td>25</td>
+			    </tr>
+			    <tr>
+			        <td>María</td>
+			        <td>30</td>
+			    </tr>
+		</table>
+	 </td>
+  </tr>
+  </table>
+
+			<br>
+
 			
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-	    </td>
-	  </tr>
-</table>
-			<br>
-			<p>Así con este lenguaje bootstrap le da los elementos gráficos a las etiquetas, los cuales se pueden hacer sin la libreria bootstrap, solo es necesario incluir la etiqueta <b>style</b> para agregar estilos a los elementos.</p>
-			<br>
-			<h2> Medidas absolutas</h2>
-
-				<br>
-
-			<p>En el desarrollo WEB es indispensable el manejo de medidas tanto absolutas como relativas, las medidas absolutas <b> son las medidas que no cambian </b> así se pueden hacer diseño respecto a unos centimetros en especifico o algunos pixeles en particular así también existen las pulgadas, milimetros y demas medidas asociadas que es indispensable manejar y convertir entre ellas.</p>
 			
-			<br>
-<table>
-        <thead>
-            <tr>
-                <th>Medida Absoluta</th>
-                <th>Valor</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Pixel (px)</td>
-                <td>1px</td>
-                <td>Representa un solo píxel en la pantalla. Es una unidad fija y no cambia de tamaño.</td>
-            </tr>
-            <tr>
-                <td>Punto (pt)</td>
-                <td>1pt</td>
-                <td>Equivalente a 1/72 de una pulgada. Es comúnmente usado para medidas en la tipografía.</td>
-            </tr>
-            <tr>
-                <td>Pulgada (in)</td>
-                <td>1in</td>
-                <td>Representa una pulgada física en la pantalla o en el papel impreso. Es menos comúnmente utilizado en diseño web.</td>
-            </tr>
-            <tr>
-                <td>Centímetro (cm)</td>
-                <td>1cm</td>
-                <td>Representa un centímetro físico en la pantalla o en el papel impreso. También es menos comúnmente utilizado en diseño web.</td>
-            </tr>
-            <tr>
-                <td>Milímetro (mm)</td>
-                <td>1mm</td>
-                <td>Representa un milímetro físico en la pantalla o en el papel impreso. Al igual que cm e in, es menos común en diseño web.</td>
-            </tr>
-        </tbody>
-    </table>
-		 
-
-            <br>
-			<h2>Medidas relativas</h2>
-
-			<p>En ocasiones es necesario fijar las medidas, según cambia el tamaño de la pantalla o el tipo de dispositivos para este tipo de medidas se usan las tipo em, rem así como los porcentajes.</p>
-			<br>
-			    <table>
-        <thead>
-            <tr>
-                <th>Medida Relativa</th>
-                <th>Valor</th>
-                <th>Descripción</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Porcentaje (%)</td>
-                <td>10%, 50%, etc.</td>
-                <td>Representa un porcentaje del tamaño del elemento padre. Por ejemplo, 50% de un contenedor de 100px sería 50px.</td>
-            </tr>
-            <tr>
-                <td>Em (em)</td>
-                <td>1em, 2em, etc.</td>
-                <td>Equivalente al tamaño de fuente del elemento actual. Por ejemplo, si el tamaño de fuente de un elemento es 16px, 1em sería igual a 16px.</td>
-            </tr>
-            <tr>
-                <td>Rem (rem)</td>
-                <td>1rem, 2rem, etc.</td>
-                <td>Equivalente al tamaño de fuente del elemento raíz (normalmente el tamaño de fuente del elemento `html`). Esto permite un control más predecible del tamaño en relación con el documento completo.</td>
-            </tr>
-            <tr>
-                <td>VH</td>
-                <td>10vh, 50vh, etc.</td>
-                <td>Representa el 1% de la altura del viewport. Por ejemplo, 50vh sería la mitad de la altura del viewport.</td>
-            </tr>
-            <tr>
-                <td>VW</td>
-                <td>10vw, 50vw, etc.</td>
-                <td>Representa el 1% del ancho del viewport. Por ejemplo, 50vw sería la mitad del ancho del viewport.</td>
-            </tr>
-        </tbody>
-    </table>
-			<br>
-			
-
-					<h2> Model BOX </h2>
-
-				<br>
-
-			<p>Como ultimo elemento para personalizar las etiquetas así como los espacios y centrar las imagenes según el tamaño deseado es necesario tener claro el concepto de model Box para ajustar correctamente la información, se presenta en la siguiente imagen: </p>
-
-			<br>
-					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=16607092368468239" height="506" width="450" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-
-			<br>
-
-
-			<p>Así si se requiere agregar espacio afuera de la información empleamos el comando margin, si es dentro es padding según las necesidades especificas y con las medidas vistas anteriormente. </p>
-		
-		
-
-                        
-
-			<br>
-   
-
-			<div id="b1">
-				<div id="e">
-					<h3> CSS Grid </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-			
-				<p>Las cuadriculas nos permiten organizar elementos de forma eficiente, esta css grid y flex box que nos permite alinear elementos de la mejor manera. El termino maquetación hace referencia al diseño de la página, donde una forma de hacerlo es dividir por "compartimientos" donde se publica la información. Estos compartimientos se llaman divisiones y con css grid podemos hacer realidad el diseño. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
-
-			<br>
-		</div>
-			</div>
-           		
+                        <br>
 
                          <div id="ctrl">
 					
