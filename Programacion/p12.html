@@ -37,23 +37,85 @@
 
                 <div id="con">
 
-         <h2>Listas con variables</h2>
-                  <br>
-					<p>En Python, puedes crear listas usando variables, lo cual es muy útil cuando los datos de la lista provienen de cálculos, entradas del usuario o cualquier otra fuente dinámica.</p>
+   <h2>Listas con Variables</h2>
+    <br>
+    <p>En Python, las listas no solo pueden contener valores fijos, sino también variables. Esto es muy útil cuando los elementos de la lista provienen de cálculos, entradas del usuario o cualquier otra fuente dinámica. Al utilizar variables, puedes crear listas que se adapten a diferentes situaciones o condiciones durante la ejecución del programa.</p>
 
-			    <pre><code># Variables
-			elemento1 = "manzana"
-			elemento2 = "banana"
-			elemento3 = "cereza"
-			
-			# Crear lista con variables
-			frutas = [elemento1, elemento2, elemento3]
-			
-			print(frutas)  # Imprime: ['manzana', 'banana', 'cereza']</code></pre>
+    <h3>Ejemplo Básico: Crear una lista con variables</h3>
+    <p>Supongamos que tienes tres variables que almacenan nombres de frutas. Puedes crear una lista utilizando estas variables como elementos de la lista. Esto es especialmente útil cuando los datos de la lista se generan de manera dinámica, por ejemplo, a partir de entradas del usuario o resultados de una operación.</p>
+    
+    <pre><code># Variables
+elemento1 = "manzana"
+elemento2 = "banana"
+elemento3 = "cereza"
 
+# Crear lista con variables
+frutas = [elemento1, elemento2, elemento3]
+
+# Imprimir la lista
+print(frutas)  # Imprime: ['manzana', 'banana', 'cereza']</code></pre>
+
+    <h3>Usar variables para modificar listas dinámicamente</h3>
+    <p>Las listas con variables también permiten modificar sus elementos de manera dinámica. Puedes realizar cambios en las variables y reflejar esos cambios automáticamente en la lista.</p>
+    
+    <pre><code># Modificando los valores de las variables
+elemento1 = "kiwi"
+elemento2 = "mango"
+
+# Crear nueva lista con los valores modificados
+frutas = [elemento1, elemento2, elemento3]
+
+# Imprimir la lista actualizada
+print(frutas)  # Imprime: ['kiwi', 'mango', 'cereza']</code></pre>
+
+    <h3>Listas con entradas del usuario</h3>
+    <p>También puedes usar variables que almacenan datos introducidos por el usuario para crear listas dinámicas.</p>
+    
+    <pre><code># Solicitar al usuario que ingrese frutas
+elemento1 = input("Ingresa una fruta: ")
+elemento2 = input("Ingresa otra fruta: ")
+elemento3 = input("Ingresa una fruta más: ")
+
+# Crear lista con las frutas proporcionadas por el usuario
+frutas = [elemento1, elemento2, elemento3]
+
+# Mostrar la lista de frutas
+print("Las frutas que ingresaste son:", frutas)</code></pre>
+
+    <h3>Operaciones con listas que contienen variables</h3>
+    <p>Al tener una lista que contiene variables, puedes realizar diversas operaciones como agregar, eliminar o modificar elementos, así como iterar sobre la lista para acceder a cada elemento.</p>
+    
+    <pre><code># Variables
+nombre1 = "Carlos"
+nombre2 = "Ana"
+nombre3 = "Luis"
+
+# Crear lista de nombres
+nombres = [nombre1, nombre2, nombre3]
+
+# Agregar un nuevo nombre
+nombres.append("Sofia")
+
+# Eliminar un nombre
+nombres.remove("Ana")
+
+# Imprimir la lista de nombres
+print(nombres)  # Imprime: ['Carlos', 'Luis', 'Sofia']</code></pre>
+
+    <h3>Conclusión</h3>
+    <p>Las listas con variables te permiten almacenar y manipular datos dinámicos de manera flexible en Python. Puedes usar variables para:</p>
+    <ul>
+        <li>Crear listas basadas en cálculos.</li>
+        <li>Modificar elementos de la lista.</li>
+        <li>Recoger datos de fuentes externas, como entradas del usuario.</li>
+        <li>Realizar operaciones sobre listas como agregar, eliminar y modificar elementos.</li>
+    </ul>
+    <p>Trabajar con listas de esta manera facilita la organización y manejo de grandes cantidades de datos de forma eficiente y adaptable. Las actividades para reforzar lo aprendido son las siguientes:</p>
   
-				
-			
+		<br>
+
+			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP12.pdf"> Descargar actividad </a>		
+			<br>
 			
                          <div id="ctrl">
 					
