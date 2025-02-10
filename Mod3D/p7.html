@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Operaciones Booleanas en 3D - OpenSCAD</title>
+    <meta name="description" content="Explicación sobre las operaciones booleanas en 3D en OpenSCAD."/>    
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#info").css("height","200vh");
+    });
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
+    <div id="info">
+        <div id="con">
+            <br>
+            <h3>Operaciones Booleanas en 3D en OpenSCAD</h3>
+            <br>
+            <p>Las operaciones booleanas permiten combinar formas 3D mediante unión, diferencia e intersección.</p>
+            <br>
+            <h3>1. Unión (<code>union()</code>)</h3>
+            <p>Permite combinar dos o más objetos en uno solo.</p>
+            <pre>
+union() {
+    cube([20, 20, 20]);
+    translate([10, 10, 0]) sphere(15);
+}
+            </pre>
+            <br>
+            <h3>2. Diferencia (<code>difference()</code>)</h3>
+            <p>Resta un objeto de otro, creando cortes y formas huecas.</p>
+            <pre>
+difference() {
+    cube([30, 30, 30]);
+    translate([5, 5, -5]) sphere(20);
+}
+            </pre>
+            <br>
+            <h3>3. Intersección (<code>intersection()</code>)</h3>
+            <p>Solo mantiene la parte en la que los objetos se superponen.</p>
+            <pre>
+intersection() {
+    cube([30, 30, 30]);
+    translate([10, 10, 0]) sphere(20);
+}
+            </pre>
+            <br>
+            <h3>4. Uso Combinado</h3>
+            <p>Podemos combinar múltiples operaciones booleanas para crear diseños más complejos.</p>
+            <pre>
+difference() {
+    union() {
+        cube([30, 30, 30]);
+        translate([15, 15, 0]) cylinder(30, 10, 10);
+    }
+    translate([5, 5, 5]) sphere(15);
+}
+            </pre>
+            <br>
+            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
+            <br>
+            <div id="ctrl">
+                <a href="p6.html"> anterior </a>
+                <a href="p8.html"> siguiente </a>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
