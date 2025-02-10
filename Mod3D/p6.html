@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Operaciones con Geometría 3D en OpenSCAD</title>
+    <meta name="description" content="Explicación sobre las operaciones booleanas en 3D en OpenSCAD."/>    
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#info").css("height","250vh");
+    });
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
+    <div id="info">
+        <div id="con">
+            <br>
+            <h3>Operaciones con Geometría 3D en OpenSCAD</h3>
+            <br>
+            <p>En OpenSCAD, se pueden realizar operaciones booleanas con objetos 3D para crear formas complejas a partir de primitivas.</p>
+            <br>
+            <h3>1. Unión (<code>union()</code>)</h3>
+            <p>Combina dos o más objetos en una sola forma.</p>
+            <pre>
+union() {
+    cube([30, 30, 30]);
+    translate([15, 15, 0]) sphere(20);
+}
+            </pre>
+            <br>
+            <h3>2. Diferencia (<code>difference()</code>)</h3>
+            <p>Resta un objeto de otro, dejando la parte restante.</p>
+            <pre>
+difference() {
+    cube([40, 40, 40]);
+    translate([10, 10, 10]) sphere(25);
+}
+            </pre>
+            <br>
+            <h3>3. Intersección (<code>intersection()</code>)</h3>
+            <p>Genera la parte común entre dos objetos.</p>
+            <pre>
+intersection() {
+    cube([40, 40, 40]);
+    translate([10, 10, 10]) sphere(25);
+}
+            </pre>
+            <br>
+            <p>Estas operaciones permiten construir formas más complejas combinando elementos básicos.</p>
+            <br>
+            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
+            <br>
+            <div id="ctrl">
+                <a href="p5.html"> anterior </a>
+                <a href="p7.html"> siguiente </a>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
