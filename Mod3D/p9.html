@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Loops en OpenSCAD</title>
+    <meta name="description" content="Uso de bucles en OpenSCAD."/>    
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#info").css("height","200vh");
+    });
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
+    <div id="info">
+        <div id="con">
+            <br>
+            <h3>Loops en OpenSCAD</h3>
+            <br>
+            <p>Los bucles (<code>for</code>) en OpenSCAD permiten repetir instrucciones para generar patrones o estructuras complejas de manera eficiente.</p>
+            <br>
+            <h3>1. Uso de un loop básico</h3>
+            <p>Ejemplo de un bucle que genera una serie de cilindros en una línea.</p>
+            <pre>
+for (i = [0:5]) {
+    translate([i * 10, 0, 0])
+    cylinder(h=10, r=3);
+}
+            </pre>
+            <br>
+            <h3>2. Bucles anidados</h3>
+            <p>Podemos usar loops dentro de otros para generar estructuras en cuadrícula.</p>
+            <pre>
+for (x = [0:3]) {
+    for (y = [0:3]) {
+        translate([x * 10, y * 10, 0])
+        cube([5, 5, 5]);
+    }
+}
+            </pre>
+            <br>
+            <h3>3. Uso de loops con transformaciones</h3>
+            <p>Ejemplo de un bucle que genera un patrón circular con cilindros.</p>
+            <pre>
+for (i = [0:5]) {
+    rotate([0, 0, i * 60])
+    translate([20, 0, 0])
+    cylinder(h=10, r=3);
+}
+            </pre>
+            <br>
+            <h3>4. Uso de loops para generar estructuras complejas</h3>
+            <p>Ejemplo de un bucle que crea una escalera.</p>
+            <pre>
+for (i = [0:5]) {
+    translate([i * 10, 0, i * 5])
+    cube([10, 20, 5]);
+}
+            </pre>
+            <br>
+            <p>Los loops permiten automatizar la creación de modelos y optimizar el código en OpenSCAD.</p>
+            <br>
+            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
+            <br>
+            <div id="ctrl">
+                <a href="p8.html"> anterior </a>
+                <a href="p10.html"> siguiente </a>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
