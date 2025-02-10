@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Figuras 3D en OpenSCAD</title>
+    <meta name="description" content="Introducción a las figuras 3D en OpenSCAD."/>    
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#info").css("height","200vh");
+    });
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
+    <div id="info">
+        <div id="con">
+            <br>
+            <h3>Introducción a Figuras 3D en OpenSCAD</h3>
+            <br>
+            <p>En OpenSCAD, las figuras 3D básicas se crean usando primitivas geométricas simples. Estas son:</p>
+            <br>
+            <h3>1. Cubo (<code>cube()</code>)</h3>
+            <p>Se usa para crear un cubo o paralelepípedo.</p>
+            <pre>
+cube([30, 20, 10]); // Ancho 30, Profundidad 20, Alto 10
+            </pre>
+            <br>
+            <h3>2. Esfera (<code>sphere()</code>)</h3>
+            <p>Genera una esfera con un radio específico.</p>
+            <pre>
+sphere(15); // Esfera con radio de 15
+            </pre>
+            <br>
+            <h3>3. Cilindro (<code>cylinder()</code>)</h3>
+            <p>Se define por su altura y radios en la base superior e inferior.</p>
+            <pre>
+cylinder(h=40, r1=10, r2=5); // Cilindro de 40 de alto con radios 10 y 5
+            </pre>
+            <br>
+            <h3>4. Cono (Cilindro con radio superior cero)</h3>
+            <p>Un cono es un cilindro con radio superior de 0.</p>
+            <pre>
+cylinder(h=30, r1=10, r2=0); // Cono de altura 30 y base de radio 10
+            </pre>
+            <br>
+            <h3>5. Toroide (usando <code>rotate_extrude()</code>)</h3>
+            <p>Un toroide se genera a partir de la revolución de un círculo.</p>
+            <pre>
+rotate_extrude() translate([10, 0, 0]) circle(5); // Toroide con radio interno de 10 y grosor 5
+            </pre>
+            <br>
+            <h3>Exportación a STL</h3>
+            <p>Los modelos 3D creados en OpenSCAD pueden ser exportados en formato STL, el cual es ampliamente utilizado en impresión 3D.</p>
+            <pre>
+// Para exportar el modelo, ve a Archivo -> Exportar -> Exportar como STL
+            </pre>
+            <br>
+            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
+            <br>
+            <div id="ctrl">
+                <a href="p4.html"> anterior </a>
+                <a href="p6.html"> siguiente </a>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
