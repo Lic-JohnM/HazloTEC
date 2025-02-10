@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Extrusión y Animación en OpenSCAD</title>
+    <meta name="description" content="Uso de extrusión y animación en OpenSCAD."/>    
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#info").css("height","200vh");
+    });
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
+    <div id="info">
+        <div id="con">
+            <br>
+            <h3>Extrusión en OpenSCAD</h3>
+            <br>
+            <p>La extrusión permite convertir figuras 2D en modelos 3D mediante la función <code>linear_extrude()</code>.</p>
+            <br>
+            <h3>1. Extrusión simple</h3>
+            <p>Ejemplo de cómo extruir un rectángulo para generar un prisma.</p>
+            <pre>
+linear_extrude(height = 10)
+square([20, 10]);
+            </pre>
+            <br>
+            <h3>2. Extrusión con giro</h3>
+            <p>Podemos aplicar una rotación durante la extrusión.</p>
+            <pre>
+linear_extrude(height = 20, twist = 45)
+square([10, 10]);
+            </pre>
+            <br>
+            <h3>3. Extrusión con escala</h3>
+            <p>Permite que la figura cambie de tamaño a lo largo de la extrusión.</p>
+            <pre>
+linear_extrude(height = 20, scale = 1.5)
+circle(r = 5);
+            </pre>
+            <br>
+            <h3>Animación en OpenSCAD</h3>
+            <br>
+            <p>OpenSCAD permite generar animaciones ajustando variables con <code>$t</code> o <code>$fa</code>. Se recomienda usar la opción "Preview - Animate".</p>
+            <br>
+            <h3>1. Movimiento animado</h3>
+            <pre>
+translate([sin($t * 360) * 10, 0, 0])
+cube([5, 5, 5]);
+            </pre>
+            <br>
+            <h3>2. Rotación animada</h3>
+            <pre>
+rotate([0, 0, $t * 360])
+cylinder(h = 10, r = 5);
+            </pre>
+            <br>
+            <p>La animación permite visualizar dinámicamente el comportamiento de los modelos en OpenSCAD.</p>
+            <br>
+            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
+            <br>
+            <div id="ctrl">
+                <a href="p9.html"> anterior </a>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
