@@ -36,97 +36,59 @@
         <div id="info">
 
                 <div id="con">
-
-			<br>
-
-			<p>Inkscape es una opción sólida y económica para la creación de gráficos vectoriales, mientras que Adobe Illustrator ofrece más herramientas pero a un costo más alto. Las opciones basadas en IA y Wix son fáciles de usar, pero limitadas en personalización y control. A continuación se muestra una tabla comparativa de las opciones:</p>
-			
-				<h2>Comparativa de Herramientas de Diseño Gráfico</h2>
+	<h2>Colores digitales</h2>
 
 				<br>
 
-			<p>En esta tabla comparamos las ventajas de trabajar en Inkscape frente a otras herramientas de diseño gráfico como inteligencia artificial (IA), páginas web como Wix y Adobe Illustrator.</p>
+			<p>Un pixel contiene la información de la imagen, sus coordenadas así como la información del color. La información del color se dividen en 3 canales desde 0 hasta 255(Valor estimado por la cantidad de bits), esta representación se denomina RGB porque cada canal contiene la información de un color R=RED, G=GREEN  y B=BLUE con su respectiva iluminación. </p>
+ 
+
 			<br>
 
-			<table border="1" cellpadding="10">
-				<tr>
-					<th>Característica</th>
-					<th>Inkscape</th>
-					<th>Inteligencia Artificial (IA)</th>
-					<th>Wix</th>
-					<th>Adobe Illustrator</th>
-				</tr>
-				<tr>
-					<td>Crear desde cero</td>
-					<td>Sí, puedes crear y personalizar completamente desde cero.</td>
-					<td>Limitado, depende de los modelos de IA disponibles.</td>
-					<td>Limitado, plantillas prediseñadas.</td>
-					<td>Sí, puedes crear y personalizar desde cero.</td>
-				</tr>
-				<tr>
-					<td>Modificar formas y colores</td>
-					<td>Completamente personalizable, puedes cambiar cualquier detalle.</td>
-					<td>Limitado, la IA ajusta automáticamente pero con menos control.</td>
-					<td>Pocas opciones de personalización en comparación con otros.</td>
-					<td>Altamente personalizable, muchas opciones de edición.</td>
-				</tr>
-				<tr>
-					<td>Facilidad de uso</td>
-					<td>Requiere aprendizaje, pero es intuitivo.</td>
-					<td>Extremadamente fácil, pero limitado en opciones avanzadas.</td>
-					<td>Muy fácil, orientado a usuarios sin experiencia técnica.</td>
-					<td>Más difícil que Inkscape, pero con muchas herramientas avanzadas.</td>
-				</tr>
-				<tr>
-					<td>Accesibilidad</td>
-					<td>Completamente gratuito y de código abierto.</td>
-					<td>Dependiendo de la herramienta de IA, puede ser gratuito o de pago.</td>
-					<td>Gratis con limitaciones, requiere pago para acceder a funciones premium.</td>
-					<td>De pago, con una suscripción mensual.</td>
-				</tr>
-				<tr>
-					<td>Soporte para gráficos vectoriales</td>
-					<td>Excelente, es una de las principales características de Inkscape.</td>
-					<td>Limitado, dependiendo del servicio de IA utilizado.</td>
-					<td>No está optimizado para gráficos vectoriales.</td>
-					<td>Excelente, especialmente para gráficos vectoriales.</td>
-				</tr>
-			</table>
-
+			<div style="text-align:center;">
 			
-                        <br>
+<iframe src="https://assets.pinterest.com/ext/embed.html?id=674765956692822851" height="714" width="345" frameborder="0" scrolling="no" ></iframe>			</div>     
+
+			<br>
+
+			<h2>Modelos y representación de color</h2>
+			<br>
+			<p>Un color se puede representar por su equivalente en RGB, como podria ser R=15, G=80 Y B=200. Sin embargo esta representación indica la mezcla de la diferencia de pixeles sin embargo no necesariamente es práctica al momento de escribir, convirtiendo su equivalente decimal a hexadecimal se puede escribir una representación más corta como se muestra en la siguiente imagen:</p>
+			<br>
+			<div style="text-align:center;">
 			
-				<br>
+			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1337074886232332" height="900" width="450" frameborder="0" scrolling="no" ></iframe>r="0" ></iframe>		 	</div>     
 
-   <h2>Operaciones con objetos</h2>
-
+        		    <br>
+		<h2>Conversión de colores hexadecimal a RGB</h2>
+		<br>
+		<p>La base decimal es la base que usamos los humanos para comunicarnos (0,1,2,3,4,5,6,7,8,0) equivalente a los 10 dedos de las manos, en los colores digitales buscamos un equivalente para poder comunicarnos donde el número de colores excede este sistema, por este motivo creamos el sistema hexadecimal que es igual al decimal pero con la siguiente conversión donde A=10, B=11, C=12, D=13, E=14 Y F=15.</p>
+		<br>
+		<p>Para convertir un número hexadecimal como #107ACC(Para distinguir iniciamos con #), dividimos en grupos de dos el número 10 =red, 7A= Blue y CC=Blue. Donde debemos multiplicar el primer digito por 16 y sumar el segundo por ejemplo 7A(16*7+10=122), donde 122 es el número equivalente a verde del color digital.</p>
+		<br>
+            <h2> Modelo HSV </h2>
             <br>
-			<p>En ocasiones es necesario agrupar imagenes para generar un resultado especifico, como podemos ver en la imagen donde se realiza una figura de union.</p>
-                        
-			
-			
 
-		<div style="text-align:center;">
+		<br>
+		<p>Si bien la representación hexadecimal o en rgb hace referencia al número que representa un color, no es un color para generar un diseño. Una representación que permite hacerlo es el modelo HSV, donde primero seleccionamos el tono(H:HUE),despues con (S:Saturation) y V(Valor:Brillo) ajustamos el color deseado, tridimensionalmente este modelo de color se ve de la siguiente manera:</p>
+			<br>
 
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=474989091961095752" height="372" width="450" frameborder="0" scrolling="no" ></iframe>
+			<div style="text-align:center;">
 
-			
-			</div>  
-			
-			
-				<br>
+				<iframe src="https://assets.pinterest.com/ext/embed.html?id=129971139235053789" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
+			</div>     
 
-			
-			<p>Tambien se emplean para cortar objetos o combinar caracteristicas de 2 imagenes, a continuación podemos ver el resto de operaciones que se pueden realizar:</p>
-			
-
+		
+	
+		
+		<p>El software libre y gratuito para ejecutar las prácticas es <b>Inkscape</b>, ya que permite ejecutar vectorización de gran calidad y tiene multiples herramientas para hacer el procesamiento de estas imagenes.</p>
+                     
                         <br>
 
-  		 <div style="text-align:center;">
-
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=512003051385027247" height="533" width="345" frameborder="0" scrolling="no" ></iframe>			
-			</div>  
-
+			
+				
+                        <br>
+			
                          <div id="ctrl">
 					
 				 <a class="n1" href="p1.html"> anterior </a>
