@@ -2,14 +2,45 @@
 
 # Acerca de HazloTEC
 
-HazloTEC es una página WEB educativa dedicada a la enseñanza y aprendizaje de la asignatura de tecnología e informática. Surge de la necesidad de registrar experiencias pedagógicas de clase tanto en su explicación, actividad y evaluación en un entorno virtual fácil de acceder y comprender para los estudiantes, así como para registrar información por parte de los docentes. Es una proyecto diseñado para:
+**HazloTEC** es una página web educativa dedicada a la enseñanza y el aprendizaje de la asignatura de **Tecnología e Informática**. Surge de la necesidad de registrar y compartir experiencias pedagógicas de aula, incluyendo explicaciones, actividades y evaluaciones, en un entorno virtual accesible y fácil de comprender para los estudiantes.
 
-**Docentes - programadores** 🧑‍🏫 🖱️ : Si tiene múltiples experiencias tanto de temas como proyectos y quieres subirlos a linea con total control de diseño WEB de una forma fácil y prediseñada es una excelente plantilla.
+Además de servir como apoyo durante las clases, **HazloTEC funciona como material de consulta**, permitiendo a los estudiantes repasar conceptos y desarrollar sus habilidades de forma autónoma.
 
-**Docentes tecnología e informática** 👨‍🏫✍️🦾:Si los contenidos le llaman la atención y cree poder trabajar con ellos se puede emplear de forma libre incluso es 100% editable para adaptarlo a las necesidades educativas, ahora si quiere contribuir a este proyecto puede generar cambios usando este controlador de versiones lo cuál permite un dialogo pedagógico para mejorar los contenidos expuestos al publico. 
+---
 
-**Estudiantes**: 👨‍🎓 👩‍🎓 : Si quiere aprender de forma autonoma muchos ejercicios traen una base para trabajar en ellos y son ejercicios comprobados con diferentes estudiantes que aprendieron con ellos.
+## 🎯 ¿A quién está dirigido?
 
+- 👩‍🎓 Estudiantes de básica y media interesados en aprender sobre tecnología e informática.  
+- 👨‍🏫 Docentes que buscan ideas, recursos y ejemplos para enriquecer sus prácticas pedagógicas.  
+- 🌐 Cualquier persona interesada en explorar contenidos educativos de forma clara y estructurada.
+
+---
+
+## 📚 ¿Qué encontrarás en HazloTEC?
+
+- ✅ **Explicaciones paso a paso** sobre temas clave de tecnología e informática.  
+- 🛠️ **Actividades prácticas** para aplicar los conocimientos adquiridos.  
+- 📋 **Instrumentos de evaluación** y seguimiento.  
+- 🧩 Recursos organizados por áreas como electrónica, programación, diseño, y más.
+
+---
+
+## 🧭 ¿Cómo usar esta página?
+
+1. Explora las secciones temáticas desde la página principal.
+2. Da clic en el área de tu interés (como *Electrónica*, *Programación Web*, etc.).
+3. Accede a los subtemas y navega entre teoría, prácticas y recursos.
+4. Usa el botón **"Volver al inicio"** para regresar a la portada principal.
+
+---
+
+## 👤 Autor
+
+Este proyecto es desarrollado por **El docente John Muñoz**, como parte de una iniciativa pedagógica para fortalecer el aprendizaje en instituciones educativas públicas.
+
+---
+
+> ✨ ¡Gracias por visitar HazloTEC! Si te resulta útil, considera compartirlo con tus colegas o estudiantes.
 
 
 
