@@ -96,10 +96,11 @@ header>#crea>#img{
       width: 100vw;
       height: 5vh;
       background-color: #0c3141ff;
-      padding-bottom:2.5%;
+  
       font-size: medium;
       display: flex;
-      align-content: center;
+        align-items: center;  
+  
       justify-content: center;
       color:white;
     }
