@@ -96,7 +96,7 @@ header>#crea>#img{
       width: 100vw;
       height: 5vh;
       background-color: #0c3141ff;
-      padding-bottom:1%;
+      padding-bottom:2.5%;
       font-size: medium;
       display: flex;
       align-content: center;
@@ -111,7 +111,7 @@ header>#crea>#img{
       height: 210vh;
       display: grid;
       grid-template-columns: 5% 30% 30% 30% 5%;
-      grid-template-rows: 2% 19.6% 19.6% 19.6% 19.6% 19.6%  2%;
+      grid-template-rows: 1% 19.6% 19.6% 19.6% 19.6% 19.6%  1%;
 
     }
     .info{
