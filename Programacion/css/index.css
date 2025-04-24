@@ -144,7 +144,7 @@
     header>#I2>a:hover{
         background-color: white;
         color:rgba(47,65,89,0.9);
-        padding: 4%;
+        padding: 2%;
         text-decoration:none;
         border-color:rgba(47,65,89,0.9);
         border-style:solid;
@@ -153,7 +153,7 @@
       header>#I2>a{
         background-color: rgba(47,65,89,0.9);
         color:white;
-        padding: 4%;
+        padding: 2%;
         text-decoration:none;
         width: 70%; 
     }
