@@ -137,9 +137,17 @@
     header>#I2>div:hover{
         background-color: rgba(47,65,89,0.9);
         color:white;
-        padding: 4%;
+        padding: 2%;
     }
+
+        header>#I2>div{
     
+        display:grid;
+        grid-template-columns:20% 80%;
+        padding: 2%;
+    }
+
+
     
     header>#I2>a:hover{
         background-color: white;
