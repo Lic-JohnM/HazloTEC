@@ -145,6 +145,14 @@
         display:grid;
         grid-template-columns:20% 80%;
         padding: 2%;
+        width: 70%; 
+    }
+
+
+        header>#I2>div>#nm{
+            background-color: rgba(47,65,89,0.9);
+        color:white;
+     
     }
 
 
