@@ -149,25 +149,25 @@
     }
 
 
-        header>#I2>div>#nm{
-          padding-top:2px; 
-          background-color: rgba(47,65,89,0.9);
-        color:white;
-         display:flex;
-        align-text:center;
-        justify-content:center;
-         
-    }
+header>#I2>div>.p2 {
+  padding-top: 2px;
+  background-color: rgba(47,65,89,0.9);
+  color: white;
+  display: flex;
+  align-items: center;  /* Alineación correcta */
+  justify-content: center;
+}
 
-        header>#I2>div>#na{
-          padding-left:5px;
-          padding-top:2px;
-          padding-bottom:2px;
-           text-decoration: none;
-          background-color:white;
-          color:rgba(47,65,89,0.9);
-          border: 1px solid rgba(47,65,89,0.9);
-    }
+header>#I2>div>.p3 {
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  background-color: white;
+  color: rgba(47,65,89,0.9);
+  border: 1px solid rgba(47,65,89,0.9);
+}
+
 
 
 
