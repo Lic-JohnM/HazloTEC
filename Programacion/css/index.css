@@ -158,6 +158,15 @@
          
     }
 
+        header>#I2>div>#nm>a{
+          padding-left:5px;
+           text-decoration: none;
+          background-color:white;
+          color:rgba(47,65,89,0.9);
+          border: 1px solid rgba(47,65,89,0.9);
+    }
+
+
 
     
     header>#I2>a:hover{
