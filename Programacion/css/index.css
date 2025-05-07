@@ -150,7 +150,8 @@
 
 
         header>#I2>div>#nm{
-            background-color: rgba(47,65,89,0.9);
+          padding-top:2px; 
+          background-color: rgba(47,65,89,0.9);
         color:white;
          display:flex;
         align-text:center;
