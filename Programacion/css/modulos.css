@@ -320,6 +320,14 @@
 
                 }
 
+
+  		 #info >#con >h1{
+
+                        margin-top: 2em; /* 2 veces el tamaño de la fuente */
+   			 margin-bottom: 2em;
+                        text-align: center;
+
+                }
                 #info >#con >h2{
 
                         color:rgb(16,6,90);
