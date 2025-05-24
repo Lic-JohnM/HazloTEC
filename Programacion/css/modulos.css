@@ -374,6 +374,11 @@
 
                 }
 
+                #info > #con li {
+                        margin-bottom: 0.4em;
+                    }
+
+                    
 		#info>#con>#img{
 
     	        
