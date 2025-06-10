@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html>
@@ -21,96 +20,109 @@
 
 	<body>
 
-		<div id="menu">
+	<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
-
 
         <div id="info">
 
                 <div id="con">
 
-   <h2>Listas con Variables</h2>
-    <br>
-    <p>En Python, las listas no solo pueden contener valores fijos, sino también variables. Esto es muy útil cuando los elementos de la lista provienen de cálculos, entradas del usuario o cualquier otra fuente dinámica. Al utilizar variables, puedes crear listas que se adapten a diferentes situaciones o condiciones durante la ejecución del programa.</p>
 
-    <h3>Ejemplo Básico: Crear una lista con variables</h3>
-    <p>Supongamos que tienes tres variables que almacenan nombres de frutas. Puedes crear una lista utilizando estas variables como elementos de la lista. Esto es especialmente útil cuando los datos de la lista se generan de manera dinámica, por ejemplo, a partir de entradas del usuario o resultados de una operación.</p>
-    
-    <pre><code># Variables
-elemento1 = "manzana"
-elemento2 = "banana"
-elemento3 = "cereza"
-
-# Crear lista con variables
-frutas = [elemento1, elemento2, elemento3]
-
-# Imprimir la lista
-print(frutas)  # Imprime: ['manzana', 'banana', 'cereza']</code></pre>
-
-    <h3>Usar variables para modificar listas dinámicamente</h3>
-    <p>Las listas con variables también permiten modificar sus elementos de manera dinámica. Puedes realizar cambios en las variables y reflejar esos cambios automáticamente en la lista.</p>
-    
-    <pre><code># Modificando los valores de las variables
-elemento1 = "kiwi"
-elemento2 = "mango"
-
-# Crear nueva lista con los valores modificados
-frutas = [elemento1, elemento2, elemento3]
-
-# Imprimir la lista actualizada
-print(frutas)  # Imprime: ['kiwi', 'mango', 'cereza']</code></pre>
-
-    <h3>Listas con entradas del usuario</h3>
-    <p>También puedes usar variables que almacenan datos introducidos por el usuario para crear listas dinámicas.</p>
-    
-    <pre><code># Solicitar al usuario que ingrese frutas
-elemento1 = input("Ingresa una fruta: ")
-elemento2 = input("Ingresa otra fruta: ")
-elemento3 = input("Ingresa una fruta más: ")
-
-# Crear lista con las frutas proporcionadas por el usuario
-frutas = [elemento1, elemento2, elemento3]
-
-# Mostrar la lista de frutas
-print("Las frutas que ingresaste son:", frutas)</code></pre>
-
-    <h3>Operaciones con listas que contienen variables</h3>
-    <p>Al tener una lista que contiene variables, puedes realizar diversas operaciones como agregar, eliminar o modificar elementos, así como iterar sobre la lista para acceder a cada elemento.</p>
-    
-    <pre><code># Variables
-nombre1 = "Carlos"
-nombre2 = "Ana"
-nombre3 = "Luis"
-
-# Crear lista de nombres
-nombres = [nombre1, nombre2, nombre3]
-
-# Agregar un nuevo nombre
-nombres.append("Sofia")
-
-# Eliminar un nombre
-nombres.remove("Ana")
-
-# Imprimir la lista de nombres
-print(nombres)  # Imprime: ['Carlos', 'Luis', 'Sofia']</code></pre>
-
-    <h3>Conclusión</h3>
-    <p>Las listas con variables te permiten almacenar y manipular datos dinámicos de manera flexible en Python. Puedes usar variables para:</p>
-    <ul>
-        <li>Crear listas basadas en cálculos.</li>
-        <li>Modificar elementos de la lista.</li>
-        <li>Recoger datos de fuentes externas, como entradas del usuario.</li>
-        <li>Realizar operaciones sobre listas como agregar, eliminar y modificar elementos.</li>
-    </ul>
-    <p>Trabajar con listas de esta manera facilita la organización y manejo de grandes cantidades de datos de forma eficiente y adaptable. Las actividades para reforzar lo aprendido son las siguientes:</p>
-  
-		<br>
-
-			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP12.pdf"> Descargar actividad </a>		
+			<h2>Libreria matplotlib </h2>
 			<br>
+<p>En Python, una <strong>biblioteca</strong> (o <strong>librería</strong>) es un conjunto de módulos reutilizables que contienen funciones, clases y herramientas ya desarrolladas para facilitar la programación. Estas bibliotecas permiten ahorrar tiempo y esfuerzo, ya que evitan tener que escribir todo el código desde cero.</p> <p>Una de las bibliotecas más utilizadas para visualización de datos es <strong>Matplotlib</strong>. Esta biblioteca permite, a partir de listas u otros tipos de datos, generar una gran variedad de gráficos como líneas, barras, tortas, dispersión, entre otros. Es especialmente útil en análisis de datos, ciencia, ingeniería y muchas otras áreas.</p>			<br>
+			    <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p121.png" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+			<br>
+			 <p>A continuación se presenta un ejemplo simple de cómo usar Matplotlib para generar un gráfico de líneas a partir de dos listas:</p>
+			<br>
+			<pre><code>
+import matplotlib.pyplot as plt
+
+# Ejemplo de gráfico de líneas
+x = [1, 2, 3, 4]
+y = [10, 20, 15, 30]
+
+plt.plot(x, y)
+plt.title("Ejemplo de Gráfico de Líneas")
+plt.xlabel("Tiempo")
+plt.ylabel("Nivel de Energía")
+plt.show()
+			   </code></pre>
+
+			<br>
+			<p>La imagen es la siguiente:</p>
+    <div style="text-align:center;">
+	 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239150" height="373" width="345" frameborder="0" scrolling="no" ></iframe>
+    </div>
+
+					<h3> Gráficas de barras y circulares</h3>
 			
+				
+				
+				<br>
+				<p>Para generar una gráfica de barras se utiliza el siguiente código:</p>
+  <br>
+			   <pre><code>
+import matplotlib.pyplot as plt
+
+# Datos del estado de ánimo durante la semana
+dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+estado_animo = [7, 5, 6, 8, 4, 7, 6]
+
+plt.bar(dias, estado_animo, color='skyblue')
+plt.title("Estado de Ánimo Semanal")
+plt.xlabel("Días de la Semana")
+plt.ylabel("Nivel de Ánimo (1-10)")
+plt.show()
+			   </code></pre>
+
+			<p>La imagen es la siguiente:</p>
+    			<div style="text-align:center;">
+    			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239359" height="384" width="345" frameborder="0" scrolling="no" ></iframe>
+    			</div>
+					
+			<br>
+			<p>Para generar un diagrama circular se utiliza el siguiente código:</p>
+ 			 <br>
+			   <pre><code>
+import matplotlib.pyplot as plt
+
+# Actividades del día y el tiempo dedicado
+actividades = ["Estudio", "Descanso", "Ejercicio", "Tiempo Libre"]
+tiempo_dedicado = [5, 3, 1, 2]
+
+plt.pie(tiempo_dedicado, labels=actividades, autopct="%1.1f%%", colors=['lightcoral', 'lightblue', 'yellowgreen', 'violet'])
+plt.title("Distribución del Tiempo en Actividades Diarias")
+plt.show()
+			   </code></pre>
+
+			<br>
+			<p>La imagen es la siguiente:</p>
+    <div style="text-align:center;">
+
+	    <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239452" height="416" width="345" frameborder="0" scrolling="no" ></iframe>
+    </div>
+			<br>
+			                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+
+<p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+
+                        
+
+			<br>
+
+			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP13.pdf"> Descargar actividad </a>
+		
+				
+			<br>
+			                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+
                          <div id="ctrl">
 					
 				 <a class="n1" href="p11.html"> anterior </a>
