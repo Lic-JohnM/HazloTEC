@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Uso de las condicionales anidadas tanto en Python como en diagrama de flujo.">
+	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -14,21 +14,16 @@
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
 		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
+	
 	<script src="js/script.js"></script>
 		
 	</head>
 
 	<body>
 
-		<div id="menu">
+<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
 
 
@@ -36,41 +31,66 @@
 
                 <div id="con">
 
-	
 		
-			<h2>Ciclos en Scratch </h2>
+			<h2>Funciones en Python</h2>
+		<br>
+	     <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p151.png" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+    <p>Las funciones en Python son bloques de código reutilizables que realizan una tarea específica. Se definen utilizando la palabra clave <code>def</code> seguida del nombre de la función y paréntesis. Las funciones pueden aceptar parámetros y devolver valores. Utilizar funciones ayuda a organizar el código y evitar la repetición.</p>
 
-			<br>
+    <h3>Ejemplo: Función para Saludar</h3>
+    <pre><code># Definir una función que saluda a una persona
+def saludar(nombre):
+    return f"Hola, {nombre}!"
 
-			<p>En Scratch, los ciclos se crean de manera similar a otros lenguajes de programación, pero con la ventaja de que ofrece opciones adicionales para controlar la repetición. Por ejemplo, puedes decidir cuántas veces deseas que se repita un ciclo sin necesidad de variables adicionales y detener el programa con el comando "Detener todo". A continuación, se presenta un ejercicio sobre el parqueadero utilizando el ciclo <b>While</b> en Scratch:</p>
+# Llamar a la función con un nombre
+mensaje = saludar("Ana")
+print(mensaje)  # Imprime: Hola, Ana!</code></pre>
 
-            <br>
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-      
-
-			<p>También podemos utilizar listas para almacenar varios datos en una sola variable. A continuación, se muestra un ejemplo de cómo llenar una lista utilizando Scratch:</p>
-			<br>
-		<div style="text-align:center;">
-                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-			<br>
+    <p>En el ejemplo anterior, la función <code>saludar</code> toma un parámetro <code>nombre</code> y devuelve un saludo personalizado. Luego, la función se llama con el argumento <code>"Ana"</code>, y el saludo resultante se imprime en la consola.</p>
 		
-			<p>Para finalizar, podemos ver cómo en Scratch se pueden utilizar otros elementos, como el botón de inicio. En este caso, al hacer clic en la flecha verde, se puede ejecutar el programa para verificar si un estudiante se encuentra en la lista. Se propone hacer como actividad los ejercicios de ciclos que realizaste en Python.</p>
-			<br>
-			
+           <h3 style="text-align: center; margin-top: 40px;">🧠 Máquina de emociones con Python</h3>
 
-			<br>
-			
-			
-			
-			
-			
-			<br>
+<p style="text-align: center; font-size: 1.1em;">
+  Una función en Python puede ayudarte a transformar palabras en reacciones. <br>
+  Mira cómo esta <strong>"máquina de emociones"</strong> recibe una palabra... ¡y responde con un mensaje!
+</p>
+
+<div style="background-color: #3E98A0; padding: 20px; border-radius: 12px; color: white; max-width: 700px; margin: 0 auto; font-family: monospace; font-size: 1.1em;">
+  <pre>
+def emocion(palabra):
+    if palabra == "feliz":
+        return "😊 ¡Qué bien que estés feliz!"
+    elif palabra == "triste":
+        return "😢 Todo va a mejorar."
+    elif palabra == "enojado":
+        return "😡 Respira profundo."
+    else:
+        return "🤔 No entiendo esa emoción."
+  </pre>
+</div>
+
+<p style="text-align: center; font-size: 1.1em; margin-top: 20px;">
+  Puedes probarla con:
+</p>
+
+<div style="background-color: #152C3E; padding: 20px; border-radius: 12px; color: white; max-width: 700px; margin: 0 auto; font-family: monospace; font-size: 1.1em;">
+  <pre>
+print(emocion("feliz"))
+print(emocion("triste"))
+print(emocion("confundido"))
+  </pre>
+</div>
+
+<p style="text-align: center; font-style: italic; margin-top: 20px;">
+  ¿Qué otras emociones podrías agregar a tu función?
+</p>
+
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
 
                          <div id="ctrl">
 					
