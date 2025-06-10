@@ -6,29 +6,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción del uso de las listas en Python así como del ciclo FOR para recorrerlas.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
 		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
+	
 	<script src="js/script.js"></script>
 		
 	</head>
 
 	<body>
-
 		<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
 
 
@@ -36,51 +29,208 @@
 
                 <div id="con">
 
-		
-	
-			<h3>Funciones en scratch</h3>
+			<h2> Programación orientada a objetos</h2>
 
 				<br>
 
-			<p> Iinicialmente vamos a hacer una función que haga que el gato parezca que salte:
-            </p>
+<p>Cuando aprendemos a programar, descubrimos que hay diferentes formas de organizar y escribir el código. Estas formas se llaman <strong>paradigmas de programación</strong>. Los más comunes son:</p>
 
-			<br>
+<p><strong>Programación estructurada:</strong> Se basa en dar instrucciones paso a paso, como seguir una receta. Es la forma más tradicional y probablemente la que ya has usado en Python.</p>
+
+<p><strong>Programación funcional:</strong> Aquí el código se organiza en funciones independientes que reciben datos, los procesan y devuelven resultados, un poco como máquinas que hacen tareas específicas.</p>
+
+<p><strong>Programación orientada a objetos (POO):</strong> Este paradigma organiza el código pensando en “objetos”, que son como cosas del mundo real. Cada objeto tiene <strong>características</strong> (atributos) y <strong>acciones</strong> (métodos). Por ejemplo, imagina que quieres programar sobre perros: todos los perros comparten características como nombre, raza o edad, pero cada uno tiene sus propios valores para esas características. Además, todos pueden hacer cosas como ladrar o correr, aunque cada perro lo haga a su manera.</p>
+
+<p>En la POO, usamos <strong>clases</strong> para definir cómo son los objetos y <strong>objetos</strong> para representar casos concretos. Así, el código se vuelve más organizado, fácil de entender y de reutilizar.</p>
+
+<p>En este curso, aprenderás cómo usar la programación orientada a objetos en Python para crear programas más potentes y flexibles, ¡usando ejemplos divertidos y cercanos a tu vida diaria!</p>
 			
-		<div style="text-align:center;">
-
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305049" height="279" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<p>En el desarrollo de un videojuego, es común necesitar diferentes tipos de salto, como un salto estándar, uno que llegue más alto, y otro que recorra más distancia horizontal. Aunque todos los códigos para estos saltos son similares, no se puede resolver el problema con un solo ciclo debido a que cada tipo de salto requiere valores diferentes. Además, si se usan muchos comandos, el código puede volverse extremadamente largo y difícil de manejar. Por esta razón, se utilizan funciones para simplificar la escritura y organización del código. A continuación, se muestra cómo se puede crear la función <b>salto</b> en Scratch. Primero, ve al menú izquierdo, selecciona <i>Mis bloques</i> y luego elige <i>Crear un bloque</i>, lo que abrirá la siguiente imagen:</p>
-
 			<br>
 
+
+			       <div style="text-align: center;">
+				  <img src="https://tecsify.com/blog/wp-content/uploads/2022/05/pooperritos.jpg"
+				       alt="Imagen logo Python" 
+				       style="max-width:60%; height:auto;">
+				</div>
+								
+               <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+			 <h2>Ejemplo: Sistema de Gestión de Bibliotecas</h2>
+  <br>
+    <p>El siguiente código Python implementa un sencillo sistema de gestión de biblioteca utilizando la programación orientada a objetos (POO). </p>
+ 	 <p>Una breve explicación del código es:</p>
+    <ul>
+        <li><strong>Clase <code>Libro</code>:</strong> Representa un libro con atributos como título, autor y estado. Incluye métodos para cambiar el estado del libro y para representar el libro en una cadena.</li>
+        <li><strong>Clase <code>Biblioteca</code>:</strong> Administra una colección de libros. Incluye métodos para agregar libros, prestar libros y consultar el inventario.</li>
+    </ul>
+   <br>
+                    
+ 
+    <pre>
+<code>
+class Libro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+        self.disponible = True
+    
+    def cambiar_estado(self):
+        self.disponible = not self.disponible
+    
+    def __str__(self):
+        estado = "Disponible" if self.disponible else "Prestado"
+        return f"{self.titulo} por {self.autor} - {estado}"
+
+class Biblioteca:
+    def __init__(self):
+        self.libros = []
+    
+    def agregar_libro(self, libro):
+        self.libros.append(libro)
+    
+    def prestar_libro(self, titulo):
+        for libro in self.libros:
+            if libro.titulo == titulo:
+                if libro.disponible:
+                    libro.cambiar_estado()
+                    print(f"El libro '{titulo}' ha sido prestado.")
+                else:
+                    print(f"El libro '{titulo}' ya está prestado.")
+                return
+        print(f"El libro '{titulo}' no está disponible en la biblioteca.")
+    
+    def consultar_inventario(self):
+        for libro in self.libros:
+            print(libro)
+
+# Uso del sistema
+biblioteca = Biblioteca()
+libro1 = Libro("1984", "George Orwell")
+libro2 = Libro("To Kill a Mockingbird", "Harper Lee")
+
+biblioteca.agregar_libro(libro1)
+biblioteca.agregar_libro(libro2)
+
+print("Inventario de la biblioteca:")
+biblioteca.consultar_inventario()
+
+print("\nPrestando '1984':")
+biblioteca.prestar_libro("1984")
+
+print("\nInventario después del préstamo:")
+biblioteca.consultar_inventario()
+
+print("\nIntentando prestar '1984' nuevamente:")
+biblioteca.prestar_libro("1984")
+</code>
+    </pre>
+<br>
+<p>¿Que otros libros agregarias?</p>
+
+
+
+<div id="b2">
+				<div id="e">
+					 <h3> Creación de Figuras Geométricas con POO en Python</h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+				<br>
             
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305066" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+			<p>Para ilustrar cómo usar la programación orientada a objetos (POO) en Python para crear figuras geométricas y mostrarlas en la pantalla, utilizaremos la biblioteca <strong>Turtle</strong>. Esta biblioteca permite dibujar gráficos en una ventana de forma sencilla.</p>
+    <br>
+    <h3>Instalación de la Biblioteca</h3>
+	<br>
+    <p>La biblioteca <code>Turtle</code> viene incluida con Python, por lo que no es necesario instalarla por separado. Solo necesitas tener Python instalado en tu sistema.</p>
+	<br>
+    <h3>Código Python</h3>
+    <pre>
+<code>
+import turtle
 
-			<br>
-		<p>Vamos a definir la función <b>salto</b> añadiendo dos parámetros: uno llamado <i>altura</i> y otro llamado <i>ancho</i>, para poder ajustar los valores del salto. Una vez creada, la función se verá de la siguiente manera:</p>
+# Clase base para las figuras geométricas
+class FiguraGeometrica:
+    def __init__(self, color):
+        self.color = color
 
+    def dibujar(self):
+        raise NotImplementedError("Método 'dibujar' no implementado en la clase base")
+
+# Clase para un cuadrado
+class Cuadrado(FiguraGeometrica):
+    def __init__(self, color, longitud_lado):
+        super().__init__(color)
+        self.longitud_lado = longitud_lado
+
+    def dibujar(self):
+        turtle.begin_fill()
+        turtle.fillcolor(self.color)
+        for _ in range(4):
+            turtle.forward(self.longitud_lado)
+            turtle.right(90)
+        turtle.end_fill()
+
+# Clase para un círculo
+class Circulo(FiguraGeometrica):
+    def __init__(self, color, radio):
+        super().__init__(color)
+        self.radio = radio
+
+    def dibujar(self):
+        turtle.begin_fill()
+        turtle.fillcolor(self.color)
+        turtle.circle(self.radio)
+        turtle.end_fill()
+
+# Configuración de la ventana de dibujo
+turtle.speed(2)
+turtle.bgcolor("white")
+
+# Crear y dibujar un cuadrado rojo
+cuadrado = Cuadrado("red", 100)
+cuadrado.dibujar()
+
+# Mover la tortuga para no sobreponer las figuras
+turtle.penup()
+turtle.goto(200, 0)
+turtle.pendown()
+
+# Crear y dibujar un círculo azul
+circulo = Circulo("blue", 50)
+circulo.dibujar()
+
+# Finalizar el dibujo
+turtle.hideturtle()
+turtle.done()
+</code>
+    </pre>
+
+    <h3>Explicación</h3>
+    <p>En este código:</p>
+    <ul>
+        <li><strong>Clase <code>FiguraGeometrica</code>:</strong> Es una clase base que define un método abstracto <code>dibujar</code>, que debe ser implementado por las clases derivadas.</li>
+        <li><strong>Clase <code>Cuadrado</code>:</strong> Hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un cuadrado.</li>
+        <li><strong>Clase <code>Circulo</code>:</strong> También hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un círculo.</li>
+    </ul>
+   <br>
+    <p>La biblioteca <strong>Turtle</strong> es ideal para este tipo de tareas, ya que proporciona una forma sencilla de dibujar gráficos y visualizar resultados en una ventana gráfica.</p>
+			<BR>
+
+				</div>
+			</div>
 			<br>
-		<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305084" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
-                  </div>  
-			<br>
-			<p>Así, dependiendo de la tecla que presionemos, se realizan diferentes tipos de saltos. Esto demuestra cómo las funciones pueden simplificar y reducir el trabajo en la programación.</p>
 			
-
 			
+			  
+    			
+	    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-           
-                        <br>
-
+		
                          <div id="ctrl">
 					
-				 <a class="n1" href="p16.html"> anterior </a>
-				<a class="n1" href="p18.html"> siguiente </a>
+				 <a class="n1" href="p17.html"> anterior </a>
+				<a class="n1" href="p19.html"> siguiente </a>
                              
 
                         </div>
