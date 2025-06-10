@@ -7,7 +7,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Presentación de las estructuras logicas de condicionales tanto en diagrama de flujo como en Pyhton.">
+	<meta name="description" content="Uso de las condicionales anidadas tanto en Python como en diagrama de flujo.">
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
@@ -23,7 +23,7 @@
 
 		<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
 
 
@@ -31,89 +31,151 @@
 
                 <div id="con">
 
+						<h2> Ciclos</h2>
 
-			<h2>Libreria matplotlib </h2>
-			<br>
-			<p>La libreria matplotlib permite apartir de listas generar diversos gráficos, a continuación se presenta un ejemplo con su respectivo gráfico:</p>
-			<br>
-			   <pre><code>
-import matplotlib.pyplot as plt
-
-# Ejemplo de gráfico de líneas
-x = [1, 2, 3, 4]
-y = [10, 20, 15, 30]
-
-plt.plot(x, y)
-plt.title("Ejemplo de Gráfico de Líneas")
-plt.xlabel("Tiempo")
-plt.ylabel("Nivel de Energía")
-plt.show()
-			   </code></pre>
-
-			<br>
-			<p>La imagen es la siguiente:</p>
-    <div style="text-align:center;">
-	 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239150" height="373" width="345" frameborder="0" scrolling="no" ></iframe>
-    </div>
-
-					<h3> Gráficas de barras y circulares</h3>
-			
-				
-				
 				<br>
-				<p>Para generar una gráfica de barras se utiliza el siguiente código:</p>
-  <br>
-			   <pre><code>
-import matplotlib.pyplot as plt
 
-# Datos del estado de ánimo durante la semana
-dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
-estado_animo = [7, 5, 6, 8, 4, 7, 6]
-
-plt.bar(dias, estado_animo, color='skyblue')
-plt.title("Estado de Ánimo Semanal")
-plt.xlabel("Días de la Semana")
-plt.ylabel("Nivel de Ánimo (1-10)")
-plt.show()
-			   </code></pre>
-
-			<p>La imagen es la siguiente:</p>
-    			<div style="text-align:center;">
-    			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239359" height="384" width="345" frameborder="0" scrolling="no" ></iframe>
-    			</div>
-					
-			<br>
-			<p>Para generar un diagrama circular se utiliza el siguiente código:</p>
- 			 <br>
-			   <pre><code>
-import matplotlib.pyplot as plt
-
-# Actividades del día y el tiempo dedicado
-actividades = ["Estudio", "Descanso", "Ejercicio", "Tiempo Libre"]
-tiempo_dedicado = [5, 3, 1, 2]
-
-plt.pie(tiempo_dedicado, labels=actividades, autopct="%1.1f%%", colors=['lightcoral', 'lightblue', 'yellowgreen', 'violet'])
-plt.title("Distribución del Tiempo en Actividades Diarias")
-plt.show()
-			   </code></pre>
-
-			<br>
-			<p>La imagen es la siguiente:</p>
-    <div style="text-align:center;">
-
-	    <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564279239452" height="416" width="345" frameborder="0" scrolling="no" ></iframe>
-    </div>
-			<br>
-<p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
-
-                        
+			<p>Los ciclos en programación nos permiten repetir instrucciones hasta que se cumpla una condición específica. En el siguiente diagrama, puedes ver cómo un ciclo puede ser utilizado para asegurar que el usuario ingrese el valor correcto para salir de un parqueadero de vehículos. El programa continuará repitiendo la solicitud hasta que se ingrese el monto adecuado.</p>
 
 			<br>
 
-			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP13.pdf"> Descargar actividad </a>
+       <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p131.jpg" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+
+			<br>
+			<p>Siguiendo el diagrama de flujo anterior, si el usuario no ingresa el valor correcto, el programa continuará solicitando el dinero indefinidamente. A continuación, se muestra un ejemplo de cómo implementar este comportamiento en Python:</p>
+			<br>
+<pre>
+    <code>
+
+print("ingrese el dinero");
+dinero=float(input());
+i = 1
+while dinero < 2500:
+  print("le falta dinero")
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
+    </code>
+</pre>			
+
+<br>
+			   
+			<p>Así, en el diagrama de flujo surge una nueva figura para organizar los ciclos, denominada <code>while</code> (o "mientras" en español).</p>
+			<br>
+			<h3> Contadores </h3>
+
+			<br>
+
+
+<p>En este nuevo flujo, podemos agregar información para guiar al usuario a ingresar cuánto dinero le hace falta, almacenando el resultado en la variable <b>a</b> y mostrándolo posteriormente.</p>
+	      <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p132.jpg" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+			<br>
+		    <p>El anterior flujo implementado en python se puede visualizar de la siguiente manera:</p>
+<pre>
+    <code>
+
+print("ingrese el dinero");
+dinero=int(input());
+i = 1
+while dinero < 2500:
+  a=2500-dinero;
+  print("le falta")
+  print(a);
+  print("ingrese el dinero")
+  dinero=float(input());
+if dinero>=2500:
+   print("puede seguir");   
+    </code>
+</pre>	    
+
+			
+<p>Un contador se utiliza para llevar el control de cuántas veces se repite un ciclo, y es útil en códigos donde es necesario contar eventos. Por ejemplo, puede ser empleado para contar cuántas veces un usuario falla al intentar salir del parqueadero.</p>
+<br>
+<pre>
+    <code>
+print("ingrese el dinero");
+dinero=float(input());
+contador=0
+while dinero < 2500:
+  a=2500-dinero;
+  contador=contador+1;
+  print("le falta")
+  print(a);
+  print("intento:");
+  print(contador);
+  print("ingrese el dinero");
+  dinero=float(input());
+if dinero>=2500:
+  print("puede seguir");
+     
+    </code>
+</pre>	 
+
+                     
+             <br>
+
+			<div id="b1">
+				<div id="e">
+					<h3> Ciclos en listas </h3>
+				<a id="signo">+</a>
+				</div>
+				<div id="p">
+				<br>
+            
+				<p>Los ciclos en programación se utilizan para repetir líneas de código hasta que se cumpla una condición específica. Por ejemplo, para acceder a cada uno de los elementos de una lista de estudiantes, podríamos usar <code>estudiantes[0]</code>, <code>estudiantes[1]</code>, y así sucesivamente. Sin embargo, si la lista tuviera 40 estudiantes, tendríamos que repetir el código 40 veces. En su lugar, podemos usar un ciclo para recorrer la lista de manera más eficiente.</p>
+		
+			  <br>
+			  
+				<p>Existen varias estructuras de programación para hacer ciclos, pero inicialmente usaremos la estructura <b>for</b>. Para recorrer toda la lista y mostrar sus elementos, solo necesitas el siguiente código:</p>
+
+<pre>
+    <code>
+
+estudiantes=["Juan","Luis","Fabian","Elkin"]
+for x in estudiantes:
+  print(x)
+     
+    </code>
+</pre>
+
+		<p>Una utilidad de recorrer una lista es encontrar la posición de un elemento utilizando el comando <b>index</b>. A continuación, se muestra un ejemplo de cómo usarlo para encontrar la posición del estudiante "Fabián".</p>
+<pre>
+    <code>
+
+estudiantes=["Juan","Luis","Fabian","Elkin"]
+for x in estudiantes:
+    posicion = estudiantes.index("Fabian");
+print(posicion);
+     
+    </code>
+</pre>
+
+            
+				</div>
+			</div>
+			
+			
+                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+
+			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP14.pdf"> Descargar actividad </a>
 		
 				
-			<br>
+			                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+			
+			
+
                          <div id="ctrl">
 					
 				 <a class="n1" href="p12.html"> anterior </a>
@@ -126,7 +188,7 @@ plt.show()
 	   </div>
 			
       </div>
-
+<br>
 
      	</body>
 
