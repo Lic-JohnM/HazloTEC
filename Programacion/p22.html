@@ -1,93 +1,97 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Ejercicios de Python e Inteligencia Artificial - Explicaciones para Adolescentes</title>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <meta name="description" content="Explicación sencilla de algoritmos KNN y chatbots para adolescentes.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+</div>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<div id="info">
+    <div id="con">
+        <h1>Ejercicios de Python e Inteligencia Artificial</h1>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","80vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+        <h2>Introducción para adolescentes</h2>
+        <p>En esta página aprenderás dos conceptos muy importantes en inteligencia artificial y programación:</p>
+        <ul>
+            <li><strong>KNN (K-Nearest Neighbors)</strong>, un algoritmo que ayuda a clasificar cosas basándose en sus vecinos más cercanos.</li>
+            <li><strong>Chatbot simple</strong>, un programa que simula una conversación con respuestas básicas.</li>
+        </ul>
+        <p>Vamos a explicar cada uno con ejemplos fáciles y sin complicaciones.</p>
 
-	<body>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <h2>1. Clasificación de Números con KNN</h2>
+        <p><strong>¿Qué es KNN?</strong> Imagina que quieres saber a qué grupo pertenece un número, pero no sabes cuál. Lo que haces es mirar a sus “vecinos” más cercanos y ver a qué grupo pertenecen ellos. El grupo que tenga más vecinos cerca, será el grupo del número que quieres clasificar.</p>
+        <p>Por ejemplo, si tienes un número y sus 3 vecinos más cercanos son del grupo A, A y B, entonces el número será clasificado en el grupo A porque es la mayoría.</p>
+        <p>Este algoritmo es muy usado porque es sencillo y funciona bien para muchas tareas.</p>
+        <pre><code>
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
 
+# Cargar datos de ejemplo (flores Iris)
+iris = load_iris()
+X, y = iris.data, iris.target
 
-        <div id="info">
+# Dividir datos en entrenamiento y prueba
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-                <div id="con">
+# Crear y entrenar el clasificador KNN con 3 vecinos
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
 
-	
-              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
+# Predecir con los datos de prueba
+predicciones = knn.predict(X_test)
+print("Predicciones:", predicciones)
+        </code></pre>
+        <p>Este código carga un conjunto de datos de flores, entrena el algoritmo KNN para aprender a clasificarlas, y luego predice la clase de nuevas flores basándose en sus características.</p>
 
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-    <h2>2. Regresión Lineal Sencilla</h2>
-    <p>Realizaremos una regresión lineal sencilla para predecir valores.</p>
-    <pre>
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.linear_model import LinearRegression
+        <h2>5. Chatbot Simple con Respuestas Predefinidas</h2>
+        <p><strong>¿Qué es un chatbot?</strong> Es un programa que puede conversar contigo usando respuestas que ya tiene guardadas. No entiende todo, pero puede responder a preguntas comunes.</p>
+        <p>Es como un robot que te habla y responde según lo que le digas.</p>
+        <pre><code>
+def chatbot():
+    print("¡Hola! Soy un chatbot simple. ¿Cómo puedo ayudarte?")
+    while True:
+        pregunta = input("Tú: ")
+        if pregunta.lower() in ['salir', 'exit']:
+            print("Chatbot: ¡Adiós!")
+            break
+        elif "hola" in pregunta.lower():
+            print("Chatbot: ¡Hola! ¿Cómo estás?")
+        elif "nombre" in pregunta.lower():
+            print("Chatbot: Soy un chatbot sin nombre.")
+        else:
+            print("Chatbot: No entiendo esa pregunta.")
 
-# Datos de ejemplo
-X = np.array([[1], [2], [3], [4], [5]])
-y = np.array([2, 3, 5, 7, 11])
+chatbot()
+        </code></pre>
+        <p>Este programa te saluda, responde a saludos y preguntas sobre su nombre, y te permite salir escribiendo "salir" o "exit". Si le preguntas algo que no entiende, te lo dice.</p>
 
-# Crear el modelo de regresión lineal
-modelo = LinearRegression()
-modelo.fit(X, y)
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-    </pre>
+        <p>Estos ejemplos muestran cómo la inteligencia artificial puede aprender y comunicarse de formas simples. ¡Anímate a probarlos y experimentar!</p>
 
-	<br>
-			<h2>Ejercicio Básico de Matrices</h2>
-    <p>Veamos un ejercicio básico de manipulación de matrices con NumPy.</p>
-    <pre>
-import numpy as np
-
-# Crear una matriz 3x3
-matriz = np.array([[1, 2, 3],
-                   [4, 5, 6],
-                   [7, 8, 9]])
-
-# Calcular la suma de cada fila
-suma_filas = np.sum(matriz, axis=1)
-print("Suma de cada fila:", suma_filas)
-    </pre>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p21.html"> anterior </a>
-				<a class="n1" href="p23.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <div id="ctrl">
+            <a class="n1" href="p21.html"> anterior </a>
+            <a class="n1" href="p23.html"> siguiente </a>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
 </html>
