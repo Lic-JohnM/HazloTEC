@@ -1,106 +1,91 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Desarrollo Web con Python: Flask y Django</title>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <meta name="description" content="Introducción a Flask y Django para desarrollo web con Python, explicaciones para principiantes y ejemplos prácticos.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+</div>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<div id="info">
+    <div id="con">
+        <h1>Desarrollo Web con Python: Flask y Django</h1>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","150vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+        <h2>Introducción</h2>
+        <p>En esta página aprenderás dos formas populares de crear aplicaciones web usando Python: <strong>Flask</strong> y <strong>Django</strong>. Ambas te permiten hacer sitios web, pero cada una tiene sus ventajas y usos especiales.</p>
+        <p>Vamos a ver qué es cada una, para qué sirve, y ejemplos básicos para que puedas empezar a crear tus propias aplicaciones web.</p>
 
-	<body>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <h2>Flask: Microframework para proyectos pequeños y rápidos</h2>
+        <p><strong>¿Qué es Flask?</strong> Flask es un framework muy ligero y fácil de usar para crear aplicaciones web con Python. Es ideal si quieres hacer proyectos pequeños o prototipos rápido, sin muchas complicaciones.</p>
+        <p>Con Flask, tú decides qué agregar y cómo hacerlo, lo que te da mucha libertad y control.</p>
+        <p><strong>Ejemplo básico de Flask:</strong></p>
+        <pre><code>
+from flask import Flask
 
+app = Flask(__name__)
 
-        <div id="info">
+@app.route('/')
+def home():
+    return "¡Bienvenido a mi aplicación Flask!"
 
-                <div id="con">
+if __name__ == '__main__':
+    app.run(debug=True)
+        </code></pre>
+        <p>Este código crea una aplicación web que muestra el mensaje <em>¡Bienvenido a mi aplicación Flask!</em> cuando visitas la página principal.</p>
+        <p>Para ejecutarlo, guarda el código en un archivo (por ejemplo, <code>app.py</code>), instala Flask con <code>pip install flask</code> y ejecuta <code>python app.py</code>. Luego abre tu navegador en <code>http://127.0.0.1:5000</code>.</p>
 
-	
-              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-    <h2>1. Clasificación de Números con KNN</h2>
-    <p>Usaremos el algoritmo K-Nearest Neighbors para clasificar números basados en características simples.</p>
-    <pre>
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+        <h2>Django: Framework completo para proyectos grandes</h2>
+        <p><strong>¿Qué es Django?</strong> Django es un framework web muy poderoso y completo que incluye muchas funcionalidades listas para usar. Es ideal para proyectos grandes donde necesitas seguridad, administración y muchas herramientas integradas.</p>
+        <p>Django sigue el patrón Modelo-Vista-Controlador (MVC) para organizar tu código y facilitar el desarrollo.</p>
+        <p><strong>Ejemplo básico de Django:</strong></p>
+        <p>Primero, en la terminal crea un proyecto y una aplicación:</p>
+        <pre><code>
+django-admin startproject mi_proyecto
+cd mi_proyecto
+python manage.py startapp mi_aplicacion
+        </code></pre>
+        <p>Luego, en el archivo <code>views.py</code> de <code>mi_aplicacion</code>, agrega:</p>
+        <pre><code>
+from django.http import HttpResponse
 
-# Cargar el conjunto de datos Iris
-iris = load_iris()
-X, y = iris.data, iris.target
+def home(request):
+    return HttpResponse("¡Bienvenido a mi aplicación Django!")
+        </code></pre>
+        <p>Después configura la ruta en <code>urls.py</code> para que la función <code>home</code> se ejecute al visitar la página principal.</p>
+        <p>Para ejecutar el servidor, usa <code>python manage.py runserver</code> y abre <code>http://127.0.0.1:8000</code> en tu navegador.</p>
 
-# Dividir el conjunto de datos en entrenamiento y prueba
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-# Crear y entrenar el clasificador
-knn = KNeighborsClassifier(n_neighbors=3)
-knn.fit(X_train, y_train)
+        <h2>Resumen y consejos</h2>
+        <ul>
+            <li><strong>Flask</strong> es ideal para aprender, hacer prototipos y proyectos pequeños porque es simple y flexible.</li>
+            <li><strong>Django</strong> es mejor cuando quieres crear aplicaciones grandes, con muchas funcionalidades y seguridad incorporada.</li>
+            <li>Ambos frameworks usan Python y te permiten crear sitios web que pueden mostrar información, recibir datos y mucho más.</li>
+        </ul>
+        <p>Si estás empezando, prueba primero con Flask para entender los conceptos básicos. Cuando te sientas cómodo, puedes explorar Django para proyectos más complejos.</p>
 
-# Hacer predicciones
-predicciones = knn.predict(X_test)
-print("Predicciones:", predicciones)
-    </pre>
-
-
-
-
-    <h2>5. Chatbot Simple con Respuestas Predefinidas</h2>
-    <p>Crearemos un chatbot que responda a preguntas simples.</p>
-    <pre>
-def chatbot():
-    print("¡Hola! Soy un chatbot simple. ¿Cómo puedo ayudarte?")
-    while True:
-        pregunta = input("Tú: ")
-        if pregunta.lower() in ['salir', 'exit']:
-            print("Chatbot: ¡Adiós!")
-            break
-        elif "hola" in pregunta.lower():
-            print("Chatbot: ¡Hola! ¿Cómo estás?")
-        elif "nombre" in pregunta.lower():
-            print("Chatbot: Soy un chatbot sin nombre.")
-        else:
-            print("Chatbot: No entiendo esa pregunta.")
-
-chatbot()
-    </pre>
-
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p22.html"> anterior </a>
-				<a class="n1" href="p24.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <div id="ctrl">
+            <a class="n1" href="p22.html"> anterior </a>
+            <a class="n1" href="p24.html"> siguiente </a>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
