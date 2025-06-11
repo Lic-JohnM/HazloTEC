@@ -1,98 +1,80 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Ejercicios de Python e Inteligencia Artificial</title>
+    <meta name="description" content="Ejercicios prácticos de regresión lineal y manipulación de matrices con Python para inteligencia artificial.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","80vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
+        <h1>Ejercicios de Python e Inteligencia Artificial</h1>
 
-	<body>
+        <h2>Introducción</h2>
+        <p>En esta sección encontrarás ejercicios prácticos que combinan Python con conceptos fundamentales de inteligencia artificial. Utilizaremos bibliotecas populares como <strong>NumPy</strong> y <strong>scikit-learn</strong> para realizar tareas comunes como regresión lineal y manipulación de matrices, que son la base para el análisis de datos y el desarrollo de modelos predictivos.</p>
+        <p>Estos ejemplos te ayudarán a entender cómo manejar datos numéricos y construir modelos simples que pueden aplicarse en problemas reales de inteligencia artificial.</p>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
+        <h2>2. Regresión Lineal Sencilla</h2>
+        <p>La regresión lineal es una técnica estadística utilizada para modelar la relación entre una variable independiente y una variable dependiente. En este ejercicio, realizaremos una regresión lineal sencilla para predecir valores basándonos en datos de ejemplo.</p>
+        <p>Usamos <strong>scikit-learn</strong>, una biblioteca popular de Python para machine learning, junto con <strong>NumPy</strong> para manejar los datos y <strong>matplotlib</strong> para graficar (aunque en este ejemplo no se grafica explícitamente).</p>
+        <pre><code>
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
 
-        <div id="info">
+# Datos de ejemplo
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 3, 5, 7, 11])
 
-                <div id="con">
+# Crear el modelo de regresión lineal
+modelo = LinearRegression()
+modelo.fit(X, y)
 
-	
-              <h1>Ejercicios de Python e Inteligencia Artificial</h1>
+# Ahora el modelo está entrenado y puede predecir nuevos valores
+        </code></pre>
 
-    
-		 <h2>Análisis de una Imagen con OpenCV</h2>
-    <p>A continuación, realizaremos un análisis básico de una imagen utilizando <strong>OpenCV</strong>.</p>
-    <pre>
-import cv2
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-# Cargar la imagen
-imagen = cv2.imread('imagen.jpg')
+        <h2>Ejercicio Básico de Matrices</h2>
+        <p>Las matrices son fundamentales en inteligencia artificial y ciencia de datos para representar y manipular conjuntos de datos. En este ejercicio básico, utilizamos <strong>NumPy</strong> para crear una matriz 3x3 y calcular la suma de cada fila.</p>
+        <pre><code>
+import numpy as np
 
-# Convertir a escala de grises
-gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
+# Crear una matriz 3x3
+matriz = np.array([[1, 2, 3],
+                   [4, 5, 6],
+                   [7, 8, 9]])
 
-# Mostrar la imagen original y la de escala de grises
-cv2.imshow('Imagen Original', imagen)
-cv2.imshow('Escala de Grises', gris)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-    </pre>
+# Calcular la suma de cada fila
+suma_filas = np.sum(matriz, axis=1)
+print("Suma de cada fila:", suma_filas)
+        </code></pre>
+        <p>Este tipo de operaciones es muy útil para el procesamiento de datos y análisis numérico en proyectos de inteligencia artificial.</p>
 
- <br>
-    <h2>4. Procesamiento de Imágenes con OpenCV</h2>
-    <p>Realizaremos un simple procesamiento de imágenes utilizando OpenCV.</p>
-    <pre>
-import cv2
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-# Cargar la imagen
-imagen = cv2.imread('imagen.jpg')
-
-# Convertir a escala de grises
-gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
-
-# Mostrar la imagen de escala de grises
-cv2.imshow('Escala de Grises', gris)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-    </pre>
-
-  
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p20.html"> anterior </a>
-				<a class="n1" href="p22.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <div id="ctrl">
+            <a class="n1" href="p20.html"> anterior </a>
+            <a class="n1" href="p22.html"> siguiente </a>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
