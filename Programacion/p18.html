@@ -6,28 +6,22 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 	<title>Programación</title>
-	<meta name="description" content="Descripción sobre los ciclos usando While en Python y contadores/acumuladores.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","300vh");
-	 });
-	</script>
+
 	<script src="js/script.js"></script>
 		
 	</head>
 
 	<body>
 
-		<div id="menu">
+<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
 
 
@@ -35,211 +29,163 @@
 
                 <div id="con">
 
-			<h2> Programación orientada a objetos</h2>
+    <h2>Análisis de datos</h2>	
+<br>		
+<p>La cantidad de información que manejamos en la actualidad es impresionante, así como los datos que contiene esa información. Este módulo tiene como finalidad, en primer lugar, explicar cómo se carga un archivo de hojas de cálculo (donde proviene la mayoría de la información, ya que en el diseño web se explicarán otros formatos) a Pandas, que es una librería de Python utilizada para analizar datos.</p>
+<br>
+			       <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p181.png" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+	 <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-				<br>
+    <h2>Análisis de un archivo Excel</h2>
+	<br>
+	<h3>Carga de archivos</h3>
+	<br>
+	<p>Desde Google Colab se puede cargar desde un archivo de la nube, o desde un archivo del computador, los códigos son los siguientes:</p>	
+		    <pre>
+# Cargar desde el computador
+from google.colab import files
+uploaded = files.upload()
 
-<p>En el ámbito de la programación, existen varios paradigmas que definen cómo se escribe y organiza el código. Uno de los enfoques tradicionales es la programación estructurada, que se basa en seguir un flujo secuencial de instrucciones. En el desarrollo del curso de Python, este paradigma es ampliamente utilizado. Otro enfoque es la programación funcional, que organiza el código en bloques funcionales independientes que realizan tareas específicas. Finalmente, la programación orientada a objetos es un paradigma que organiza el código en torno a objetos y clases, como se ilustra en la siguiente imagen muestra cómo la programación orientada a objetos utiliza conceptos como clases y objetos usando como ejemplos los perros, en donde si bien todos son diferentes tienen unas caracteristicas unicas.</p>
-			<br>
+data = pd.read_excel('archivo_datos.xlsx')
 
-				<div style="text-align:center;">
-     			   <img src="https://tecsify.com/blog/wp-content/uploads/2022/05/pooperritos.jpg" alt="Programación Orientada a Objetos" />
-			
-			</div>  
-   <br>
-			 <h2>Sistema de Gestión de Biblioteca</h2>
-  <br>
-    <p>El siguiente código Python implementa un sencillo sistema de gestión de biblioteca utilizando la programación orientada a objetos (POO). La POO es un paradigma que organiza el código en torno a "objetos" y "clases", facilitando la modularidad y reutilización del código.</p>
-    <br>
-    <h2>Código Python</h2>
-    <pre>
-<code>
-class Libro:
-    def __init__(self, titulo, autor):
-        self.titulo = titulo
-        self.autor = autor
-        self.disponible = True
-    
-    def cambiar_estado(self):
-        self.disponible = not self.disponible
-    
-    def __str__(self):
-        estado = "Disponible" if self.disponible else "Prestado"
-        return f"{self.titulo} por {self.autor} - {estado}"
+# Cargar desde Google Drive
+from google.colab import drive
+drive.mount('/content/drive')
 
-class Biblioteca:
-    def __init__(self):
-        self.libros = []
-    
-    def agregar_libro(self, libro):
-        self.libros.append(libro)
-    
-    def prestar_libro(self, titulo):
-        for libro in self.libros:
-            if libro.titulo == titulo:
-                if libro.disponible:
-                    libro.cambiar_estado()
-                    print(f"El libro '{titulo}' ha sido prestado.")
-                else:
-                    print(f"El libro '{titulo}' ya está prestado.")
-                return
-        print(f"El libro '{titulo}' no está disponible en la biblioteca.")
-    
-    def consultar_inventario(self):
-        for libro in self.libros:
-            print(libro)
-
-# Uso del sistema
-biblioteca = Biblioteca()
-libro1 = Libro("1984", "George Orwell")
-libro2 = Libro("To Kill a Mockingbird", "Harper Lee")
-
-biblioteca.agregar_libro(libro1)
-biblioteca.agregar_libro(libro2)
-
-print("Inventario de la biblioteca:")
-biblioteca.consultar_inventario()
-
-print("\nPrestando '1984':")
-biblioteca.prestar_libro("1984")
-
-print("\nInventario después del préstamo:")
-biblioteca.consultar_inventario()
-
-print("\nIntentando prestar '1984' nuevamente:")
-biblioteca.prestar_libro("1984")
-</code>
+# Ruta al archivo en Google Drive
+data = pd.read_excel('/content/drive/My Drive/ruta/al/archivo_datos.xlsx')
     </pre>
+<br>
+<h3>Visualización de los datos</h3>
+	                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-    <h2>Explicación de la Programación Orientada a Objetos</h2>
-    <br>
-    <p>En este código:</p>
+    <p>En este ejemplo, siguiendo las bibliotecas anteriormente usadas utilizaremos <strong>Pandas</strong> y <strong>Seaborn</strong> para analizar un archivo Excel y visualizar los resultados.</p>
+    <pre>
+# Cargar las librerías
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Cargar el archivo Excel
+data = pd.read_excel('archivo_datos.xlsx')
+
+# Mostrar las primeras filas
+print(data.head())
+
+# Crear un gráfico de dispersión
+sns.scatterplot(x='columna_x', y='columna_y', data=data)
+plt.title('Gráfico de Dispersión')
+plt.savefig('grafico.png')  # Guardar el gráfico como imagen
+plt.show()
+    </pre>
+                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+          <h2>¿Qué es un DataFrame en Pandas?</h2>
+    <p>Un <strong>DataFrame</strong> es una estructura de datos bidimensional que se utiliza para almacenar datos en forma de tabla (filas y columnas). Es una de las estructuras más importantes en Pandas, similar a una hoja de cálculo o una tabla en una base de datos. Cada columna puede tener un tipo de dato diferente, como enteros, flotantes o cadenas de texto.</p>
+
+    <h2>¿Cómo se crea un DataFrame?</h2>
+    <p>Un DataFrame se puede crear de varias maneras, como a partir de un diccionario, una lista de listas, o leyendo archivos como <code>.csv</code> o <code>.xlsx</code> (Excel). Aquí te mostramos cómo se puede crear un DataFrame:</p>
+
+    <pre><code>
+    import pandas as pd
+
+    # Creación de un DataFrame a partir de un diccionario
+    data = {
+        'Nombre': ['Juan', 'Ana', 'Luis', 'Marta'],
+        'Edad': [23, 25, 22, 24],
+        'Ciudad': ['Madrid', 'Barcelona', 'Valencia', 'Sevilla']
+    }
+
+    df = pd.DataFrame(data)
+    print(df)
+    </code></pre>
+	<br>
+			 <h2>Filtrar Datos en un DataFrame</h2>
+    <p>Una de las tareas más comunes al trabajar con DataFrames es filtrar datos. Se puede hacer fácilmente usando condiciones. Aquí te mostramos cómo filtrar filas en un DataFrame:</p>
+
+    <pre><code>
+    import pandas as pd
+
+    # Creación de un DataFrame de ejemplo
+    data = {
+        'Nombre': ['Juan', 'Ana', 'Luis', 'Marta'],
+        'Edad': [23, 25, 22, 24],
+        'Ciudad': ['Madrid', 'Barcelona', 'Valencia', 'Sevilla']
+    }
+    df = pd.DataFrame(data)
+
+    # Filtrar personas con edad mayor a 23 años
+    df_filtrado = df[df['Edad'] > 23]
+    print(df_filtrado)
+    </code></pre>
+
+    <p>En este caso, la condición <code>df['Edad'] > 23</code> selecciona solo las filas donde la columna "Edad" es mayor a 23.</p>
+
+    <h2>Funciones Comunes con DataFrames</h2>
+    <p>En Pandas, existen muchas funciones útiles para trabajar con DataFrames. Aquí te dejo algunas de las más importantes:</p>
+
     <ul>
-        <li><strong>Clase <code>Libro</code>:</strong> Representa un libro con atributos como título, autor y estado. Incluye métodos para cambiar el estado del libro y para representar el libro en una cadena.</li>
-        <li><strong>Clase <code>Biblioteca</code>:</strong> Administra una colección de libros. Incluye métodos para agregar libros, prestar libros y consultar el inventario.</li>
+        <li><strong>head()</strong>: Muestra las primeras 5 filas del DataFrame.</li>
+        <pre><code>df.head()</code></pre>
+        
+        <li><strong>tail()</strong>: Muestra las últimas 5 filas del DataFrame.</li>
+        <pre><code>df.tail()</code></pre>
+        
+        <li><strong>info()</strong>: Muestra información general sobre el DataFrame, como tipos de datos y valores nulos.</li>
+        <pre><code>df.info()</code></pre>
+        
+        <li><strong>describe()</strong>: Muestra estadísticas descriptivas de las columnas numéricas (promedio, mínimo, máximo, etc.).</li>
+        <pre><code>df.describe()</code></pre>
+        
+        <li><strong>groupby()</strong>: Agrupa los datos por una o más columnas y realiza operaciones sobre esos grupos.</li>
+        <pre><code>df.groupby('Ciudad').mean()</code></pre>
+        
+        <li><strong>dropna()</strong>: Elimina filas con valores nulos.</li>
+        <pre><code>df.dropna()</code></pre>
+        
+        <li><strong>fillna()</strong>: Rellena los valores nulos con un valor específico.</li>
+        <pre><code>df.fillna(0)</code></pre>
     </ul>
-   <br>
-    <p>La <strong>programación orientada a objetos</strong> permite organizar el código en clases y objetos que interactúan entre sí. Esto facilita la creación de sistemas modulares y reutilizables, como el sistema de gestión de biblioteca mostrado aquí.</p>
+                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+    <h2>Ejemplo Completo: Cargar, Filtrar y Analizar Datos</h2>
+    <p>A continuación, se presenta un ejemplo completo donde cargamos un archivo Excel, filtramos los datos y realizamos un análisis simple:</p>
+
+    <pre><code>
+    import pandas as pd
+
+    # Cargar datos desde un archivo Excel
+    df = pd.read_excel('archivo_datos.xlsx')
+
+    # Mostrar las primeras filas del DataFrame
+    print("Primeras filas del DataFrame:")
+    print(df.head())
+
+    # Filtrar solo las personas mayores de 30 años
+    df_mayores_30 = df[df['Edad'] > 30]
+    print("\nPersonas mayores de 30 años:")
+    print(df_mayores_30)
+
+    # Calcular el promedio de la columna 'Edad'
+    promedio_edad = df['Edad'].mean()
+    print("\nPromedio de edad:")
+    print(promedio_edad)
+    </code></pre>
+
+    <p>En este ejemplo, cargamos un archivo Excel, mostramos las primeras filas, filtramos personas mayores de 30 años, y calculamos el promedio de edad.</p>
+
+    <h2>Conclusión</h2>
+    <p>Los DataFrames son una herramienta fundamental en Pandas para el análisis de datos. A través de funciones simples, como <code>read_excel()</code> para cargar archivos y <code>head()</code>, <code>filter()</code> y <code>groupby()</code> para explorar los datos, puedes realizar análisis complejos de manera eficiente.</p>
+
                         <br>
-
-<div id="b1">
-				<div id="e">
-					<h3>Instalación de Python y CLI  </h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            
-			
-    				<p>Un <strong>CLI</strong> (Command Line Interface) o <strong>terminal</strong> es una interfaz de usuario que permite a los usuarios interactuar con el sistema operativo mediante la entrada de comandos en texto. A diferencia de las interfaces gráficas de usuario (GUI), el CLI permite un control más directo y a menudo más poderoso del sistema operativo y las aplicaciones. Los usuarios pueden ejecutar programas, manejar archivos y realizar tareas administrativas usando comandos escritos en el terminal.</p
-     
-            			<p>Inicialmente descargamos Python del siguiente link :https://www.python.org/downloads/</p>
-
-				</div>
-			</div>
-			<br>
-
-
-<div id="b2">
-				<div id="e">
-					 <h3> Creación de Figuras Geométricas con POO en Python</h3>
-				<a id="signo">+</a>
-				</div>
-				<div id="p">
-				<br>
-            
-			<p>Para ilustrar cómo usar la programación orientada a objetos (POO) en Python para crear figuras geométricas y mostrarlas en la pantalla, utilizaremos la biblioteca <strong>Turtle</strong>. Esta biblioteca permite dibujar gráficos en una ventana de forma sencilla.</p>
-    <br>
-    <h3>Instalación de la Biblioteca</h3>
-	<br>
-    <p>La biblioteca <code>Turtle</code> viene incluida con Python, por lo que no es necesario instalarla por separado. Solo necesitas tener Python instalado en tu sistema.</p>
-	<br>
-    <h3>Código Python</h3>
-    <pre>
-<code>
-import turtle
-
-# Clase base para las figuras geométricas
-class FiguraGeometrica:
-    def __init__(self, color):
-        self.color = color
-
-    def dibujar(self):
-        raise NotImplementedError("Método 'dibujar' no implementado en la clase base")
-
-# Clase para un cuadrado
-class Cuadrado(FiguraGeometrica):
-    def __init__(self, color, longitud_lado):
-        super().__init__(color)
-        self.longitud_lado = longitud_lado
-
-    def dibujar(self):
-        turtle.begin_fill()
-        turtle.fillcolor(self.color)
-        for _ in range(4):
-            turtle.forward(self.longitud_lado)
-            turtle.right(90)
-        turtle.end_fill()
-
-# Clase para un círculo
-class Circulo(FiguraGeometrica):
-    def __init__(self, color, radio):
-        super().__init__(color)
-        self.radio = radio
-
-    def dibujar(self):
-        turtle.begin_fill()
-        turtle.fillcolor(self.color)
-        turtle.circle(self.radio)
-        turtle.end_fill()
-
-# Configuración de la ventana de dibujo
-turtle.speed(2)
-turtle.bgcolor("white")
-
-# Crear y dibujar un cuadrado rojo
-cuadrado = Cuadrado("red", 100)
-cuadrado.dibujar()
-
-# Mover la tortuga para no sobreponer las figuras
-turtle.penup()
-turtle.goto(200, 0)
-turtle.pendown()
-
-# Crear y dibujar un círculo azul
-circulo = Circulo("blue", 50)
-circulo.dibujar()
-
-# Finalizar el dibujo
-turtle.hideturtle()
-turtle.done()
-</code>
-    </pre>
-
-    <h3>Explicación</h3>
-    <p>En este código:</p>
-    <ul>
-        <li><strong>Clase <code>FiguraGeometrica</code>:</strong> Es una clase base que define un método abstracto <code>dibujar</code>, que debe ser implementado por las clases derivadas.</li>
-        <li><strong>Clase <code>Cuadrado</code>:</strong> Hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un cuadrado.</li>
-        <li><strong>Clase <code>Circulo</code>:</strong> También hereda de <code>FiguraGeometrica</code> y proporciona una implementación específica para dibujar un círculo.</li>
-    </ul>
-   <br>
-    <p>La biblioteca <strong>Turtle</strong> es ideal para este tipo de tareas, ya que proporciona una forma sencilla de dibujar gráficos y visualizar resultados en una ventana gráfica.</p>
-			<BR>
-
-				</div>
-			</div>
-			<br>
-			
-			
-			  
-    			
-			
-		
                          <div id="ctrl">
 					
-				 <a class="n1" href="p17.html"> anterior </a>
-				<a class="n1" href="p19.html"> siguiente </a>
+				 <a class="n1" href="p18.html"> anterior </a>
+				<a class="n1" href="p20.html"> siguiente </a>
                              
 
                         </div>
@@ -254,3 +200,4 @@ turtle.done()
 
 	
 </html>
+
