@@ -38,7 +38,7 @@
 <p><strong>ReportLab</strong> es ideal para crear archivos PDF desde cero, permitiéndote agregar texto, imágenes, tablas y más. <strong>PyPDF2</strong> sirve para leer, extraer texto, combinar o dividir archivos PDF ya existentes. Por su parte, <strong>python-docx</strong> permite crear y editar documentos de Word (.docx) de forma sencilla.</p>
  <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-<h3>1. Crear un PDF con ReportLab</h3>
+<h3>Crear un PDF con ReportLab</h3>
 <p>ReportLab te permite generar un archivo PDF y escribir texto en él de manera sencilla:</p>
 <pre><code>
 from reportlab.pdfgen import canvas
@@ -48,7 +48,7 @@ pdf.drawString(100, 750, "¡Hola, este es un PDF creado con Python!")
 pdf.save()
 </code></pre>
  <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
-<h3>2. Leer y unir PDFs con PyPDF2</h3>
+<h3>Leer y unir PDFs con PyPDF2</h3>
 <p>Con PyPDF2 puedes leer el contenido de un PDF o combinar varios archivos PDF en uno solo:</p>
 <pre><code>
 import PyPDF2
@@ -69,7 +69,7 @@ merger.write("combinado.pdf")
 merger.close()
 </code></pre>
  <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
-<h3>3. Crear y modificar archivos Word con python-docx</h3>
+<h3>Crear y modificar archivos Word con python-docx</h3>
 <p>python-docx permite crear documentos de Word y agregarles títulos y párrafos fácilmente:</p>
 <pre><code>
 from docx import Document
