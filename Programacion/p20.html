@@ -1,75 +1,92 @@
-
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Ejercicios de Python e Inteligencia Artificial</title>
+    <meta name="description" content="Ejercicios prácticos de análisis y procesamiento de imágenes con OpenCV en Python.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","80vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
+        <h2>Introducción a OpenCV</h2>
+<p><strong>OpenCV</strong> (Open Source Computer Vision Library) es una biblioteca de código abierto muy popular para el procesamiento de imágenes y visión por computadora. Permite realizar tareas como detección de objetos, reconocimiento facial, análisis de movimiento y mucho más, facilitando el desarrollo de aplicaciones de inteligencia artificial que trabajan con imágenes y videos en tiempo real.</p>
+<p>OpenCV es compatible con varios lenguajes de programación, siendo Python uno de los más usados por su simplicidad y gran comunidad.</p>
+        <div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/p181.png" 
+       alt="Imagen logo Python" 
+       style="max-width:100%; height:auto;">
+</div>
+	    
+	    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
+        
+        <h2>Análisis de una Imagen con OpenCV</h2>
+        <p>A continuación, realizaremos un análisis básico de una imagen utilizando <strong>OpenCV</strong>.</p>
+        <pre><code>
+import cv2
 
-	<body>
+# Cargar la imagen
+imagen = cv2.imread('imagen.jpg')
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+# Convertir a escala de grises
+gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
 
+# Mostrar la imagen original y la de escala de grises
+cv2.imshow('Imagen Original', imagen)
+cv2.imshow('Escala de Grises', gris)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+        </code></pre>
 
-        <div id="info">
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-                <div id="con">
+        <h2>Procesamiento de Imágenes con OpenCV</h2>
+        <p>Realizaremos un simple procesamiento de imágenes utilizando OpenCV.</p>
+        <pre><code>
+import cv2
 
+# Cargar la imagen
+imagen = cv2.imread('imagen.jpg')
 
-    <h2>Generación de un PDF</h2>
-    <p>Usaremos <strong>ReportLab</strong> para generar un PDF con los resultados del análisis.</p>
-    <pre>
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+# Convertir a escala de grises
+gris = cv2.cvtColor(imagen, cv2.COLOR_BGR2GRAY)
 
-# Crear un PDF
-pdf = canvas.Canvas("analisis_datos.pdf", pagesize=letter)
-pdf.drawString(100, 750, "Análisis de Datos")
-pdf.drawString(100, 730, "Resultados del análisis en Excel.")
-pdf.save()
-    </pre>
+# Mostrar la imagen de escala de grises
+cv2.imshow('Escala de Grises', gris)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+        </code></pre>
 
-   
-                 
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-                
-                        <br>
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p19.html"> anterior </a>
-				<a class="n1" href="p21.html"> siguiente </a>
-                             
+        <h3>¿Cómo instalar OpenCV?</h3>
+        <p>Para instalar OpenCV en tu entorno de Python, ejecuta:</p>
+        <pre><code>
+!pip install opencv-python
+        </code></pre>
+        <p>Con OpenCV puedes realizar análisis y procesamiento de imágenes, lo que resulta fundamental en proyectos de inteligencia artificial y visión por computadora.</p>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
 
-
-     	</body>
-
-	
+        <div id="ctrl">
+            <a class="n1" href="p19.html"> anterior </a>
+            <a class="n1" href="p20.html"> siguiente </a>
+        </div>
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
