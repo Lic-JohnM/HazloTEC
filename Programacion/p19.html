@@ -13,22 +13,16 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","320vh");
-	 });
-	</script>
+	
 	<script src="js/script.js"></script>
 		
 	</head>
 
 	<body>
 
-		<div id="menu">
+<div id="menu">
                         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
                 </div>
 
 
@@ -36,149 +30,67 @@
 
                 <div id="con">
 
-    <h2>Análisis de datos</h2>	
-<br>		
-<p>La cantidad de información que manejamos en la actualidad es impresionante, así como los datos que contiene esa información. Este módulo tiene como finalidad, en primer lugar, explicar cómo se carga un archivo de hojas de cálculo (donde proviene la mayoría de la información, ya que en el diseño web se explicarán otros formatos) a Pandas, que es una librería de Python utilizada para analizar datos.</p>
+
+
+<h2>Operaciones con Documentos en Python</h2>
 <br>
-    <h2>Análisis de un archivo Excel</h2>
-	<br>
-	<h3>Carga de archivos</h3>
-	<br>
-	<p>Desde Google Colab se puede cargar desde un archivo de la nube, o desde un archivo del computador, los códigos son los siguientes:</p>	
-		    <pre>
-# Cargar desde el computador
-from google.colab import files
-uploaded = files.upload()
+<p>Además de analizar datos, Python permite crear, leer y modificar documentos en formatos populares como PDF y Word. Para estas tareas existen varias bibliotecas especializadas, cada una con funciones muy útiles para automatizar la gestión de documentos en tus proyectos.</p>
+ <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
+<p><strong>ReportLab</strong> es ideal para crear archivos PDF desde cero, permitiéndote agregar texto, imágenes, tablas y más. <strong>PyPDF2</strong> sirve para leer, extraer texto, combinar o dividir archivos PDF ya existentes. Por su parte, <strong>python-docx</strong> permite crear y editar documentos de Word (.docx) de forma sencilla.</p>
 
-data = pd.read_excel('archivo_datos.xlsx')
+<h3>1. Crear un PDF con ReportLab</h3>
+<p>ReportLab te permite generar un archivo PDF y escribir texto en él de manera sencilla:</p>
+<pre><code>
+from reportlab.pdfgen import canvas
 
-# Cargar desde Google Drive
-from google.colab import drive
-drive.mount('/content/drive')
+pdf = canvas.Canvas("ejemplo.pdf")
+pdf.drawString(100, 750, "¡Hola, este es un PDF creado con Python!")
+pdf.save()
+</code></pre>
+ <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
+<h3>2. Leer y unir PDFs con PyPDF2</h3>
+<p>Con PyPDF2 puedes leer el contenido de un PDF o combinar varios archivos PDF en uno solo:</p>
+<pre><code>
+import PyPDF2
 
-# Ruta al archivo en Google Drive
-data = pd.read_excel('/content/drive/My Drive/ruta/al/archivo_datos.xlsx')
-    </pre>
-   <br>
-<h3>Visualización de los datos</h3>
-			<br>
-    <p>En este ejemplo, siguiendo las bibliotecas anteriormente usadas utilizaremos <strong>Pandas</strong> y <strong>Seaborn</strong> para analizar un archivo Excel y visualizar los resultados.</p>
-    <pre>
-# Cargar las librerías
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+# Leer un PDF y mostrar el texto de la primera página
+with open("ejemplo.pdf", "rb") as archivo:
+    lector = PyPDF2.PdfReader(archivo)
+    pagina = lector.pages[0]
+    print(pagina.extract_text())
 
-# Cargar el archivo Excel
-data = pd.read_excel('archivo_datos.xlsx')
+# Unir dos PDFs en uno solo
+from PyPDF2 import PdfMerger
 
-# Mostrar las primeras filas
-print(data.head())
+merger = PdfMerger()
+merger.append("archivo1.pdf")
+merger.append("archivo2.pdf")
+merger.write("combinado.pdf")
+merger.close()
+</code></pre>
+ <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 30px 0;">
+<h3>3. Crear y modificar archivos Word con python-docx</h3>
+<p>python-docx permite crear documentos de Word y agregarles títulos y párrafos fácilmente:</p>
+<pre><code>
+from docx import Document
 
-# Crear un gráfico de dispersión
-sns.scatterplot(x='columna_x', y='columna_y', data=data)
-plt.title('Gráfico de Dispersión')
-plt.savefig('grafico.png')  # Guardar el gráfico como imagen
-plt.show()
-    </pre>
+# Crear un documento Word nuevo
+doc = Document()
+doc.add_heading("Título del Documento", 0)
+doc.add_paragraph("Este documento fue creado con Python.")
+doc.save("ejemplo.docx")
+</code></pre>
 
-          <h2>¿Qué es un DataFrame en Pandas?</h2>
-    <p>Un <strong>DataFrame</strong> es una estructura de datos bidimensional que se utiliza para almacenar datos en forma de tabla (filas y columnas). Es una de las estructuras más importantes en Pandas, similar a una hoja de cálculo o una tabla en una base de datos. Cada columna puede tener un tipo de dato diferente, como enteros, flotantes o cadenas de texto.</p>
+<h3>¿Cómo instalar estas bibliotecas?</h3>
+<p>Para instalar estas herramientas en tu entorno de Python, ejecuta:</p>
+<pre><code>
+!pip install reportlab
+!pip install PyPDF2
+!pip install python-docx
+</code></pre>
 
-    <h2>¿Cómo se crea un DataFrame?</h2>
-    <p>Un DataFrame se puede crear de varias maneras, como a partir de un diccionario, una lista de listas, o leyendo archivos como <code>.csv</code> o <code>.xlsx</code> (Excel). Aquí te mostramos cómo se puede crear un DataFrame:</p>
+<p>Con estas bibliotecas puedes automatizar la generación y manipulación de documentos, facilitando la presentación y el intercambio de resultados en tus proyectos de programación.</p>
 
-    <pre><code>
-    import pandas as pd
-
-    # Creación de un DataFrame a partir de un diccionario
-    data = {
-        'Nombre': ['Juan', 'Ana', 'Luis', 'Marta'],
-        'Edad': [23, 25, 22, 24],
-        'Ciudad': ['Madrid', 'Barcelona', 'Valencia', 'Sevilla']
-    }
-
-    df = pd.DataFrame(data)
-    print(df)
-    </code></pre>
-	<br>
-			 <h2>Filtrar Datos en un DataFrame</h2>
-    <p>Una de las tareas más comunes al trabajar con DataFrames es filtrar datos. Se puede hacer fácilmente usando condiciones. Aquí te mostramos cómo filtrar filas en un DataFrame:</p>
-
-    <pre><code>
-    import pandas as pd
-
-    # Creación de un DataFrame de ejemplo
-    data = {
-        'Nombre': ['Juan', 'Ana', 'Luis', 'Marta'],
-        'Edad': [23, 25, 22, 24],
-        'Ciudad': ['Madrid', 'Barcelona', 'Valencia', 'Sevilla']
-    }
-    df = pd.DataFrame(data)
-
-    # Filtrar personas con edad mayor a 23 años
-    df_filtrado = df[df['Edad'] > 23]
-    print(df_filtrado)
-    </code></pre>
-
-    <p>En este caso, la condición <code>df['Edad'] > 23</code> selecciona solo las filas donde la columna "Edad" es mayor a 23.</p>
-
-    <h2>Funciones Comunes con DataFrames</h2>
-    <p>En Pandas, existen muchas funciones útiles para trabajar con DataFrames. Aquí te dejo algunas de las más importantes:</p>
-
-    <ul>
-        <li><strong>head()</strong>: Muestra las primeras 5 filas del DataFrame.</li>
-        <pre><code>df.head()</code></pre>
-        
-        <li><strong>tail()</strong>: Muestra las últimas 5 filas del DataFrame.</li>
-        <pre><code>df.tail()</code></pre>
-        
-        <li><strong>info()</strong>: Muestra información general sobre el DataFrame, como tipos de datos y valores nulos.</li>
-        <pre><code>df.info()</code></pre>
-        
-        <li><strong>describe()</strong>: Muestra estadísticas descriptivas de las columnas numéricas (promedio, mínimo, máximo, etc.).</li>
-        <pre><code>df.describe()</code></pre>
-        
-        <li><strong>groupby()</strong>: Agrupa los datos por una o más columnas y realiza operaciones sobre esos grupos.</li>
-        <pre><code>df.groupby('Ciudad').mean()</code></pre>
-        
-        <li><strong>dropna()</strong>: Elimina filas con valores nulos.</li>
-        <pre><code>df.dropna()</code></pre>
-        
-        <li><strong>fillna()</strong>: Rellena los valores nulos con un valor específico.</li>
-        <pre><code>df.fillna(0)</code></pre>
-    </ul>
-
-    <h2>Ejemplo Completo: Cargar, Filtrar y Analizar Datos</h2>
-    <p>A continuación, te presento un ejemplo completo donde cargamos un archivo Excel, filtramos los datos y realizamos un análisis simple:</p>
-
-    <pre><code>
-    import pandas as pd
-
-    # Cargar datos desde un archivo Excel
-    df = pd.read_excel('archivo_datos.xlsx')
-
-    # Mostrar las primeras filas del DataFrame
-    print("Primeras filas del DataFrame:")
-    print(df.head())
-
-    # Filtrar solo las personas mayores de 30 años
-    df_mayores_30 = df[df['Edad'] > 30]
-    print("\nPersonas mayores de 30 años:")
-    print(df_mayores_30)
-
-    # Calcular el promedio de la columna 'Edad'
-    promedio_edad = df['Edad'].mean()
-    print("\nPromedio de edad:")
-    print(promedio_edad)
-    </code></pre>
-
-    <p>En este ejemplo, cargamos un archivo Excel, mostramos las primeras filas, filtramos personas mayores de 30 años, y calculamos el promedio de edad.</p>
-
-    <h2>Conclusión</h2>
-    <p>Los DataFrames son una herramienta fundamental en Pandas para el análisis de datos. A través de funciones simples, como <code>read_excel()</code> para cargar archivos y <code>head()</code>, <code>filter()</code> y <code>groupby()</code> para explorar los datos, puedes realizar análisis complejos de manera eficiente.</p>
-
-                        <br>
                          <div id="ctrl">
 					
 				 <a class="n1" href="p18.html"> anterior </a>
