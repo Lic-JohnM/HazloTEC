@@ -35,7 +35,12 @@
 	 <h3> OpenSCAD</h3>
             <br>
             <p>OpenSCAD es una herramienta de modelado 3D basada en programación, ideal para diseñadores e ingenieros que buscan precisión y parametrización. Permite crear modelos 3D mediante código, lo que facilita la modificación y personalización de diseños.</p>
-            <br>
+       	<br>
+			<div style="text-align: center;">
+		  <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/OpenSCAD-logo.png" 
+		       alt="Imagen openscad" 
+		       style="max-width:100%; height:auto;">
+		</div>
             <p>Algunas ventajas de OpenSCAD incluyen:</p>
             <ul>
                 <li>Modelado paramétrico.</li>
@@ -91,7 +96,36 @@
             <p><strong>50 mm ÷ 10 mm/cm = 5 cm</strong></p>
             <br>
                     		<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+ <h3>Uso del plano cartesiano y creación de figuras con coordenadas</h3>
+    <br>
+    <p>En OpenSCAD, el plano cartesiano se utiliza para ubicar puntos mediante coordenadas <code>[x, y]</code>. Usando estos puntos, se pueden definir formas planas (2D) con la función <code>polygon()</code>. Esta función toma una lista de puntos y otra lista que define cómo conectar esos puntos (los índices).</p>
+    <br>
 
+    <h4>Ejemplo sencillo:</h4>
+    <br>
+    <p>El siguiente código crea un triángulo conectando tres puntos en el plano cartesiano:</p>
+
+    <pre><code>polygon(
+    points = [[0,0], [50,0], [25,40]], 
+    paths = [[0,1,2]]
+);</code></pre>
+
+    <p><strong>Explicación:</strong></p>
+    <ul>
+        <li><code>[0,0]</code>: punto en el origen del plano.</li>
+        <li><code>[50,0]</code>: punto 50 unidades a la derecha.</li>
+        <li><code>[25,40]</code>: punto centrado en x=25 y elevado 40 unidades.</li>
+        <li><code>paths = [[0,1,2]]</code>: indica que se conectan los puntos en ese orden, formando un triángulo.</li>
+    </ul>
+    <br>
+
+    <p>Este enfoque se puede usar para crear cualquier figura 2D definiendo sus vértices en el plano cartesiano y conectándolos de manera adecuada. A continuación se puede observar como se ve la figura generada por openscad:</p>
+				<div style="text-align: center;">
+		  <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/p1.png" 
+		       alt="Imagen openscad" 
+		       style="max-width:100%; height:auto;">
+		</div>		
+                    		<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
                         <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
 
