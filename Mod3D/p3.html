@@ -75,10 +75,46 @@ square([20, 10]);
 
             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-            <div id="ctrl">
-                <a class="n1" href="p3.html">anterior</a>
-                <a class="n1" href="p5.html">siguiente</a>
-            </div>
+
+<h3>Superponer figuras en altura y usar colores</h3>
+<br>
+<p>Cuando trabajamos en 3D, también podemos mover figuras hacia arriba usando el eje <strong>Z</strong>. Esto es útil si queremos colocar una figura encima de otra, como si apiláramos bloques.</p>
+
+<p>Además, podemos usar <code>color()</code> para ver mejor cada figura.</p>
+
+<h4>Ejemplo:</h4>
+
+<pre><code>
+// Figura base: cuadrado extruido en 3D
+color("red")
+linear_extrude(height = 5)
+square([30, 30]);
+
+// Segunda figura: círculo encima de la base
+translate([0, 0, 5])  // se sube 5 mm (encima del cuadrado)
+color("blue")
+linear_extrude(height = 5)
+circle(r = 15);
+</code></pre>
+
+<p>Este código crea un cuadrado rojo y coloca un círculo azul justo encima. ¡Así se pueden construir torres o detalles en capas!</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/colores_altura.png" 
+         alt="Figura con colores y altura" 
+         style="max-width:100%; height:auto;">
+</div>
+
+<br>
+<p>Con estos comandos puedes crear modelos mucho más interesantes y organizados. ¡Juega con las posiciones, colores y formas para hacer tus propias creaciones!</p>
+
+<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+<div id="ctrl">
+    <a class="n1" href="p3.html">anterior</a>
+    <a class="n1" href="p5.html">siguiente</a>
+</div>
+
 
         </div>
     </div>
