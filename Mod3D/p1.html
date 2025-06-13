@@ -39,7 +39,7 @@
 			<div style="text-align: center;">
 		  <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/OpenSCAD-logo.png" 
 		       alt="Imagen openscad" 
-		       style="max-width:100%; height:auto;">
+		       style="max-width:50%; height:auto;">
 		</div>
             <p>Algunas ventajas de OpenSCAD incluyen:</p>
             <ul>
@@ -48,18 +48,15 @@
                 <li>Automatización de tareas repetitivas.</li>
                 <li>Compatibilidad con impresión 3D.</li>
             </ul>
-            <br>
-            <p>Para profundizar en este tema, revisa los siguientes recursos:</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
+       
+           
 
 		<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
   <h3>Unidades de Medida y su Conversión</h3>
                     
             <br>
-            <p>Para trabajar en OpenSCAD, es esencial comprender las unidades de medida. OpenSCAD no define unidades específicas, por lo que es importante ser consistente en el uso de milímetros, centímetros o pulgadas según el contexto.</p>
+            <p>Para trabajar en OpenSCAD, es esencial comprender las unidades de medida. OpenSCAD no define unidades específicas, por lo que es importante ser consistente en el uso de milímetros (que es el que se interpreta por lo general), centímetros o pulgadas según el contexto.</p>
             <br>
             <table border="1">
                 <thead>
@@ -107,7 +104,6 @@
 
     <pre><code>polygon(
     points = [[0,0], [50,0], [25,40]], 
-    paths = [[0,1,2]]
 );</code></pre>
 
     <p><strong>Explicación:</strong></p>
@@ -115,7 +111,6 @@
         <li><code>[0,0]</code>: punto en el origen del plano.</li>
         <li><code>[50,0]</code>: punto 50 unidades a la derecha.</li>
         <li><code>[25,40]</code>: punto centrado en x=25 y elevado 40 unidades.</li>
-        <li><code>paths = [[0,1,2]]</code>: indica que se conectan los puntos en ese orden, formando un triángulo.</li>
     </ul>
     <br>
 
