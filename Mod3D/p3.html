@@ -1,65 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Traslación y Rotación en OpenSCAD</title>
     <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-    <title>Transformaciones en OpenSCAD</title>
-    <meta name="description" content="Explicación sobre las transformaciones en OpenSCAD."/>    
+    <meta name="description" content="Explicación de cómo trasladar y rotar figuras en OpenSCAD usando translate y rotate.">
+    
+    <!-- Estilos compartidos -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
 </head>
+
 <body>
+
     <div id="menu">
         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
     </div>
+
     <div id="info">
         <div id="con">
+
+            <h3>Trasladar y Rotar Figuras en OpenSCAD</h3>
             <br>
-            <h3>Transformaciones en OpenSCAD</h3>
+            <p>Una vez que tenemos figuras creadas en 2D, es muy útil poder moverlas (trasladarlas) o girarlas (rotarlas) para construir modelos más complejos. En OpenSCAD, esto se hace con dos comandos especiales:</p>
+
             <br>
-            <p>En OpenSCAD, las transformaciones permiten modificar la posición, orientación y tamaño de los objetos geométricos. Estas incluyen traslaciones, rotaciones, escalado y reflejos.</p>
-            <br>
-            <h3>1. Traslación (<code>translate()</code>)</h3>
-            <p>Se usa para mover un objeto en los ejes X, Y.</p>
-            <pre>
-translate([30, 20]) square(20); // Mueve el cuadrado 30 unidades en X y 20 en Y
-            </pre>
-            <br>
-            <h3>2. Rotación (<code>rotate()</code>)</h3>
-            <p>Gira un objeto en torno al origen del sistema de coordenadas.</p>
-            <pre>
-rotate(45) square(30); // Rota el cuadrado 45 grados
-            </pre>
-            <br>
-            <h3>3. Escalado (<code>scale()</code>)</h3>
-            <p>Modifica el tamaño de un objeto en una o más direcciones.</p>
-            <pre>
-scale([2, 0.5]) circle(20); // Doble de ancho y mitad de altura
-            </pre>
-            <br>
-            <h3>4. Reflexión o Espejo (<code>mirror()</code>)</h3>
-            <p>Refleja un objeto con respecto a un eje.</p>
-            <pre>
-mirror([1, 0]) square([20, 10]); // Refleja en el eje X
-            </pre>
-            <br>
-            <p>Usando combinaciones de estas transformaciones, podemos construir modelos más complejos.</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p2.html"> anterior </a>
-                <a href="p4.html"> siguiente </a>
+            <h4>1. Trasladar una figura - <code>translate()</code></h4>
+            <p>Con <code>translate([x, y])</code> puedes mover una figura a otra posición. Por ejemplo:</p>
+            <pre><code>
+square([20, 20]); // figura original
+translate([30, 10])
+square([20, 20]); // misma figura, pero movida a la derecha y hacia arriba
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/translate.png" 
+                     alt="Ejemplo translate" style="max-width:100%; height:auto;">
             </div>
+
             <br>
+            <h4>2. Rotar una figura - <code>rotate()</code></h4>
+            <p>Con <code>rotate(a)</code> se gira la figura <strong>en grados</strong>. El giro es alrededor del punto (0, 0).</p>
+            <pre><code>
+square([20, 10]); // figura original
+rotate(45)
+square([20, 10]); // la figura se gira 45 grados
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/rotate.png" 
+                     alt="Ejemplo rotate" style="max-width:100%; height:auto;">
+            </div>
+
+            <br>
+            <p>También se pueden combinar ambos movimientos:</p>
+            <pre><code>
+translate([40, 0])
+rotate(30)
+square([20, 10]);
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/translate_rotate.png" 
+                     alt="Ejemplo combinado" style="max-width:100%; height:auto;">
+            </div>
+
+            <br>
+            <p>Al usar estas herramientas, puedes colocar cada figura exactamente donde la necesitas. Son muy útiles para construir diseños complejos, como letras que se alinean, engranajes o estructuras geométricas.</p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <div id="ctrl">
+                <a class="n1" href="p3.html">anterior</a>
+                <a class="n1" href="p5.html">siguiente</a>
+            </div>
+
         </div>
     </div>
+
 </body>
 </html>
+
