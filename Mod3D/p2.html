@@ -1,68 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Figuras 2D en OpenSCAD</title>
     <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-    <title>Coordenadas 2D y Polígonos en OpenSCAD</title>
-    <meta name="description" content="Explicación sobre las coordenadas 2D, figuras geométricas y polígonos en OpenSCAD."/>    
+    <meta name="description" content="Explicación de las figuras 2D básicas en OpenSCAD como square, circle y text.">
+    
+    <!-- Estilos ya usados en otras páginas -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
 </head>
+
 <body>
+
     <div id="menu">
         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
     </div>
+
     <div id="info">
         <div id="con">
+
+            <h3>Figuras 2D en OpenSCAD</h3>
             <br>
-            <h3>Coordenadas 2D y Figuras Básicas en OpenSCAD</h3>
+            <p>OpenSCAD permite crear muchas figuras planas (2D) usando instrucciones simples. Estas figuras se pueden combinar, modificar o convertir en 3D más adelante. Aquí te mostramos las más comunes:</p>
             <br>
-            <p>En OpenSCAD, el sistema de coordenadas 2D se basa en ejes <strong>(x, y)</strong>. Se pueden crear figuras básicas como cuadrados, rectángulos y círculos mediante funciones predefinidas.</p>
-            <br>
-            <h3>Figuras Básicas en OpenSCAD</h3>
-            <br>
-            <p><strong>Cuadrado y Rectángulo:</strong></p>
-            <pre>
-square([width, height]); // Crea un rectángulo o cuadrado
-square(50); // Crea un cuadrado de 50x50 unidades
-square([80, 40]); // Crea un rectángulo de 80 de ancho y 40 de alto</pre>
-            <p>El parámetro <code>center=true</code> centra la figura en el origen.</p>
-            <br>
-            <p><strong>Círculo:</strong></p>
-            <pre>
-circle(r=30); // Crea un círculo con radio 30 unidades</pre>
-            <p>El parámetro <code>$fn</code> permite ajustar la calidad del círculo.</p>
-            <br>
-            <h3>Ejemplo de Uso de Polígonos</h3>
-            <br>
-            <p>Podemos definir un polígono especificando una lista de puntos:</p>
-            <pre>
-polygon(points=[[0,0], [100,0], [50,50], [0,100]]);</pre>
-            <p>Esto generará un cuadrilátero con vértices en las coordenadas indicadas.</p>
-            <br>
-            <h3>Generación de Polígonos Regulares a partir de Cilindros</h3>
-            <br>
-            <p>Podemos generar polígonos regulares usando cilindros con pocos segmentos:</p>
-            <pre>
-cylinder(h=10, r=50, $fn=6); // Genera un hexágono</pre>
-            <p>El parámetro <code>$fn</code> determina el número de lados del polígono resultante.</p>
-            <br>
-            <p>Para profundizar en este tema, revisa los siguientes recursos:</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p3.html"> siguiente </a>
+
+            <h4>1. Cuadrado o Rectángulo - <code>square()</code></h4>
+            <p>Se usa para crear cuadrados o rectángulos. Puedes ajustar el tamaño con <code>[ancho, alto]</code>.</p>
+            <pre><code>square([40, 20]);</code></pre>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/square.png" alt="Figura square" style="max-width:100%; height:auto;">
             </div>
             <br>
+
+            <h4>2. Círculo - <code>circle()</code></h4>
+            <p>Crea un círculo indicando su radio. Entre más alto el <code>$fn</code>, más suave será el borde.</p>
+            <pre><code>circle(r = 20, $fn = 50);</code></pre>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/circle.png" alt="Figura circle" style="max-width:100%; height:auto;">
+            </div>
+            <br>
+
+            <h4>3. Texto - <code>text()</code></h4>
+            <p>También se puede escribir texto plano que luego puede extruirse en 3D.</p>
+            <pre><code>text("Hola", size=20);</code></pre>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/text.png" alt="Figura texto" style="max-width:100%; height:auto;">
+            </div>
+            <br>
+
+            <h4>4. Polígono libre - <code>polygon()</code></h4>
+            <p>Permite crear cualquier forma conectando puntos. Ya lo has usado, pero recuerda que es útil para figuras irregulares:</p>
+            <pre><code>polygon(points = [[0,0],[30,0],[15,25]]);</code></pre>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/p1.png" alt="Triángulo básico" style="max-width:100%; height:auto;">
+            </div>
+            <br>
+
+            <p>Estas figuras se pueden combinar fácilmente, por ejemplo:</p>
+            <pre><code>
+square([30, 30]);
+translate([40, 0]) circle(r = 15);
+translate([80, 5]) text("Hola", size = 10);
+</code></pre>
+
+            <br>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/combinadas2d.png" alt="Figuras combinadas" style="max-width:100%; height:auto;">
+            </div>
+
+            <br>
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+            <p>En la próxima sección aprenderás cómo transformar estas figuras planas en objetos 3D usando <code>linear_extrude()</code>. ¡Vamos paso a paso creando modelos geniales!</p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <div id="ctrl">
+                <a class="n1" href="p1.html">anterior</a>
+                <a class="n1" href="p3.html">siguiente</a>
+            </div>
+
         </div>
     </div>
+
 </body>
 </html>
