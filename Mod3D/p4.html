@@ -1,89 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Operaciones de Corte en OpenSCAD</title>
     <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-    <title>Operaciones Booleanas en 2D - OpenSCAD</title>
-    <meta name="description" content="Explicación sobre las operaciones booleanas en 2D en OpenSCAD."/>    
+    <meta name="description" content="Uso de difference, union e intersection en OpenSCAD para modelado 3D.">
+    
+    <!-- Estilos existentes -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","250vh");
-    });
-    </script>
 </head>
+
 <body>
+
     <div id="menu">
         <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
     </div>
+
     <div id="info">
         <div id="con">
+
+            <h3>Operaciones de Corte en OpenSCAD</h3>
             <br>
-            <h3>Operaciones Booleanas en 2D</h3>
+            <p>OpenSCAD permite combinar figuras con operaciones llamadas <strong>booleanas</strong>: unir, cortar o encontrar lo que tienen en común.</p>
+
+            <h4>1. Restar una figura con <code>difference()</code></h4>
+            <p>Sirve para cortar una figura usando otra. Aquí vemos cómo hacer un rectángulo con una esquina curva:</p>
+
+            <pre><code>
+difference() {
+    square([40, 40]);        // figura base
+    translate([40, 40])
+        circle(r = 20);      // esquina curva que se "corta"
+}
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/recorte_curva.png" 
+                     alt="Corte con curva" style="max-width:100%; height:auto;">
+            </div>
+
             <br>
-            <p>Las operaciones booleanas en OpenSCAD permiten combinar o modificar formas geométricas utilizando unión, diferencia e intersección.</p>
-            <br>
-            
-            <h3>1. Unión (<code>union()</code>)</h3>
-            <p>Combina dos o más objetos en uno solo.</p>
-            <pre>
+            <h4>2. Unir figuras con <code>union()</code></h4>
+            <p>Combina dos o más figuras para que actúen como una sola:</p>
+            <pre><code>
 union() {
     square([30, 30]);
-    circle(20);
+    translate([30, 0]) circle(r = 15);
 }
-            </pre>
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/union.png" 
+                     alt="Figura unida" style="max-width:100%; height:auto;">
+            </div>
+
             <br>
-            
-            <h3>2. Diferencia (<code>difference()</code>)</h3>
-            <p>Resta un objeto de otro.</p>
-            <pre>
-difference() {
-    square([40, 40]);
-    circle(20);
-}
-            </pre>
-            <br>
-            
-            <h3>3. Intersección (<code>intersection()</code>)</h3>
-            <p>Deja solo la parte común entre dos o más objetos.</p>
-            <pre>
+            <h4>3. Intersección con <code>intersection()</code></h4>
+            <p>Deja solo la parte donde dos figuras se superponen:</p>
+            <pre><code>
 intersection() {
     square([40, 40]);
-    circle(30);
+    translate([20, 20]) circle(r = 30);
 }
-            </pre>
-            <br>
-            
-            <h3>4. Uso de Diferencia para Crear una Figura Hueca</h3>
-            <pre>
-difference() {
-    circle(30);
-    circle(20);
-}
-            </pre>
-            <br>
-            
-            <h3>5. Creación de un Semicírculo</h3>
-            <pre>
-difference() {
-    circle(30);
-    square([60, 30]);
-}
-            </pre>
-            <br>
-            <p>Estas operaciones permiten generar formas complejas combinando figuras básicas.</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p3.html"> anterior </a>
-                <a href="p5.html"> siguiente </a>
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/interseccion.png" 
+                     alt="Intersección" style="max-width:100%; height:auto;">
             </div>
+
             <br>
+            <p>Estas herramientas son muy poderosas para dar forma precisa a tus diseños. Con un poco de práctica, puedes hacer recortes complejos, curvas suaves o unir piezas personalizadas.</p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <div id="ctrl">
+                <a class="n1" href="p3.html">anterior</a>
+                <a class="n1" href="p5.html">siguiente</a>
+            </div>
+
         </div>
     </div>
+
 </body>
 </html>
