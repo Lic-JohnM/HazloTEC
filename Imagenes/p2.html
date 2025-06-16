@@ -1,109 +1,92 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Imágenes digitales</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <title>Imágenes digitales</title>
 
-	<meta name="description" content="Descripción de programas de edición grafica, figuras primitivas con propiedades de Inkscape y operaciones entre objetos">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+  <meta name="description" content="Descripción de programas de edición gráfica, figuras primitivas con propiedades de Inkscape y operaciones entre objetos">
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","380vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
-
-	<body>
-
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-        <div id="info">
+  <script src="js/script.js"></script>
+</head>
 
-                <div id="con">
-	<h2>Colores digitales</h2>
+<body>
 
-				<br>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="Ingreso/index.html">INGRESA</a>
+  </div>
 
-			<p>Un pixel contiene la información de la imagen, sus coordenadas así como la información del color. La información del color se dividen en 3 canales desde 0 hasta 255(Valor estimado por la cantidad de bits), esta representación se denomina RGB porque cada canal contiene la información de un color R=RED, G=GREEN  y B=BLUE con su respectiva iluminación. </p>
- 
+  <div id="info">
+    <div id="con">
+      <h2>Colores digitales</h2>
+      <p>Un píxel contiene la información de la imagen, sus coordenadas, así como la información del color. El color se representa en tres canales: Rojo, Verde y Azul, conocidos como RGB. Cada canal tiene un valor entre 0 y 255.</p>
 
-			<br>
-
-			<div style="text-align:center;">
-			
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=674765956692822851" height="714" width="345" frameborder="0" scrolling="no" ></iframe>			</div>     
-
-			<br>
-
-			<h2>Modelos y representación de color</h2>
-			<br>
-			<p>Un color se puede representar por su equivalente en RGB, como podria ser R=15, G=80 Y B=200. Sin embargo esta representación indica la mezcla de la diferencia de pixeles sin embargo no necesariamente es práctica al momento de escribir, convirtiendo su equivalente decimal a hexadecimal se puede escribir una representación más corta como se muestra en la siguiente imagen:</p>
-			<br>
-			<div style="text-align:center;">
-			
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1337074886232332" height="900" width="450" frameborder="0" scrolling="no" ></iframe>r="0" ></iframe>		 	</div>     
-
-        		    <br>
-		<h2>Conversión de colores hexadecimal a RGB</h2>
-		<br>
-		<p>La base decimal es la base que usamos los humanos para comunicarnos (0,1,2,3,4,5,6,7,8,0) equivalente a los 10 dedos de las manos, en los colores digitales buscamos un equivalente para poder comunicarnos donde el número de colores excede este sistema, por este motivo creamos el sistema hexadecimal que es igual al decimal pero con la siguiente conversión donde A=10, B=11, C=12, D=13, E=14 Y F=15.</p>
-		<br>
-		<p>Para convertir un número hexadecimal como #107ACC(Para distinguir iniciamos con #), dividimos en grupos de dos el número 10 =red, 7A= Blue y CC=Blue. Donde debemos multiplicar el primer digito por 16 y sumar el segundo por ejemplo 7A(16*7+10=122), donde 122 es el número equivalente a verde del color digital.</p>
-		<br>
-            <h2> Modelo HSV </h2>
-            <br>
-
-		<br>
-		<p>Si bien la representación hexadecimal o en rgb hace referencia al número que representa un color, no es un color para generar un diseño. Una representación que permite hacerlo es el modelo HSV, donde primero seleccionamos el tono(H:HUE),despues con (S:Saturation) y V(Valor:Brillo) ajustamos el color deseado, tridimensionalmente este modelo de color se ve de la siguiente manera:</p>
-			<br>
-
-			<div style="text-align:center;">
-
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=129971139235053789" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>     
-
-		
-	
-		
-		<p>El software libre y gratuito para ejecutar las prácticas es <b>Inkscape</b>, ya que permite ejecutar vectorización de gran calidad y tiene multiples herramientas para hacer el procesamiento de estas imagenes.</p>
-                     
-                        <br>
-
-			
-				
-                        <br>
-			
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p1.html"> anterior </a>
-				<a class="n1" href="p3.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
+      <div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=674765956692822851" height="714" width="345" frameborder="0" scrolling="no"></iframe>
       </div>
 
+      <h2>Modelos de color: RGB, HEX y HSV</h2>
 
-     	</body>
+      <h3>🔢 Modelo RGB y representación HEX</h3>
+      <p><strong>RGB</strong> es un modelo de color basado en la mezcla de luces: rojo (Red), verde (Green) y azul (Blue). Cada uno puede tener un valor entre <strong>0 y 255</strong>. Por ejemplo, <code>R=255, G=0, B=0</code> es rojo puro.</p>
 
-	
+      <p>Esto es muy útil para entender cómo se compone un color y cómo modificarlo desde sus componentes. Se usa en pantallas, celulares, computadoras, etc.</p>
+
+      <p>La representación <strong>HEX</strong> es una forma más corta de escribir los valores RGB en base 16. Por ejemplo, el color <code>#800080</code> significa:</p>
+      <ul>
+        <li>80 = 128 en rojo</li>
+        <li>00 = 0 en verde</li>
+        <li>80 = 128 en azul</li>
+      </ul>
+      <p>Se usa mucho en diseño web, aunque no es tan clara para entender la composición interna del color.</p>
+
+      <h3>🌈 Modelo HSV: Elegir colores con lógica</h3>
+      <p><strong>HSV</strong> significa Tono (Hue), Saturación y Valor (Brillo). Este modelo permite elegir colores de forma más intuitiva:</p>
+      <ul>
+        <li><strong>Hue (Tono):</strong> Tipo de color (rojo, verde, azul...), expresado en grados de 0° a 360°.</li>
+        <li><strong>Saturation:</strong> Intensidad del color, de gris (0%) a color fuerte (100%).</li>
+        <li><strong>Value:</strong> Brillo del color, de negro (0%) a claro (100%).</li>
+      </ul>
+
+      <p>Este modelo se usa para crear combinaciones armónicas, elegir paletas de colores o variar un mismo tono.</p>
+
+      <div style="text-align:center;">
+        <iframe src="https://assets.pinterest.com/ext/embed.html?id=129971139235053789" height="359" width="345" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+    
+
+      <br>
+      <h2>🛠️ Figuras basicas en Inkscape</h2>
+
+      <p>Agrega varios rectángulos al lienzo y cámbiales el color usando una de estas gamas:</p>
+      <ul>
+        <li><strong>Colores cálidos:</strong> rojo, naranja, amarillo</li>
+        <li><strong>Colores fríos:</strong> azul, verde, violeta</li>
+        <li><strong>Colores tierra:</strong> marrón, beige, oliva</li>
+        <li><strong>Colores neón:</strong> verde neón, fucsia, cian brillante</li>
+        <li><strong>Colores neutros:</strong> blanco, negro, gris</li>
+      </ul>
+
+      <p>Prueba combinaciones y observa cómo cambia la sensación de la imagen según la gama que elijas.</p>
+
+      <div id="ctrl">
+        <a class="n1" href="p1.html">anterior</a>
+        <a class="n1" href="p3.html">siguiente</a>
+      </div>
+      <br>
+    </div>
+  </div>
+
+</body>
+
 </html>
