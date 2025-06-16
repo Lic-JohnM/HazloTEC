@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+ @media only screen and (max-width: 1000px) {
         #menu{
            grid-template-columns:40% 60%;
            font-size:35px;
@@ -67,7 +67,7 @@
     
     header>#I2>a{
         width:70%;
-        padding-bottom:4%;
+        padding-bottom:2%;
     }
      
         }
