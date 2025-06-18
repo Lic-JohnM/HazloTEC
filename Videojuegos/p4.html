@@ -1,75 +1,64 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Animación y Movimiento</title>
+    <meta name="description" content="Introducción a la animación básica y lógica de movimiento en videojuegos con Scratch, usando como ejemplo juegos tipo trivia.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Videojuegos</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/index.html">VIDEOJUEGOS</a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","110vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
 
-	<body>
+        <h2>🎨 Animación básica y movimiento lógico</h2>
+        <p>En los videojuegos no todo se trata de correr o saltar. Muchos juegos se basan en la <strong>interacción</strong> por medio de preguntas, elecciones o decisiones visuales. Este tipo de juegos también necesita animaciones: que aparezca una pregunta, que una respuesta cambie de color o que un personaje hable.</p>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <h2>🎮 Ejemplo inspirador: ¿Quién quiere ser millonario?</h2>
+        <p>Este juego de trivia se hizo muy popular porque mezcla <strong>preguntas con suspenso</strong>, <strong>luces</strong>, <strong>efectos de sonido</strong> y <strong>retroalimentación visual</strong>. Cada acción está acompañada de un pequeño movimiento o efecto para mantener la atención.</p>
 
+        <div style="text-align:center;">
+            <img src="https://lic-johnm.github.io/HazloTEC/Imagenes/imagenes/millonario.png" alt="Trivia animada" style="max-width:100%; height:auto;">
+        </div>
 
-        <div id="info">
+        <h3>🎓 Actividad sugerida en Scratch</h3>
+        <ol>
+            <li>Crea una pantalla con una pregunta y 3 respuestas posibles</li>
+            <li>Haz que al hacer clic sobre cada opción cambie de color o suene</li>
+            <li>Si la opción es correcta, aparece un mensaje positivo. Si es incorrecta, uno negativo</li>
+        </ol>
 
-                <div id="con">
+        <h3>🔹 Herramienta recomendada</h3>
+        <p>Usaremos <strong>Scratch</strong>, una plataforma ideal para niños donde se programa con bloques y puedes usar personajes, sonidos y escenarios.</p>
 
-					<h2> Quien quere ser millonario </h2>
+        <p>✨ Puedes usar esta herramienta en: <a href="https://scratch.mit.edu/" target="_blank">scratch.mit.edu</a></p>
 
-				<br>
+        <p>Allí puedes buscar ejemplos como <em>"quiz game"</em> o <em>"trivia"</em> para inspirarte.</p>
 
-					<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=32158584830519021" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
+        <h3>💡 Importancia</h3>
+        <p>Este tipo de juegos ayuda a desarrollar la <strong>lógica del juego</strong>, <strong>condiciones</strong> y <strong>eventos</strong> que son parte fundamental del diseño de videojuegos.</p>
 
-			<br>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-			<p>Con el desarrollo de los video juegos surgen otras formas de entretenimiento que no son propias de las consolas, como el juego quien quiere ser millonario el cual apartir de medios electrónicos genera diversas preguntas con respuestas de selección multiple.</p>
-		
+        <div id="ctrl">
+            <a class="n1" href="p3.html">anterior</a>
+            <a class="n1" href="p5.html">siguiente</a>
+        </div>
 
-                        
-
-			
-
-                        <br>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p3.html"> anterior </a>
-				<a class="n1"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
