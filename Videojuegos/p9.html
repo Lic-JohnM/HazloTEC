@@ -1,103 +1,71 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Videojuegos: Enemigos y Comportamiento Automático</title>
+    <meta name="description" content="Cómo programar enemigos y comportamientos automáticos simples en videojuegos hechos con Scratch.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/index.html">VIDEOJUEGOS</a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
 
-	<body>
+        <h2>👾 Enemigos y comportamiento automático</h2>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <p>Para que un videojuego sea emocionante, necesitamos oponentes. Los enemigos pueden moverse por sí mismos, seguir al jugador, o aparecer en lugares inesperados. Este tipo de lógica se conoce como <strong>comportamiento automático</strong>.</p>
 
+        <h3>⚙️ Tipos de enemigos simples</h3>
+        <ul>
+            <li>Enemigos que se mueven en línea recta y rebotan</li>
+            <li>Enemigos que aparecen de pronto (spawn)</li>
+            <li>Enemigos que <strong>siguen al jugador</strong> usando bloques de dirección</li>
+        </ul>
 
-        <div id="info">
+        <p>En Scratch, puedes hacer que un enemigo siempre mire al jugador usando:</p>
+        <pre style="background:#f4f4f4; padding:10px;">apuntar en dirección de [Jugador]</pre>
 
-                <div id="con">
+        <p>Y luego hacer que se acerque poco a poco:</p>
+        <pre style="background:#f4f4f4; padding:10px;">mover (2) pasos</pre>
 
-			   <h2>Condicionales en Scratch</h2>
+        <h3>🎮 Ejemplo de juego tipo “dodge”</h3>
+        <p>El jugador debe esquivar enemigos que lo persiguen. Cada vez que lo tocan, pierde una vida. Puedes usar una variable para mostrar cuántas vidas quedan y cambiar el fondo si pierde.</p>
 
-            <br>
-            
-            <p>Las condicionales en Scratch tienen la misma logica de programación de dividir el flujo de trabajo, a continuación se presenta un ejemplo para que lo realices y puedas observar su funcionamiento:</p>
-            
-			<br>
-			
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304858" height="691" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+        <div style="text-align:center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Scratch_Cat_vs_Ghost.png/640px-Scratch_Cat_vs_Ghost.png" alt="Enemigos Scratch" style="max-width:100%; height:auto;">
+        </div>
 
-			<p>En la parte izquierda de la imagen podemos encontrar los bloques con los condicionales y los ciclos, en el ejemplo anterior podemos observar otra logica de programación para el intervalo de -5 a 15 grados sin la necesidad de indicar el intervalo completo para los condicionales como lo es donde la temperatura se encuentra entre 25 y 40. Es importante recordar que en la programación existen multiples formas de solucionar los problemas propuestos. </p>
+        <h3>🧠 Actividad sugerida</h3>
+        <ol>
+            <li>Crea un enemigo que se mueva solo o que siga al jugador</li>
+            <li>Agrega una condición: si toca al jugador, resta 1 vida</li>
+            <li>Cuando las vidas llegan a 0, cambia el fondo y termina el juego</li>
+        </ol>
 
-			<br>
+        <h3>💡 Consejo</h3>
+        <p>No todos los enemigos deben perseguir. Algunos pueden solo moverse de lado a lado. Lo importante es que den la sensación de reto y presión al jugador.</p>
 
-			<h2>Ciclos en Scratch </h2>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-			<br>
+        <div id="ctrl">
+            <a class="n1" href="p8.html">anterior</a>
+            <a class="n1" href="p10.html">siguiente</a>
+        </div>
 
-			<p> Los ciclos se crean de la misma manera, con la ventaja que existen otras opciones para crear ciclos, como decidir cuantas veces necesitamos que se repita sin necesidad de variables adicionales así como detener el programa con el comando detener todo. A continuación se presenta el ejercicio del parqueadero empleando el ciclo While con Scratch: </p>
-
-            <br>
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304889" height="363" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-      
-
-			<p> Así también con Scratch podemos emplear listas, para almacenar datos en la misma variable, a continuación podemos ver un ejemplo de como llenar una lista empleando Scratch: </p>
-			<br>
-		<div style="text-align:center;">
-                 <iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238304913" height="562" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-			<br>
-		
-			<p> Para finalizar podemos observar como en scratch se pueden usar otros elementos como inicio, en esta caso empleando la flecha hacia arriba se puede ejecutar el programa para buscar si un estudiante se encuentra en la lista.</p>
-			<br>
-			
-
-			<br>
-
-                        <p>Te sugerimos hacer los ejercicios de la cuarta y quinta actividad ahora en Scratch.</p>
-                        <br>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p8.html"> anterior </a>
-				<a class="n1" href="p10.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
