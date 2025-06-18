@@ -1,133 +1,64 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Videojuegos: Colisiones y puntuación</title>
+    <meta name="description" content="Introducción a colisiones, recolección de objetos y sistema de puntajes en videojuegos usando Scratch como herramienta base.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/index.html">VIDEOJUEGOS</a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
 
-	<body>
+        <h2>🍒 Colisiones y Puntos en los Videojuegos</h2>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <p>En muchos videojuegos, los personajes pueden recoger objetos (como monedas, frutas o llaves) o evitar peligros (como enemigos o trampas). Esto se logra gracias a algo llamado <strong>detector de colisión</strong>.</p>
 
+        <p>Una colisión ocurre cuando dos elementos se tocan: por ejemplo, cuando Pac-Man come una cereza o choca con un fantasma. Podemos usar esas colisiones para sumar puntos o quitar vidas.</p>
 
-        <div id="info">
+        <h3>🎮 Juego inspirador: Pac-Man</h3>
+        <p>Pac-Man es uno de los juegos más clásicos e influyentes. Fue lanzado en 1980 y se volvió popular por su jugabilidad simple pero divertida. En el juego, debes comer todos los puntos del laberinto mientras evitas a los fantasmas. ¡Si los comes a ellos después de una súper pastilla, ganas más puntos!</p>
 
-                <div id="con">
+        <div style="text-align:center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Pacman_gameplay.png/640px-Pacman_gameplay.png" alt="Pac-Man" style="max-width:100%; height:auto;">
+        </div>
 
-					<h2> Condicionales anidadas </h2>
+        <h3>🛠️ Actividad en Scratch</h3>
+        <p>Vamos a hacer un juego donde el personaje principal debe recolectar objetos y sumar puntos:</p>
+        <ol>
+            <li>Crea un personaje (puede ser el gato de Scratch)</li>
+            <li>Dibuja o elige un objeto para recolectar (como una estrella o una moneda)</li>
+            <li>Usa bloques de Scratch para detectar cuándo el personaje toca el objeto</li>
+            <li>Cuando ocurra la colisión, suma 1 al contador de puntos y haz desaparecer el objeto</li>
+            <li>Haz que el objeto aparezca en un lugar aleatorio para seguir jugando</li>
+        </ol>
 
-				<br>
+        <p>¡Puedes agregar un temporizador, vidas o enemigos para hacer el juego más desafiante!</p>
 
-			<p> En algunas ocasiones un programa puede tener varios flujos según las decisiones o situaciones que pasen. Así por ejemplo al momento de saber cuál es el desempeño según la nota definitiva de una materia de un colegio, el diagrama podría ser el siguiente: </p>
+        <h3>💡 Consejo</h3>
+        <p>En juegos más avanzados, las colisiones se usan también para <strong>activar puertas, cambiar de nivel o desbloquear poderes</strong>. Entender cómo funcionan es clave para crear interacciones emocionantes.</p>
 
-			<br>
-						<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238249568" height="667" width="600" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-			<br>
+        <div id="ctrl">
+            <a class="n1" href="p4.html">anterior</a>
+            <a class="n1" href="p6.html">siguiente</a>
+        </div>
 
-			<h3> Condicionales anidadas en Python </h3>
-
-			<br>
-
-			<p> En python existen diversas maneras de escribir el programa una de ellas es la siguiente, donde debemos tener mucho cuidado con los espacios de tabulación para escribir cada condición:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-else:
-    if definitiva>=4.0 and definitiva<4.5:
-          print("tu desempeño es alto");
-    else:
-        if definitiva>=3.0 and definitiva<4.0:
-              print("tu desempeño es basico");
-        else:
-            if definitiva>=0.0 and definitiva<3.0:
-                print("tu desempeño es bajo");
-            else:
-                print("Esta nota no existe");
-
-    </code>
-</pre>
-
-	<br>
-
-			<p> Otra forma de escribirlo sin tener en cuenta los espacios es empleando el comando <b>elif</b>, a continuación se presenta el programa:
-			<br>
-
-<pre>
-    <code>
-
-print("¿ Cuál es tu definitiva ?");
-definitiva=float(input());
-if definitiva>=4.5 and definitiva<5:
-    print("tu desempeño es superior");
-elif definitiva>=4.0 and definitiva<4.5:
-    print("tu desempeño es alto");
-elif definitiva>=3.0 and definitiva<4.0:
-    print("tu desempeño es basico");
-elif definitiva>=0.0 and definitiva<3.0:
-     print("tu desempeño es bajo");
-else:
-     print("Esta nota no existe");
-     
-    </code>
-</pre>
-
-            <br>
-
-	        	
-            <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
-
-			<br>
-
-			<a id="dcr" href="https://es.scribd.com/document/631657592/P5.pdf"  target="_blank"> Descarga taller condicionales anidadas </a>
-
-             <br>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
