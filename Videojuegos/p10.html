@@ -1,101 +1,75 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Videojuegos: Monedas, poderes y mejoras</title>
+    <meta name="description" content="Elementos especiales en videojuegos como monedas, poderes, mejoras y desbloqueables. Juegos más divertidos con coleccionables.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se emplean las funciones en la aplicación libre Scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/index.html">VIDEOJUEGOS</a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
 
-	<body>
+        <h2>💎 Monedas, poderes y mejoras</h2>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <p>Una de las partes más divertidas de muchos videojuegos son los <strong>coleccionables</strong>: monedas, estrellas, llaves mágicas, cofres o cualquier objeto que se pueda recoger. También hay <strong>poderes especiales</strong> que mejoran al personaje o le dan habilidades por un tiempo.</p>
 
+        <h3>🪙 Monedas y objetos que se recogen</h3>
+        <p>En juegos como Mario, recoger monedas da puntos, vidas o acceso a otros mundos. En Scratch puedes hacer esto con:</p>
+        <pre style="background:#f4f4f4; padding:10px;">si tocando [moneda] entonces
+  cambiar puntuación por 1
+  esconder [moneda]</pre>
 
-        <div id="info">
+        <h3>⚡ Poderes especiales</h3>
+        <p>Un poder especial puede ser:</p>
+        <ul>
+            <li>Ir más rápido</li>
+            <li>Salto doble</li>
+            <li>Ser invencible por unos segundos</li>
+        </ul>
 
-                <div id="con">
-   <h2>Funciones</h2>
+        <p>Puedes usar una <strong>variable de poder</strong> que se activa y luego se desactiva con un <code>esperar</code>.</p>
 
-            <br>
-            
-            <p>En ocasiones es necesario reutilizar codigos para evitar volver a escribir el codigo nuevamente, las librerias existen en multiples lenguajes de programación y no son más que compendios de codigos organizados que tienen una función determinada.</p>
-            
-			<h3>Funciones en scratch</h3>
+        <h3>🗝️ Desbloqueables y cofres</h3>
+        <p>También puedes crear objetos como cofres que <strong>dan premios aleatorios</strong>, o personajes ocultos que aparecen solo si tienes suficientes monedas. Esto hace que los jugadores quieran seguir explorando.</p>
 
-				<br>
+        <div style="text-align:center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Scratch_Gold_Coins.png/600px-Scratch_Gold_Coins.png" alt="Monedas en Scratch" style="max-width:100%; height:auto;">
+        </div>
 
-			<p> Aunque en Python existen librerias, vamos a explicarlo con Scratch por su editor en linea, inicialmente vamos a hacer una función que haga que el gato parezca que salte:
-            </p>
+        <h3>🎯 Actividad final</h3>
+        <ol>
+            <li>Agrega monedas u objetos que se puedan recoger en tu juego</li>
+            <li>Crea una variable de puntos</li>
+            <li>Agrega un cofre sorpresa que aparezca al llegar a cierto puntaje</li>
+            <li>Incluye al menos un poder especial (velocidad, invencibilidad, etc.)</li>
+        </ol>
 
-			<br>
-			
-		<div style="text-align:center;">
+        <h3>💡 Consejo creativo</h3>
+        <p>¡Inventa tus propios objetos especiales! No tienen que ser solo monedas: puede ser una guitarra mágica, una llave de colores, un reloj congelador del tiempo, etc.</p>
 
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305049" height="279" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-			<p>Así siempre va a saltar, sin embargo si es el desarrollo de un video juego y se requieren programar 3 tipos de salto, el ya creado, otro que llegue más alto y para finalizar uno que recorra más distancia horizontal. Aunque todos los codigos son parecidos no se puede solucionar con un ciclo porque siempre tienen valores diferentes, y si se acompaña de más comando se crea un codigo extremadamente largo para controlar. Por este motivo se crean las funciones para reducir la escritura de codigo, a continuación se muestra como se crearia la función <b>salto</b> en scratch. inicialmente vamos a ir al menu izquierdo> mis bloques> crear un bloque donde nos saldra la siguiente imagen:</p>
+        <div id="ctrl">
+            <a class="n1" href="p9.html">anterior</a>
+            <a class="n1" href="index.html">inicio</a>
+        </div>
 
-			<br>
-
-            
-		<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305066" height="438" width="450" frameborder="0" scrolling="no" ></iframe>
-			</div>  
-
-			<br>
-            <p>Vamos a llamar la función salto  agregamos dos entradas, una demonimada altura y otra denominada ancho para poder definir los parametros del salto, una vez creado se observa de la siguiente manera:</p>
-
-			<br>
-		<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564238305084" height="550" width="450" frameborder="0" scrolling="no" ></iframe>
-                  </div>  
-			<br>
-			<p> Donde podemos observar que dependiendo la tecla que empleemos, se realizan diferentes saltos. Así las funciones pueden reducir el trabajo, en el curso de video juegos vamos a aplicar todo lo visto, si quieres profundizar en el diseño de algoritmos te recomendamos averiguar sobre <b>eficiencia algoritmica</b> pues nos permitira hacer de forma más eficiente los algoritmos, por otra parte te invitamos a modificar e inventar los codigos vistos y para finalizar leer sobre los paradigmas de programación en particular la <b> POO: Programación orientada a objetos</b>.</p>
-			
-
-			
-
-                        <br>
-
-   
-                        
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p9.html"> anterior </a>
-				                           
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
