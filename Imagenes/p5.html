@@ -1,58 +1,78 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Imagenes digitales</title>
+    <meta name="description" content="Introducción a imágenes vectoriales, vectorización de mapa de bits, curvas Bézier y trayectos B-Spline en Inkscape">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Imágenes digitales</title>
-	<meta name="description" content="Descripción de algunas caracteristicas de un mapa de bits .">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Imagenes/index.html">IMÁGENES DIGITALES</a>
+</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","280vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<div id="info">
+    <div id="con">
 
-	<body>
+        <h2>🖼️ ¿Qué es una imagen vectorial?</h2>
+        <p>Una <strong>imagen vectorial</strong> está compuesta por formas geométricas (como líneas, curvas y polígonos) definidas por fórmulas matemáticas, en lugar de píxeles. Esto significa que <strong>puede escalarse a cualquier tamaño sin perder calidad</strong>.</p>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <p>Estas imágenes son ideales para logotipos, íconos, planos y cualquier diseño que necesite conservar nitidez al ampliarse.</p>
 
+        <h2>📤 Vectorizar un mapa de bits en Inkscape</h2>
+        <p>Inkscape tiene una herramienta poderosa que permite convertir imágenes tipo mapa de bits (como .jpg o .png) en gráficos vectoriales. Esto se llama <strong>vectorizar</strong> o <strong>trazar mapa de bits</strong>.</p>
 
-        <div id="info">
+        <h3>🛠️ ¿Cómo hacerlo?</h3>
+        <ol>
+            <li>Importa una imagen en formato mapa de bits (como una foto o dibujo escaneado)</li>
+            <li>Selecciona la imagen y ve al menú <strong>Ruta &gt; Trazar mapa de bits</strong></li>
+            <li>Explora las opciones: brillo, bordes, colores múltiples, etc.</li>
+            <li>Haz clic en <strong>Aceptar</strong> y verás una copia vectorial encima de la imagen original</li>
+        </ol>
 
-                <div id="con">
+        <div style="text-align:center;">
+            <img src="https://lic-johnm.github.io/HazloTEC/Imagenes/imagenes/vectorizar.png" alt="Vectorizar imagen" style="max-width:100%; height:auto;">
+        </div>
 
-				
-  
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
-                             
+        <h3>🎨 Ejercicio sugerido</h3>
+        <p>Busca el dibujo de un animal (puede ser una caricatura en blanco y negro). Vectorízalo en Inkscape usando la opción de <strong>bordes</strong>. Luego colóralo por partes con la herramienta de <strong>relleno</strong>.</p>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+        <h2>🧩 Curvas Bézier y B-Spline</h2>
 
+        <h3>✒️ Curva Bézier</h3>
+        <p>Es una línea que se curva entre dos puntos gracias a sus <strong>manijas de control</strong>. Es perfecta para dibujar trazos precisos y editar formas con fluidez. En Inkscape se accede con la herramienta <strong>dibujar curvas Bézier</strong>.</p>
 
-     	</body>
+        <h3>🌊 Trayecto B-Spline</h3>
+        <p>Es una alternativa más suave y automática que las curvas Bézier. Permite crear líneas orgánicas que se ajustan de forma natural entre puntos. Muy útil para ilustraciones estilizadas o caligráficas.</p>
 
-	
+        <div style="text-align:center;">
+            <img src="https://lic-johnm.github.io/HazloTEC/Imagenes/imagenes/curvas.png" alt="Curvas Bézier y B-Spline" style="max-width:100%; height:auto;">
+        </div>
+
+        <h3>✍️ Actividad práctica</h3>
+        <ul>
+            <li>Dibuja un objeto simple (como una hoja, una nube o una gota) usando la herramienta Bézier</li>
+            <li>Repite el dibujo usando la herramienta B-Spline</li>
+            <li>Compara los resultados y analiza cuál fue más fácil de usar o cuál se adapta mejor al diseño</li>
+        </ul>
+
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+        <div id="ctrl">
+            <a class="n1" href="p4.html">anterior</a>
+            <a class="n1" href="p6.html">siguiente</a>
+        </div>
+
+        <br>
+    </div>
+</div>
+</body>
 </html>
