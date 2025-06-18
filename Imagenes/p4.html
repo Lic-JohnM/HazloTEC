@@ -1,93 +1,115 @@
+
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Imágenes digitales</title>
+    <meta name="description" content="Introducción a imágenes digitales: resolución, formatos, derechos de autor, color y uso de Inkscape">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Imágenes digitales</title>
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Imagenes/index.html">IMÁGENES DIGITALES</a>
+</div>
 
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","250vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
-
-	<body>
-
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+<div id="info">
+    <div id="con">
 
 
-        <div id="info">
+<h2>✨ Diseño con Formas</h2>
 
-                <div id="con">
-			<h2>Comunicación visual</h2>
-			<br>
-			  <p>La <strong>comunicación visual</strong> es fundamental en diversas áreas como el <strong>diseño gráfico</strong>, la <strong>ingeniería</strong>, la <strong>arquitectura</strong> y la <strong>publicidad</strong>, ya que permite representar ideas de manera clara y efectiva. A lo largo de este curso de <strong>imagenes digitales</strong>, hemos explorado herramientas como las formas primitivas y los colores digitales, elementos clave en la creación de piezas visuales. Ahora, nos adentraremos en el diseño de tarjetas de presentación, explorando aspectos como tamaños adecuados y el diseño para redes sociales, herramientas esenciales para cualquier profesional visual en la actualidad.</p> 
-			<br>
-			
+<p>En esta sección aprenderemos a trabajar con <strong>formas básicas</strong> en Inkscape para crear elementos visuales como tarjetas, botones y componentes gráficos pensados para usarse en redes sociales o diseños digitales.</p>
 
-			
+<h3>🔹 Tamaños comunes de elementos gráficos</h3>
+<p>Es importante respetar las dimensiones recomendadas según el uso de cada imagen. A continuación, se muestra una tabla con las medidas sugeridas para publicaciones en redes sociales:</p>
 
-			   <h2>Reticulas </h2>
-			<br>
-			<p>Las reticulas son elementos avanzados del diseño gráfico que permiten generar elementos con mucha precisión porque permiten apartir de un elemento gráfico generar otro, a continuación se muestra una reticula muy básica de inkscape:</p>
-          
+<h1>Tamaños de Elementos Gráficos para Redes Sociales</h1>
+<table>
+    <caption>Tamaños Recomendados de Imágenes para Redes Sociales</caption>
+    <thead>
+        <tr>
+            <th>Plataforma</th>
+            <th>Tamaño de Imagen</th>
+            <th>Especificación</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Facebook</td>
+            <td>1200 x 630 px</td>
+            <td>Foto de portada, publicaciones en el feed</td>
+        </tr>
+        <tr>
+            <td>Twitter</td>
+            <td>1200 x 675 px</td>
+            <td>Imágenes para tweets</td>
+        </tr>
+        <tr>
+            <td>Instagram</td>
+            <td>1080 x 1080 px</td>
+            <td>Publicaciones cuadradas</td>
+        </tr>
+        <tr>
+            <td>LinkedIn</td>
+            <td>1200 x 627 px</td>
+            <td>Imágenes para actualizaciones y anuncios</td>
+        </tr>
+        <tr>
+            <td>Pinterest</td>
+            <td>1000 x 1500 px</td>
+            <td>Imágenes de pines</td>
+        </tr>
+        <tr>
+            <td>YouTube</td>
+            <td>1280 x 720 px</td>
+            <td>Miniaturas de videos</td>
+        </tr>
+        <tr>
+            <td>General</td>
+            <td>500 x 500 px</td>
+            <td>Para redes sin tamaño específico</td>
+        </tr>
+    </tbody>
+</table>
 
-			<br>
-			
-				<div style="text-align:center;">
+<h3>📝 Diseño de tarjetas</h3>
+<p>Las tarjetas de presentación también siguen tamaños estándares. En Inkscape puedes practicar diseños reales usando estas medidas:</p>
+<ul>
+    <li>Tarjeta horizontal: <strong>90 x 50 mm</strong></li>
+    <li>Tarjeta vertical: <strong>50 x 90 mm</strong></li>
+    <li>Tarjeta cuadrada: <strong>60 x 60 mm</strong></li>
+</ul>
+<p>Recuerda configurar la página en milímetros desde el menú de <strong>Archivo &gt; Propiedades del documento</strong>.</p>
 
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=170081323418528017" height="570" width="450" frameborder="0" scrolling="no" ></iframe>	
-			</div>  
+<h3>🌈 Actividad sugerida</h3>
+<p>En Inkscape:</p>
+<ol>
+    <li>Dibuja una tarjeta del tamaño indicado.</li>
+    <li>Agrega tu nombre, una imagen o logo, y elementos decorativos.</li>
+    <li>Prueba hacer una versión circular usando la <strong>herramienta de recorte (clip)</strong> con un círculo.</li>
+</ol>
 
-			<p>Usando las diversas guias se pueden generar elementos precisos que pueden ser replicados desde su composición:</p>
-
-			<br>
-
-
-            
-				<div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=105342078778527553" height="498" width="345" frameborder="0" scrolling="no" ></iframe>
-				</div>  
-			<br>
-			<h2>Logos y tarjetas de presentación</h2>
-			<p>El logo de mitsubishi es de una empresa japone creada en 1960 y traduce diamantes, se reinventaron despues de fabricar motores de avion</p>
-
-
-			<p>El logo de messenger que es 3 servicio de mensajer usado en la actualidad hace referencia a un rayo porque simboliza velocidad y rapidez.</p>
+<p>Con estas prácticas desarrollarás habilidades para crear piezas visuales coherentes, atractivas y adaptadas a su destino digital.</p>
 
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p3.html"> anterior </a>
-				<a class="n1" href="p5.html"> siguiente </a>
-                             
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+        <div id="ctrl">
+            <a class="n1" href="p3.html">anterior</a>
+            <a class="n1" href="p5.html">siguiente</a>
+        </div>
 
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
+
