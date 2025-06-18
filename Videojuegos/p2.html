@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Diseño de Sprites con Pixel Art</title>
+    <meta name="description" content="Introducción al pixel art en videojuegos con inspiración en Mario Bros">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/index.html">VIDEOJUEGOS</a>
+</div>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Videojuegos</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<div id="info">
+    <div id="con">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","110vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+        <h2>🎮 Diseño de Sprites con Pixel Art</h2>
+        <p>Un <strong>sprite</strong> es una imagen pequeña que representa un personaje u objeto en un videojuego. En lugar de vectores, aquí trabajaremos con <strong>pixel art</strong>, donde cada píxel cuenta: ¡ideal para comenzar con estilo retro!</p>
 
-	<body>
+        <h3>🧙 Inspiración: Mario Bros</h3>
+        <p><strong>Mario Bros</strong> es uno de los videojuegos más icónicos de la historia. Fue creado por <strong>Shigeru Miyamoto</strong> y lanzado por Nintendo en 1985. Su historia gira en torno a Mario, un fontanero que rescata a la Princesa Peach del malvado Bowser, superando mundos, obstáculos y enemigos.</p>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <p>Mario se mueve por escenarios llenos de tuberías, bloques y criaturas. Gracias a su estilo colorido y simple, los sprites en 8 bits definieron toda una era del diseño de videojuegos.</p>
 
+        <div style="text-align:center;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Super_Mario_Bros._box.png" alt="Portada Mario Bros" style="max-width:100%; height:auto;">
+        </div>
 
-        <div id="info">
+        <h3>🧩 ¿Qué es el Pixel Art?</h3>
+        <p>El pixel art consiste en dibujar imágenes usando una cuadrícula donde cada celda es un píxel. Se trabaja a resoluciones diminutas (como 16×16 o 32×32 px), lo que ayuda a entender la idea de forma, colores y animación frame por frame.</p>
 
-                <div id="con">
+        <h3>🛠️ Herramienta recomendada</h3>
+        <p>Para practicar puedes usar <a href="https://www.piskelapp.com/" target="_blank">Piskel</a>, una herramienta en línea gratuita y simple para dibujar pixel art:</p>
+        <ul>
+            <li>Abre Piskel en tu navegador</li>
+            <li>Crea un nuevo sprite de <strong>32×32 px</strong></li>
+            <li>Dibuja tu personaje con colores simples</li>
+            <li>Guárdalo como PNG para usarlo luego en un juego o presentación</li>
+        </ul>
 
-			<h2>Mario Bross</h2>
-				<div style="text-align:center;">
-			
-				<iframe src="https://assets.pinterest.com/ext/embed.html?id=33073378507224140" height="775" width="450" frameborder="0" scrolling="no" ></iframe>			
-				</div>     		
-			<br>
-			<p>Mario Bross es un video juego clasico que brindo la oportunidad de generar multiples secuelas y es un icono debido entre otras muchas opciones a su historia. En termino de jugabilidad consiste en un pesonaje que se mueve por el escenario mientras se generan diversos oponentes y sortea dificultades para lograr llegar a rescatar a una princesa.</p>
+        <h3>✍️ Actividad práctica</h3>
+        <p>Vamos a crear nuestro primer sprite estilo Mario:</p>
+        <ul>
+            <li>Dibuja un mini personaje (como un fontanero o criatura)</li>
+            <li>Usa entre <strong>3 y 5 colores</strong></li>
+            <li>Intenta dibujar una pose de pie y otra caminando (2 frames)</li>
+            <li>Exporta la animación simple</li>
+        </ul>
+        <p>Usa tu sprite en un proyecto futuro o compártelo con la clase.</p>
 
-                        <br>
+        <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p1.html"> anterior </a>
-				<a class="n1" href="p3.html"> siguiente </a>
-                             
+        <div id="ctrl">
+            <a class="n1" href="p1.html">anterior</a>
+            <a class="n1" href="p3.html">siguiente</a>
+        </div>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-
-     	</body>
-
-	
+        <br>
+    </div>
+</div>
+</body>
 </html>
