@@ -1,119 +1,119 @@
-
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>WEB</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 4</title>
+  <meta name="description" content="Introducción a CSS: estilos en línea y estilos internos en HTML.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","100vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="info">
+    <div id="con">
 
+      <h2>¿Qué es CSS?</h2>
+      <p><strong>CSS</strong> significa <em>Cascading Style Sheets</em>. Es el lenguaje que se usa para aplicar <strong>estilos</strong> a una página web, como colores, tamaños, fuentes, márgenes, etc.</p>
 
-        <div id="info">
+      <h3>1. Estilos con el atributo <code>style</code></h3>
+      <p>Se puede usar el atributo <code>style</code> dentro de una etiqueta HTML para cambiar su apariencia.</p>
 
-                <div id="con">
+<pre><code>
+&lt;p style="color:blue;"&gt;Este texto es azul&lt;/p&gt;
+</code></pre>
 
-		
+      <p><span style="color:blue;">Ejemplo en vivo: Este texto es azul</span></p>
 
-			<h2>Tablas</h2>
+      <h3>2. Estilos con la etiqueta <code>&lt;style&gt;</code></h3>
+      <p>También se puede insertar CSS dentro de la página, en la parte del <code>&lt;head&gt;</code>.</p>
 
-			<br>
+<pre><code>
+&lt;style&gt;
+  h1 {
+    color: red;
+    font-family: Arial;
+  }
+&lt;/style&gt;
+</code></pre>
 
-			<p>Para generar tablas se usan las etiquetas TR y TD. </p>
-		<br>
+      <p><strong>Resultado:</strong> el título será rojo y con letra Arial.</p>
 
+      <h3>3. Estilos comunes</h3>
+      <ul>
+        <li><code>color</code>: color del texto</li>
+        <li><code>background-color</code>: color de fondo</li>
+        <li><code>font-size</code>: tamaño del texto</li>
+        <li><code>font-family</code>: tipo de letra</li>
+        <li><code>text-align</code>: alineación (left, center, right)</li>
+      </ul>
 
-						
-<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-			&lt;table border="1"&gt;
-			    &lt;tr&gt;
-			        &lt;th&gt;Nombre&lt;/th&gt;
-			        &lt;th&gt;Edad&lt;/th&gt;
-			    &lt;/tr&gt;
-			    &lt;tr&gt;
-			        &lt;td&gt;Juan&lt;/td&gt;
-			        &lt;td&gt;25&lt;/td&gt;
-			    &lt;/tr&gt;
-			    &lt;tr&gt;
-			        &lt;td&gt;María&lt;/td&gt;
-			        &lt;td&gt;30&lt;/td&gt;
-			    &lt;/tr&gt;
-			&lt;/table&gt;
-		</code>
-  	 </pre>
+      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
 
-    </td>
+      <h3>Editor interactivo</h3>
+      <p>Prueba diferentes estilos aquí mismo:</p>
 
-    <td>
-		<table border="1">
-			    <tr>
-			        <th>Nombre</th>
-			        <th>Edad</th>
-			    </tr>
-			    <tr>
-			        <td>Juan</td>
-			        <td>25</td>
-			    </tr>
-			    <tr>
-			        <td>María</td>
-			        <td>30</td>
-			    </tr>
-		</table>
-	 </td>
-  </tr>
-  </table>
+<textarea id="htmlInput" style="width: 100%; height: 280px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        color: green;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mi título con estilo</h1>
+    <p>Este párrafo tiene fondo gris claro, texto más grande y espacio interno.</p>
+  </body>
+</html>
+</textarea>
+      <br><br>
+      <button onclick="runHTML()" style="padding: 10px 20px;">Ver resultado</button>
+      <br><br>
+      <iframe id="preview" style="width: 100%; height: 300px; border:1px solid #ccc;"></iframe>
 
-			<br>
+      <script>
+        function runHTML() {
+          var code = document.getElementById("htmlInput").value;
+          var frame = document.getElementById("preview");
+          frame.contentDocument.open();
+          frame.contentDocument.write(code);
+          frame.contentDocument.close();
+        }
+      </script>
 
-			
-			
-                        <br>
+      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p3.html"> anterior </a>
-				<a class="n1" href="p5.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
+      <div id="ctrl">
+        <a class="n1" href="p3.html">anterior</a>
+        <a class="n1" href="p5.html">siguiente</a>
       </div>
 
+    </div>
+  </div>
+
+</body>
+
+</html>
 
      	</body>
 
