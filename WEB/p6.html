@@ -1,160 +1,186 @@
-
-
-
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>WEB</title>
-	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-		
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","210vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 6</title>
+  <meta name="description" content="Selectores en CSS: etiquetas, clases, IDs y archivo externo.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<body>
+<body>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
+  <div id="info">
+    <div id="con">
 
-        <div id="info">
+      <h2>Selectores en CSS</h2>
 
-                <div id="con">
-				<br>
-			<h3>Bootstrap</h3>
-			<br>
-			<p>Es una libreria que añade estilos a las etiquetas usando el lenguaje CSS, y entre uno de sus mayores aportes es generar páginas adaptables a todas las pantallas, para que funcionen es necesario agregar al documento HTML algunas lineas de codigo, a continuación se presentan las lineas junto a algunas etiquetas fundamentales de HTML, para facilitar la construcción de codigo: </p>
-			<br>
-			<pre>
-			<code>
-			&lt;!DOCTYPE html&gt;
-			&lt;html lang="es"&gt;
-			&lt;head&gt;
-			&lt;meta charset="UTF-8"&gt;
-			&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-			&lt;title&gt;Documento con Bootstrap&lt;/title&gt;
-			
-			&lt;!-- Agregar el enlace al archivo CSS de Bootstrap --&gt;
-			&lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"&gt;
-			
-			&lt;/head&gt;
-			&lt;body&gt;
-			
-			&lt;!-- Tu contenido HTML aquí --&gt;
-			
-			&lt;!-- Agregar los scripts de Bootstrap (jQuery y Popper.js son requeridos) --&gt;
-			&lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"&gt;&lt;/script&gt;
-			&lt;script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"&gt;&lt;/script&gt;
-			&lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"&gt;&lt;/script&gt;
-			
-			&lt;/body&gt;
-			&lt;/html&gt;
-			</code>
-  			 </pre>
-			
+      <p>Un selector le dice al navegador a qué elementos se deben aplicar los estilos. Los más comunes son:</p>
 
-			
+      <ul>
+        <li><strong>Etiqueta</strong>: aplica a todos los elementos de ese tipo. Ej: <code>p { color: blue; }</code></li>
+        <li><strong>Clase</strong>: comienza con punto (<code>.</code>) y se aplica con el atributo <code>class</code></li>
+        <li><strong>ID</strong>: comienza con numeral (<code>#</code>) y se aplica con el atributo <code>id</code></li>
+      </ul>
 
+      <h3>1. Selector por etiqueta</h3>
+<textarea id="htmlInput1" style="width:100%; height:220px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Este es un párrafo azul.</p>
+    <p>Este también.</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput1','preview1')">Ver resultado</button>
+<iframe id="preview1" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
 
-			<br>
-			
-			<h2>Bootstrap y los diferentes tamaños de dispositivos</h2>
-			<br>
-			<p>Una ventaja de Bootstrap es que la disposición de los elementos puede varias según el tipo de pantalla a continuación se muestran los tipos de pantalla </p>
-			<br>
-		
-<div class="container mt-5">
-  <h2>Tamaños de Dispositivos en Bootstrap</h2>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Tipo de Dispositivo</th>
-        <th>Tamaño de Pantalla</th>
-        <th>Clase Bootstrap</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Extra pequeño</td>
-        <td>Menos de 576px</td>
-        <td>col-</td>
-      </tr>
-      <tr>
-        <td>Pequeño</td>
-        <td>576px o más</td>
-        <td>col-sm-</td>
-      </tr>
-      <tr>
-        <td>Mediano</td>
-        <td>768px o más</td>
-        <td>col-md-</td>
-      </tr>
-      <tr>
-        <td>Grande</td>
-        <td>992px o más</td>
-        <td>col-lg-</td>
-      </tr>
-      <tr>
-        <td>Extra grande</td>
-        <td>1200px o más</td>
-        <td>col-xl-</td>
-      </tr>
-    </tbody>
-  </table>
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <h3>2. Selector por clase (.clase)</h3>
+<textarea id="htmlInput2" style="width:100%; height:240px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .importante {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="importante">Este párrafo es importante.</p>
+    <p>No tiene clase, es normal.</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput2','preview2')">Ver resultado</button>
+<iframe id="preview2" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <h3>3. Selector por ID (#id)</h3>
+<textarea id="htmlInput3" style="width:100%; height:240px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #especial {
+        background-color: yellow;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="especial">Este párrafo tiene un ID llamado especial.</p>
+    <p>Este no lo tiene.</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput3','preview3')">Ver resultado</button>
+<iframe id="preview3" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <h3>4. Combinando selectores</h3>
+<textarea id="htmlInput4" style="width:100%; height:240px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        font-family: Arial;
+      }
+      .azul {
+        color: blue;
+      }
+      #grande {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="azul">Texto en azul</p>
+    <p id="grande">Texto grande</p>
+    <p class="azul" id="grande">Texto azul y grande</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput4','preview4')">Ver resultado</button>
+<iframe id="preview4" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+
+<script>
+function runHTML(inputId, previewId) {
+  var code = document.getElementById(inputId).value;
+  var frame = document.getElementById(previewId);
+  frame.contentDocument.open();
+  frame.contentDocument.write(code);
+  frame.contentDocument.close();
+}
+</script>
+
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+<!-- SECCIÓN b1: Guardar CSS en archivo externo -->
+<div id="b1">
+  <div id="e">
+    <h3>¿Cómo guardar tu CSS en un archivo externo?</h3>
+    <a id="signo">+</a>
+  </div>
+  <div id="p">
+    <p>Separar los estilos en un archivo externo permite reutilizar y organizar mejor tu código.</p>
+    <ol>
+      <li>Crea un nuevo archivo en el Bloc de notas.</li>
+      <li>Escribe los estilos sin etiquetas HTML. Ejemplo:</li>
+<pre><code>
+p {
+  color: green;
+}
+.importante {
+  font-size: 18px;
+}
+</code></pre>
+      <li>Guarda el archivo como <strong>"estilos.css"</strong> (usa comillas dobles).</li>
+      <li>En tu archivo HTML, enlázalo así dentro del <code>&lt;head&gt;</code>:</li>
+<pre><code>
+&lt;link rel="stylesheet" href="estilos.css"&gt;
+</code></pre>
+    </ol>
+    <p>¡Listo! Tu página usará ese archivo para aplicar estilos.</p>
+  </div>
 </div>
 
-	
-		
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
 
+<div id="ctrl">
+  <a class="n1" href="p5.html">anterior</a>
+  <a class="n1" href="p7.html">siguiente</a>
+</div>
 
-                        
+    </div>
+  </div>
 
-			<br>
+</body>
 
-			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
-			<br>
-           	
-
-
-                        <br>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p5.html"> anterior </a>
-				<a class="n1" href="p7.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
-
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     	</body>
-
-	
 </html>
 
