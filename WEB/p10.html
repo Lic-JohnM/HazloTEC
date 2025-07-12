@@ -1,219 +1,122 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se emplean las funciones en la aplicación libre Scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Proyecto Final</title>
+  <meta name="description" content="Proyecto integrador: Crea tu mini sitio web combinando HTML, CSS y JavaScript.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","250vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="info">
+    <div id="con">
 
+      <h2>🎓 Proyecto Final: Mi Mini Sitio Web</h2>
 
-        <div id="info">
+      <p>Este es el momento de aplicar lo aprendido. Vas a crear tu propia página web usando HTML, CSS y JavaScript.</p>
 
-                <div id="con">
-   
+      <h3>🎯 ¿Qué debe tener tu página?</h3>
+      <ul>
+        <li>✅ Estructura completa con <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code></li>
+        <li>✅ Títulos y párrafos</li>
+        <li>✅ Una imagen y un enlace</li>
+        <li>✅ Una lista o tabla</li>
+        <li>✅ Estilos CSS: color de fondo, texto, márgenes, clases o ID</li>
+        <li>✅ Una plantilla con <code>div</code> organizados (puedes usar Grid o Flexbox)</li>
+        <li>✅ Un botón que cambie algo con JavaScript (texto, color, etc.)</li>
+      </ul>
 
+      <h3>🌈 Tema libre:</h3>
+      <p>Tu página puede ser sobre lo que tú quieras: un videojuego, tu cantante favorito, tu mascota, una receta, una película, etc.</p>
 
-		
+      <h3>🧪 Plantilla base editable</h3>
+      <p>Puedes comenzar con este ejemplo y modificarlo como quieras:</p>
 
-		<br>
-			<h2>Formularios</h2>
+<textarea id="htmlInputFinal" style="width:100%; height:400px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: #f0f0f0;
+        font-family: Arial;
+      }
+      #contenedor {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 10px;
+      }
+      .caja {
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      #boton {
+        background: navy;
+        color: white;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mi sitio web</h1>
+    <p>Bienvenido a mi primera página personalizada</p>
 
-			<br>
-
-			<p>Los formularios para tomar datos de la página WEB, tambien se pueden hacer con bootstrap, a continuación se presenta un ejemplo con diversos ejemplos:</p>
-		<br>
-			<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-&lt;form&gt
-      &lt;!-- Campo de entrada --&gt
-      &lt;div class="mb-3"&gt
-        &lt;label for="nombre" class="form-label"&gtNombre&lt;/label&gt
-        &lt;input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre"&gt
-      &lt;/div&gt
-      &lt;!-- Casilla de verificación --&gt
-      &lt;div class="mb-3 form-check"&gt
-        &lt;input type="checkbox" class="form-check-input" id="acepto"&gt
-        &lt;label class="form-check-label" for="acepto"&gtAcepto los términos y condiciones&lt;/label&gt
-      &lt;/div&gt
-      &lt;!-- Botones de radio --&gt
-      &lt;div class="mb-3"&gt
-        &lt;div class="form-check"&gt
-          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked&gt
-          &lt;label class="form-check-label" for="opcion1"&gt
-            Opción 1
-          &lt;/label&gt
-        &lt;/div&gt
-        &lt;div class="form-check"&gt
-          &lt;input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2"&gt
-          &lt;label class="form-check-label" for="opcion2"&gt
-            Opción 2
-          &lt;/label&gt
-        &lt;/div&gt
-      &lt;/div&gt
-      &lt;!-- Selector --&gt
-      &lt;div class="mb-3"&gt
-        &lt;label for="select" class="form-label"&gtSeleccione una opción&lt;/label&gt
-        &lt;select class="form-select" id="select"&gt
-          &lt;option selected&gtSeleccionar...&lt;/option&gt
-          &lt;option value="opcion1"&gtOpción 1&lt;/option&gt
-          &lt;option value="opcion2"&gtOpción 2&lt;/option&gt
-          &lt;option value="opcion3"&gtOpción 3&lt;/option&gt
-        &lt;/select&gt
-      &lt;/div&gt
-      &lt;!-- Botón de envío --&gt
-      &lt;button type="submit" class="btn btn-primary"&gtEnviar&lt;/button&gt
-    &lt;/form&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-		 <form>
-      <!-- Campo de entrada -->
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+    <div id="contenedor">
+      <div class="caja">
+        <h3>Sobre mí</h3>
+        <p>Me gusta el arte y la tecnología.</p>
       </div>
-      <!-- Casilla de verificación -->
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="acepto">
-        <label class="form-check-label" for="acepto">Acepto los términos y condiciones</label>
-      </div>
-      <!-- Botones de radio -->
-      <div class="mb-3">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="opciones" id="opcion1" value="opcion1" checked>
-          <label class="form-check-label" for="opcion1">
-            Opción 1
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="opciones" id="opcion2" value="opcion2">
-          <label class="form-check-label" for="opcion2">
-            Opción 2
-          </label>
-        </div>
-      </div>
-      <!-- Selector -->
-      <div class="mb-3">
-        <label for="select" class="form-label">Seleccione una opción</label>
-        <select class="form-select" id="select">
-          <option selected>Seleccionar...</option>
-          <option value="opcion1">Opción 1</option>
-          <option value="opcion2">Opción 2</option>
-          <option value="opcion3">Opción 3</option>
-        </select>
-      </div>
-      <!-- Botón de envío -->
-      <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
-	    </td>
-	  </tr>
-</table>	
-
-
-			<br>
-
-					<h3> carrusel </h3>
-		
-			
-				<p>El carrusel permite mostrar en la página WEB diferentes imagenes, a continuación se muestra un ejemplo del codigo:</p>
-					<br>
-						<table border="1">
-			  <tr>
-			    <td style="text-align:center">Código</td>
-			    <td style="text-align:center">Resultado</td>
-			  </tr>
-			  <tr>
-			    <td>
-				<pre>
-					<code>
- &lt;div class="container" &gt
-   &lt;div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" &gt
-     &lt;div class="carousel-inner" &gt
-       &lt;div class="carousel-item active" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1" &gt
-       &lt;/div &gt
-       &lt;div class="carousel-item" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2" &gt
-       &lt;/div &gt
-       &lt;div class="carousel-item" &gt
-         &lt;img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3" &gt
-       &lt;/div &gt
-     &lt;/div &gt
-   &lt;/div &gt
- &lt;/div &gt
-					</code>
-			  	 </pre>
-			    </td>
-			    <td>
-		
-
-<div class="container">
-  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1">
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2">
-      </div>
-      <div class="carousel-item">
-        <img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3">
+      <div class="caja">
+        <h3>Mi imagen</h3>
+        <img src="https://via.placeholder.com/150" alt="Mi imagen" style="max-width:100%;">
       </div>
     </div>
-  </div>
-</div>
-	    </td>
-	  </tr>
-</table>	
-					
-         <div id="ctrl">
-					
-				 <a class="n1" href="p9.html"> anterior </a>
-				<a class="n1" href="p11.html"> siguiente </a>
-                             
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+    <br>
+    <button id="boton" onclick="document.body.style.background = '#cceeff'">Cambiar fondo</button>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInputFinal','previewFinal')">Ver resultado</button>
+<iframe id="previewFinal" style="width:100%; height:400px; border:1px solid #ccc;"></iframe>
+
+<script>
+function runHTML(inputId, previewId) {
+  var code = document.getElementById(inputId).value;
+  var frame = document.getElementById(previewId);
+  frame.contentDocument.open();
+  frame.contentDocument.write(code);
+  frame.contentDocument.close();
+}
+</script>
+
+      <hr>
+      <p>¡Este proyecto es tu oportunidad de demostrar tu creatividad y lo que has aprendido en el Módulo 1!</p>
+
+      <div id="ctrl">
+        <a class="n1" href="p9.html">anterior</a>
       </div>
 
+    </div>
+  </div>
 
-     	</body>
-
-	
+</body>
 </html>
+
