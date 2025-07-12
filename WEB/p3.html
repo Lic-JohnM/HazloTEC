@@ -1,111 +1,150 @@
-
-   		<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>WEB</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 3</title>
+  <meta name="description" content="Estructura de una página HTML y elementos de formulario básicos.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","150vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="info">
+    <div id="con">
 
+      <h2>Estructura de una página HTML</h2>
+      <p>Una página web debe tener una estructura mínima para funcionar correctamente:</p>
 
-        <div id="info">
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;Mi Página&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
-                <div id="con">
+      <h3>¿Qué es el &lt;head&gt;?</h3>
+      <p>Es la parte oculta de la página. Aquí se define el título, el tipo de letra, íconos, estilos, etc.</p>
 
-			<H2>HEAD Y BODY</H2>
-			<br>
+      <h3>¿Qué es el &lt;body&gt;?</h3>
+      <p>Es la parte visible de la página. Todo lo que el usuario ve en pantalla va dentro del cuerpo.</p>
 
-			<p>Las etiquetas más fundamentales de HTML son <head></head> y <body></body> en las etiquetas head se escribe toda la información de la página respecto a su configuración y en la etiqueta body todo el contenido. A continuación se presentan algunas etiquetas muy recurrentes que se emplean en la parte de las etiquetas de Body de HTML: </p>
-			<br>
-				<h3>Estructura de un texto</h3>
+      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
 
-				<br>
-			
-			<p>Con las etiquetas H1,H2... se puede hacer encabezados con diferentes tamaños, con las etiquetas p se pueden hacer diversos parrafos, a continuación se muestra el codigo y como se ve en la pagina WEB:</p>
-		<br>
+      <h3>Elementos de formulario</h3>
+      <p>Los formularios permiten que el usuario escriba, seleccione o elija opciones en la página. Aquí mostramos algunos ejemplos comunes:</p>
 
-			
-<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	    <pre>
-		<code>
-		        &lt;h1&gt;Encabezado de nivel 1&lt;/h1&gt;
-		        &lt;h2&gt;Encabezado de nivel 2&lt;/h2&gt;
-		        &lt;h3&gt;Encabezado de nivel 3&lt;/h3&gt;
-		        &lt;h4&gt;Encabezado de nivel 4&lt;/h4&gt;
-			&lt;h5&gt;Encabezado de nivel 5&lt;/h5&gt;
-			&lt;br&gt;salto de linea.&lt;/br&gt;
-			&lt;p&gt;Este es un párrafo de ejemplo.&lt;/p&gt;
-			&lt;b&gt;Texo en negrilla&lt;/b&gt;
-		</code>
-  	 </pre>
-    </td>
-    <td>
-			<h1>Encabezado de nivel 1</h1>
-			<h2>Encabezado de nivel 2</h2>
-			<h3>Encabezado de nivel 3</h3>
-			<h4>Encabezado de nivel 4</h4>
-			<h5>Encabezado de nivel 5</h5>
-	    		<br>
-			<p>Este es un párrafo de ejemplo</p>    
-	                <b>Texto en negrilla</b>  
-    </td>
-  </tr>
-</table>
+      <ul>
+        <li><strong>Campo de texto:</strong><br>
+          <code>&lt;input type="text"&gt;</code><br>
+          Resultado: <input type="text" placeholder="Escribe aquí">
+        </li><br>
 
-	
-		<br>
-			
-	<br>
+        <li><strong>Área de texto:</strong><br>
+          <code>&lt;textarea&gt;&lt;/textarea&gt;</code><br>
+          Resultado:<br>
+          <textarea placeholder="Escribe un comentario" rows="3" cols="30"></textarea>
+        </li><br>
 
-			
+        <li><strong>Botón de opción (radio):</strong><br>
+          <code>&lt;input type="radio"&gt;</code><br>
+          Resultado:<br>
+          <input type="radio" name="color" id="azul"><label for="azul">Azul</label><br>
+          <input type="radio" name="color" id="rojo"><label for="rojo">Rojo</label>
+        </li><br>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p2.html"> anterior </a>
-				<a class="n1" href="p4.html"> siguiente </a>
-                             
+        <li><strong>Casilla de verificación (checkbox):</strong><br>
+          <code>&lt;input type="checkbox"&gt;</code><br>
+          Resultado:<br>
+          <input type="checkbox" id="acepto"><label for="acepto"> Acepto los términos</label>
+        </li><br>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+        <li><strong>Lista desplegable:</strong><br>
+          <code>
+&lt;select&gt;<br>
+  &lt;option&gt;Opción 1&lt;/option&gt;<br>
+  &lt;option&gt;Opción 2&lt;/option&gt;<br>
+&lt;/select&gt;
+          </code><br>
+          Resultado:<br>
+          <select>
+            <option>HTML</option>
+            <option>CSS</option>
+          </select>
+        </li>
+      </ul>
+
+      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <h3>Editor interactivo</h3>
+      <p>Prueba estos elementos dentro de una estructura HTML completa:</p>
+
+<textarea id="htmlInput" style="width: 100%; height: 250px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi formulario</title>
+  </head>
+  <body>
+    <h2>Formulario básico</h2>
+    <input type="text" placeholder="Nombre">
+    <br><br>
+    <textarea placeholder="Comentario"></textarea>
+    <br><br>
+    <label><input type="checkbox"> Acepto los términos</label>
+    <br><br>
+    <label><input type="radio" name="opc"> Masculino</label>
+    <label><input type="radio" name="opc"> Femenino</label>
+    <br><br>
+    <select>
+      <option>HTML</option>
+      <option>CSS</option>
+    </select>
+  </body>
+</html>
+</textarea>
+      <br><br>
+      <button onclick="runHTML()" style="padding: 10px 20px;">Ver resultado</button>
+      <br><br>
+      <iframe id="preview" style="width: 100%; height: 300px; border:1px solid #ccc;"></iframe>
+
+      <script>
+        function runHTML() {
+          var code = document.getElementById("htmlInput").value;
+          var frame = document.getElementById("preview");
+          frame.contentDocument.open();
+          frame.contentDocument.write(code);
+          frame.contentDocument.close();
+        }
+      </script>
+
+      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <div id="ctrl">
+        <a class="n1" href="p2.html">anterior</a>
+        <a class="n1" href="p4.html">siguiente</a>
       </div>
 
+    </div>
+  </div>
 
-     	</body>
-
-	
+</body>
 </html>
 
