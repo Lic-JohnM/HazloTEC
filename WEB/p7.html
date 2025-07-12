@@ -1,170 +1,142 @@
-
-
-
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>WEB</title>
-	<meta name="description" content="Descripción sobre la codificación y las principales estructuras de codigo de Python">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
-		
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","210vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 7</title>
+  <meta name="description" content="Uso de medidas relativas, Flexbox, Grid y plantilla base en CSS.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<body>
+<body>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
+  <div id="info">
+    <div id="con">
 
-        <div id="info">
+      <h2>Medidas relativas en CSS: <code>vh</code> y <code>vw</code></h2>
+      <p>
+        Estas unidades dependen del tamaño de la ventana del navegador:
+      </p>
+      <ul>
+        <li><code>1vh</code> = 1% del alto de la pantalla</li>
+        <li><code>1vw</code> = 1% del ancho de la pantalla</li>
+      </ul>
 
-                <div id="con">
-				<br>
-		
-  			 </pre>
-			
+<textarea id="htmlInput1" style="width:100%; height:200px;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="background-color: lightblue; height: 30vh;">
+      Alto del 30% de la pantalla (30vh)
+    </div>
+    <div style="background-color: lightgreen; width: 50vw;">
+      Ancho del 50% de la pantalla (50vw)
+    </div>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput1','preview1')">Ver resultado</button>
+<iframe id="preview1" style="width:100%; height:200px; border:1px solid #ccc;"></iframe>
 
-			<h2>Contenedores y columnas</h2>
-			<br>
-			<p>Para que funcionen las columnas se debe poner el atributo class="container"a una división y dentro de ellas otra división con el atributo class="row", a continuación se presenta como se construyen dos columnas:</p>
-			<br>
-			<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	    <pre>
-		<code>
-			&lt;div class="container"&gt
-			  &lt;div class="row"&gt
-			    &lt;div class="col-6"&gt
-			      Primer columna
-			    &lt;/div&gt
-			    &lt;div class="col-6"&gt
-			      Segunda columna
-			    &lt;/div&gt
-			  &lt;/div&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-			<div class="container">
-			  <div class="row">
-			    <div class="col-6">
-			      Primer columna
-			    </div>
-			    <div class="col-6">
-			        Segunda columna
-			    </div>
-			
-		 </div>
-	    </td>
-	  </tr>
-</table>
-		<p>Así dependiendo el número de columnas que se quieran se debe indicar en el número despues de col- la cantidad de espacio ocupado sea el total 12. Así en el ejemplo anterior dos columnas cada una equivale 6, si se quisieran 3 columnas el numero a escribir seria col-4 como podemos ver en el siguiente ejemplo: </p>	
-		<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	    <pre>
-		<code>
-			&lt;div class="container"&gt
-			  &lt;div class="row"&gt
-			    &lt;div class="col-4"&gt
-			      Primer columna
-			    &lt;/div&gt
-			    &lt;div class="col-4"&gt
-			      Segunda columna
-			    &lt;/div&gt
-			    &lt;div class="col-4"&gt
-			      Tercer columna
-			    &lt;/div&gt
-			  &lt;/div&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-			<div class="container">
-			  <div class="row">
-			    <div class="col-4">
-			      Primer columna
-			    </div>
-			    <div class="col-4">
-			        Segunda columna
-			    </div>
-			   <div class="col-4">
-			        Tercer columna
-			    </div>
-			
-		 </div>
-	    </td>
-	  </tr>
-</table>	
+<hr>
 
+      <h2>Flexbox</h2>
+      <p>Flexbox permite distribuir elementos horizontal o verticalmente con facilidad.</p>
+      <p>Ejemplo: 3 cajas distribuidas horizontalmente</p>
 
-				
-	
+<textarea id="htmlInput2" style="width:100%; height:220px;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="display: flex;">
+      <div style="background:red; color:white; padding:20px; margin:5px;">Caja 1</div>
+      <div style="background:blue; color:white; padding:20px; margin:5px;">Caja 2</div>
+      <div style="background:green; color:white; padding:20px; margin:5px;">Caja 3</div>
+    </div>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput2','preview2')">Ver resultado</button>
+<iframe id="preview2" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
 
+<hr>
 
-		
+      <h2>Grid</h2>
+      <p>Grid permite dividir un contenedor en filas y columnas con más control.</p>
+      <p>Ejemplo: 2 filas y 2 columnas</p>
 
-		
+<textarea id="htmlInput3" style="width:100%; height:240px;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap:10px;">
+      <div style="background:#f88; padding:20px;">Elemento 1</div>
+      <div style="background:#8f8; padding:20px;">Elemento 2</div>
+      <div style="background:#88f; padding:20px;">Elemento 3</div>
+      <div style="background:#ff8; padding:20px;">Elemento 4</div>
+    </div>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput3','preview3')">Ver resultado</button>
+<iframe id="preview3" style="width:100%; height:200px; border:1px solid #ccc;"></iframe>
 
+<hr>
 
-                        
+      <h2>Plantilla base para diseño web</h2>
+      <p>
+        Esta estructura básica te permite comenzar cualquier sitio web de forma organizada. Puedes cambiar los colores o secciones según tu proyecto.
+      </p>
 
-			<br>
+<textarea id="htmlInput4" style="width:100%; height:260px;">
+<!DOCTYPE html>
+<html>
+  <body style="margin:0;">
+    <div style="background:#333; color:white; padding:20px;">Header</div>
+    <div style="display:flex;">
+      <div style="background:#ccc; width:20%; padding:20px;">Navegación</div>
+      <div style="background:#eee; width:60%; padding:20px;">Contenido principal</div>
+      <div style="background:#ddd; width:20%; padding:20px;">Barra lateral</div>
+    </div>
+    <div style="background:#444; color:white; padding:20px;">Footer</div>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput4','preview4')">Ver resultado</button>
+<iframe id="preview4" style="width:100%; height:250px; border:1px solid #ccc;"></iframe>
 
-			<a id="dcr"  target="_blank" href="https://es.scribd.com/document/631277755/P3"> Descarga ejercicios </a>
-			<br>
-           	
+<script>
+function runHTML(inputId, previewId) {
+  var code = document.getElementById(inputId).value;
+  var frame = document.getElementById(previewId);
+  frame.contentDocument.open();
+  frame.contentDocument.write(code);
+  frame.contentDocument.close();
+}
+</script>
 
+<hr>
 
-                        <br>
-
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p6.html"> anterior </a>
-				<a class="n1" href="p8.html"> siguiente </a>
-                             
-
-                        </div>
-			
-			   <br>
-	   </div>
-			
+      <div id="ctrl">
+        <a class="n1" href="p6.html">anterior</a>
+        <a class="n1" href="p8.html">siguiente</a>
       </div>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     	</body>
+    </div>
+  </div>
 
-	
+</body>
 </html>
+
 
