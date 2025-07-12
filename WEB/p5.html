@@ -1,119 +1,128 @@
-
-
-
-   		<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>WEB</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 5</title>
+  <meta name="description" content="Unidades de medida, colores y modelo de caja en CSS.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","150vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="info">
+    <div id="con">
 
+      <h2>Unidades de medida en CSS</h2>
+      <p>Las unidades nos permiten definir tamaños de texto, márgenes, anchos y más. Algunas comunes son:</p>
+      <ul>
+        <li><code>px</code>: píxeles. Medida fija.</li>
+        <li><code>%</code>: porcentaje relativo al contenedor.</li>
+        <li><code>em</code>: relativo al tamaño del texto actual.</li>
+      </ul>
 
-        <div id="info">
+      <h4>Editor: cambia tamaños usando distintas unidades</h4>
 
-                <div id="con">
+<textarea id="htmlInput1" style="width:100%; height:200px;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <p style="font-size: 16px;">Texto con 16px</p>
+    <p style="font-size: 120%;">Texto con 120%</p>
+    <p style="font-size: 1.5em;">Texto con 1.5em</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput1','preview1')">Ver resultado</button>
+<iframe id="preview1" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
 
-		
-	
-			
-			<br>
-			            <h2> Formularios </h2>
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
 
-            <br>
-		<p>Las etiquetas input permiten ingresar los datos a  la página WEB, los más empleados son:  </p>
-			<br>
-			<p>text:Cuadro de texto</p>
-			<p>radio button:Seleccionar entre varias opciones</p>
-			<p>Checkbox:Seleccionar entre varias opciones</p>
-			<p>Select: Seleccionar entre varias opciones.</p>
-		<br>
-		<p>A continuación se presenta el codigo en la parte izquierda y su visualización en la parte derecha:</p>
+      <h2>Colores digitales</h2>
+      <p>Los colores en CSS se pueden definir de diferentes formas:</p>
+      <ul>
+        <li>Por nombre: <code>red</code>, <code>blue</code>, <code>green</code></li>
+        <li>Por código hexadecimal: <code>#ff0000</code></li>
+        <li>Por valores RGB: <code>rgb(255,0,0)</code></li>
+      </ul>
 
-	<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-	
-		    &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
-		    &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;&lt;br&gt;
-		    
-		    &lt;label for="email"&gt;Email:&lt;/label&gt;
-		    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
-		    
-		    &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;&lt;br&gt;
-		    &lt;textarea id="mensaje" name="mensaje" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
-		    
-		    &lt;input type="submit" value="Enviar"&gt;
-	
-		</code>
-  	 </pre>
-    </td>
-    <td>
-   		<label for="nombre">Nombre:</label>
-		    <input type="text" id="nombre" name="nombre"><br><br>
-		    
-		    <label for="email">Email:</label>
-		    <input type="email" id="email" name="email"><br><br>
-		    
-		    <label for="mensaje">Mensaje:</label><br>
-		    <textarea id="mensaje" name="mensaje" rows="8" cols="8"></textarea><br><br>
-		    
-		    <input type="submit" value="Enviar"> 
-    </td>
-  </tr>
-</table>
-			
- 		<br>
+      <p>Consulta esta guía visual en el <a href="https://lic-johnm.github.io/HazloTEC/Imagenes/p2.html" target="_blank">Bloque de colores digitales</a>.</p>
 
-	
+      <h4>Editor: cambia los colores de fondo y texto</h4>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
-                             
+<textarea id="htmlInput2" style="width:100%; height:200px;">
+<!DOCTYPE html>
+<html>
+  <body style="background-color: #f0f0f0;">
+    <h2 style="color: red;">Texto rojo</h2>
+    <p style="color: #0000ff;">Texto azul (hexadecimal)</p>
+    <p style="color: rgb(0, 128, 0);">Texto verde (RGB)</p>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput2','preview2')">Ver resultado</button>
+<iframe id="preview2" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+<hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <h2>Modelo de caja (Box Model)</h2>
+      <p>Todo elemento en HTML tiene una "caja" con 4 partes:</p>
+      <ul>
+        <li><strong>Content:</strong> el contenido (texto, imagen, etc.)</li>
+        <li><strong>Padding:</strong> espacio interno</li>
+        <li><strong>Border:</strong> borde que rodea el contenido</li>
+        <li><strong>Margin:</strong> espacio hacia afuera</li>
+      </ul>
+
+      <h4>Editor: modifica padding, border y margin</h4>
+
+<textarea id="htmlInput3" style="width:100%; height:230px;">
+<!DOCTYPE html>
+<html>
+  <body>
+    <div style="background-color: lightyellow;
+                padding: 20px;
+                border: 3px solid orange;
+                margin: 30px;">
+      <p>Esta es una caja con padding, borde y margen.</p>
+    </div>
+  </body>
+</html>
+</textarea>
+<br><button onclick="runHTML('htmlInput3','preview3')">Ver resultado</button>
+<iframe id="preview3" style="width:100%; height:200px; border:1px solid #ccc;"></iframe>
+
+<script>
+function runHTML(inputId, previewId) {
+  var code = document.getElementById(inputId).value;
+  var frame = document.getElementById(previewId);
+  frame.contentDocument.open();
+  frame.contentDocument.write(code);
+  frame.contentDocument.close();
+}
+</script>
+
+      <hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
+
+      <div id="ctrl">
+        <a class="n1" href="p4.html">anterior</a>
+        <a class="n1" href="p6.html">siguiente</a>
       </div>
 
+    </div>
+  </div>
 
-     	</body>
-
-	
+</body>
 </html>
 
