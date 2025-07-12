@@ -1,68 +1,112 @@
-
-
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Desarrollo WEB</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <title>Diseño Web - Módulo 1 - Bloque 2</title>
+  <meta name="description" content="Exploración de etiquetas HTML: tablas, listas, imágenes y enlaces.">
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+  <script src="js/script.js"></script>
+</head>
 
+<body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/WEB/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/WEB/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","100vh");
-	});
-	</script>
-	<script src="https://lic-johnm.github.io/HazloTEC/Programacion/js/script.js"></script>
-		
-	</head>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+  </div>
 
-	<body>
+  <div id="info">
+    <div id="con">
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+      <h2>Explorando más etiquetas HTML</h2>
+      <p>Ahora que conoces las etiquetas básicas de texto, es momento de explorar otras que permiten organizar y enlazar mejor la información.</p>
 
+      <h3>Listas</h3>
+      <p>Las listas pueden ser ordenadas (<code>&lt;ol&gt;</code>) o desordenadas (<code>&lt;ul&gt;</code>).</p>
+      <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Manzana&lt;/li&gt;
+  &lt;li&gt;Banano&lt;/li&gt;
+&lt;/ul&gt;
 
-        <div id="info">
+&lt;ol&gt;
+  &lt;li&gt;Paso 1&lt;/li&gt;
+  &lt;li&gt;Paso 2&lt;/li&gt;
+&lt;/ol&gt;
+      </code></pre>
 
-                <div id="con">
+      <h3>Imágenes</h3>
+      <p>Se insertan con la etiqueta <code>&lt;img&gt;</code> usando el atributo <code>src</code>.</p>
+      <pre><code>&lt;img src="https://via.placeholder.com/150" alt="Ejemplo"&gt;</code></pre>
 
-		
-							<h3> Backend y Frontend </h3>
-			
-				<p>En la siguiente imagen podemos ver en la mitad un servidor el cual alberga unas tecnologías propias para su programación como lo es PHP,NodeJs,Ruby y se encarga de controlar los datos que se envian al servidor. Los computadores son los clientes los cuales visualizan la información y manejan tecnologías como HTML, Javascript, CSS. </p>
-				<div style="text-align:center;">
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=891994269924109840" height="350" width="345" frameborder="0" scrolling="no" ></iframe>
-					</div>  
-			<p> Es importante entender que toda la programación que realicemos con la tecnología <b>frontend</b> se facilmente portable porque se ejecutan desde cualquier computador, sin embargo las tecnologías <b>backend</b> unicamente se programan en servidores así que es necesario volver un equipo servidor para poder programar unicamente en el o contratar un servidor para poder programar la gestión y recepción de datos. Actualmente desde las tecnologías frontend se realizan multiples procesos para no cargar los servidores gracias a las altas prestaciones computacionales de los equipos empleando tecnologías como <b>node.</b> </p>
+      <h3>Enlaces</h3>
+      <p>Para enlazar otra página, usamos <code>&lt;a href="URL"&gt;</code></p>
+      <pre><code>&lt;a href="https://google.com"&gt;Ir a Google&lt;/a&gt;</code></pre>
 
-			<br>
-                             <div id="ctrl">
-					
-				 <a class="n1" href="p1.html"> anterior </a>
-				<a class="n1" href="p3.html"> siguiente </a>
-                             
+      <h3>Tablas</h3>
+      <p>Permiten organizar datos en filas y columnas.</p>
+      <pre><code>
+&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;12&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+      </code></pre>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+      <h3>Escribe tu propio código HTML</h3>
+      <p>Prueba el código HTML en el siguiente editor. Escribe algo y haz clic en "Ver resultado".</p>
+
+      <textarea id="htmlInput" style="width: 100%; height: 150px;">
+<table border="1">
+  <tr><th>Producto</th><th>Precio</th></tr>
+  <tr><td>Cuaderno</td><td>$3.000</td></tr>
+</table>
+      </textarea>
+      <br><br>
+      <button onclick="runHTML()" style="padding: 10px 20px;">Ver resultado</button>
+      <br><br>
+      <iframe id="preview" style="width: 100%; height: 200px; border:1px solid #ccc;"></iframe>
+
+      <script>
+      function runHTML() {
+        var code = document.getElementById("htmlInput").value;
+        var frame = document.getElementById("preview");
+        frame.contentDocument.open();
+        frame.contentDocument.write(code);
+        frame.contentDocument.close();
+      }
+      </script>
+
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+      <p>Actividad complementaria:</p>
+      <a id="dcr" target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActWeb2.pdf"> Descargar actividad </a>
+
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+      
+      <div id="ctrl">
+        <a class="n1" href="p1.html">anterior</a>
+        <a class="n1" href="p3.html">siguiente</a>
       </div>
 
+      <br>
+    </div>
+  </div>
 
-     	</body>
+</body>
 
-	
 </html>
-			
+
