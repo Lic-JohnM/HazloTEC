@@ -1,82 +1,120 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Desarrollo WEB</title>
-	<meta name="description" content="Descripción y material desconectado y con material concreto de algoritmos, así como el pensamiento computacional y sus 4 partes(algoritmos, descomposición, patrones y abstracción).">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <title>Diseño Web </title>
+  <meta name="description" content="Introducción al diseño web y uso de HTML básico.">
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+  <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+  <script src="js/script.js"></script>
+</head>
 
+<body>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/WEB/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/WEB/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","170vh");
-	});
-	</script>
-	<script src="https://lic-johnm.github.io/HazloTEC/Programacion/js/script.js"></script>
-		
-	</head>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
+  </div>
 
-	<body>
+  <div id="info">
+    <div id="con">
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+      <h2>Diseño Web: Introducción</h2>
 
+      <p>
+        El diseño web es el proceso de crear y estructurar sitios en Internet. Involucra el uso de herramientas y lenguajes que permiten mostrar información de manera atractiva, clara y funcional para los usuarios.
+      </p>
 
-        <div id="info">
+      <h3>¿Qué es HTML?</h3>
+      <p>
+        HTML significa <strong>HyperText Markup Language</strong>. Es el lenguaje que se usa para definir la estructura y el contenido de una página web. Con HTML podemos crear títulos, párrafos, enlaces, imágenes y más.
+      </p>
 
-                <div id="con">
+      <h3>¿Qué es una etiqueta?</h3>
+      <p>
+        Una <strong>etiqueta</strong> es una instrucción que le dice al navegador cómo debe mostrar un contenido. Todas las etiquetas HTML se escriben entre signos de menor y mayor:
+      </p>
+      <pre><code>&lt;etiqueta&gt;Contenido&lt;/etiqueta&gt;</code></pre>
 
-		
-					<h3> Estructura WEB</h3>
-			
-				<br>
-            
-					<p>Si nos movemos por la ciudad de un lugar a otro es habitual tener un dirección que identifica donde estamos y hacia donde queremos llegar. El funcionamiento de la estructura WEB es muy similar, al momento que necesitamos acceder a algún tipo de información que no tenemos en nuestros equipos digitales como el celular, computador, etc. Para encontrar esta información accedemos desde una aplicación o un navegador WEB (dirección donde estamos) a la red donde la conseguimos (dirección donde esta la información). </p>
-	
-					<br>
-					<div style="text-align:center;">
-					
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=837458493180262180" height="359" width="345" frameborder="0" scrolling="no" ></iframe>
-					
-					</div>         
-					<br>
+      <h3>Etiquetas básicas de texto</h3>
+      <ul>
+        <li><code>&lt;b&gt;</code> para <b>negrita</b></li>
+        <li><code>&lt;i&gt;</code> para <i>cursiva</i></li>
+        <li><code>&lt;u&gt;</code> para <u>subrayado</u></li>
+        <li><code>&lt;br&gt;</code> para un salto de línea (no tiene cierre)</li>
+        <li><code>&lt;p&gt;</code> para un párrafo</li>
+        <li><code>&lt;h1&gt;</code> hasta <code>&lt;h6&gt;</code> para títulos (de mayor a menor tamaño)</li>
+      </ul>
 
-					<p>Al usar una aplicación como una red social de forma interna se conecta a una dirección que en este caso es virtual y es invisible para nosotros, cuando usamos un navegador WEB como Internet Explorer, Google Chrome o Firefox accedemos desde la URL como la que se encuentra en la imagen anterior a la dirección electrónica de la página que tiene el servidor. </p>
-				        <br>
-					<p>Si queremos ingresar a una página como www.hazlotec.com tambien podriamos hacerlo con una serie de números como 18.65.229.18 sin embargo seria mucho más dificil de recordar, así toda página tiene un <b>dominio WEB</b> que significa una serie de números y letras denominadas <b>dirección IP</b> que identifican para una red nuestro equipo y de a donde sacamos la información quedando siempre registrado por nuestro proveedor de internet.</p>
-					<br>
-					<p>Para una red de internet siempre vamos a tener una IP asignada por nuestro proovedor de datos moviles o de internet de nuestra casa y va a cambiar cada vez que nos conectemos por la dinamica propia de la red. Pero para una conexión más pequeña y más privada que incluso no maneje internet es posible tener una dirección IP fija todo el tiempo, así las redes se clasifican de la siguiente manera y en todas es posible trabajar con tecnología WEB:</p>
+      <p>Ejemplo de uso combinado:</p>
+      <pre><code>
+&lt;h1&gt;Hola Mundo&lt;/h1&gt;
+&lt;p&gt;Este es un &lt;b&gt;text&lt;/b&gt; en &lt;i&gt;HTML&lt;/i&gt;&lt;/p&gt;
+      </code></pre>
 
-					<div style="text-align:center;">
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-					<iframe src="https://assets.pinterest.com/ext/embed.html?id=635359459916132155" height="301" width="345" frameborder="0" scrolling="no" ></iframe>
-					
-					</div>  
-					<p>Donde las redes LAN se denominan locales y las redes WAN se denominan extensas, y en este entorno funciona todo lo que conocemos para compartir la información reconociendo que existen diferentes aplicaciones WEB que no se basan necesariamente en el uso del internet. Para que exista una red existen dos elementos básicos, un <b>servidor</b> que es el encargado de albergar la red y un <b>cliente</b> que es el encargado de solicitar la información. </p>
-			
-                         <div id="ctrl">
+      <!-- SECCIÓN b1: Cómo guardar en Bloc de Notas -->
+      <div id="b1">
+        <div id="e">
+          <h3>¿Cómo guardar tu código HTML en el Bloc de notas?</h3>
+          <a id="signo">+</a>
+        </div>
+        <div id="p">
+          <br>
+          <p>
+            Para ver tu primera página web, sigue estos pasos:
+          </p>
+          <ol>
+            <li>Abre el <strong>Bloc de notas</strong>.</li>
+            <li>Escribe el siguiente código:</li>
+            <pre><code>
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;
+    &lt;p&gt;Esta es mi primera página web&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+            <li>Ve a <strong>Archivo → Guardar como...</strong></li>
+            <li>En el nombre escribe: <strong>"mi_pagina.html"</strong> (con comillas dobles)</li>
+            <li>En tipo selecciona: <strong>Todos los archivos</strong></li>
+            <li>Haz clic en <strong>Guardar</strong></li>
+            <li>Haz doble clic en el archivo para abrirlo en el navegador</li>
+          </ol>
 
-                                <a href="p2.html"> siguiente </a>
+          <div style="text-align: center;">
+            <img src="https://lic-johnm.github.io/HazloTEC/Programacion/imagenes/pb8.png" 
+                 alt="Guardar archivo HTML" 
+                 style="max-width:100%; height:auto;">
+          </div>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+          <p><strong>⚠ Importante:</strong> Usa comillas dobles para que el archivo se guarde con la extensión correcta (<code>.html</code>) y no como un archivo de texto común.</p>
+        </div>
       </div>
 
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-     	</body>
+      <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+      <a id="dcr" target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActWeb1.pdf"> Descargar actividad </a>
 
-	
+      <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+      <div id="ctrl">
+        <a class="n1" href="p0.html">anterior</a>
+        <a class="n1" href="p2.html">siguiente</a>
+      </div>
+
+      <br>
+    </div>
+  </div>
+
+</body>
+
 </html>
 
