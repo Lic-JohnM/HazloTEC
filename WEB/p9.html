@@ -1,147 +1,125 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+  <meta charset="utf-8">
+  <title>Diseño Web - Módulo 1 - Bloque 9</title>
+  <meta name="description" content="Interacción básica con inputs y elementos visuales con JavaScript.">
+  <link rel="icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
+  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+  <div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+  </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+  <div id="info">
+    <div id="con">
 
+      <h2>Capturar datos desde inputs</h2>
+      <p>Es posible tomar lo que un usuario escribe en un <code>&lt;input&gt;</code> o <code>&lt;textarea&gt;</code> y mostrarlo en pantalla.</p>
 
-        <div id="info">
+      <input type="text" id="nombre" placeholder="Escribe tu nombre">
+      <button onclick="mostrarNombre()">Mostrar</button>
+      <p id="resultado"></p>
 
-                <div id="con">
-	<h3> Botones </h3>
-			
-				<br>
-				<p>Los botones permiten direccionar de un lugar a otro, dependiendo el texto tienen diferentes caracteristicas:</p>
-								<table border="1">
-			  <tr>
-			    <td style="text-align:center">Código</td>
-			    <td style="text-align:center">Resultado</td>
-			  </tr>
-			  <tr>
-			    <td>
-				<pre>
-					<code>
-  &lt;div class="container mt-5" &gt
-    &lt;button type="button" class="btn btn-primary mr-2" &gtBotón Primario  &lt;/button &gt
-    &lt;button type="button" class="btn btn-secondary mr-2" &gtBotón Secundario  &lt;/button &gt
-    &lt;button type="button" class="btn btn-success mr-2" &gtBotón Éxito  &lt;/button &gt
-    &lt;button type="button" class="btn btn-danger mr-2" &gtBotón Peligro  &lt;/button &gt
-    &lt;button type="button" class="btn btn-warning" &gtBotón Advertencia  &lt;/button &gt
-  &lt;/div &gt
-					</code>
-			  	 </pre>
-			    </td>
-			    <td>
-<div class="container mt-5">
-  <button type="button" class="btn btn-primary mr-2">Botón Primario</button>
-  <button type="button" class="btn btn-secondary mr-2">Botón Secundario</button>
-  <button type="button" class="btn btn-success mr-2">Botón Éxito</button>
-  <button type="button" class="btn btn-danger mr-2">Botón Peligro</button>
-  <button type="button" class="btn btn-warning">Botón Advertencia</button>
-</div>
-	    </td>
-	  </tr>
-</table>		
-				<br>
-					<h2>Navbar</h2>
+      <script>
+        function mostrarNombre() {
+          const valor = document.getElementById("nombre").value;
+          document.getElementById("resultado").innerHTML = "Hola, " + valor + "!";
+        }
+      </script>
 
-			<br>
+      <hr>
 
-			<p>Hace referencia a las tablas de navegación de una página WEB como lo son los menus de las páginas WEB, y son por lo general los que determinan la navegación de los sitios WEB</p>
-		<br>
-			<table border="1">
-  <tr>
-    <td style="text-align:center">Código</td>
-    <td style="text-align:center">Resultado</td>
-  </tr>
-  <tr>
-    <td>
-	<pre>
-		<code>
-&lt;nav class="navbar "&gt
-    &lt;ul class="nav navbar-nav"&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtLogo&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtAcerca&lt;/a&gt
-    &lt;/li&gt
-    &lt;li class="nav-item"&gt
-        &lt;a class="nav-link" href="#"&gtContacto&lt;/a&gt
-    &lt;/li&gt
-   
-&lt;/ul&gt
-&lt;/nav&gt
-		</code>
-  	 </pre>
-    </td>
-    <td>
-		
+      <h2>Cambiar tamaño y color de un círculo</h2>
+      <p>Introduce el tamaño (en píxeles) y el color que quieras.</p>
 
-			<nav class="navbar">
-			    <ul class="nav navbar-nav">
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Logo</a>
-			    </li>
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Acerca</a>
-			    </li>
-			    <li class="nav-item">
-			        <a class="nav-link" href="#">Contacto</a>
-			    </li>
-			   
-			</ul>
-			</nav>
-			
-	
-		 </div>
-	    </td>
-	  </tr>
-</table>	
-		<br>
+      <label for="tam">Tamaño:</label>
+      <input type="number" id="tam" value="100">
+      <label for="col">Color:</label>
+      <input type="text" id="col" value="blue">
+      <button onclick="cambiarCirculo()">Aplicar</button>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p8.html"> anterior </a>
-				<a class="n1" href="p10.html"> siguiente </a>
-                             
+      <div id="circulo" style="margin: 20px auto; background:blue; width:100px; height:100px; border-radius:50%;"></div>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
+      <script>
+        function cambiarCirculo() {
+          const tam = document.getElementById("tam").value;
+          const col = document.getElementById("col").value;
+          const circ = document.getElementById("circulo");
+          circ.style.width = tam + "px";
+          circ.style.height = tam + "px";
+          circ.style.background = col;
+        }
+      </script>
+
+      <hr>
+
+      <h2>Ejemplo: Arrastrar un cuadro</h2>
+      <p>Puedes mover el cuadro arrastrándolo:</p>
+
+      <div id="drag" draggable="true"
+        style="width:100px; height:100px; background:tomato; cursor:move; margin:20px;" 
+        ondragstart="dragStart(event)">
       </div>
 
+      <div id="area" 
+        ondragover="event.preventDefault()" 
+        ondrop="drop(event)"
+        style="width:300px; height:150px; border:2px dashed #aaa; text-align:center; line-height:150px;">
+        Suelta aquí
+      </div>
 
-     	</body>
+      <script>
+        function dragStart(e) {
+          e.dataTransfer.setData("text", e.target.id);
+        }
+        function drop(e) {
+          e.preventDefault();
+          const data = e.dataTransfer.getData("text");
+          e.target.appendChild(document.getElementById(data));
+        }
+      </script>
 
-	
+      <hr>
+
+      <h2>Ejemplo visual con canvas: selector de color de fondo</h2>
+      <p>Haz clic en el lienzo para cambiar el color del fondo con un color aleatorio:</p>
+
+      <canvas id="myCanvas" width="300" height="150" style="border:1px solid #ccc;"></canvas>
+
+      <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#dddddd";
+        ctx.fillRect(0, 0, 300, 150);
+
+        canvas.addEventListener("click", function () {
+          const color = "#" + Math.floor(Math.random()*16777215).toString(16);
+          ctx.fillStyle = color;
+          ctx.fillRect(0, 0, 300, 150);
+        });
+      </script>
+
+      <hr>
+
+      <div id="ctrl">
+        <a class="n1" href="p8.html">anterior</a>
+        <a class="n1" href="p10.html">siguiente</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
 </html>
+
