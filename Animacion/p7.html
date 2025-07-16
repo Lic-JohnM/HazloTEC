@@ -34,20 +34,88 @@
         <div id="info">
 
                 <div id="con">
+<h2>Los Mensajes en Scratch: Haciendo que los objetos trabajen juntos</h2>
 
-			<h2> Sonido en Scratch</h2>
+<br>
 
-				<br>
-					<div style="text-align:center;">
-<iframe src="https://assets.pinterest.com/ext/embed.html?id=705376360410114489" height="727" width="450" frameborder="0" scrolling="no" ></iframe>
-					</div>
-			<p>El bloque rosado en la parte izquierda permite generar sonidos en scratch, ya sea de forma predeterminada o subir un audio externo al software. Tambien trae un editor que permite ajustar el volumen y la duración, como el que se encuentra a continuación:</p>
-			
-			<div style="text-align:center;">
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=285204588887447554" height="336" width="345" frameborder="0" scrolling="no" ></iframe>
-			</div>
-				
-                        <br>
+<p>En Scratch, los objetos o sprites no siempre actúan por sí solos. Muchas veces, para que las historias, juegos o animaciones funcionen correctamente, es necesario que los personajes se comuniquen entre sí. Para lograrlo, Scratch utiliza <strong>mensajes</strong>.</p>
+
+<br>
+
+<h3>¿Qué son los mensajes en Scratch?</h3>
+
+<p>Los <strong>mensajes</strong> son señales que un objeto envía para indicar que otro objeto debe hacer algo. Se usan para coordinar acciones, controlar el momento en que ocurren las cosas o hacer que varias acciones sucedan al mismo tiempo.</p>
+
+<p>Por ejemplo:</p>
+
+<ul>
+    <li>Un botón que, al ser clickeado, envía un mensaje para que un personaje aparezca.</li>
+    <li>Un personaje que, al llegar al final de un recorrido, envía un mensaje para cambiar el escenario.</li>
+    <li>Un objeto que, al tocarse con otro, envía un mensaje para mostrar el puntaje o iniciar una nueva acción.</li>
+</ul>
+
+<br>
+
+<h3>Bloques de mensajes principales</h3>
+
+<ul>
+    <li><strong>Enviar mensaje ( )</strong> → Envía un mensaje a todos los sprites. Puedes escribir el nombre que desees para el mensaje (por ejemplo: “¡Comenzar!”).</li>
+    <li><strong>Cuando reciba ( )</strong> → Indica lo que debe hacer un sprite cuando reciba un mensaje específico.</li>
+</ul>
+
+<p>Estos bloques permiten crear interacciones entre los elementos del proyecto y son fundamentales para trabajar en equipo dentro del programa.</p>
+
+<br>
+
+<h3>Ejemplo práctico: ¡Hola y bienvenido!</h3>
+
+<p>Queremos que al iniciar el proyecto:</p>
+
+<ul>
+    <li>El gato diga “¡Hola!”</li>
+    <li>Después de decirlo, envíe un mensaje llamado <strong>“Entrar perro”</strong>.</li>
+    <li>Cuando el perro reciba el mensaje <strong>“Entrar perro”</strong>, aparecerá y dirá “¡Aquí estoy!”</li>
+</ul>
+
+<p>Para lograrlo se utilizan estos bloques:</p>
+
+<ul>
+    <li>En el gato:
+        <ul>
+            <li><strong>Al hacer clic en la bandera verde</strong></li>
+            <li><strong>Decir “¡Hola!” por 2 segundos</strong></li>
+            <li><strong>Enviar (Entrar perro)</strong></li>
+        </ul>
+    </li>
+    <li>En el perro:
+        <ul>
+            <li><strong>Cuando reciba (Entrar perro)</strong></li>
+            <li><strong>Mostrar</strong></li>
+            <li><strong>Decir “¡Aquí estoy!” por 2 segundos</strong></li>
+        </ul>
+    </li>
+</ul>
+
+<br>
+
+<h3>¿Por qué es importante aprender a usar los mensajes?</h3>
+
+<p>Los mensajes ayudan a:</p>
+
+<ul>
+    <li>Coordinar acciones y crear historias ordenadas.</li>
+    <li>Hacer que los objetos trabajen juntos en un mismo proyecto.</li>
+    <li>Diseñar videojuegos donde las acciones suceden en el momento justo.</li>
+    <li>Comprender mejor cómo funcionan los eventos y la comunicación en programación.</li>
+</ul>
+
+<p>Los mensajes permiten que todo cobre sentido en un proyecto: que las acciones se relacionen y que los personajes interactúen. ¡Sin ellos, muchos juegos y animaciones no funcionarían!</p>
+
+<br>
+
+<h3>¡Ponte a prueba!</h3>
+
+<p><strong>Reto:</strong> Crea un pequeño proyecto donde un personaje diga algo y después aparezca otro personaje gracias a un mensaje. ¡Prueba cuántos mensajes diferentes puedes crear!</p>
 
 
                          <div id="ctrl">
