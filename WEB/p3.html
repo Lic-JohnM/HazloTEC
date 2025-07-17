@@ -24,54 +24,45 @@
   <div id="info">
     <div id="con">
 
-      <h2>Estructura de una página HTML</h2>
-      <p>Una página web debe tener una estructura mínima para funcionar correctamente:</p>
-
-<pre><code>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;title&gt;Mi Página&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hola Mundo&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-      <h3>¿Qué es el &lt;head&gt;?</h3>
-      <p>Es la parte oculta de la página. Aquí se define el título, el tipo de letra, íconos, estilos, etc.</p>
-
-      <h3>¿Qué es el &lt;body&gt;?</h3>
-      <p>Es la parte visible de la página. Todo lo que el usuario ve en pantalla va dentro del cuerpo.</p>
-
-      <hr style="margin: 30px 0; border: 1px solid rgba(47,65,89,0.2);">
 
       <h3>Elementos de formulario</h3>
       <p>Los formularios permiten que el usuario escriba, seleccione o elija opciones en la página. Aquí mostramos algunos ejemplos comunes:</p>
 
       <ul>
         <li><strong>Campo de texto:</strong><br>
-          <code>&lt;input type="text"&gt;</code><br>
+          <code><input type="text" placeholder="Escribe aquí"></code><br>
           Resultado: <input type="text" placeholder="Escribe aquí">
         </li><br>
 
         <li><strong>Área de texto:</strong><br>
-          <code>&lt;textarea&gt;&lt;/textarea&gt;</code><br>
+          <code><textarea id="comentario" name="comentario" rows="4" cols="40" placeholder="Escribe tu opinión aquí..."></textarea><br><br></code><br>
           Resultado:<br>
           <textarea placeholder="Escribe un comentario" rows="3" cols="30"></textarea>
         </li><br>
 
         <li><strong>Botón de opción (radio):</strong><br>
-          <code>&lt;input type="radio"&gt;</code><br>
+          <code><input type="radio" id="rojo" name="color" value="rojo">
+  <label for="rojo">Rojo</label><br>
+
+  <input type="radio" id="azul" name="color" value="azul">
+  <label for="azul">Azul</label><br>
+
+  <input type="radio" id="verde" name="color" value="verde">
+  <label for="verde">Verde</label><br></code><br>
           Resultado:<br>
           <input type="radio" name="color" id="azul"><label for="azul">Azul</label><br>
           <input type="radio" name="color" id="rojo"><label for="rojo">Rojo</label>
         </li><br>
 
         <li><strong>Casilla de verificación (checkbox):</strong><br>
-          <code>&lt;input type="checkbox"&gt;</code><br>
+          <code><input type="checkbox" id="futbol" name="deporte" value="futbol">
+  <label for="futbol">Fútbol</label><br>
+
+  <input type="checkbox" id="basket" name="deporte" value="basket">
+  <label for="basket">Baloncesto</label><br>
+
+  <input type="checkbox" id="natacion" name="deporte" value="natacion">
+  <label for="natacion">Natación</label><br><br></code><br>
           Resultado:<br>
           <input type="checkbox" id="acepto"><label for="acepto"> Acepto los términos</label>
         </li><br>
