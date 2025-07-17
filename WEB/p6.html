@@ -130,76 +130,142 @@ Utiliza solo selectores por etiqueta para realizar las siguientes acciones usand
 
       <h3>2. Selector por clase (.clase)</h3>
 <textarea id="htmlInput2" style="width:100%; height:240px;">
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .importante {
-        color: red;
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
-    <p class="importante">Este párrafo es importante.</p>
-    <p>No tiene clase, es normal.</p>
-  </body>
-</html>
+<h2>Mi Red Social</h2>
+
+<div class="usuario">Juan Pérez</div>
+<p class="publicacion">¡Hoy tuve un gran día!</p>
+
+<div class="comentario">¡Qué bueno!</div>
+<p class="publicacion">¿Alguien vio la tarea de matemáticas?</p>
+
+<div class="like">👍 Me gusta</div>
+<p class="mensaje">Nos vemos mañana</p>
+
+<div class="usuario destacado">Laura Gómez</div>
+<p class="publicacion">¡Les recomiendo este libro!</p>
+
+<div class="comentario">Gracias por la recomendación</div>
+<p class="publicacion">¿Quién juega fútbol mañana?</p>
+
+<div class="like">❤️ Like</div>
+<p class="mensaje">Recuerden el paseo escolar</p>
+
+<div class="usuario">Carlos Ruiz</div>
+<p class="publicacion">¿Alguien va al club de robótica?</p>
+
+<div class="comentario">Yo voy 😊</div>
+<p class="mensaje">¡Apúntense al concurso!</p>
+
+<div class="like">💬 Comentario</div>
+<p class="publicacion">¿Me ayudan con inglés?</p>
+
 </textarea>
 <br><button onclick="runHTML('htmlInput2','preview2')">Ver resultado</button>
 <iframe id="preview2" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+<p><strong>¡Reto CSS!</strong></p>
+
+<ol>
+  <li>Selecciona todas las publicaciones <code>.publicacion</code> y cambia el color del texto a azul oscuro.</li>
+  <li>Selecciona los comentarios <code>.comentario</code> y ponles fondo gris claro.</li>
+  <li>Selecciona los "likes" <code>.like</code> y haz que el texto sea rojo y en negrita.</li>
+  <li>Selecciona todos los usuarios <code>.usuario</code> y cambia el color a verde oscuro.</li>
+  <li>Haz que los usuarios destacados <code>.usuario.destacado</code> tengan fondo amarillo.</li>
+  <li>Selecciona los mensajes <code>.mensaje</code> y ponles un borde negro de 1px sólido.</li>
+</ol>
+
+<p><strong>Recuerda:</strong> Usa correctamente los selectores de clase y combínalos si es necesario (por ejemplo: <code>.usuario.destacado</code> para los destacados).</p>
 
 <hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
 
       <h3>3. Selector por ID (#id)</h3>
 <textarea id="htmlInput3" style="width:100%; height:240px;">
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      #especial {
-        background-color: yellow;
-        padding: 10px;
-      }
-    </style>
-  </head>
-  <body>
-    <p id="especial">Este párrafo tiene un ID llamado especial.</p>
-    <p>Este no lo tiene.</p>
-  </body>
-</html>
+<h2>Mi Red Social — Con ID</h2>
+
+<div id="usuario1">Juan Pérez</div>
+<p id="publicacion1">¡Hoy tuve un gran día!</p>
+
+<div id="comentario1">¡Qué bueno!</div>
+<p id="publicacion2">¿Alguien vio la tarea de matemáticas?</p>
+
+<div id="like1">👍 Me gusta</div>
+<p id="mensaje1">Nos vemos mañana</p>
+
+<div id="usuario2">Laura Gómez</div>
+<p id="publicacion3">¡Les recomiendo este libro!</p>
+
+<div id="comentario2">Gracias por la recomendación</div>
+<p id="publicacion4">¿Quién juega fútbol mañana?</p>
+
+<div id="like2">❤️ Like</div>
+<p id="mensaje2">Recuerden el paseo escolar</p>
+
+<div id="usuario3">Carlos Ruiz</div>
+<p id="publicacion5">¿Alguien va al club de robótica?</p>
+
+<div id="comentario3">Yo voy 😊</div>
+<p id="mensaje3">¡Apúntense al concurso!</p>
+
+<div id="like3">💬 Comentario</div>
+<p id="publicacion6">¿Me ayudan con inglés?</p>
+
 </textarea>
 <br><button onclick="runHTML('htmlInput3','preview3')">Ver resultado</button>
 <iframe id="preview3" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+<p><strong>¡Reto CSS — Identificadores!</strong></p>
+
+<ol>
+  <li>Cambia el color de texto del <code>#publicacion3</code> a azul marino.</li>
+  <li>Pon un fondo amarillo al <code>#usuario2</code>.</li>
+  <li>Haz que el texto del <code>#comentario1</code> sea rojo y en cursiva.</li>
+  <li>Agrega un borde verde de 2px al <code>#like2</code>.</li>
+  <li>Pon el texto del <code>#mensaje3</code> en negrita y fondo gris claro.</li>
+  <li>Cambia el color de <code>#publicacion6</code> a morado oscuro.</li>
+</ol>
+
+<p><strong>Importante:</strong> Recuerda que cada ID es único y debes usar el símbolo <code>#</code> en CSS para seleccionarlo.</p>
 
 <hr style="margin: 40px 0; border: 1px solid rgba(47,65,89,0.2);">
 
       <h3>4. Combinando selectores</h3>
 <textarea id="htmlInput4" style="width:100%; height:240px;">
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      p {
-        font-family: Arial;
-      }
-      .azul {
-        color: blue;
-      }
-      #grande {
-        font-size: 24px;
-      }
-    </style>
-  </head>
-  <body>
-    <p class="azul">Texto en azul</p>
-    <p id="grande">Texto grande</p>
-    <p class="azul" id="grande">Texto azul y grande</p>
-  </body>
-</html>
+<h2>Mi Club Escolar — Selectores Combinados</h2>
+
+<div class="miembro lider">Andrea López</div>
+<p class="anuncio especial">¡Bienvenidos al Club de Ciencia!</p>
+
+<div class="comentario positivo">¡Excelente inicio!</div>
+<p class="anuncio">La próxima reunión será el viernes.</p>
+
+<div class="actividad destacada">Proyecto de Robótica</div>
+<p class="mensaje importante">Recuerden traer sus materiales.</p>
+
+<div class="miembro">David Ramírez</div>
+<p class="anuncio especial">Estamos buscando nuevos integrantes.</p>
+
+<div class="comentario">¡Yo quiero participar!</div>
+<p class="anuncio">Se realizará un taller de programación básica.</p>
+
+<div class="actividad">Concurso de Experimentos</div>
+<p class="mensaje">Los mejores trabajos serán premiados.</p>
+
+<div class="miembro lider">Sofía Martínez</div>
+<p class="anuncio">¡Anímate y sé parte del club!</p>
+
 </textarea>
 <br><button onclick="runHTML('htmlInput4','preview4')">Ver resultado</button>
 <iframe id="preview4" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
+<p><strong>¡Reto CSS — Usa combinaciones de selectores!</strong></p>
+
+<ol>
+  <li>Selecciona todos los <code>p.anuncio</code> y pon el texto en azul marino.</li>
+  <li>Selecciona los miembros que sean líderes <code>.miembro.lider</code> y ponles fondo amarillo.</li>
+  <li>Haz que las actividades destacadas <code>.actividad.destacada</code> tengan borde rojo y texto en negrita.</li>
+  <li>Selecciona los <code>div.miembro</code> (pero solo si son <code>div</code>) y cambia su color a verde oscuro.</li>
+  <li>Selecciona los comentarios positivos <code>.comentario.positivo</code> y ponles fondo gris claro.</li>
+  <li>Haz que los mensajes importantes <code>p.mensaje.importante</code> tengan un borde azul y fuente cursiva.</li>
+</ol>
+
+<p><strong>¡Recuerda!</strong> Usa combinaciones como <code>etiqueta.clase</code> o <code>.clase1.clase2</code> y no selecciones todo con un solo nombre.</p>
 
 <script>
 function runHTML(inputId, previewId) {
