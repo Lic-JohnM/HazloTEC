@@ -35,21 +35,77 @@
       </ul>
 
       <h3>1. Selector por etiqueta</h3>
+      <p>Funcionan escribiendo los estilos unicamente a las etiquetas, asi por ejemplo si es la etiqueta p, se aplicada a todos los parrafos, a continuación se presenta un ejemplo:</p>
 <textarea id="htmlInput1" style="width:100%; height:220px;">
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
+
+      <style>
       p {
-        color: blue;
+       background-color:blue;
       }
     </style>
-  </head>
-  <body>
-    <p>Este es un párrafo azul.</p>
-    <p>Este también.</p>
-  </body>
-</html>
+<h1>Revista Escolar</h1>
+
+<h2>Noticias Destacadas</h2>
+<p>Hoy se realizó la feria de ciencia en el colegio.</p>
+
+<h3>Entrevista a la profesora Marta</h3>
+<p>La profe Marta nos cuenta sobre sus experiencias enseñando tecnología.</p>
+
+<ul>
+  <li>Robótica Educativa</li>
+  <li>Laboratorios de Ciencias</li>
+</ul>
+
+<blockquote>“Siempre hay algo nuevo por aprender”</blockquote>
+
+<h2>Deportes</h2>
+<p>El equipo de baloncesto ganó el torneo intercolegial.</p>
+
+<img src="baloncesto.jpg" alt="Equipo de baloncesto">
+
+<h3>Próximos partidos</h3>
+<ol>
+  <li>Fútbol — Viernes</li>
+  <li>Baloncesto — Sábado</li>
+</ol>
+
+<footer>© 2025 Revista Escolar - Todos los derechos reservados</footer>
+
+<hr>
+
+<h2>Clubes Escolares</h2>
+<p>El club de lectura inicia este mes.</p>
+
+<table border="1">
+  <tr>
+    <th>Club</th>
+    <th>Horario</th>
+  </tr>
+  <tr>
+    <td>Robótica</td>
+    <td>Jueves 3pm</td>
+  </tr>
+</table>
+
+<address>Contacto: revista@colegio.edu</address>
+
+<aside>
+  <p>¿Sabías que puedes enviar tus artículos?</p>
+</aside>
+
+<section>
+  <h3>Galería de Fotos</h3>
+  <img src="galeria1.jpg" alt="Foto 1">
+</section>
+
+<nav>
+  <ul>
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Noticias</a></li>
+    <li><a href="#">Clubes</a></li>
+  </ul>
+</nav>
+
 </textarea>
 <br><button onclick="runHTML('htmlInput1','preview1')">Ver resultado</button>
 <iframe id="preview1" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
