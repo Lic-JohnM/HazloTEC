@@ -34,17 +34,29 @@
       </ul>
 
 <textarea id="htmlInput1" style="width:100%; height:200px;">
-<!DOCTYPE html>
-<html>
-  <body>
-    <div style="background-color: lightblue; height: 30vh;">
-      Alto del 30% de la pantalla (30vh)
-    </div>
-    <div style="background-color: lightgreen; width: 50vw;">
-      Ancho del 50% de la pantalla (50vw)
-    </div>
-  </body>
-</html>
+<style>
+
+#e1 { background-color: lightblue;
+       height: 30vh;
+}
+  
+#e2 { background-color: lightgreen;
+       width: 50vw;
+}
+
+ #e3 { background-color: lightred;
+       width: 80vw;
+       width: 25vw;
+
+}
+</style>
+
+<div id="e1">Ejercicio 1</div>
+<div id="e2">Ejercicio 2</div>
+<div id="e3">Ejercicio 3</div>
+
+
+
 </textarea>
 <br><button onclick="runHTML('htmlInput1','preview1')">Ver resultado</button>
 <iframe id="preview1" style="width:100%; height:200px; border:1px solid #ccc;"></iframe>
