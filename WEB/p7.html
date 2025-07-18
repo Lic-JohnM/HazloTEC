@@ -82,46 +82,45 @@ Para eso, usamos herramientas como <strong>CSS Grid</strong>, que nos permite cr
 
 <p><strong>¡Ahora vamos a aprender cómo usar CSS Grid para crear nuestros propios diseños!</strong></p>
 
-
-      
-
-      <h2>Flexbox</h2>
-      <p>Flexbox permite distribuir elementos horizontal o verticalmente con facilidad.</p>
-      <p>Ejemplo: 3 cajas distribuidas horizontalmente</p>
-
-<textarea id="htmlInput2" style="width:100%; height:220px;">
-<!DOCTYPE html>
-<html>
-  <body>
-    <div style="display: flex;">
-      <div style="background:red; color:white; padding:20px; margin:5px;">Caja 1</div>
-      <div style="background:blue; color:white; padding:20px; margin:5px;">Caja 2</div>
-      <div style="background:green; color:white; padding:20px; margin:5px;">Caja 3</div>
-    </div>
-  </body>
-</html>
-</textarea>
-<br><button onclick="runHTML('htmlInput2','preview2')">Ver resultado</button>
-<iframe id="preview2" style="width:100%; height:180px; border:1px solid #ccc;"></iframe>
-
-<hr>
-
-      <h2>Grid</h2>
       <p>Grid permite dividir un contenedor en filas y columnas con más control.</p>
-      <p>Ejemplo: 2 filas y 2 columnas</p>
+<p>
+  La propiedad <code>display: grid;</code> convierte el contenedor en una cuadrícula (grid), lo que permite organizar los elementos hijos en filas y columnas. La línea <code>grid-template-columns: 25% 25% 25% 25%;</code> indica que se crearán cuatro columnas, cada una ocupando el 25% del ancho total del contenedor. Es decir, el espacio se divide equitativamente en cuatro partes. Si se desea controlar también las filas, se puede usar <code>grid-template-rows</code> para definir la altura de cada fila dentro de la cuadrícula. A continuación se puede ver un ejemplo:
+</p>
 
 <textarea id="htmlInput3" style="width:100%; height:240px;">
-<!DOCTYPE html>
-<html>
-  <body>
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap:10px;">
-      <div style="background:#f88; padding:20px;">Elemento 1</div>
-      <div style="background:#8f8; padding:20px;">Elemento 2</div>
-      <div style="background:#88f; padding:20px;">Elemento 3</div>
-      <div style="background:#ff8; padding:20px;">Elemento 4</div>
-    </div>
-  </body>
-</html>
+<style>
+
+#e1 { background-color: blue;
+       height: 30vh;
+       display:grid;
+       grid-template-columns: 25% 25% 25% 25%;
+
+}
+  
+#e1>div {
+    
+    background-color: lightblue;
+    margin-left:10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+</style>
+
+<div id="e1">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
 </textarea>
 <br><button onclick="runHTML('htmlInput3','preview3')">Ver resultado</button>
 <iframe id="preview3" style="width:100%; height:200px; border:1px solid #ccc;"></iframe>
