@@ -27,7 +27,19 @@
 
             <h3>Operaciones de Corte en OpenSCAD</h3>
             <br>
-            <p>OpenSCAD permite combinar figuras con operaciones llamadas <strong>booleanas</strong>: unir, cortar o encontrar lo que tienen en común.</p>
+            <p>OpenSCAD permite combinar figuras con operaciones llamadas <strong>booleanas</strong>: unir, cortar o encontrar lo que tienen en común. Vamos a realizar dos operaciones teniendo como base el siguiente código e imagen:</p>
+
+            difference() {
+    square([40, 40]);        // figura base
+    translate([40, 40])
+        circle(r = 20);      // esquina curva que se "corta"
+}
+</code></pre>
+
+               <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i8.png" 
+                     alt="Corte con curva" style="max-width:100%; height:auto;">
+            </div>   
 
             <h4>1. Restar una figura con <code>difference()</code></h4>
             <p>Sirve para cortar una figura usando otra. Aquí vemos cómo hacer un rectángulo con una esquina curva:</p>
@@ -41,37 +53,24 @@ difference() {
 </code></pre>
 
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/recorte_curva.png" 
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i9.png" 
                      alt="Corte con curva" style="max-width:100%; height:auto;">
             </div>
 
             <br>
-            <h4>2. Unir figuras con <code>union()</code></h4>
-            <p>Combina dos o más figuras para que actúen como una sola:</p>
-            <pre><code>
-union() {
-    square([30, 30]);
-    translate([30, 0]) circle(r = 15);
-}
-</code></pre>
-
-            <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/union.png" 
-                     alt="Figura unida" style="max-width:100%; height:auto;">
-            </div>
-
-            <br>
-            <h4>3. Intersección con <code>intersection()</code></h4>
+          
+       
+            <h4>2. Intersección con <code>intersection()</code></h4>
             <p>Deja solo la parte donde dos figuras se superponen:</p>
             <pre><code>
 intersection() {
     square([40, 40]);
-    translate([20, 20]) circle(r = 30);
+    translate([40, 40]) circle(r = 20);
 }
 </code></pre>
 
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/interseccion.png" 
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i10.png" 
                      alt="Intersección" style="max-width:100%; height:auto;">
             </div>
 
@@ -80,7 +79,7 @@ intersection() {
 
             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-            <div id="ctrl">
+            <div id="ctrl"  style="grid-template-columns: 1fr 1fr";>
                 <a class="n1" href="p3.html">anterior</a>
                 <a class="n1" href="p5.html">siguiente</a>
             </div>
