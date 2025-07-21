@@ -75,7 +75,33 @@ intersection() {
             </div>
 
             <br>
-            <p>Estas herramientas son muy poderosas para dar forma precisa a tus diseños. Con un poco de práctica, puedes hacer recortes complejos, curvas suaves o unir piezas personalizadas.</p>
+            <p>Estas herramientas son muy poderosas para dar forma precisa a tus diseños. Con un poco de práctica, puedes hacer recortes complejos, curvas suaves o unir piezas personalizadas. A continuación se puede ver un ejemplo:</p>
+            <br>
+              <pre><code>
+// Cara base
+difference() {
+    color("orange") 
+    square([40, 40]);
+
+    // Ojo izquierdo
+    translate([8, 25]) 
+    square([6, 6]);
+
+    // Ojo derecho
+    translate([26, 25]) 
+    square([6, 6]);
+
+    // Boca (opcional)
+    translate([15, 5]) 
+    square([10, 4]);
+}
+</code></pre>
+            <p>La imagen resultante es la siguiente:</p>
+            <br>
+                  <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i11.png" 
+                     alt="Intersección" style="max-width:100%; height:auto;">
+            </div>
 
             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
