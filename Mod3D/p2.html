@@ -34,25 +34,19 @@
             <p>Se usa para crear cuadrados o rectángulos. Puedes ajustar el tamaño con <code>[ancho, alto]</code>.</p>
             <pre><code>square([40, 20]);</code></pre>
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/square.png" alt="Figura square" style="max-width:100%; height:auto;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i1.png" alt="Figura square" style="max-width:100%; height:auto;">
             </div>
             <br>
 
             <h4>2. Círculo - <code>circle()</code></h4>
             <p>Crea un círculo indicando su radio. Entre más alto el <code>$fn</code>, más suave será el borde.</p>
-            <pre><code>circle(r = 20, $fn = 50);</code></pre>
+            <pre><code>circle(r = 20);</code></pre>
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/circle.png" alt="Figura circle" style="max-width:100%; height:auto;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i2.png" alt="Figura circle" style="max-width:100%; height:auto;">
             </div>
             <br>
 
-            <h4>3. Texto - <code>text()</code></h4>
-            <p>También se puede escribir texto plano que luego puede extruirse en 3D.</p>
-            <pre><code>text("Hola", size=20);</code></pre>
-            <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/text.png" alt="Figura texto" style="max-width:100%; height:auto;">
-            </div>
-            <br>
+          
 
             <h4>4. Polígono libre - <code>polygon()</code></h4>
             <p>Permite crear cualquier forma conectando puntos. Ya lo has usado, pero recuerda que es útil para figuras irregulares:</p>
@@ -62,16 +56,16 @@
             </div>
             <br>
 
-            <p>Estas figuras se pueden combinar fácilmente, por ejemplo:</p>
+            <p>Estas figuras se pueden combinar fácilmente(solo basta con agregar la linea de la figura que se requiera), por ejemplo:</p>
             <pre><code>
 square([30, 30]);
 translate([40, 0]) circle(r = 15);
-translate([80, 5]) text("Hola", size = 10);
+
 </code></pre>
 
             <br>
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/combinadas2d.png" alt="Figuras combinadas" style="max-width:100%; height:auto;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i4.png" alt="Figuras combinadas" style="max-width:100%; height:auto;">
             </div>
 
             <br>
@@ -80,7 +74,7 @@ translate([80, 5]) text("Hola", size = 10);
 
             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-            <div id="ctrl">
+            <div id="ctrl"  style="grid-template-columns: 1fr 1fr";>
                 <a class="n1" href="p1.html">anterior</a>
                 <a class="n1" href="p3.html">siguiente</a>
             </div>
