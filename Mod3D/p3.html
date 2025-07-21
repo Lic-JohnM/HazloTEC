@@ -33,13 +33,59 @@
             <h4>1. Trasladar una figura - <code>translate()</code></h4>
             <p>Con <code>translate([x, y])</code> puedes mover una figura a otra posición. Por ejemplo:</p>
             <pre><code>
-square([20, 20]); // figura original
-translate([30, 10])
-square([20, 20]); // misma figura, pero movida a la derecha y hacia arriba
+// Cabeza
+translate([0, 40]) square([20, 20]);
+
+// Cuerpo
+translate([5, 15]) square([10, 25]);
+
+// Pierna izquierda
+translate([5, 0]) square([4, 15]);
+
+// Pierna derecha
+translate([11, 0]) square([4, 15]);
+
+// Brazo izquierdo
+translate([-5, 25]) square([5, 15]);
+
+// Brazo derecho
+translate([20, 25]) square([5, 15]);
 </code></pre>
 
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/translate.png" 
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i4.png" 
+                     alt="Ejemplo translate" style="max-width:100%; height:auto;">
+            </div>
+
+            <br>
+
+
+              <h4>2. Trasladar circulos</h4>
+            
+            <p>Tambien se puede hacer el ejercicio con circulos o poligonos</p>
+            <pre><code>
+// Luz roja
+translate([0, 60]) color("red") circle(r = 5);
+
+// Luz amarilla
+translate([20, 40]) color("yellow") circle(r = 5);
+
+// Luz verde
+translate([-20, 20]) color("green") circle(r = 5);
+
+// Poste (la base)
+translate([0, 0]) color("black") circle(r = 3);
+
+// Adorno lateral
+translate([-30, 50]) color("blue") circle(r = 4);
+
+// Adorno lateral derecho
+translate([30, 10]) color("purple") circle(r = 4);
+
+</code></pre>
+
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i5.png" 
                      alt="Ejemplo translate" style="max-width:100%; height:auto;">
             </div>
 
@@ -47,28 +93,50 @@ square([20, 20]); // misma figura, pero movida a la derecha y hacia arriba
             <h4>2. Rotar una figura - <code>rotate()</code></h4>
             <p>Con <code>rotate(a)</code> se gira la figura <strong>en grados</strong>. El giro es alrededor del punto (0, 0).</p>
             <pre><code>
-square([20, 10]); // figura original
-rotate(45)
-square([20, 10]); // la figura se gira 45 grados
+// Cabeza rotada 15°
+translate([-50, 60])
+    rotate(15)
+    color("orange")
+    square([20, 20]);
+
+// Cuerpo rotado 10°
+translate([0, 30])
+    rotate(10)
+    color("gray")
+    square([20, 40]);
+
+// Pierna izquierda rotada -20°
+translate([-40, -10])
+    rotate(-20)
+    color("blue")
+    square([5, 20]);
+
+// Pierna derecha rotada 30°
+translate([50, -10])
+    rotate(30)
+    color("red")
+    square([5, 20]);
+
+// Brazo izquierdo rotado -45°
+translate([-60, 40])
+    rotate(-45)
+    color("green")
+    square([10, 10]);
+
+// Brazo derecho rotado 60°
+translate([60, 40])
+    rotate(60)
+    color("purple")
+    square([10, 10]);
 </code></pre>
 
             <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/rotate.png" 
+                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i6.png" 
                      alt="Ejemplo rotate" style="max-width:100%; height:auto;">
             </div>
 
             <br>
-            <p>También se pueden combinar ambos movimientos:</p>
-            <pre><code>
-translate([40, 0])
-rotate(30)
-square([20, 10]);
-</code></pre>
-
-            <div style="text-align: center;">
-                <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/translate_rotate.png" 
-                     alt="Ejemplo combinado" style="max-width:100%; height:auto;">
-            </div>
+          
 
             <br>
             <p>Al usar estas herramientas, puedes colocar cada figura exactamente donde la necesitas. Son muy útiles para construir diseños complejos, como letras que se alinean, engranajes o estructuras geométricas.</p>
@@ -78,29 +146,39 @@ square([20, 10]);
 
 <h3>Superponer figuras en altura y usar colores</h3>
 <br>
-<p>Cuando trabajamos en 3D, también podemos mover figuras hacia arriba usando el eje <strong>Z</strong>. Esto es útil si queremos colocar una figura encima de otra, como si apiláramos bloques.</p>
-
-<p>Además, podemos usar <code>color()</code> para ver mejor cada figura.</p>
+<p>Cuando trabajamos en 3D, también podemos mover las figuras hacia arriba o hacia abajo usando el eje <strong>Z</strong>. Esto nos permite colocar las figuras a diferentes alturas, como si las estuviéramos ubicando en distintos pisos o niveles. Usando <code>translate([x, y, z])</code> podemos controlar en qué posición aparece cada figura sin necesidad de cambiar su forma ni extruirla.</p>
+<p>Además, es importante recordar que podemos usar <code>color()</code> para ver mejor cada figura.</p>
 
 <h4>Ejemplo:</h4>
 
 <pre><code>
-// Figura base: cuadrado extruido en 3D
-color("red")
-linear_extrude(height = 5)
-square([30, 30]);
+// Círculo grande
+translate([12, 12, 0]) circle(r = 60);
 
-// Segunda figura: círculo encima de la base
-translate([0, 0, 5])  // se sube 5 mm (encima del cuadrado)
-color("blue")
-linear_extrude(height = 5)
-circle(r = 15);
+// Círculo 2 
+translate([14, -8, 1]) color("red") circle(r = 10);
+
+// Círculo 3
+translate([26, 28, 2]) color("green") circle(r = 8);
+
+// Círculo 4 
+translate([-8, 28, 3]) color("green") circle(r = 8);
+
+// Círculo 5
+translate([12, 12, 4]) color("blue") circle(r = 5);
+
+// Círculo 6 
+translate([50, 70, 0]) circle(r = 25);
+
+// Círculo 7 
+translate([-20, 70, 0]) circle(r = 25);
+
 </code></pre>
 
 <p>Este código crea un cuadrado rojo y coloca un círculo azul justo encima. ¡Así se pueden construir torres o detalles en capas!</p>
 
 <div style="text-align: center;">
-    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/colores_altura.png" 
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i7.png" 
          alt="Figura con colores y altura" 
          style="max-width:100%; height:auto;">
 </div>
@@ -110,9 +188,9 @@ circle(r = 15);
 
 <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-<div id="ctrl">
-    <a class="n1" href="p3.html">anterior</a>
-    <a class="n1" href="p5.html">siguiente</a>
+<div id="ctrl"  style="grid-template-columns: 1fr 1fr";>
+    <a class="n1" href="p2.html">anterior</a>
+    <a class="n1" href="p4.html">siguiente</a>
 </div>
 
 
