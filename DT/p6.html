@@ -1,89 +1,74 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Dibujo técnico</title>
-	<meta name="description" content="Introducción a Scratch y como se crean las variables en esta aplicación.">	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Dibujo técnico</title>
+    <meta name="description" content="Descripción de las vistas en dibujo técnico">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <script src="js/script.js"></script>
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","210vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+    </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+    <div id="info">
+        <div id="con">
 
+            <h2>Vistas en dibujo técnico</h2>
 
-        <div id="info">
+            <p>Las <strong>vistas</strong> en dibujo técnico son representaciones planas de un objeto tridimensional, observadas desde diferentes ángulos. Permiten comunicar con precisión la forma, dimensiones y características de una pieza sin necesidad de verla en volumen.</p>
 
-                <div id="con">
- <section>
-  <h2>Vistas en Dibujo Técnico</h2>
-  <p>
-    En el dibujo técnico, las <strong>vistas</strong> permiten representar un objeto tridimensional desde diferentes ángulos en un plano bidimensional. Estas vistas se obtienen proyectando el objeto como si lo observaras directamente desde cada uno de sus lados. Así, se pueden interpretar con precisión sus dimensiones y forma sin necesidad de tener el objeto físico.
-  </p>
+            <p>Generalmente se usan tres vistas principales:
+                <ul>
+                    <li><strong>Vista frontal</strong>: muestra el objeto desde el frente, es la vista principal.</li>
+                    <li><strong>Vista lateral derecha</strong>: permite ver el perfil del objeto.</li>
+                    <li><strong>Vista superior</strong>: muestra cómo se ve desde arriba, revelando su contorno general.</li>
+                </ul>
+            </p>
 
-  <p>
-    Las vistas más comunes son:
-    <ul>
-      <li><strong>Vista frontal</strong>: muestra el objeto tal como se ve desde el frente. Es la vista principal.</li>
-      <li><strong>Vista lateral derecha</strong>: muestra el costado derecho del objeto, útil para ver el perfil.</li>
-      <li><strong>Vista superior</strong>: muestra cómo se ve el objeto desde arriba, permitiendo observar su contorno y distribución.</li>
-    </ul>
-  </p>
+            <h3>🔍 Ejemplo: vista en perspectiva</h3>
+            <p>Observa la siguiente imagen tomada en perspectiva isométrica. Esta vista es útil para entender la forma global del objeto antes de descomponerlo en vistas ortogonales.</p>
 
-  <figure>
-    <img src="ruta/a/tu/imagen-diagonal.png" alt="Vista isométrica del objeto" style="max-width: 100%; height: auto;">
-    <figcaption>Vista en perspectiva isométrica del objeto, que ayuda a visualizar su forma general antes de analizar cada vista por separado.</figcaption>
-  </figure>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/12.png" 
+                     alt="Vista en perspectiva isométrica" 
+                     style="max-width:100%; height:auto;">  
+            </div>
+            <br>
 
-  <figure>
-    <img src="ruta/a/tu/imagen-vistas.png" alt="Vistas ortogonales del objeto" style="max-width: 100%; height: auto;">
-    <figcaption>Distribución de vistas: frontal, lateral derecha y superior. Cada una representa una cara diferente del mismo objeto.</figcaption>
-  </figure>
+            <h3>📐 Vistas ortogonales</h3>
+            <p>Ahora observa cómo se descompone ese mismo objeto en tres vistas ortogonales. Cada una representa una cara del objeto y juntas permiten su reconstrucción mental o en software de modelado.</p>
 
-  <p>
-    Comprender y dibujar correctamente las vistas es fundamental en el diseño técnico, ya que permite comunicar de forma precisa la forma y dimensiones de una pieza u objeto a fabricar o analizar.
-  </p>
-</section>
+            <br>
+            <div style="text-align: center;">
+                <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/13.png" 
+                     alt="Vistas ortogonales del objeto" 
+                     style="max-width:100%; height:auto;">  
+            </div>
+            <br>
 
-            
-			
-		 
-                       
-                        <br>
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p5.html"> anterior </a>
-				<a class="n1" href="p7.html"> siguiente </a>
-                             
+            <p>Dominar la lectura y construcción de vistas es esencial para comunicar diseños técnicos de forma clara, precisa y estandarizada.</p>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+            <div id="ctrl">
+                <a class="n1" href="p6.html"> anterior </a>
+                <a class="n1" href="p8.html"> siguiente </a>
+            </div>
 
+            <br>
 
-     	</body>
+        </div>
+    </div>
 
-	
+</body>
 </html>
