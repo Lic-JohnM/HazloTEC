@@ -14,11 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
 		
 	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","180vh");
-	 });
-	</script>
+	
 	<script src="js/script.js"></script>
 		
 	</head>
@@ -34,35 +30,58 @@
         <div id="info">
 
                 <div id="con">
-   <h2>Vistas</h2>
-
-            <br>
-            
-			<p>Para poder definir completamente un objeto es necesario tener todas las caracteristicas del espacio tridimensional del mismo. Ya sea para su posterior diseño o para implementarlo en algún diseño. A continuación se presentan las vistas de un objeto.</p>            
-	
-
-				<br>
-
-			
-				<div style="text-align:center;">
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242818087" height="466" width="450" frameborder="0" scrolling="no" ></iframe>
-					
-			</div>  
-
-		<br>
-
-	
-
-			<p>Sin embargo no en todas las ocasiones es necesario emplear todas las vistas, solamente las que contienen más información relevante del diseño. A continuación se presenta un ejemplo:</p>
-            <br>
-            
-				<div style="text-align:center;">
-
-		<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564242818091" height="737" width="450" frameborder="0" scrolling="no" ></iframe>
-
-			</div>  
-
 			<br>
+  <h2>Curvas Bézier en FreeCAD</h2>
+
+<p>
+  <strong>FreeCAD</strong> es un programa de diseño asistido por computador (CAD) totalmente libre y gratuito. Es ideal para aprender modelado 3D y dibujo técnico sin necesidad de pagar licencias. Está pensado para estudiantes, técnicos, ingenieros o cualquier persona que quiera explorar el diseño digital desde lo más básico hasta proyectos complejos.
+</p>
+
+<p>
+  Uno de los módulos más accesibles y útiles para empezar es el <strong>módulo Draft</strong>. Este permite crear <em>dibujo 2D técnico</em> con líneas, círculos, textos, cotas, rectángulos y más. Es similar a otros programas como AutoCAD, pero mucho más amigable para comenzar. Desde Draft también se pueden crear curvas complejas que no son posibles solo con líneas y arcos.
+</p>
+
+<h3>🔶 ¿Qué es una curva Bézier?</h3>
+<p>
+  Las curvas Bézier (también llamadas <strong>B-Spline</strong> en FreeCAD) son <em>curvas suaves</em> que se crean a partir de puntos de control. A diferencia de los círculos o líneas rectas, estas curvas permiten diseñar <strong>formas naturales, estilizadas o decorativas</strong>, como una hoja, la carcasa de un objeto o una forma aerodinámica.
+</p>
+
+<p>
+  En dibujo técnico tradicional, muchas curvas se representan con combinaciones de líneas rectas y arcos circulares. Sin embargo, no todas las formas reales pueden construirse de esa forma. Las curvas Bézier permiten diseñar trayectorias más libres que no pueden lograrse con herramientas básicas.
+</p>
+
+<h3>🧩 ¿Cómo crear una curva Bézier en FreeCAD?</h3>
+<p>
+  En el módulo <strong>Draft</strong> se encuentra la herramienta de <strong>B-Spline</strong>. Para usarla:
+  <ul>
+    <li>Activa el módulo Draft desde el menú superior.</li>
+    <li>Haz clic en el ícono de <em>Curva B-Spline</em> (curva suave con puntos).</li>
+    <li>Haz clic en varios puntos en la vista para definir el camino de la curva.</li>
+    <li>Presiona <code>ESC</code> o haz clic derecho para terminar.</li>
+  </ul>
+</p>
+
+<br>
+<div style="text-align: center;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bézier_curve.svg/640px-Bézier_curve.svg.png" 
+         alt="Curva Bézier de ejemplo" 
+         style="max-width:100%; height:auto;">  
+</div>
+<br>
+
+<p>
+  Este tipo de curvas se puede combinar con otras figuras (como círculos o rectángulos) para crear perfiles más complejos que luego se convierten en <strong>modelos tridimensionales</strong> usando otros módulos como Part o Part Design.
+</p>
+
+<h3>🛠️ Ejercicio sugerido:</h3>
+<p>
+  <strong>Actividad:</strong> Diseña en el módulo Draft la silueta de una hoja utilizando la herramienta de curva Bézier. Intenta que no parezca un dibujo hecho con solo rectas. Luego, usa el módulo <strong>Part</strong> para extruir el contorno y convertirlo en una figura 3D.
+</p>
+
+<p>
+  Las curvas Bézier son una herramienta poderosa para el diseño de formas personalizadas, especialmente útiles en áreas como diseño industrial, arte técnico o impresión 3D. Su uso abre posibilidades más allá del dibujo mecánico tradicional, fomentando la creatividad y el pensamiento espacial.
+</p>
+
          
                         <br>
 
