@@ -31,42 +31,90 @@
 
                 <div id="con">
 
-		<h1>TechDraw en FreeCAD</h1>
+		<h2>📏 Módulo: Del diseño 3D al dibujo técnico en FreeCAD</h2>
 
-  <p>TechDraw es un módulo especializado dentro de <strong>FreeCAD</strong> que permite generar planos técnicos a partir de modelos tridimensionales. Es ideal para representar con precisión diseños mecánicos o estructurales en un formato que puede imprimirse o exportarse como PDF o SVG.</p>
+<p>
+  En este módulo aprenderás a transformar tus modelos 3D en representaciones técnicas claras con medidas, vistas y detalles. Si ya trabajaste con OpenSCAD o tienes un archivo <code>.stl</code> exportado, podrás traerlo a FreeCAD y generar un plano técnico listo para imprimir o presentar.
+</p>
 
-  <h2>¿Para qué sirve?</h2>
-  <ul>
-    <li>Crear <strong>vistas ortogonales</strong> (frontal, superior, lateral) de un modelo 3D.</li>
-    <li>Generar <strong>proyecciones isométricas o en perspectiva</strong>.</li>
-    <li>Añadir <strong>cotas</strong>, <strong>líneas de centro</strong>, <strong>etiquetas</strong> y otros detalles técnicos.</li>
-    <li>Exportar los planos para impresión o documentación.</li>
-  </ul>
+<h3>🔁 Conexión con el módulo anterior: Diseño 3D</h3>
+<p>
+  En el módulo anterior creamos modelos 3D con OpenSCAD utilizando figuras como cubos, cilindros y esferas. También combinamos formas y aplicamos rotaciones y desplazamientos. Ahora, damos un paso más: convertir esos modelos en un <strong>plano técnico con medidas y vistas ortogonales</strong>.
+</p>
 
-  <h2>¿Cómo se usa?</h2>
-  <ol>
-    <li>Crear o importar un modelo 3D en FreeCAD.</li>
-    <li>Ir al módulo <strong>TechDraw</strong>.</li>
-    <li>Seleccionar el objeto y usar "Insertar vista" para generar la vista deseada.</li>
-    <li>Agregar cotas u otras herramientas según necesidad.</li>
-    <li>Exportar como archivo PDF o imagen.</li>
-  </ol>
+<h3>📥 Paso 1: Importar tu modelo 3D en FreeCAD</h3>
+<p>
+  Puedes empezar con un archivo <code>.stl</code> exportado desde OpenSCAD, o incluso usar un modelo de FreeCAD directamente. Aquí te explicamos cómo importar un archivo STL:
+</p>
 
-  <h2>Ventajas para estudiantes</h2>
-  <p>Con TechDraw, los estudiantes pueden convertir un diseño digital en un <strong>plano técnico real</strong>, sin necesidad de dibujar todo manualmente. Esto ahorra tiempo, reduce errores y fortalece habilidades de diseño técnico.</p>
+<ol>
+  <li>Abre FreeCAD.</li>
+  <li>Ve a <strong>Archivo &gt; Abrir</strong> y selecciona tu archivo <code>.stl</code>.</li>
+  <li>Una vez abierto, el modelo aparecerá como una <em>malla (Mesh)</em>.</li>
+</ol>
 
-  <div class="ejemplo">
-    <h3>Ejemplo de uso básico</h3>
-    <p>Un estudiante diseña un soporte simple en Part Design y usa TechDraw para:</p>
-    <ul>
-      <li>Insertar vistas frontal, superior y lateral.</li>
-      <li>Añadir cotas para imprimir.</li>
-      <li>Guardar como PDF y compartir su diseño.</li>
-    </ul>
-  </div>
-			<br>
-      
+<p>Para poder trabajar en TechDraw, necesitas convertir esa malla en un <strong>sólido reconocible</strong>:</p>
 
+<ol>
+  <li>Selecciona la malla en el árbol de objetos.</li>
+  <li>Ve al menú <strong>Part &gt; Crear forma a partir de malla</strong>.</li>
+  <li>Luego selecciona la forma nueva y usa <strong>Part &gt; Convertir a sólido</strong>.</li>
+  <li>Refina la forma si es necesario: <strong>Part &gt; Refine Shape</strong>.</li>
+</ol>
+
+<p>
+  Ahora tu modelo ya está listo para usarse en la generación de vistas técnicas.
+</p>
+
+<h3>📄 Paso 2: Crear una hoja en TechDraw</h3>
+<p>
+  Cambia al módulo <strong>TechDraw</strong> desde la lista de módulos (esquina superior izquierda).
+</p>
+
+<ol>
+  <li>Haz clic en <strong>Insertar una nueva hoja</strong> (puede ser tamaño A4).</li>
+  <li>Selecciona tu modelo en el árbol de objetos.</li>
+  <li>Haz clic en <strong>Insertar vista base</strong>.</li>
+  <li>Desde las propiedades (en la parte inferior), puedes elegir la vista: frontal, superior, lateral, isométrica, etc.</li>
+</ol>
+
+<h3>📐 Paso 3: Agregar cotas (medidas)</h3>
+<p>
+  TechDraw permite agregar diferentes tipos de cotas para representar medidas con precisión:
+</p>
+
+<ul>
+  <li><strong>Longitud</strong>: para medir líneas rectas.</li>
+  <li><strong>Radio o diámetro</strong>: para círculos y cilindros.</li>
+  <li><strong>Ángulo</strong>: entre dos líneas.</li>
+</ul>
+
+<p>
+  Para agregar una cota:
+</p>
+<ol>
+  <li>Haz clic en la herramienta de cota (iconos con líneas y medidas).</li>
+  <li>Selecciona dos puntos en la vista (o una arista, para radios y longitudes).</li>
+  <li>La medida aparecerá en la hoja y se puede mover o ajustar.</li>
+</ol>
+
+<h3>🎯 Importancia del dibujo técnico</h3>
+<p>
+  El dibujo técnico permite comunicar con precisión cómo debe construirse un objeto. Las vistas ortogonales (frontal, lateral, superior) muestran todas las caras, y las cotas aseguran que cualquier persona pueda replicar el diseño con exactitud.
+</p>
+
+<p>
+  Al trabajar en diseño 3D y luego generar planos técnicos, estás cerrando el ciclo completo del modelado digital: <strong>diseño, representación técnica y fabricación</strong>.
+</p>
+
+<h3>🧠 Actividad sugerida</h3>
+<ul>
+  <li>Importa uno de tus diseños de OpenSCAD (en formato STL) a FreeCAD.</li>
+  <li>Convierte la malla a sólido.</li>
+  <li>Crea una hoja con vistas ortogonales.</li>
+  <li>Agrega al menos 5 cotas distintas (alto, ancho, radio, etc.).</li>
+  <li>Guarda tu trabajo en PDF o imagen para compartirlo.</li>
+</ul>
 
                          <div id="ctrl">
 					
