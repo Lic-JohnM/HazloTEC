@@ -86,40 +86,8 @@
   <li>Ve a <strong>Archivo &gt; Exportar</strong>.</li>
   <li>Elige el formato <code>.svg</code> y guarda el archivo.</li>
 </ul>
-<p>
-  Este archivo será útil para importarlo en herramientas como OpenSCAD.
-</p>
 
 
-<h3>🧾 Importar SVG en OpenSCAD</h3>
-<p>
-  Para usar un archivo SVG en OpenSCAD debes seguir estos pasos:
-</p>
-<ul>
-  <li>Asegúrate de que el archivo SVG tenga solo formas cerradas y sin texto.</li>
-  <li>En OpenSCAD, usa el siguiente comando:</li>
-</ul>
-
-<pre><code>import("nombre_del_archivo.svg");</code></pre>
-
-<p>
-  Si deseas darle volumen al diseño, puedes usar <code>linear_extrude</code> para convertirlo en un objeto 3D:
-</p>
-
-<pre><code>linear_extrude(height = 5)
-    import("nombre_del_archivo.svg");</code></pre>
-
-<p>
-  Para visualizar correctamente el diseño importado, es importante activar la vista completa:
-  ve a <strong>View &gt; View All</strong> o presiona la tecla de acceso rápido para ajustar la vista.
-</p>
-			<div style="text-align: center;">
-    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/24.png"  
-         alt="Curva Bézier exportada como SVG" 
-         style="max-width:100%; height:auto;">  
-</div>
-<br>
-<p>Esta técnica sirve para complementar figuras para generar una figura tridimensional</p>
 
          
                         <br>
