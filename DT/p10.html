@@ -30,38 +30,91 @@
         <div id="info">
 
                 <div id="con">
-    <h1>Módulo Spreadsheet en FreeCAD</h1>
+        <h3>📐 Análisis y vistas técnicas de modelos STL con Python</h3>
+        <p>
+            Este módulo enseña cómo usar <strong>Python</strong> para apoyar el dibujo técnico desde archivos STL. Aprenderás a:
+        </p>
+        <ul>
+            <li>Importar modelos STL</li>
+            <li>Calcular volumen, área y dimensiones</li>
+            <li>Exportar un reporte en Excel</li>
+            <li>Generar vistas (frontal, superior, lateral, isométrica)</li>
+            <li>Visualizar cotas básicas en las vistas</li>
+        </ul>
 
-  <div class="cuadro">
-    <h2>¿Qué es?</h2>
-    <p>El módulo <strong>Spreadsheet</strong> permite crear y gestionar hojas de cálculo dentro de FreeCAD. Se usa para parametrizar modelos 3D, automatizar cálculos y organizar datos técnicos directamente en el mismo archivo de diseño.</p>
-  </div>
+        <h3>📚 Instalación de bibliotecas</h3>
+        <pre><code>pip install trimesh pandas openpyxl matplotlib</code></pre>
 
-  <div class="cuadro">
-    <h2>¿Para qué sirve?</h2>
-    <ul>
-      <li><strong>Parametrización:</strong> cambia dimensiones del modelo fácilmente desde la hoja de cálculo.</li>
-      <li><strong>Documentación:</strong> añade información clave como materiales, nombres o cantidades.</li>
-      <li><strong>Fórmulas:</strong> crea relaciones entre parámetros usando operaciones matemáticas.</li>
-      <li><strong>Diseños reutilizables:</strong> usa plantillas con valores editables.</li>
-    </ul>
-  </div>
+        <h3>🔍 Código completo con vistas y cotas</h3>
+        <pre><code>import trimesh
+import pandas as pd
+import matplotlib.pyplot as plt
 
-  <div class="cuadro">
-    <h2>Ejemplo práctico: Soporte para celular</h2>
-    <p>Supongamos que diseñamos una base simple para un celular. Creamos una hoja de cálculo con los siguientes valores:</p>
-    <table>
-      <tr><th>Parámetro</th><th>Valor</th></tr>
-      <tr><td>Altura</td><td>100 mm</td></tr>
-      <tr><td>Ancho</td><td>60 mm</td></tr>
-      <tr><td>Espesor base</td><td>10 mm</td></tr>
-      <tr><td>Inclinación</td><td>30°</td></tr>
-    </table>
-    <p>En el boceto, en lugar de escribir números fijos, referenciamos con:</p>
-    <p><code>Spreadsheet.Altura</code></p>
-    <p>Esto hace que el diseño sea dinámico: al cambiar el valor en la hoja, se actualiza automáticamente.</p>
-  </div>
+# Cargar modelo STL
+malla = trimesh.load('modelo.stl')
 
+# Extraer propiedades
+volumen = malla.volume
+area = malla.area
+dimensiones = malla.extents
+
+# Crear DataFrame y exportar a Excel
+df = pd.DataFrame({
+    'Volumen (mm³)': [volumen],
+    'Área superficial (mm²)': [area],
+    'Largo (X)': [dimensiones[0]],
+    'Ancho (Y)': [dimensiones[1]],
+    'Alto (Z)': [dimensiones[2]]
+})
+df.to_excel('reporte_modelo.xlsx', index=False)
+
+# Crear vistas
+def guardar_vista(malla, direccion, nombre_archivo):
+    escena = malla.scene()
+    escena.set_camera(angles=direccion)
+    imagen = escena.save_image(resolution=(800, 600), visible=True)
+    with open(nombre_archivo, 'wb') as f:
+        f.write(imagen)
+
+guardar_vista(malla, (0, 0, 0), 'vista_frontal.png')
+guardar_vista(malla, (0, -90, 0), 'vista_lateral.png')
+guardar_vista(malla, (90, 0, 0), 'vista_superior.png')
+guardar_vista(malla, (45, 45, 45), 'vista_isometrica.png')
+
+# Generar cotas básicas (dimensiones en gráfico)
+plt.figure()
+plt.title('Cotas del modelo (vista simplificada)')
+plt.text(0.5, 0.8, f"Largo X: {dimensiones[0]:.1f} mm", ha='center')
+plt.text(0.5, 0.6, f"Ancho Y: {dimensiones[1]:.1f} mm", ha='center')
+plt.text(0.5, 0.4, f"Alto Z: {dimensiones[2]:.1f} mm", ha='center')
+plt.axis('off')
+plt.savefig('cotas.png')
+</code></pre>
+
+        <h3>📊 Resultado</h3>
+        <p>El script generará un archivo Excel y las siguientes imágenes:</p>
+        <ul>
+            <li><code>vista_frontal.png</code></li>
+            <li><code>vista_lateral.png</code></li>
+            <li><code>vista_superior.png</code></li>
+            <li><code>vista_isometrica.png</code></li>
+            <li><code>cotas.png</code> (dimensiones rotuladas)</li>
+        </ul>
+
+        <div style="text-align:center;">
+            <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/cotas.png" 
+                 alt="Ejemplo de cotas en Python" style="max-width:90%; height:auto;">
+        </div>
+
+        <h3>🎓 Actividad práctica</h3>
+        <ol>
+            <li>Diseña una figura en Tinkercad o FreeCAD.</li>
+            <li>Exporta como <code>.stl</code>.</li>
+            <li>Ejecuta el script anterior.</li>
+            <li>Entrega el archivo Excel y las imágenes generadas.</li>
+        </ol>
+
+        <p>Esta práctica fort
 
                          <div id="ctrl">
 					
