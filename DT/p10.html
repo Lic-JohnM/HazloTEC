@@ -45,54 +45,68 @@
         <h3>📚 Instalación de bibliotecas</h3>
         <pre><code>pip install trimesh pandas openpyxl matplotlib</code></pre>
 
-        <h3>🔍 Código completo con vistas y cotas</h3>
-        <pre><code>import trimesh
-import pandas as pd
+        <h3>🔍 Código completo con vistas</h3>
+        <pre><code>
+
+		import trimesh
 import matplotlib.pyplot as plt
 
-# Cargar modelo STL
-malla = trimesh.load('modelo.stl')
+# Cargar el archivo STL
+malla = trimesh.load('cajita.stl')  # Reemplaza con tu archivo STL
 
-# Extraer propiedades
-volumen = malla.volume
-area = malla.area
-dimensiones = malla.extents
+# Función para guardar una vista con matplotlib
+def guardar_vista(malla, elev, azim, nombre_archivo):
+    # Crear una figura con proyección 3D
+    fig = plt.figure(figsize=(6, 6))
+    ax = fig.add_subplot(111, projection='3d')
 
-# Crear DataFrame y exportar a Excel
-df = pd.DataFrame({
-    'Volumen (mm³)': [volumen],
-    'Área superficial (mm²)': [area],
-    'Largo (X)': [dimensiones[0]],
-    'Ancho (Y)': [dimensiones[1]],
-    'Alto (Z)': [dimensiones[2]]
-})
-df.to_excel('reporte_modelo.xlsx', index=False)
+    # Obtener vértices y caras
+    vertices = malla.vertices
+    caras = malla.faces
 
-# Crear vistas
-def guardar_vista(malla, direccion, nombre_archivo):
-    escena = malla.scene()
-    escena.set_camera(angles=direccion)
-    imagen = escena.save_image(resolution=(800, 600), visible=True)
-    with open(nombre_archivo, 'wb') as f:
-        f.write(imagen)
+    # Crear colección de polígonos para el mesh
+    mesh = trimesh.base.Trimesh(vertices=vertices, faces=caras)
+    ax.plot_trisurf(
+        mesh.vertices[:, 0],
+        mesh.vertices[:, 1],
+        mesh.vertices[:, 2],
+        triangles=mesh.faces,
+        color='lightblue',
+        edgecolor='gray',
+        linewidth=0.2,
+        alpha=1.0
+    )
 
-guardar_vista(malla, (0, 0, 0), 'vista_frontal.png')
-guardar_vista(malla, (0, -90, 0), 'vista_lateral.png')
-guardar_vista(malla, (90, 0, 0), 'vista_superior.png')
-guardar_vista(malla, (45, 45, 45), 'vista_isometrica.png')
+    # Configurar la vista
+    ax.view_init(elev=elev, azim=azim)
+    ax.axis('off')
 
-# Generar cotas básicas (dimensiones en gráfico)
-plt.figure()
-plt.title('Cotas del modelo (vista simplificada)')
-plt.text(0.5, 0.8, f"Largo X: {dimensiones[0]:.1f} mm", ha='center')
-plt.text(0.5, 0.6, f"Ancho Y: {dimensiones[1]:.1f} mm", ha='center')
-plt.text(0.5, 0.4, f"Alto Z: {dimensiones[2]:.1f} mm", ha='center')
-plt.axis('off')
-plt.savefig('cotas.png')
+    # Ajustar límites
+    limites = malla.bounds
+    for i in range(3):
+        medio = (limites[1][i] + limites[0][i]) / 2
+        rango = (limites[1][i] - limites[0][i]) * 0.6
+        ax.set_xlim(limites[0][0] - rango, limites[1][0] + rango)
+        ax.set_ylim(limites[0][1] - rango, limites[1][1] + rango)
+        ax.set_zlim(limites[0][2] - rango, limites[1][2] + rango)
+
+    # Guardar imagen
+    plt.tight_layout()
+    plt.savefig(nombre_archivo)
+    plt.close()
+
+# Generar las vistas
+guardar_vista(malla, elev=0, azim=0, nombre_archivo='vista_frontal.png')
+guardar_vista(malla, elev=0, azim=90, nombre_archivo='vista_lateral.png')
+guardar_vista(malla, elev=90, azim=0, nombre_archivo='vista_superior.png')
+guardar_vista(malla, elev=45, azim=45, nombre_archivo='vista_isometrica.png')
+
+print("✅ Vistas guardadas como imágenes PNG.")
+
 </code></pre>
 
         <h3>📊 Resultado</h3>
-        <p>El script generará un archivo Excel y las siguientes imágenes:</p>
+        <p>El script generará las siguientes imágenes:</p>
         <ul>
             <li><code>vista_frontal.png</code></li>
             <li><code>vista_lateral.png</code></li>
@@ -101,18 +115,7 @@ plt.savefig('cotas.png')
             <li><code>cotas.png</code> (dimensiones rotuladas)</li>
         </ul>
 
-        <div style="text-align:center;">
-            <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/cotas.png" 
-                 alt="Ejemplo de cotas en Python" style="max-width:90%; height:auto;">
-        </div>
-
-        <h3>🎓 Actividad práctica</h3>
-        <ol>
-            <li>Diseña una figura en Tinkercad o FreeCAD.</li>
-            <li>Exporta como <code>.stl</code>.</li>
-            <li>Ejecuta el script anterior.</li>
-            <li>Entrega el archivo Excel y las imágenes generadas.</li>
-        </ol>
+     
 
         <p>Esta práctica fort
 
