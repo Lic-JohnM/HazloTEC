@@ -124,24 +124,7 @@
          
                         <br>
 
-			<h1>Vista lateral (YZ) de un Cubo con un Cilindro – OpenSCAD</h1>
-    <p>Este código muestra un cubo y un cilindro de pie, vistos lateralmente. Puedes renderizarlo con <strong>F6</strong> y exportar como SVG desde OpenSCAD.</p>
-
-    <pre>
-// Vista lateral (YZ) de un cubo con un cilindro de pie al lado
-projection(cut = true)
-    rotate([0, 90, 0]) {
-        // Cubo de 30x30x30
-        cube([30, 30, 30]);
-
-        // Cilindro de 30mm de alto, radio 5mm
-        // Ubicado al lado derecho del cubo (en eje X)
-        translate([30, 10, 0])
-            cylinder(h = 30, r = 5, $fn = 60);
-    }
-    </pre>
-
-    <p>🔁 Recuerda presionar <strong>F6</strong> para renderizar completamente antes de exportar.</p>
+		
 
                  
             <div id="ctrl"  style="grid-template-columns: 1fr 1fr";>
