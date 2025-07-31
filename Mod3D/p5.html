@@ -9,10 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
+
 </head>
 <body>
     <div id="menu">
@@ -21,49 +18,88 @@
     </div>
     <div id="info">
         <div id="con">
-            <br>
-            <h3>Introducción a Figuras 3D en OpenSCAD</h3>
-            <br>
-            <p>En OpenSCAD, las figuras 3D básicas se crean usando primitivas geométricas simples. Estas son:</p>
-            <br>
-            <h3>1. Cubo (<code>cube()</code>)</h3>
-            <p>Se usa para crear un cubo o paralelepípedo.</p>
-            <pre>
-cube([30, 20, 10]); // Ancho 30, Profundidad 20, Alto 10
-            </pre>
-            <br>
-            <h3>2. Esfera (<code>sphere()</code>)</h3>
-            <p>Genera una esfera con un radio específico.</p>
-            <pre>
-sphere(15); // Esfera con radio de 15
-            </pre>
-            <br>
-            <h3>3. Cilindro (<code>cylinder()</code>)</h3>
-            <p>Se define por su altura y radios en la base superior e inferior.</p>
-            <pre>
-cylinder(h=40, r1=10, r2=5); // Cilindro de 40 de alto con radios 10 y 5
-            </pre>
-            <br>
-            <h3>4. Cono (Cilindro con radio superior cero)</h3>
-            <p>Un cono es un cilindro con radio superior de 0.</p>
-            <pre>
-cylinder(h=30, r1=10, r2=0); // Cono de altura 30 y base de radio 10
-            </pre>
-            <br>
-            <h3>5. Toroide (usando <code>rotate_extrude()</code>)</h3>
-            <p>Un toroide se genera a partir de la revolución de un círculo.</p>
-            <pre>
-rotate_extrude() translate([10, 0, 0]) circle(5); // Toroide con radio interno de 10 y grosor 5
-            </pre>
-            <br>
-            <h3>Exportación a STL</h3>
-            <p>Los modelos 3D creados en OpenSCAD pueden ser exportados en formato STL, el cual es ampliamente utilizado en impresión 3D.</p>
-            <pre>
-// Para exportar el modelo, ve a Archivo -> Exportar -> Exportar como STL
-            </pre>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
+            		
+
+<h3>🔶 ¿Qué es una curva Bézier?</h3>
+<p>
+  Las curvas Bézier (también llamadas <strong>B-Spline</strong> en FreeCAD) son <em>curvas suaves</em> que se crean a partir de puntos de control. A diferencia de los círculos o líneas rectas, estas curvas permiten diseñar <strong>formas naturales, estilizadas o decorativas</strong>, como una hoja, la carcasa de un objeto o una forma aerodinámica.
+</p>
+
+<p>
+  En dibujo técnico tradicional, muchas curvas se representan con combinaciones de líneas rectas y arcos circulares. Sin embargo, no todas las formas reales pueden construirse de esa forma. Las curvas Bézier permiten diseñar trayectorias más libres que no pueden lograrse con herramientas básicas.
+</p>
+
+<p>
+  Para practicar más sobre curvas y figuras decorativas, visita el módulo de <strong>Imágenes Digitales</strong> donde se exploran más ejemplos y combinaciones con formas vectoriales. Es ideal para comprender cómo convertir diseños artísticos en modelos 3D.
+</p>
+
+<h3>📤 Exportar como SVG desde FreeCAD</h3>
+<p>
+  Una vez dibujada la curva B-Spline, puedes exportarla como archivo vectorial para usar en otros programas o modeladores:
+</p>
+<ul>
+  <li>Selecciona el objeto creado.</li>
+  <li>Ve a <strong>Archivo &gt; Exportar</strong>.</li>
+  <li>Elige el formato <code>.svg</code> y guarda el archivo.</li>
+</ul>
+<p>
+  Este archivo será útil para importarlo en herramientas como OpenSCAD o para trabajar en ilustraciones con Inkscape.
+</p>
+
+			<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/20.png"  
+         alt="Curva Bézier exportada como SVG" 
+         style="max-width:100%; height:auto;">  
+</div>
+
+
+<h3>🧾 Importar SVG en OpenSCAD</h3>
+<p>
+  Para usar un archivo SVG en OpenSCAD debes seguir estos pasos:
+</p>
+<ul>
+  <li>Asegúrate de que el archivo SVG tenga solo formas cerradas y sin texto.</li>
+  <li>En OpenSCAD, usa el siguiente comando:</li>
+</ul>
+
+<pre><code>import("nombre_del_archivo.svg");</code></pre>
+
+<p>
+  Si deseas darle volumen al diseño, puedes usar <code>linear_extrude</code> para convertirlo en un objeto 3D:
+</p>
+
+<pre><code>linear_extrude(height = 5)
+    import("nombre_del_archivo.svg");</code></pre>
+
+<p>
+  Para visualizar correctamente el diseño importado, es importante activar la vista completa:
+  ve a <strong>View &gt; View All</strong> o presiona la tecla de acceso rápido para ajustar la vista.
+</p>
+			<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/21.png"  
+         alt="Curva Bézier exportada como SVG" 
+         style="max-width:100%; height:auto;">  
+</div>
+<br>
+<h3>🧱 ¿Cómo se extruye un SVG en OpenSCAD y para qué sirve?</h3>
+<p>
+  La extrusión es el proceso de convertir una figura 2D (como la de un SVG) en un objeto tridimensional, dándole altura. Esto es muy útil para crear piezas planas con volumen, como logotipos, placas, figuras decorativas o incluso moldes para impresión 3D.
+</p>
+<p>
+  En OpenSCAD, esto se hace con el comando <code>linear_extrude()</code> seguido de <code>import()</code>, como se mostró antes. Puedes ajustar la altura y combinarlo con otros comandos para crear modelos más complejos.
+</p>
+
+		<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/22.png"  
+         alt="Curva Bézier exportada como SVG" 
+         style="max-width:100%; height:auto;">  
+</div>
+<p>
+  Este tipo de curvas se puede combinar con otras figuras (como círculos o rectángulos) para crear perfiles más complejos que luego se convierten en <strong>modelos tridimensionales</strong>   Las curvas Bézier son una herramienta poderosa para el diseño de formas personalizadas, especialmente útiles en áreas como diseño industrial, arte técnico o impresión 3D. Su uso abre posibilidades más allá del dibujo mecánico tradicional, fomentando la creatividad y el pensamiento espacial.
+</p>
+
+         
+         
             <div id="ctrl">
                 <a href="p4.html"> anterior </a>
                 <a href="p6.html"> siguiente </a>
