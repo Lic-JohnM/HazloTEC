@@ -36,6 +36,39 @@
 <p>
   Las curvas Bézier (también llamadas <strong>B-Spline</strong> en FreeCAD) son <em>curvas suaves</em> que se crean a partir de puntos de control.  En dibujo técnico tradicional, muchas curvas se representan con combinaciones de líneas rectas y arcos circulares. Sin embargo, no todas las formas reales pueden construirse de esa forma. Las curvas Bézier permiten diseñar trayectorias más libres que no pueden lograrse con herramientas básicas.
 </p>
+<h3>📤 Generar SVG desde GeoGebra</h3>
+
+<p>
+  GeoGebra permite exportar construcciones matemáticas como archivos <strong>SVG</strong> (Gráficos Vectoriales Escalables), un formato que guarda formas mediante líneas, curvas y puntos, ideal para trabajar con gráficos precisos en otros programas como <em>Inkscape</em>.
+</p>
+
+<p>
+  Los archivos SVG están basados en trazos vectoriales, muchos de los cuales se describen mediante <strong>curvas Bézier</strong>. Esto significa que los objetos exportados pueden editarse libremente en programas de diseño vectorial, permitiendo transformar líneas rectas en curvas suaves y complejas, o combinar varias formas geométricas.
+</p>
+
+<div style="text-align: center;">
+  <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/19.png"  
+       alt="Curva Bézier exportada como SVG desde GeoGebra" 
+       style="max-width:100%; height:auto;">  
+</div>
+
+<p>
+  Antes de exportar desde GeoGebra, es recomendable <strong>ocultar los ejes y la cuadrícula</strong> para facilitar el trabajo posterior en Inkscape u otros programas. Esto se puede hacer desde el icono de engranaje (⚙️) en la vista gráfica.
+</p>
+
+<p>
+  Para exportar el SVG, ve al menú de tres líneas (☰), elige <strong>“Exportar” → “Gráfico como imagen”</strong> y selecciona el formato <strong>SVG</strong>. Una vez descargado, puedes abrirlo en Inkscape para seguir editando curvas, colores o detalles visuales.
+</p>
+
+<p>
+  Si quieres practicar más sobre curvas y diseño vectorial, visita el módulo de <strong>Imágenes Digitales</strong>, donde se exploran más ejemplos y combinaciones con formas Bézier y objetos SVG.
+</p>
+
+
+<h3>📤 Generar  curvas usando Inkscape</h3>
+
+<p>En un software de modelamiento llamado Inkscape, es posible importar los svg de geogebra para completar los trazos que se requieren, a continuación se presenta un ejemplo:</p>
+
 			<div style="text-align: center;">
     <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/23.png"  
          alt="Curva Bézier exportada como SVG" 
@@ -45,7 +78,6 @@
   Para practicar más sobre curvas visita el módulo de <strong>Imágenes Digitales</strong> donde se exploran más ejemplos y combinaciones con formas vectoriales. 
 </p>
 
-<h3>📤 Exportar como SVG desde FreeCAD</h3>
 <p>
   Una vez dibujada la curva B-Spline, puedes exportarla como archivo vectorial para usar en otros programas o modeladores:
 </p>
@@ -55,7 +87,7 @@
   <li>Elige el formato <code>.svg</code> y guarda el archivo.</li>
 </ul>
 <p>
-  Este archivo será útil para importarlo en herramientas como OpenSCAD o para trabajar en ilustraciones con Inkscape.
+  Este archivo será útil para importarlo en herramientas como OpenSCAD.
 </p>
 
 
