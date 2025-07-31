@@ -34,15 +34,15 @@
 
 <h3>🔶 ¿Qué es una curva Bézier?</h3>
 <p>
-  Las curvas Bézier (también llamadas <strong>B-Spline</strong> en FreeCAD) son <em>curvas suaves</em> que se crean a partir de puntos de control. A diferencia de los círculos o líneas rectas, estas curvas permiten diseñar <strong>formas naturales, estilizadas o decorativas</strong>, como una hoja, la carcasa de un objeto o una forma aerodinámica.
+  Las curvas Bézier (también llamadas <strong>B-Spline</strong> en FreeCAD) son <em>curvas suaves</em> que se crean a partir de puntos de control.  En dibujo técnico tradicional, muchas curvas se representan con combinaciones de líneas rectas y arcos circulares. Sin embargo, no todas las formas reales pueden construirse de esa forma. Las curvas Bézier permiten diseñar trayectorias más libres que no pueden lograrse con herramientas básicas.
 </p>
-
+			<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/23.png"  
+         alt="Curva Bézier exportada como SVG" 
+         style="max-width:100%; height:auto;">  
+</div>
 <p>
-  En dibujo técnico tradicional, muchas curvas se representan con combinaciones de líneas rectas y arcos circulares. Sin embargo, no todas las formas reales pueden construirse de esa forma. Las curvas Bézier permiten diseñar trayectorias más libres que no pueden lograrse con herramientas básicas.
-</p>
-
-<p>
-  Para practicar más sobre curvas y figuras decorativas, visita el módulo de <strong>Imágenes Digitales</strong> donde se exploran más ejemplos y combinaciones con formas vectoriales. Es ideal para comprender cómo convertir diseños artísticos en modelos 3D.
+  Para practicar más sobre curvas visita el módulo de <strong>Imágenes Digitales</strong> donde se exploran más ejemplos y combinaciones con formas vectoriales. 
 </p>
 
 <h3>📤 Exportar como SVG desde FreeCAD</h3>
@@ -57,12 +57,6 @@
 <p>
   Este archivo será útil para importarlo en herramientas como OpenSCAD o para trabajar en ilustraciones con Inkscape.
 </p>
-
-			<div style="text-align: center;">
-    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/20.png"  
-         alt="Curva Bézier exportada como SVG" 
-         style="max-width:100%; height:auto;">  
-</div>
 
 
 <h3>🧾 Importar SVG en OpenSCAD</h3>
@@ -88,30 +82,34 @@
   ve a <strong>View &gt; View All</strong> o presiona la tecla de acceso rápido para ajustar la vista.
 </p>
 			<div style="text-align: center;">
-    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/21.png"  
+    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/24.png"  
          alt="Curva Bézier exportada como SVG" 
          style="max-width:100%; height:auto;">  
 </div>
 <br>
-<h3>🧱 ¿Cómo se extruye un SVG en OpenSCAD y para qué sirve?</h3>
-<p>
-  La extrusión es el proceso de convertir una figura 2D (como la de un SVG) en un objeto tridimensional, dándole altura. Esto es muy útil para crear piezas planas con volumen, como logotipos, placas, figuras decorativas o incluso moldes para impresión 3D.
-</p>
-<p>
-  En OpenSCAD, esto se hace con el comando <code>linear_extrude()</code> seguido de <code>import()</code>, como se mostró antes. Puedes ajustar la altura y combinarlo con otros comandos para crear modelos más complejos.
-</p>
-
-		<div style="text-align: center;">
-    <img src="https://lic-johnm.github.io/HazloTEC/DT/imagenes/22.png"  
-         alt="Curva Bézier exportada como SVG" 
-         style="max-width:100%; height:auto;">  
-</div>
-<p>
-  Este tipo de curvas se puede combinar con otras figuras (como círculos o rectángulos) para crear perfiles más complejos que luego se convierten en <strong>modelos tridimensionales</strong>   Las curvas Bézier son una herramienta poderosa para el diseño de formas personalizadas, especialmente útiles en áreas como diseño industrial, arte técnico o impresión 3D. Su uso abre posibilidades más allá del dibujo mecánico tradicional, fomentando la creatividad y el pensamiento espacial.
-</p>
+<p>Esta técnica sirve para complementar figuras para generar una figura tridimensional</p>
 
          
                         <br>
+
+			<h1>Vista lateral (YZ) de un Cubo con un Cilindro – OpenSCAD</h1>
+    <p>Este código muestra un cubo y un cilindro de pie, vistos lateralmente. Puedes renderizarlo con <strong>F6</strong> y exportar como SVG desde OpenSCAD.</p>
+
+    <pre>
+// Vista lateral (YZ) de un cubo con un cilindro de pie al lado
+projection(cut = true)
+    rotate([0, 90, 0]) {
+        // Cubo de 30x30x30
+        cube([30, 30, 30]);
+
+        // Cilindro de 30mm de alto, radio 5mm
+        // Ubicado al lado derecho del cubo (en eje X)
+        translate([30, 10, 0])
+            cylinder(h = 30, r = 5, $fn = 60);
+    }
+    </pre>
+
+    <p>🔁 Recuerda presionar <strong>F6</strong> para renderizar completamente antes de exportar.</p>
 
                  
             <div id="ctrl"  style="grid-template-columns: 1fr 1fr";>
