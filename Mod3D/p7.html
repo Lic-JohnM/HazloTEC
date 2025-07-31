@@ -1,78 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Extrusión en OpenSCAD</title>
     <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-    <title>Operaciones Booleanas en 3D - OpenSCAD</title>
-    <meta name="description" content="Explicación sobre las operaciones booleanas en 3D en OpenSCAD."/>    
+    <meta name="description" content="Explora cómo usar extrusión lineal y rotacional en OpenSCAD para convertir figuras 2D en objetos 3D complejos.">
+
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
 </head>
+
 <body>
-    <div id="menu">
-        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+</div>
+
+<div id="info">
+    <div id="con">
+
+<h3>🔄 Extrusión en OpenSCAD</h3>
+<p>
+  La <strong>extrusión</strong> permite transformar figuras 2D en modelos 3D. Existen dos tipos principales:
+</p>
+<ul>
+  <li><strong>linear_extrude()</strong>: extruye una figura en línea recta.</li>
+  <li><strong>rotate_extrude()</strong>: gira una figura 2D alrededor del eje Y para crear sólidos de revolución.</li>
+</ul>
+
+<h3>🧱 Extrusión lineal básica</h3>
+<p>
+  Convierte una figura 2D en un volumen extruyéndola hacia arriba:
+</p>
+
+<pre><code>linear_extrude(height=20)
+    text("Hola", size=10);</code></pre>
+
+<h3>🌀 Extrusión con giro (no lineal)</h3>
+<p>
+  <code>rotate_extrude()</code> genera figuras girando un perfil 2D alrededor del eje Y, ideal para vasos, platos o jarrones:
+</p>
+
+<pre><code>rotate_extrude()
+    translate([10, 0])
+        circle(5);</code></pre>
+
+<p>Este ejemplo crea un toro (rosquilla) al girar un círculo.</p>
+
+<h3>🧪 Ejemplo: jarrón con perfil</h3>
+<pre><code>rotate_extrude()
+    polygon(points=[[0,0], [5,0], [7,10], [3,20], [0,25]]);</code></pre>
+<p>Gira un perfil para formar un jarrón de revolución.</p>
+
+<h3>🌀 Extrusión con torsión (twist)</h3>
+<p>
+  También puedes torcer la figura a medida que se extruye. Esto da formas helicoidales:
+</p>
+
+<pre><code>linear_extrude(height=40, twist=180, slices=100)
+    circle(5);</code></pre>
+
+<p>Este ejemplo crea una columna torcida (tipo tornillo).</p>
+
+<h3>📏 Extrusión con escala</h3>
+<p>
+  Puedes hacer que la forma cambie de tamaño mientras se extruye:
+</p>
+
+<pre><code>linear_extrude(height=20, scale=0.5)
+    square([20, 20], center=true);</code></pre>
+<p>Esto crea una pirámide truncada a partir de un cuadrado.</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/extrusion_openscad.png" 
+         alt="Ejemplos de extrusión en OpenSCAD"
+         style="max-width:100%; height:auto;">
+</div>
+
+<h3>💡 Recomendaciones</h3>
+<ul>
+  <li>Usa <code>$fn</code> para controlar la suavidad de curvas.</li>
+  <li>Siempre traduce tu figura si necesitas alejarla del eje Y para usar <code>rotate_extrude()</code>.</li>
+  <li>El parámetro <code>slices</code> mejora la precisión de formas torcidas.</li>
+</ul>
+
+<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+<div id="ctrl" style="grid-template-columns: 1fr 1fr;">
+    <a class="n1" href="p6.html">anterior</a>
+    <a class="n1" href="p8.html">siguiente</a>
+</div>
+
     </div>
-    <div id="info">
-        <div id="con">
-            <br>
-            <h3>Operaciones Booleanas en 3D en OpenSCAD</h3>
-            <br>
-            <p>Las operaciones booleanas permiten combinar formas 3D mediante unión, diferencia e intersección.</p>
-            <br>
-            <h3>1. Unión (<code>union()</code>)</h3>
-            <p>Permite combinar dos o más objetos en uno solo.</p>
-            <pre>
-union() {
-    cube([20, 20, 20]);
-    translate([10, 10, 0]) sphere(15);
-}
-            </pre>
-            <br>
-            <h3>2. Diferencia (<code>difference()</code>)</h3>
-            <p>Resta un objeto de otro, creando cortes y formas huecas.</p>
-            <pre>
-difference() {
-    cube([30, 30, 30]);
-    translate([5, 5, -5]) sphere(20);
-}
-            </pre>
-            <br>
-            <h3>3. Intersección (<code>intersection()</code>)</h3>
-            <p>Solo mantiene la parte en la que los objetos se superponen.</p>
-            <pre>
-intersection() {
-    cube([30, 30, 30]);
-    translate([10, 10, 0]) sphere(20);
-}
-            </pre>
-            <br>
-            <h3>4. Uso Combinado</h3>
-            <p>Podemos combinar múltiples operaciones booleanas para crear diseños más complejos.</p>
-            <pre>
-difference() {
-    union() {
-        cube([30, 30, 30]);
-        translate([15, 15, 0]) cylinder(30, 10, 10);
-    }
-    translate([5, 5, 5]) sphere(15);
-}
-            </pre>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p6.html"> anterior </a>
-                <a href="p8.html"> siguiente </a>
-            </div>
-            <br>
-        </div>
-    </div>
+</div>
+
 </body>
 </html>
+
