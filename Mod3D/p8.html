@@ -1,99 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <meta charset="UTF-8">
     <title>Módulos en OpenSCAD</title>
-    <meta name="description" content="Explicación sobre la creación y uso de módulos en OpenSCAD."/>    
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <meta name="description" content="Aprende a usar módulos en OpenSCAD para organizar y reutilizar tus diseños.">
+
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
 </head>
+
 <body>
-    <div id="menu">
-        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+</div>
+
+<div id="info">
+    <div id="con">
+
+<h3>🔁 Módulos y Reutilización de Código</h3>
+<p>
+  Los <strong>módulos</strong> en OpenSCAD permiten crear piezas reutilizables. Esto es útil para no repetir código cuando diseñamos muchas figuras similares, como fichas, patas de mesa, botones o estructuras repetidas.
+</p>
+
+<h3>🧩 ¿Cómo crear un módulo?</h3>
+<p>
+  Un módulo es como una función. Lo defines una vez y lo puedes usar muchas veces:
+</p>
+
+<pre><code>module ficha() {
+    cylinder(h=5, r=10);
+}</code></pre>
+
+<p>
+  Luego puedes usarlo así:
+</p>
+
+<pre><code>ficha();
+translate([25,0,0]) ficha();
+translate([50,0,0]) ficha();</code></pre>
+
+<h3>🧪 Ejemplo: 5 fichas alineadas</h3>
+<pre><code>module ficha(colorFicha="red") {
+    color(colorFicha)
+        cylinder(h=5, r=10);
+}
+
+for (i = [0:4]) {
+    translate([i*25, 0, 0])
+        ficha("blue");
+}</code></pre>
+
+<p>Este ejemplo crea 5 fichas azules reutilizando el mismo módulo.</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/modulos_openscad.png" 
+         alt="Fichas con módulo reutilizable"
+         style="max-width:100%; height:auto;">
+</div>
+
+<h3>📦 Ventajas de usar módulos</h3>
+<ul>
+  <li>Evitas repetir código</li>
+  <li>Puedes modificar todo desde un solo lugar</li>
+  <li>Organizas mejor tus diseños grandes</li>
+  <li>Permiten usar parámetros personalizados</li>
+</ul>
+
+<h3>💡 Tip:</h3>
+<p>Un módulo puede recibir <strong>parámetros</strong> como altura, color o forma para ser aún más flexible.</p>
+
+<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+<div id="ctrl" style="grid-template-columns: 1fr 1fr;">
+    <a class="n1" href="p7.html">anterior</a>
+    <a class="n1" href="p9.html">siguiente</a>
+</div>
+
     </div>
-    <div id="info">
-        <div id="con">
-            <br>
-            <h3>Módulos en OpenSCAD</h3>
-            <br>
-            <p>Los módulos en OpenSCAD permiten reutilizar código y organizar proyectos de manera eficiente. Se usan para definir formas y estructuras que pueden ser invocadas varias veces con diferentes parámetros.</p>
-            <br>
-            <h3>1. Creación de un módulo básico</h3>
-            <p>Definimos un módulo con la palabra clave <code>module</code> seguido del nombre y sus parámetros.</p>
-            <pre>
-module cilindro_base(altura, radio) {
-    cylinder(h=altura, r=radio);
-}
+</div>
 
-cilindro_base(50, 10); // Llamada al módulo
-            </pre>
-            <br>
-            <h3>2. Uso de módulos dentro de otros módulos</h3>
-            <p>Podemos anidar módulos para construir estructuras más complejas.</p>
-            <pre>
-module base() {
-    cube([30, 30, 5]);
-}
-
-module soporte() {
-    translate([15, 15, 5]) cylinder(h=40, r=5);
-}
-
-module estructura_completa() {
-    base();
-    soporte();
-}
-
-estructura_completa(); // Genera la estructura
-            </pre>
-            <br>
-            <h3>3. Parámetros para personalizar módulos</h3>
-            <p>Los módulos pueden recibir parámetros que permiten modificar sus características.</p>
-            <pre>
-module caja(ancho, largo, alto) {
-    cube([ancho, largo, alto]);
-}
-
-caja(40, 20, 10);
-caja(20, 20, 20);
-            </pre>
-            <br>
-            <h3>4. Uso en la creación de ensamblajes</h3>
-            <p>Los módulos son útiles para crear partes reutilizables en diseños más complejos.</p>
-            <pre>
-module pata() {
-    cylinder(h=50, r=5);
-}
-
-module mesa() {
-    cube([60, 40, 5]);
-    translate([5, 5, -50]) pata();
-    translate([55, 5, -50]) pata();
-    translate([5, 35, -50]) pata();
-    translate([55, 35, -50]) pata();
-}
-
-mesa();
-            </pre>
-            <br>
-            <p>Los módulos permiten estructurar y reutilizar código para crear modelos más eficientes y organizados.</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p7.html"> anterior </a>
-                <a href="p9.html"> siguiente </a>
-            </div>
-            <br>
-        </div>
-    </div>
 </body>
 </html>
