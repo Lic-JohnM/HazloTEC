@@ -1,80 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Animaciones en OpenSCAD</title>
     <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-    <title>Loops en OpenSCAD</title>
-    <meta name="description" content="Uso de bucles en OpenSCAD."/>    
+    <meta name="description" content="Cómo hacer animaciones simples y vistas dinámicas en OpenSCAD para explorar modelos.">
+
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
     <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $("#info").css("height","200vh");
-    });
-    </script>
 </head>
+
 <body>
-    <div id="menu">
-        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
-        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
+
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+</div>
+
+<div id="info">
+    <div id="con">
+
+<h3>🎞️ Animaciones y Vistas Dinámicas</h3>
+<p>
+  OpenSCAD permite realizar animaciones sencillas para ver cómo se mueve o rota un modelo. Esto es útil para inspeccionar diseños o simular piezas móviles.
+</p>
+
+<h3>🔄 Usando el parámetro <code>$t</code></h3>
+<p>
+  El valor <code>$t</code> va de 0 a 1 durante una animación y se puede usar para calcular movimientos o rotaciones.
+</p>
+
+<pre><code>// Cubo rotando en el tiempo
+rotate([0, 0, 360 * $t])
+    cube([20, 20, 20], center=true);
+</code></pre>
+
+<h3>🧪 Ejemplo: objeto oscilante</h3>
+<pre><code>translate([sin($t*360)*20, 0, 0])
+    sphere(10);
+</code></pre>
+<p>La esfera se mueve de un lado a otro gracias al seno.</p>
+
+<h3>📽️ Cómo activar la animación</h3>
+<ol>
+  <li>Haz clic en <strong>View → Animate</strong></li>
+  <li>Ajusta los valores de FPS y Steps</li>
+</ol>
+
+<h3>📐 Vista dinámica con bucles</h3>
+<pre><code>for (i = [0:30:330]) {
+    rotate([0, 0, i])
+    translate([30, 0, 0])
+    cube([5, 5, 20]);
+}
+</code></pre>
+
+<p>
+  Este código crea una corona de cubos girados como si fueran radios de una rueda.
+</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/animacion_openscad.png"
+         alt="Animación en OpenSCAD"
+         style="max-width:100%; height:auto;">
+</div>
+
+<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+<div id="ctrl" style="grid-template-columns: 1fr 1fr;">
+    <a class="n1" href="p8.html">anterior</a>
+    <a class="n1" href="p10.html">siguiente</a>
+</div>
+
     </div>
-    <div id="info">
-        <div id="con">
-            <br>
-            <h3>Loops en OpenSCAD</h3>
-            <br>
-            <p>Los bucles (<code>for</code>) en OpenSCAD permiten repetir instrucciones para generar patrones o estructuras complejas de manera eficiente.</p>
-            <br>
-            <h3>1. Uso de un loop básico</h3>
-            <p>Ejemplo de un bucle que genera una serie de cilindros en una línea.</p>
-            <pre>
-for (i = [0:5]) {
-    translate([i * 10, 0, 0])
-    cylinder(h=10, r=3);
-}
-            </pre>
-            <br>
-            <h3>2. Bucles anidados</h3>
-            <p>Podemos usar loops dentro de otros para generar estructuras en cuadrícula.</p>
-            <pre>
-for (x = [0:3]) {
-    for (y = [0:3]) {
-        translate([x * 10, y * 10, 0])
-        cube([5, 5, 5]);
-    }
-}
-            </pre>
-            <br>
-            <h3>3. Uso de loops con transformaciones</h3>
-            <p>Ejemplo de un bucle que genera un patrón circular con cilindros.</p>
-            <pre>
-for (i = [0:5]) {
-    rotate([0, 0, i * 60])
-    translate([20, 0, 0])
-    cylinder(h=10, r=3);
-}
-            </pre>
-            <br>
-            <h3>4. Uso de loops para generar estructuras complejas</h3>
-            <p>Ejemplo de un bucle que crea una escalera.</p>
-            <pre>
-for (i = [0:5]) {
-    translate([i * 10, 0, i * 5])
-    cube([10, 20, 5]);
-}
-            </pre>
-            <br>
-            <p>Los loops permiten automatizar la creación de modelos y optimizar el código en OpenSCAD.</p>
-            <br>
-            <a id="dcr" target="_blank" href="https://openscad.org/">Visitar OpenSCAD</a>
-            <br>
-            <div id="ctrl">
-                <a href="p8.html"> anterior </a>
-                <a href="p10.html"> siguiente </a>
-            </div>
-            <br>
-        </div>
-    </div>
+</div>
+
 </body>
 </html>
+
