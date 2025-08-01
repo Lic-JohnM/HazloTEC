@@ -1,43 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <title>Animación Artística</title>
-  <meta name="description" content="Análisis de animaciones tridimensionales con foco en reflexión artística y uso de formas básicas.">
-  <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-  <link rel="stylesheet" href="https://lic-johnm.github.io/HazloTEC/Videojuegos/css/pagina.css"/>
+    <meta charset="UTF-8">
+    <title>Modelado Paramétrico vs. Artístico</title>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <meta name="description" content="Comparación entre modelado mecánico y modelado artístico usando OpenSCAD y animación 3D.">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <div id="contenido">
-    <h2>🎨 Animación Artística: Análisis y Reflexión</h2>
-    <p>En este módulo exploramos cómo la animación tridimensional puede transmitir emociones e ideas. A través de ejercicios basados en videos animados, reflexionaremos sobre la forma, el movimiento y el mensaje.</p>
 
-    <h3>👟 “Los zapatos de Luis”</h3>
-    <p><strong>Enlace a animación:</strong> ENLACE A ANIMACIÓN “Los zapatos de Luis”</p>
-    <p><strong>Tarea artística:</strong> Dibuja a Luis y sus zapatos en 3D. Luego incluye dos objetos adicionales (pueden ser una pelota, un sombrero, una planta…). Debes mostrar los tres en volumen, sombreado y perspectiva.</p>
-    <p><strong>Reflexión:</strong> ¿Qué cuentan los zapatos de Luis sobre su distancia al suelo? ¿Cómo transmiten su carácter o estado de ánimo?</p>
+<div id="menu">
+    <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+    <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">PROGRAMACIÓN</a>
+</div>
 
-    <h3>👨‍👧 “Alike”</h3>
-    <p><strong>Enlace a animación:</strong> ENLACE A ANIMACIÓN “Alike”</p>
-    <p><strong>Tarea artística:</strong> Dibuja al papá y a la niña usando sólo formas básicas (cubos, esferas, cilindros…). Anima una escena corta en la que se mueven juntos.</p>
-    <p><strong>Reflexión:</strong> ¿Cómo cambian sus formas y colores cuando están unidos o cuando se distancian? ¿Qué transmite esto sobre sus emociones o su relación?</p>
+<div id="info">
+    <div id="con">
 
-    <h3>🌼 “Spring”</h3>
-    <p><strong>Enlace a animación:</strong> ENLACE A ANIMACIÓN “Spring”</p>
-    <p><strong>Tarea artística:</strong> Dibuja una pastora joven junto a un árbol en un entorno minimalista. Luego anima el momento en que le da un golpe al árbol (por ejemplo, para sacar una fruta o caja).</p>
-    <p><strong>Reflexión:</strong> ¿Qué causa el golpe al árbol? ¿Qué efecto inmediato observas en la animación? ¿Qué controla ese movimiento, qué energía o emoción se transmite?</p>
+<h3>🧭 Modelado Paramétrico vs. Artístico</h3>
+<p>
+  En el mundo del modelado 3D, existen dos grandes enfoques:
+</p>
 
-    <h3>✏️ Actividad final</h3>
-    <ol>
-      <li>Escoge una de las animaciones y realiza tu dibujo y animación correspondiente.</li>
-      <li>Escribe una pequeña reflexión (3–5 líneas) sobre lo que transmite el movimiento que representaste.</li>
-      <li>Comparte tu trabajo con la clase y comparen cómo cada uno interpretó la misma animación.</li>
-    </ol>
+<h4>⚙️ Modelado Mecánico o Paramétrico</h4>
+<p>
+  Este tipo de modelado se usa para piezas técnicas, objetos funcionales o estructuras precisas. Se enfoca en <strong>medidas exactas</strong>, <strong>repetibilidad</strong> y <strong>modificación por parámetros</strong>. Ideal para diseño de engranajes, soportes, estructuras modulares, prototipos mecánicos, etc.
+</p>
 
-    <div id="ctrl">
-      <a class="n1" href="p10.html">◀ Volver</a>
-      <a class="n1" href="index.html">🏠 Inicio</a>
+<ul>
+  <li>Utiliza variables, módulos y condicionales</li>
+  <li>Facilita el cambio de dimensiones o versiones</li>
+  <li>Es ideal para impresión 3D precisa</li>
+</ul>
+
+<h4>🎨 Modelado Artístico o Expresivo</h4>
+<p>
+  Aquí lo más importante es <strong>la forma, la emoción y el mensaje visual</strong>. No se basa en medidas exactas, sino en cómo se ve o qué comunica. Se usa en animación, ilustración 3D, arte digital o experiencias emocionales.
+</p>
+
+<ul>
+  <li>Busca representar personajes, escenas o ideas</li>
+  <li>No se rige por exactitud, sino por estética</li>
+  <li>Puede incluir animaciones que transmiten emoción</li>
+</ul>
+
+<hr>
+
+<h3>🎞️ Animación Artística: Análisis y Reflexión</h3>
+<p>
+  A través de estas actividades observarás cómo el movimiento y la forma pueden contar historias:
+</p>
+
+<h4>👟 “Los zapatos de Luis”</h4>
+<p><strong>Enlace:</strong> <a href="#">ENLACE A ANIMACIÓN</a></p>
+<p><strong>Tarea:</strong> Dibuja a Luis y sus zapatos en 3D. Luego añade dos objetos más (una pelota, sombrero, planta…). Muestra volumen, sombra y perspectiva.</p>
+<p><strong>Reflexión:</strong> ¿Qué nos cuentan sus zapatos sobre su relación con el suelo? ¿Qué estado de ánimo transmiten?</p>
+
+<h4>👨‍👧 “Alike”</h4>
+<p><strong>Enlace:</strong> <a href="#">ENLACE A ANIMACIÓN</a></p>
+<p><strong>Tarea:</strong> Dibuja al papá y la niña usando solo cubos, esferas y cilindros. Anima una escena en la que caminan o se conectan.</p>
+<p><strong>Reflexión:</strong> ¿Cómo cambian las formas o colores al acercarse o alejarse? ¿Qué comunican esas diferencias?</p>
+
+<h4>🌼 “Spring”</h4>
+<p><strong>Enlace:</strong> <a href="#">ENLACE A ANIMACIÓN</a></p>
+<p><strong>Tarea:</strong> Modela una pastora y un árbol en un estilo simple. Anima cuando golpea el árbol para que caiga algo (una fruta, una caja…).</p>
+<p><strong>Reflexión:</strong> ¿Qué causa el golpe? ¿Qué energía se transmite? ¿Qué efecto inmediato ocurre?</p>
+
+<h4>✏️ Actividad final</h4>
+<p>
+  Escoge una de las animaciones y realiza tu dibujo y animación correspondiente.
+  Escribe una pequeña reflexión (3–5 líneas) sobre lo que transmite el movimiento que representaste.
+  Luego comparte tu trabajo y compara con tus compañeros: ¿cómo interpretaron lo mismo de forma diferente?
+</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/modelado_artisticovsparametrico.png"
+         alt="Modelado paramétrico vs artístico"
+         style="max-width:100%; height:auto;">
+</div>
+
+<hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+<div id="ctrl" style="grid-template-columns: 1fr 1fr;">
+    <a class="n1" href="p10.html">anterior</a>
+    <a class="n1" href="p12.html">siguiente</a>
+</div>
+
     </div>
-  </div>
+</div>
+
 </body>
 </html>
