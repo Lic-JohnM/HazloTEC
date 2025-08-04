@@ -71,8 +71,29 @@ translate([40, 0]) circle(r = 15);
             <div style="text-align: center;">
                 <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/I3.png" alt="Figuras combinadas" style="max-width:100%; height:auto;">
             </div>
-
+            <p>El comando translate lo vamos a ver más adelante, pero asi de sencillo es crear dos figuras.</p>
             <br>
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>Comando adicional: <code>scale()</code></h3>
+<p>
+  En OpenSCAD, el comando <code>scale()</code> permite agrandar o reducir una figura. Se puede aplicar en uno o varios ejes (horizontal y vertical).
+</p>
+
+<p>
+  El siguiente ejemplo toma un círculo de radio 10 y lo escala al doble de su ancho (eje X), pero mantiene su altura (eje Y):
+</p>
+
+<pre><code>scale([2, 1]) circle(r = 10);</code></pre>
+
+<p>
+  Esto genera una elipse, ya que el círculo se ha estirado horizontalmente. También puedes aplicar <code>scale()</code> a cuadrados, polígonos y cualquier otra figura.
+</p>
+
+<p>
+  En la siguiente sección exploraremos otros comandos como <code>circle()</code>, <code>square()</code> y <code>polygon()</code> con más detalle.
+</p>
+
             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 <p>Ahora que ya conoces cómo crear figuras básicas, es importante que aprendas a guardar tu trabajo. En OpenSCAD, puedes guardar tu archivo con <strong>Archivo &gt; Guardar como</strong> o presionando <code>Ctrl + S</code>. Asegúrate de usar nombres claros y guárdalos en una carpeta específica (por ejemplo: <code>Figuras2D</code>).</p>
 
@@ -82,7 +103,7 @@ translate([40, 0]) circle(r = 15);
   <li>Un archivo con varios <code>circle</code> usando diferentes radios y colores.</li>
   <li>Un archivo con un <code>polygon</code> que forme un triángulo.</li>
   <li>Un archivo con un <code>polygon</code> que forme una figura con al menos 5 puntos.</li>
-  <li>Un archivo que genere un logo de la figuta humana solo usando <code>polygon</code> </li>
+  <li>Un archivo que genere un logo de la figuta humana solo usando <code>polygon</code> .</li>
  <li>Un archivo con un poligono que te llame la atención usando <code>polygon</code>.</li>
 
 </ul>
