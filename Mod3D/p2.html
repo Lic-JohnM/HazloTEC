@@ -72,9 +72,34 @@
             </div>
             <br>
 
-          
 
-            <h4>4. Polígono libre - <code>polygon()</code></h4>
+            <h4>4. Polígonos regulares usando <code>circle()</code> con <code>$fn</code></h4>
+
+<p>
+  Aunque el comando <code>circle()</code> se usa para hacer círculos, también puede ayudarte a construir polígonos regulares si usas el parámetro <code>$fn</code>. Este parámetro define cuántos lados tendrá el polígono.
+</p>
+
+<p>Por ejemplo:</p>
+
+<pre><code>circle(r = 20, $fn = 5);  // Pentágono</code></pre>
+<pre><code>circle(r = 20, $fn = 6);  // Hexágono</code></pre>
+<pre><code>circle(r = 20, $fn = 8);  // Octágono</code></pre>
+
+<p>
+  Así puedes obtener figuras simétricas con lados iguales. Si cambias el número de lados, puedes explorar la geometría de diferentes polígonos.
+</p>
+
+<div style="text-align: center;">
+    <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/poligonos_regulares.png" alt="Polígonos regulares con circle y $fn" style="max-width:100%; height:auto;">
+    <p style="font-size: 0.9em;">Ejemplos de pentágono, hexágono y octágono generados con <code>circle($fn)</code></p>
+</div>
+
+<p>
+  Si quieres modificar su tamaño, solo debes cambiar el valor del radio <code>r</code>. Más adelante aprenderás cómo rotarlos, moverlos o agrandarlos con comandos como <code>rotate()</code>, <code>translate()</code> y <code>scale()</code>.
+</p>
+
+
+            <h4>5. Polígono libre - <code>polygon()</code></h4>
             <p>Permite crear cualquier forma conectando puntos. Ya lo has usado, pero recuerda que es útil para figuras irregulares:</p>
             <pre><code>polygon(points = [[0,0],[30,0],[15,25]]);</code></pre>
             <div style="text-align: center;">
