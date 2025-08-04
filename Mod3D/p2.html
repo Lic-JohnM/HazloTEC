@@ -41,10 +41,32 @@
             </div>
             <br>
 
-            <h4>2. Círculo - <code>circle()</code></h4>
-            <p>Crea un círculo indicando su radio. Entre más alto el <code>$fn</code>, más suave será el borde.</p>
-                         <pre><code>color("red");</code></pre>
+        <h4>2. Círculo - <code>circle()</code></h4>
+            
+            <p>
+              El comando <code>circle()</code> se utiliza para dibujar un círculo plano. Existen dos formas principales de usarlo:
+            </p>
+            
+            <h5>Versión básica:</h5>
+            <p>
+              Solo necesitas indicar el radio con <code>r</code>. Por ejemplo:
+            </p>
             <pre><code>circle(r = 20);</code></pre>
+            <p>
+              En esta forma, OpenSCAD crea un círculo con un número predeterminado de lados. A veces, especialmente con radios pequeños, puede verse como un polígono.
+            </p>
+            
+            <h5>Versión detallada con <code>$fn</code>:</h5>
+            <p>
+              Puedes controlar la "suavidad" del círculo indicando cuántos lados debe tener el polígono que lo forma, usando el parámetro especial <code>$fn</code>. Mientras más alto sea el valor, más suave se verá el borde.
+            </p>
+            <pre><code>circle(r = 20, $fn = 100);</code></pre>
+            <p>
+              Con <code>$fn = 100</code> el borde es muy suave. Si pruebas con <code>$fn = 10</code>, notarás que se parece más a un decágono que a un círculo.
+            </p>
+
+     
+
             <div style="text-align: center;">
                 <img src="https://lic-johnm.github.io/HazloTEC/Mod3D/imagenes/i2.png" alt="Figura circle" style="max-width:100%; height:auto;">
             </div>
