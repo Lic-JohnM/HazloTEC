@@ -1,91 +1,128 @@
 <!DOCTYPE html>
-
 <html>
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Ofimática</title>
-	<meta name="description" content="Descripción de como se hacen los condicionales y los ciclos en scratch.">	
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
+    <title>Hojas de cálculo</title>
+    <meta name="description" content="Introducción a las hojas de cálculo: celdas, fórmulas, gráficos, filtros y herramientas como Excel y Google Sheets.">
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+    <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+</head>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
-	<script>
-	$(document).ready(function(){
-	  //Ajustar longitud de la página
-	  $("#info").css("height","190vh");
-	 });
-	</script>
-	<script src="js/script.js"></script>
-		
-	</head>
+<body>
 
-	<body>
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+        <a id="r2" href="Ingreso/index.html">INGRESA</a>
+    </div>
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+    <div id="info">
+        <div id="con">
 
+            <h2>Hojas de cálculo</h2>
+            <br>
 
-        <div id="info">
-
-                <div id="con">
-
-			   <h2>Planeadores y diagramadores</h2>
+            <p>
+                Las <b>hojas de cálculo</b> son una herramienta fundamental para el análisis, registro y control de información.  
+                Permiten organizar datos, realizar operaciones matemáticas y visualizar resultados mediante gráficos.  
+                El programa más popular es <b>Microsoft Excel</b>, aunque existen alternativas libres y gratuitas como <b>LibreOffice Calc</b> o <b>Google Sheets</b> en línea.
+            </p>
 
             <br>
-            <h2>Diagrama de Gantt</h2>
-	<br>	
-            <p>Empleando software procesadores de texto así como software que manejan hojas de cálculo, es posible generar un diagrama de gantt como el que podemos apreciar a continuación:</p>
-            
-			<br>
-			
-			<div style="text-align:center;">
-				
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564243187007" height="321" width="345" frameborder="0" scrolling="no" ></iframe>				
-			
-			</div>  
-			<br>
+            <h2>Celdas</h2>
+            <div style="text-align:center;">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=705657835380770618" height="376" width="345" frameborder="0" scrolling="no"></iframe>
+            </div>  
+            <br>
 
-			<p>Así el diagrama de gantt permite generar una planeación de tiempo y tareas de algún proyecto.</p>
-			<br>
+            <p>
+                La <b>celda</b> es la unidad básica de una hoja de cálculo.  
+                Cada celda se identifica por una <b>columna</b> (letra) y una <b>fila</b> (número).  
+                En cada una puedes escribir números, texto o fórmulas.  
+                Las celdas pueden modificarse, copiarse, eliminarse o cambiar su formato de color y estilo según sea necesario.
+            </p>
 
-			<h2>Calendario de google</h2>
-
-			<br>
-
+            <p>
+                🧮 <b>Ejercicio:</b> abre una hoja nueva y escribe los nombres de tus compañeros en la columna A y sus edades en la columna B.  
+                Luego selecciona todo el contenido y cambia el color de fondo de los encabezados.
+            </p>
 
             <br>
+            <h2>Fórmulas</h2>
+            <div style="text-align:center;">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=7177680649036747" height="484" width="450" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <br>
             
-		<div style="text-align:center;">
+            <p>
+                Las fórmulas son instrucciones matemáticas que permiten calcular valores automáticamente.  
+                Todas comienzan con el signo <b>=</b>.  
+                Por ejemplo:
+            </p>
+            <ul>
+                <li><code>=A1+B1</code> → suma el valor de las celdas A1 y B1.</li>
+                <li><code>=PROMEDIO(B2:B5)</code> → calcula el promedio de un rango de celdas.</li>
+                <li><code>=MAX(C2:C10)</code> → busca el valor más alto en el rango.</li>
+            </ul>
 
-			<iframe src="https://assets.pinterest.com/ext/embed.html?id=1036320564243187021" height="526" width="450" frameborder="0" scrolling="no" ></iframe>
-			
-		</div>  
-			<br>
-			<p>Usando la virtualidad es posible emplear el calendario de google el cual empleando la nube permite guardar tareas y recordarlas cuando sea el momento de realizarlas generando una forma de planear actividades eficiente.</p>
-                        <br>
+            <p>
+                📊 <b>Ejercicio:</b> crea una tabla con 5 estudiantes y tres notas cada uno.  
+                Calcula el promedio de cada estudiante usando una fórmula.  
+                Luego aplica <b>negrita</b> al promedio más alto.
+            </p>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p8.html"> anterior </a>
-				<a class="n1" href="p10.html"> siguiente </a>
-                             
+            <br>
+            <h2>Gráficos</h2>
+            <div style="text-align:center;">
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=682225043572824438" height="455" width="450" frameborder="0" scrolling="no"></iframe>
+            </div>
+            <br>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+            <p>
+                Una de las funciones más útiles de las hojas de cálculo es generar <b>gráficos</b> para visualizar datos.  
+                Puedes crear gráficos de barras, líneas, pastel y muchos otros para analizar la información de forma clara.
+            </p>
 
+            <p>
+                📈 <b>Ejercicio:</b> usa la tabla de promedios del ejercicio anterior y genera un gráfico de barras.  
+                Cambia el color de las barras y agrega un título al gráfico.
+            </p>
 
-     	</body>
+            <br>
+            <h2>Filtros y Google Sheets</h2>
+            <p>
+                Los <b>filtros</b> te permiten mostrar solo los datos que cumplen una condición.  
+                Por ejemplo, puedes ver únicamente los estudiantes con promedio superior a 4.0.  
+                Esta función está disponible tanto en programas instalados como <b>Microsoft Excel</b> y <b>LibreOffice Calc</b>, como en herramientas en línea como <b>Google Sheets</b>, que además permite el trabajo colaborativo.
+            </p>
+
+            <p>
+                ☁️ <b>Ejercicio:</b> abre <a href="https://sheets.google.com" target="_blank">Google Sheets</a> y crea una tabla de gastos mensuales.  
+                Aplica un filtro para ver solo los gastos de alimentación o transporte.
+            </p>
+
+            <br>
+            <h2>Conclusión</h2>
+            <p>
+                Las hojas de cálculo son una herramienta esencial tanto en la educación como en el trabajo.  
+                Dominar el uso de celdas, fórmulas, gráficos y filtros te permitirá transformar simples listas de datos en información clara y útil.
+            </p>
+
+            <div id="ctrl">
+                <a class="n1" href="p8.html">anterior</a>
+                <a class="n1" href="p10.html">siguiente</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
 
 	
 </html>
