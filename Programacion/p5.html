@@ -1,100 +1,443 @@
 
+
+```html
 <!DOCTYPE html>
+<html lang="es">
 
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+    <link rel="icon" type="image/x-icon"
+        href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+    <title>Programación - Variables</title>
 
-	<script src="js/script.js"></script>
-		
-	</head>
+    <meta name="description"
+        content="Aprende qué son las variables en Python, cómo almacenan información en la memoria del computador y cómo utilizarlas junto con print().">
 
-	<body>
-<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html"> PROGRAMACIÓN </a>
-                </div>
+    <link rel="stylesheet" type="text/css"
+        href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css">
 
+    <link rel="stylesheet" type="text/css"
+        href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <div id="info">
+    <link rel="stylesheet" type="text/css"
+        href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css">
 
-                <div id="con">
-		<br>
-		
-		<h2>Variables</h2>
-		<br>
-		<p>La función `input` te permite recibir información del usuario. Por ejemplo, puedes pedir al usuario su nombre o edad y luego usar esa información en tu programa. Las variables son como contenedores donde guardamos datos. En Python, hay dos tipos principales de variables que puedes usar.</p>
-	             <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+    <link rel="stylesheet" type="text/css"
+        href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css">
 
-		<ul>
-		    <li><b>Variables no numéricas:</b> Estas variables guardan texto y se definen con comillas. Por ejemplo:</li>
-		</ul>
-		<br>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+
+    <div id="menu">
+        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">
+            HazloTEC
+        </a>
+
+        <a id="r2" href="https://lic-johnm.github.io/HazloTEC/Programacion/index.html">
+            PROGRAMACIÓN
+        </a>
+    </div>
+
+    <div id="info">
+        <div id="con">
+
+            <br>
+
+            <h2>Variables</h2>
+
+            <br>
+
+            <p>
+                Anteriormente aprendimos a utilizar la instrucción
+                <b>print()</b>, que permite mostrar información en la
+                pantalla. Ahora aprenderemos a utilizar las
+                <b>variables</b>, una herramienta fundamental en la
+                programación.
+            </p>
+
+            <p>
+                Una variable es un nombre que utilizamos para
+                identificar un dato almacenado en la memoria del
+                computador. Podemos imaginarla como una caja que
+                tiene un nombre y contiene información que el programa
+                puede consultar y utilizar posteriormente.
+            </p>
+
+            <p>
+                Por ejemplo, si queremos guardar el nombre de una
+                persona, podemos escribir:
+            </p>
+
+<pre><code>nombre = "Juan"</code></pre>
+
+            <p>
+                En esta instrucción, <b>nombre</b> es el identificador
+                de la variable, el símbolo <b>=</b> es el operador de
+                asignación y <b>"Juan"</b> es el dato que estamos
+                almacenando.
+            </p>
+
+            <p>
+                En Python, el operador <b>=</b> se utiliza para
+                asignar un valor a una variable. No significa
+                necesariamente que ambos lados sean iguales como
+                ocurre en una operación matemática.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>1. ¿Para qué sirven las variables?</h3>
+
+            <p>
+                Las variables permiten guardar información para
+                utilizarla en diferentes partes de un programa.
+                Esto evita tener que escribir nuevamente un dato
+                cada vez que necesitamos utilizarlo.
+            </p>
+
+            <p>
+                Observemos la diferencia entre mostrar un mensaje
+                directamente y utilizar una variable.
+            </p>
+
+            <p><b>Sin utilizar variables:</b></p>
+
+<pre><code>print("Hola Juan")</code></pre>
+
+            <p>
+                El programa muestra el mensaje <b>Hola Juan</b>.
+                Sin embargo, si queremos cambiar el nombre, debemos
+                modificar el texto escrito dentro de la instrucción.
+            </p>
+
+            <p><b>Utilizando una variable:</b></p>
+
+<pre><code>nombre = "Juan"
+print("Hola", nombre)</code></pre>
+
+            <p>
+                El resultado será:
+            </p>
+
+<pre><code>Hola Juan</code></pre>
+
+            <p>
+                En este caso, la instrucción <b>print()</b> muestra
+                el texto "Hola" y luego el valor almacenado en la
+                variable <b>nombre</b>.
+            </p>
+
+            <p>
+                Si cambiamos la primera línea por
+                <b>nombre = "María"</b>, el resultado será
+                <b>Hola María</b>, sin necesidad de modificar
+                la instrucción <b>print()</b>.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>2. Variables que almacenan texto</h3>
+
+            <p>
+                Cuando necesitamos almacenar palabras, nombres o
+                frases, utilizamos variables que contienen texto.
+                En Python, estos datos se conocen como cadenas de
+                caracteres y se escriben entre comillas.
+            </p>
+
 <pre><code>nombre = "Juan"
 mensaje = "Hola, " + nombre + "!"
-print(mensaje)
-</code></pre>
 
-		<p>En las variables no numéricas, el símbolo `+` se utiliza para unir cadenas de texto, una operación conocida como <b>concatenación</b>. Por ejemplo, al usar `nombre = "Juan"` y `mensaje = "Hola, " + nombre`, el resultado es "Hola, Juan".</p>
-				                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+print(mensaje)</code></pre>
 
-		<ul>
-		    <li><b>Variables numéricas:</b> Estas variables guardan números y pueden ser enteros o flotantes (decimales). Para operar con números decimales, utilizamos el tipo de dato `float`. Por ejemplo:</li>
-		</ul>
-		<br>
-		<pre><code>
-		peso = 70.5
-		altura = 1.75
+            <p>
+                El resultado será:
+            </p>
 
-		# Calculamos el índice de masa corporal (IMC)
-		imc = peso / (altura ** 2)
+<pre><code>Hola, Juan!</code></pre>
 
-		# Imprimimos los resultados
-		print("Peso:", peso)
-		print("Altura:", altura)
-		print("Índice de Masa Corporal (IMC):", imc)
-		</code></pre>
-		<br>
-		<p>En estos ejemplos, `nombre` y `mensaje` son variables no numéricas, mientras que `edad` y `altura` son variables numéricas. Comprender cómo utilizar estas variables es fundamental para comenzar a programar en Python.</p>
-		<br>
-		<p>También es importante comprender que en el ejemplo anterior el print usa comas para separa la información a mostrar y que <b>en el caso de las variables no usa comillas</b>.</p>
-					
-		
-			                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
-                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+            <p>
+                En este ejemplo, el símbolo <b>+</b> permite unir
+                dos cadenas de texto. Esta operación se conoce como
+                <b>concatenación</b>.
+            </p>
 
+            <p>
+                También podemos utilizar comas dentro de
+                <b>print()</b> para mostrar diferentes datos:
+            </p>
 
-			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP5.pdf"> Descargar actividad </a>
-		
-                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+<pre><code>nombre = "Juan"
+print("Hola", nombre)</code></pre>
 
+            <p>
+                Es importante recordar que las comillas se utilizan
+                para escribir un texto directamente, mientras que
+                una variable se escribe sin comillas cuando queremos
+                consultar el valor que contiene.
+            </p>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p4.html"> anterior </a>
-				<a class="n1" href="p6.html"> siguiente </a>
-                             
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+            <h3>3. Variables que almacenan números</h3>
 
+            <p>
+                Las variables también pueden almacenar números.
+                Estos datos pueden utilizarse para realizar
+                operaciones matemáticas.
+            </p>
 
-     	</body>
+<pre><code>edad = 14
+altura = 1.65
 
-	
+print("Edad:", edad)
+print("Altura:", altura)</code></pre>
+
+            <p>
+                En este ejemplo, <b>edad</b> almacena un número
+                entero y <b>altura</b> almacena un número decimal.
+            </p>
+
+            <p>
+                Python reconoce automáticamente el tipo de dato
+                según el valor asignado. No es necesario escribir
+                la palabra <b>float</b> para guardar un decimal.
+            </p>
+
+            <p>
+                Podemos utilizar estas variables para realizar
+                operaciones:
+            </p>
+
+<pre><code>edad = 14
+edad_futura = edad + 5
+
+print("Edad actual:", edad)
+print("Edad dentro de cinco años:", edad_futura)</code></pre>
+
+            <p>
+                El programa calcula un nuevo valor utilizando
+                la información almacenada en la variable
+                <b>edad</b>.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>4. Tipos de datos básicos</h3>
+
+            <p>
+                Las variables pueden almacenar diferentes tipos
+                de datos. Algunos de los más utilizados en Python son:
+            </p>
+
+            <ul>
+                <li>
+                    <b>Texto (str):</b> almacena nombres, palabras
+                    o frases. Ejemplo:
+                    <b>nombre = "Juan"</b>.
+                </li>
+
+                <li>
+                    <b>Entero (int):</b> almacena números sin parte
+                    decimal. Ejemplo: <b>edad = 14</b>.
+                </li>
+
+                <li>
+                    <b>Decimal (float):</b> almacena números con
+                    parte decimal. Ejemplo: <b>altura = 1.65</b>.
+                </li>
+
+                <li>
+                    <b>Booleano (bool):</b> almacena uno de dos
+                    valores: <b>True</b> o <b>False</b>.
+                    Ejemplo: <b>encendido = True</b>.
+                </li>
+            </ul>
+
+            <p>
+                Observa estos dos ejemplos:
+            </p>
+
+<pre><code>edad = 14
+numero = "14"</code></pre>
+
+            <p>
+                Aunque parecen similares, sus tipos de datos son
+                diferentes. La variable <b>edad</b> almacena un
+                número entero, mientras que <b>numero</b> almacena
+                el texto "14".
+            </p>
+
+            <p>
+                Por esta razón, es importante reconocer qué tipo
+                de información contiene cada variable.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>5. Reglas para nombrar variables</h3>
+
+            <p>
+                Para crear variables, debemos utilizar nombres
+                que permitan identificar fácilmente la información
+                que almacenan.
+            </p>
+
+            <ul>
+                <li>
+                    El nombre puede contener letras, números y
+                    guiones bajos.
+                </li>
+
+                <li>
+                    No puede comenzar con un número.
+                </li>
+
+                <li>
+                    No debe contener espacios.
+                </li>
+
+                <li>
+                    Python distingue entre mayúsculas y minúsculas.
+                    Por ejemplo, <b>nombre</b> y <b>Nombre</b>
+                    son variables diferentes.
+                </li>
+
+                <li>
+                    Es recomendable utilizar nombres descriptivos,
+                    como <b>edad</b>, <b>temperatura</b> o
+                    <b>nombre_estudiante</b>.
+                </li>
+            </ul>
+
+            <p>
+                Ejemplos de nombres válidos:
+            </p>
+
+<pre><code>nombre = "Laura"
+edad2 = 15
+temperatura_actual = 24.5</code></pre>
+
+            <p>
+                Ejemplos de nombres no válidos:
+            </p>
+
+<pre><code>2edad = 15
+nombre estudiante = "Laura"</code></pre>
+
+            <p>
+                Los ejemplos anteriores presentan errores porque
+                el nombre de una variable no puede comenzar con
+                un número ni contener espacios.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>6. Actividad de práctica</h3>
+
+            <p>
+                Escribe el siguiente programa en Python y ejecútalo
+                para observar la información que aparece en pantalla.
+            </p>
+
+<pre><code>nombre = "Carlos"
+edad = 15
+colegio = "Mi colegio"
+
+print("Mi nombre es", nombre)
+print("Tengo", edad, "años")
+print("Estudio en", colegio)</code></pre>
+
+            <p>
+                Después de ejecutarlo, realiza los siguientes retos:
+            </p>
+
+            <ol>
+                <li>
+                    Cambia el nombre por el tuyo sin modificar
+                    las instrucciones <b>print()</b>.
+                </li>
+
+                <li>
+                    Cambia la edad por un número diferente.
+                </li>
+
+                <li>
+                    Modifica el nombre del colegio.
+                </li>
+
+                <li>
+                    Crea una variable llamada <b>ciudad</b> y
+                    muestra su contenido en pantalla.
+                </li>
+
+                <li>
+                    Crea una variable llamada <b>materia_favorita</b>
+                    y guarda el nombre de una asignatura.
+                </li>
+
+                <li>
+                    Explica qué sucede si escribes
+                    <b>print("nombre")</b> en lugar de
+                    <b>print(nombre)</b>.
+                </li>
+
+                <li>
+                    Cambia el valor de una variable después de
+                    haberla creado. ¿Qué valor muestra el programa
+                    si utilizas nuevamente <b>print()</b>?
+                </li>
+            </ol>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <h3>Conclusión</h3>
+
+            <p>
+                Las variables son fundamentales en programación
+                porque permiten almacenar y reutilizar información
+                durante la ejecución de un programa.
+            </p>
+
+            <p>
+                Mientras <b>print()</b> permite mostrar información
+                en la pantalla, las variables permiten identificar
+                y consultar los datos que necesitamos utilizar.
+                Al combinar ambas herramientas, podemos crear
+                programas más flexibles y fáciles de modificar.
+            </p>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <p>
+                Las actividades propuestas para reforzar el tema
+                son las siguientes:
+            </p>
+
+            <a id="dcr" target="_blank"
+                href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP5.pdf">
+                Descargar actividad
+            </a>
+
+            <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+            <div id="ctrl">
+                <a class="n1" href="p4.html">anterior</a>
+                <a class="n1" href="p6.html">siguiente</a>
+            </div>
+
+            <br>
+
+        </div>
+    </div>
+
+</body>
 </html>
+
