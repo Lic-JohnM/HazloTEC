@@ -1,108 +1,397 @@
-
+```html
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
 
-	<head>
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
-	<title>Programación</title>
-	<meta name="description" content="Descripción del uso y las partes gráficas del diagrama de flujo así como el uso de las variables.">
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
-	<link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
-		
+        <link rel="icon" type="image/x-icon" href="https://lic-johnm.github.io/HazloTEC/Imagenes/Principal/FAVICON.ico">
 
-	<script src="js/script.js"></script>
-		
-	</head>
+        <title>Programación</title>
 
-	<body>
+        <meta name="description" content="Aprende a utilizar print() en Python, mostrar mensajes, realizar concatenaciones y documentar el código mediante comentarios.">
 
-		<div id="menu">
-                        <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html" >HazloTEC</a>
-                        <a id="r2" href="Ingreso/index.html"> INGRESA </a>
-                </div>
+        <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index.css" />
+        <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/index_responsive.css" />
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos.css" />
+        <link rel="stylesheet" type="text/css" href="https://lic-johnm.github.io/HazloTEC/Programacion/css/modulos_responsive.css" />
+
+        <script src="js/script.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="menu">
+            <a id="r1" href="https://lic-johnm.github.io/HazloTEC/index.html">HazloTEC</a>
+            <a id="r2" href="Ingreso/index.html">INGRESA</a>
+        </div>
 
         <div id="info">
 
-                <div id="con">
+            <div id="con">
 
-		<br>
-		<h2>Print </h2>
-		<br>
-		<p>Ahora que conoces algunas de las características de Python, es importante entender cómo interactuar con el programa. Dos funciones básicas y fundamentales en Python son `print` e `input`. La función `print` se utiliza para mostrar información en la pantalla. Por ejemplo:</p>
-<br>
+                <br>
+
+                <h2>Print</h2>
+
+                <br>
+
+                <p>
+                    Ahora que conoces algunas de las características de Python,
+                    es importante entender cómo mostrar información en la
+                    pantalla. Una de las instrucciones básicas es
+                    <b>print()</b>, que permite presentar mensajes, resultados
+                    de operaciones y datos almacenados en variables.
+                </p>
+
+                <p>Por ejemplo:</p>
+
 <pre><code>print("¡Hola, mundo!")
 print("Python es divertido.")
-print("Este es un ejemplo de print.")
-</code></pre>
-<br>
-		<p>Estos ejemplos muestran cómo `print` puede usarse para mostrar diferentes tipos de mensajes. Puedes experimentar con `print` en Google Colab, una herramienta en línea donde puedes ejecutar código Python directamente desde tu navegador. Haz clic en el siguiente enlace para probarlo: <a target="_blank" href="https://colab.research.google.com">Google Colab</a>.</p>
-		<br>
-		
-                                         <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+print("Este es un ejemplo de print.")</code></pre>
 
-    <h3>Tipos de Comentarios</h3>
-    <br>
-   
-        <p><b>Comentarios de Línea:</b> Se usan para explicar una sola línea o una sección breve del código. Se denotan con <code>#</code> en Python.</p>
-        <p><b>Comentarios de Bloque:</b> Se utilizan para explicar secciones más extensas del código y se pueden abarcar múltiples líneas. Se denotan con <code>"""</code> en Python.</p>
-    
-    <br>
-    <h3>Ejemplo</h3>
-    <p>A continuación, se muestra un ejemplo en Python que ilustra ambos tipos de comentarios:</p>
-    <br>
-    <pre><code>
-# Este es un comentario de línea que explica la siguiente línea de código
-print("Hola, mundo!")  # Imprime un mensaje en la consola
+                <p>
+                    Cada instrucción <b>print()</b> muestra un mensaje en la
+                    pantalla. Puedes experimentar con estos ejemplos en
+                    Google Colab, una herramienta en línea donde puedes
+                    ejecutar código Python directamente desde tu navegador.
+                    Haz clic en el siguiente enlace para probarlo:
+                    <a target="_blank" href="https://colab.research.google.com">Google Colab</a>.
+                </p>
 
-"""
-Este es un comentario de bloque.
-A continuación, realizamos una operación básica de suma
-y mostramos el resultado en la consola.
-"""
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <h3>Concatenación de textos</h3>
+
+                <br>
+
+                <p>
+                    En programación, la <b>concatenación</b> consiste en unir
+                    dos o más cadenas de texto para formar una sola. En Python,
+                    podemos realizar esta operación utilizando el símbolo
+                    <b>+</b>.
+                </p>
+
+                <p>
+                    Imagina que tenemos dos textos independientes y queremos
+                    unirlos para formar un mensaje completo.
+                </p>
+
+<pre><code>print("Hola, " + "mundo")</code></pre>
+
+                <p>El resultado será:</p>
+
+<pre><code>Hola, mundo</code></pre>
+
+                <p>
+                    Python une ambos textos en el orden en que aparecen.
+                    Observa que el primer texto contiene un espacio después
+                    de la coma. Si no lo escribimos, las palabras quedarían
+                    pegadas.
+                </p>
+
+                <p>
+                    También podemos concatenar textos que están almacenados
+                    en variables:
+                </p>
+
+<pre><code>nombre = "Juan"
+saludo = "Hola, " + nombre
+
+print(saludo)</code></pre>
+
+                <p>El resultado será:</p>
+
+<pre><code>Hola, Juan</code></pre>
+
+                <p>
+                    En este ejemplo, Python toma el texto almacenado en la
+                    variable <b>nombre</b> y lo une con el texto
+                    <b>"Hola, "</b>. El resultado de esa unión se guarda
+                    en la variable <b>saludo</b>.
+                </p>
+
+                <p>
+                    La ventaja es que podemos cambiar el valor de
+                    <b>nombre</b> y obtener un saludo diferente sin tener
+                    que escribir nuevamente todo el mensaje.
+                </p>
+
+<pre><code>nombre = "María"
+saludo = "Hola, " + nombre
+
+print(saludo)</code></pre>
+
+                <p>Ahora el resultado será:</p>
+
+<pre><code>Hola, María</code></pre>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <h3>Concatenación con variables</h3>
+
+                <br>
+
+                <p>
+                    Podemos unir varias variables para construir mensajes
+                    más completos. Por ejemplo:
+                </p>
+
+<pre><code>nombre = "Laura"
+apellido = "Gómez"
+
+nombre_completo = nombre + " " + apellido
+
+print(nombre_completo)</code></pre>
+
+                <p>El resultado será:</p>
+
+<pre><code>Laura Gómez</code></pre>
+
+                <p>
+                    Observa que utilizamos <b>" "</b> para agregar un
+                    espacio entre el nombre y el apellido. Este espacio
+                    también es una cadena de texto y forma parte de la
+                    concatenación.
+                </p>
+
+                <p>
+                    <b>Importante:</b> el operador <b>+</b> permite
+                    concatenar cadenas de texto, pero no podemos unir
+                    directamente una cadena con un número.
+                </p>
+
+<pre><code>edad = 15
+
+# Esta instrucción genera un error:
+# print("Tengo " + edad + " años")</code></pre>
+
+                <p>
+                    Para solucionarlo, podemos convertir el número en
+                    texto utilizando <b>str()</b>:
+                </p>
+
+<pre><code>edad = 15
+
+print("Tengo " + str(edad) + " años")</code></pre>
+
+                <p>El resultado será:</p>
+
+<pre><code>Tengo 15 años</code></pre>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <h3>¿Es lo mismo concatenar que utilizar comas en print()?</h3>
+
+                <br>
+
+                <p>
+                    No exactamente. Aunque ambas formas permiten mostrar
+                    un mensaje con diferentes partes, funcionan de manera
+                    distinta.
+                </p>
+
+                <p><b>Utilizando el símbolo +:</b></p>
+
+<pre><code>nombre = "Juan"
+
+print("Hola, " + nombre)</code></pre>
+
+                <p>
+                    Python une las cadenas de texto antes de mostrarlas.
+                    Si queremos concatenar un número, debemos convertirlo
+                    en texto.
+                </p>
+
+                <p><b>Utilizando comas:</b></p>
+
+<pre><code>nombre = "Juan"
+edad = 15
+
+print("Hola, ", nombre)
+print("Tu edad es:", edad)</code></pre>
+
+                <p>
+                    En este caso, <b>print()</b> recibe varios argumentos
+                    separados por comas y los muestra en la misma línea
+                    de salida. De forma predeterminada, agrega un espacio
+                    entre ellos. Además, puede mostrar números sin que
+                    tengamos que convertirlos en texto.
+                </p>
+
+                <p>
+                    Recuerda: <b>+</b> une cadenas de texto, mientras que
+                    las comas permiten mostrar diferentes valores dentro
+                    de una misma instrucción <b>print()</b>.
+                </p>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <h3>Tipos de comentarios</h3>
+
+                <br>
+
+                <p>
+                    Los comentarios permiten escribir explicaciones dentro
+                    del código para que las personas puedan comprenderlo
+                    con mayor facilidad. Python no ejecuta el contenido
+                    de un comentario de línea.
+                </p>
+
+                <p>
+                    <b>Comentarios de línea:</b> comienzan con el símbolo
+                    <b>#</b> y pueden utilizarse para explicar una
+                    instrucción o agregar una observación.
+                </p>
+
+<pre><code># Este mensaje saluda al usuario
+print("Hola, mundo!")</code></pre>
+
+                <p>
+                    También podemos escribir un comentario al final de
+                    una instrucción:
+                </p>
+
+<pre><code>print("Hola, mundo!")  # Muestra un saludo</code></pre>
+
+                <p>
+                    <b>Notas de varias líneas:</b> podemos utilizar
+                    comentarios con <b>#</b> en varias líneas. También
+                    existen las cadenas multilínea, delimitadas por
+                    tres comillas, que se utilizan frecuentemente para
+                    documentar funciones, clases y módulos mediante
+                    cadenas de documentación.
+                </p>
+
+<pre><code># Este programa realiza una suma.
+# Después muestra el resultado
+# mediante la instrucción print().
+
 a = 5
 b = 3
 resultado = a + b
-print("La suma de", a, "y", b, "es", resultado)
-    </code></pre>
-    
-  
-    <p>Los comentarios son una herramienta poderosa para hacer que el código sea más legible y fácil de mantener, y su uso adecuado es una práctica recomendada en el desarrollo de software.</p>
 
-		                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
-                        <p>Las actividades propuestas para reforzar el tema, son las siguientes:</p>
+print("La suma es:", resultado)</code></pre>
 
+                <p>
+                    En Python, escribir tres comillas no convierte
+                    automáticamente el contenido en un comentario.
+                    Las cadenas multilínea son textos y su función
+                    depende del lugar donde se utilicen.
+                </p>
 
-			<a id="dcr"  target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP4.pdf"> Descargar actividad </a>
-		
-                 
-                        
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
 
-	                                    <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+                <h3>Actividad de práctica</h3>
 
+                <br>
 
+                <p>
+                    Escribe los siguientes ejemplos en Python y observa
+                    los resultados. Después, realiza los retos propuestos.
+                </p>
 
-                         <div id="ctrl">
-					
-				 <a class="n1" href="p3.html"> anterior </a>
-				<a class="n1" href="p5.html"> siguiente </a>
-                             
+                <p><b>Ejemplo 1. Unir textos:</b></p>
 
-                        </div>
-			
-			   <br>
-	   </div>
-			
-      </div>
+<pre><code>print("Me gusta " + "programar")</code></pre>
 
+                <p><b>Ejemplo 2. Construir un saludo:</b></p>
 
-     	</body>
+<pre><code>nombre = "Carlos"
+mensaje = "Hola, " + nombre
 
-	
+print(mensaje)</code></pre>
+
+                <p><b>Retos:</b></p>
+
+                <ol>
+                    <li>
+                        Cambia el mensaje del primer ejemplo para que
+                        muestre una frase diferente.
+                    </li>
+
+                    <li>
+                        Modifica el nombre del segundo ejemplo por el tuyo.
+                    </li>
+
+                    <li>
+                        Crea dos variables, una para tu nombre y otra
+                        para tu apellido. Únelas para mostrar tu nombre
+                        completo.
+                    </li>
+
+                    <li>
+                        Crea una variable llamada <b>ciudad</b> y
+                        concatena su contenido con el texto
+                        "Vivo en ".
+                    </li>
+
+                    <li>
+                        Crea una variable llamada <b>edad</b> y muestra
+                        el mensaje "Tengo 15 años" utilizando
+                        concatenación y la función <b>str()</b>.
+                        Puedes reemplazar 15 por tu edad.
+                    </li>
+
+                    <li>
+                        Realiza el mismo mensaje anterior utilizando
+                        comas dentro de <b>print()</b>. ¿Qué diferencias
+                        encuentras?
+                    </li>
+                </ol>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <h3>Conclusión</h3>
+
+                <br>
+
+                <p>
+                    La instrucción <b>print()</b> permite mostrar
+                    información en pantalla. La concatenación permite
+                    unir cadenas de texto utilizando el operador
+                    <b>+</b>, lo que facilita la construcción de
+                    mensajes personalizados.
+                </p>
+
+                <p>
+                    Por su parte, los comentarios permiten documentar
+                    el código y explicar cómo funciona. Estas herramientas
+                    son fundamentales para escribir programas claros,
+                    organizados y fáciles de comprender.
+                </p>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <p>
+                    Las actividades propuestas para reforzar el tema
+                    son las siguientes:
+                </p>
+
+                <a id="dcr" target="_blank" href="https://lic-johnm.github.io/HazloTEC/Programacion/Talleres/ActP4.pdf">
+                    Descargar actividad
+                </a>
+
+                <hr style="border: 1px solid rgba(47, 65, 89, 0.9); margin: 20px 0;">
+
+                <div id="ctrl">
+                    <a class="n1" href="p3.html">anterior</a>
+                    <a class="n1" href="p5.html">siguiente</a>
+                </div>
+
+                <br>
+
+            </div>
+
+        </div>
+
+    </body>
+
 </html>
+```
